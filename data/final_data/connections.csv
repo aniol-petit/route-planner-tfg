@@ -1,0 +1,236 @@
+Origin,Destination,Country,connection_time
+VIE,Wien Hbf,Austria,20
+SZG,Salzburg Hbf,Austria,18
+INN,Innsbruck Hbf,Austria,16
+GRZ,Graz Hbf,Austria,19
+LNZ,Linz Hbf,Austria,18
+KLU,Klagenfurt Hbf,Austria,14
+ANR,Antwerpen Centraal,Belgium,19
+ANR,Antwerpen-Berchem,Belgium,10
+BRU,Brussels Airport - Zaventem,Belgium,3
+BRU,Bruxelles Midi,Belgium,28
+BRU,Mechelen,Belgium,19
+LGG,Liège-Guillemins,Belgium,15
+Antwerpen Centraal,Antwerpen-Berchem,Belgium,8
+Antwerpen-Berchem,Antwerpen-Noorderdokken,Belgium,17
+Antwerpen-Noorderdokken,Ekeren,Belgium,8
+Bruxelles Midi,Bruxelles-Midi Eurostar,Belgium,5
+Brussels Airport - Zaventem,Bruxelles Midi,Belgium,27
+Brussels Airport - Zaventem,Mechelen,Belgium,15
+Namur,Ciney,Belgium,21
+Ciney,Rochefort-Jemelle,Belgium,27
+ZAG,Zagreb Glavni kolodvor,Croatia,22
+Zagreb Glavni kolodvor,Zapresic,Croatia,20
+Zapresic,Veliko Trgovisce,Croatia,21
+Veliko Trgovisce,Velika Ves,Croatia,23
+PRG,Praha hl.n.,Czechia,28
+PRG,Praha-Holesovice,Czechia,26
+BRQ,Brno hl.n.,Czechia,19
+OSR,Ostrava-Svinov,Czechia,25
+OSR,Ostrava hl.n.,Czechia,33
+PED,Pardubice hl.n.,Czechia,9
+Praha hl.n.,Praha-Holesovice,Czechia,6
+Praha hl.n.,Praha-Liben,Czechia,10
+Praha-Holesovice,Praha-Liben,Czechia,10
+Ostrava hl.n.,Ostrava-Svinov,Czechia,12
+Ostrava hl.n.,Bohumin,Czechia,16
+Decin hl.n.,Decin-Certova voda,Czechia,12
+Most,Bilina Kyselka,Czechia,9
+Lichkov,Roztoki Bystrzyckie,Czechia,20    
+CPH,Taarnby st,Denmark,5
+CPH,Koebenhavn H,Denmark,18
+Taarnby st,Koebenhavn H,Denmark,16
+Koebenhavn H,Hoeje Taastrup st,Denmark,22
+Hoeje Taastrup st,Roskilde st,Denmark,19
+RKE,Roskilde st,Denmark,13
+ODE,Odense st,Denmark,18
+Fredericia st,Middelfart st,Denmark,12
+STN,London Liverpool Street,United Kingdom,50
+LCY,London Liverpool Street,United Kingdom,25
+SEN,London Liverpool Street,United Kingdom,60
+LTN,London St. Pancras International,United Kingdom,50
+LGW,London St. Pancras International,United Kingdom,60
+LHR,London St. Pancras International,United Kingdom,50
+London Liverpool Street,London St. Pancras International,United Kingdom,10
+CDG,Paris Nord,France,35
+CDG,Paris Est,France,35
+CDG,Marne la Vallée-Chessy,France,16
+CDG,ORY,France,38
+ORY,Paris Gare de Lyon,France,22
+LYS,Lyon Part Dieu,France,30
+MRS,Marseille-St-Charles,France,23
+SXB,Strasbourg,France,19
+ETZ,Lorraine TGV,France,13
+BSL,St-Louis (Haut-Rhin),France,8
+LIL,Lille Europe,France,14
+LIL,Lille Flandres,France,16
+DIJ,Dijon Ville,France,19
+DLE,Dole Ville,France,14
+Paris Nord,Paris Est,France,6
+Paris Nord,Paris Nord Eurostar,France,3
+Lille Europe,Lille Flandres,France,4
+Marseille-St-Charles,Marseille-Blancarde,France,12
+Annecy Annecy, Gare routière,France,1
+BUD,Budapest-Nyugati,Hungary,35
+BUD,Budapest-Keleti,Hungary,29
+BUD,Budapest-Kelenföld,Hungary,34
+Budapest-Keleti,Budapest-Nyugati,Hungary,14
+Budapest-Keleti,Budapest-Déli,Hungary,17
+Budapest-Keleti,Budapest-Kelenföld,Hungary,19
+Budapest-Nyugati,Budapest-Kelenföld,Hungary,18
+Budapest-Déli,Budapest-Kelenföld,Hungary,10
+Sopron,Nagycenk,Hungary,22
+Vac,Szob,Hungary,35
+Györ,Györszentivan,Hungary,9
+Györszentivan,Nagyszentjanos,Hungary,8
+Hegyeshalom,Mosonmagyarovar,Hungary,12
+Mosonmagyarovar,Kimle-Karolyhaza,Hungary,15
+Kimle-Karolyhaza,Lébény-Mosonszentmiklos,Hungary,13
+Lébény-Mosonszentmiklos,Györ,Hungary,20
+Bekescsaba,Ketegyhaza,Hungary,15
+MXP,Milano Centrale,Italy,45
+MXP,Milano Porta Garibaldi,Italy,40
+LIN,Milano Centrale,Italy,20
+BGY,Milano Centrale,Italy,45
+FCO,Roma Termini,Italy,35
+FCO,Roma Tiburtina,Italy,37
+CIA,Roma Termini,Italy,26
+VCE,Venezia Mestre,Italy,17
+VCE,Venezia Santa Lucia,Italy,19
+TSF,Treviso Centrale,Italy,10
+TSF,Venezia Mestre,Italy,28
+BLQ,Bologna Centrale,Italy,14
+VRN,Verona Porta Nuova,Italy,13
+TRN,Torino Porta Susa,Italy,24
+Milano Centrale,Milano Porta Garibaldi,Italy,7
+Milano Centrale,Milano Lambrate,Italy,16
+Roma Termini,Roma Tiburtina,Italy,9
+Venezia Mestre,Venezia Santa Lucia,Italy,13
+Como S. Giovanni,Como Nord Camerlata,Italy,10
+Levanto,Monterosso,Italy,9
+Bologna Centrale,Ferrara,Italy,37
+Verona Porta Nuova,Peschiera del Garda,Italy,28
+Schaanwald Zollamt,Nendeln,Liechtenstein,6
+Nendeln,Schaan-Vaduz,Liechtenstein,8
+Schaan-Vaduz,Triesen Säga,Liechtenstein,15
+AMS,Schiphol (Airport),Netherlands,2
+AMS,Amsterdam Centraal,Netherlands,23
+AMS,Amsterdam Zuid,Netherlands,12
+RTM,Rotterdam Centraal,Netherlands,15
+EIN,Eindhoven Centraal,Netherlands,15
+MST,Maastricht,Netherlands,15
+MST,Meerssen,Netherlands,10
+Amsterdam Centraal,Amsterdam Centraal Eurostar,Netherlands,2
+Amsterdam Centraal,Utrecht Centraal,Netherlands,40
+Amsterdam Centraal,Rotterdam Centraal,Netherlands,60
+Rotterdam Centraal,Rotterdam Centraal Eurostar,Netherlands,2
+Rotterdam Centraal,Breda,Netherlands,38
+Utrecht Centraal,Schiphol (Airport),Netherlands,40
+Utrecht Centraal,Amersfoort Centraal,Netherlands,27
+Utrecht Centraal,Arnhem Centraal,Netherlands,50
+Utrecht Centraal,Driebergen-Zeist,Netherlands,13
+Breda,Tilburg,Netherlands,30
+Tilburg,Eindhoven Centraal,Netherlands,33
+Arnhem Centraal,"Nijmegen Centraal Station (Bus), Niederlande",Netherlands,23
+Arnhem Centraal,Zevenaar,Netherlands,20
+"Nijmegen Centraal Station (Bus), Niederlande","Ubbergen Beek Sportpark, Niederlande",Netherlands,11
+Hengelo,Oldenzaal,Netherlands,20
+Maastricht,Sittard,Netherlands,22
+Maastricht,Valkenburg(NL),Netherlands,14
+Maastricht,Eijsden,Netherlands,14
+Sittard,Schinnen,Netherlands,15
+Schinnen,Nuth,Netherlands,4
+Apeldoorn,Deventer,Netherlands,23
+Apeldoorn,Amersfoort Centraal,Netherlands,33
+OSL,Oslo S,Norway,30
+OSL,Ski,Norway,53
+Oslo S,Ski,Norway,23
+Oslo S,Kongsvinger,Norway,74
+Oslo S,Halden,Norway,62
+Ski,Halden,Norway,74
+GDN,Gdansk Port Lotniczy,Poland,1
+GDN,Gdansk Osowa,Poland,15
+WAW,Warszawa Centralna,Poland,18
+WAW,Warszawa Zachodnia,Poland,16
+KRK,Krakow Glowny,Poland,27
+POZ,Poznan Glowny,Poland,18
+LCJ,Lodz Chojny,Poland,18
+LCJ,Pabianice,Poland,17
+Gdansk Port Lotniczy,Gdansk Osowa,Poland,16
+Gdansk Osowa,Gdynia Karwiny,Poland,15
+Gdynia Glowna,Sopot,Poland,18
+Warszawa Centralna,Warszawa Zachodnia,Poland,9
+Zgorzelec,Piensk,Poland,21
+Grodzisk Mazowiecki,Zyrardow,Poland,22
+Konin,Kolo,Poland,35
+OTP,Bucuresti Nord Gara A,Romania,23
+BBU,Bucuresti Nord Gara A,Romania,17
+OTP,BBU,Romania,15
+ARW,Arad,Romania,14
+SBZ,Sibiu,Romania,16
+Caracal,Draganesti Olt,Romania,18
+BTS,Bratislava hl.st.,Slovakia,18
+Bratislava hl.st.,Devinska Nova Ves,Slovakia,18
+LJU,Ljubljana,Slovenia,25
+ARN,Stockholm Central,Sweden,35
+BMA,Stockholm Central,Sweden,14
+ARN,BMA,Sweden,33
+GOT,Göteborg Central,Sweden,23
+MMX,Malmö Central,Sweden,30
+AGH,Helsingborg Central,Sweden,30
+NRK,Norrköping Central,Sweden,11
+Stockholm Central,BMA,Sweden,17
+Malmö Central,Malmö Hyllie station,Sweden,16
+Göteborg Central,Mölndal Nedre station,Sweden,13
+GVA,"Genève, gare Cornavin",Switzerland,16
+GVA,"Plan-les-Ouates, Galaise",Switzerland,13
+ZRH,Zürich HB,Switzerland,14
+ZRH,Winterthur,Switzerland,24
+BRN,Bern,Switzerland,21
+LUG,Paradiso(CH),Switzerland,13
+ACH,St. Margrethen SG,Switzerland,14
+Basel SBB,Basel Bad Bf,Switzerland,9
+Basel SBB,Basel St. Johann,Switzerland,11
+"Basel SBB","Basel, Claraplatz",Switzerland,12
+"Genève, gare Cornavin",Nyon,Switzerland,30
+Lausanne,Renens VD,Switzerland,14
+Zürich HB,Baden(CH),Switzerland,24
+Zürich HB,Winterthur,Switzerland,25
+Schaffhausen,Neuhausen(CH),Switzerland,6
+Neuhausen(CH),Neuhausen Rheinfall,Switzerland,3
+Schaffhausen,Thayngen,Switzerland,11
+Buchs SG,Altstätten SG,Switzerland,24
+St. Margrethen SG,Altstätten SG,Switzerland,18
+Paradiso(CH),Melide,Switzerland,7
+Chiasso,Stabio,Switzerland,16
+KBP,Kiev Pass,Ukraine,40
+IEV,Kiev Pass,Ukraine,18
+KBP,IEV,Ukraine,39
+LWO,Lviv,Ukraine,18
+UDJ,Chop,Ukraine,36
+Chop,Mukacheve,Ukraine,45
+Ternopil,Volochysk,Ukraine,45
+FRA,Frankfurt Flughafen,Germany,2
+FRA,Frankfurt (Main) Hbf,Germany,17
+BER,Berlin Hbf,Germany,32
+BER,Berlin Südkreuz,Germany,21
+MUC,München Hbf,Germany,34
+HAM,Hamburg Hbf,Germany,26
+DUS,Düsseldorf Hbf,Germany,20
+CGN,Köln Hbf,Germany,18
+STR,Stuttgart Hbf,Germany,25
+HAJ,Hannover Hbf,Germany,21
+LEJ,Leipzig Hbf,Germany,18
+NUE,Nürnberg Hbf,Germany,16
+DRS,Dresden Hbf,Germany,25
+BRE,Bremen Hbf,Germany,15
+SCN,Saarbrücken Hbf,Germany,18
+Frankfurt Flughafen,Frankfurt (Main) Hbf,Germany,17
+Berlin Hbf,Berlin Südkreuz,Germany,16
+München Hbf,Rosenheim,Germany,59
+München Hbf,Passau,Germany,65
+Köln Hbf,Aachen Hbf,Germany,58
+Frankfurt (Main) Hbf,Köln Hbf,Germany,65
+Düsseldorf Hbf,Köln Hbf,Germany,38
+LUX,Luxembourg,Luxembourg,20
+Luxembourg,Rodange,Luxembourg,36

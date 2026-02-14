@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<title>Graph report for OTP Graph</title>
+<meta charset="utf-8">
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css" integrity="sha384-X38yfunGUhNzHpBaEBsWLO+A0HDYOQi8ufWDkZ0k9e0eXz/tH3II7uKZ9msv++Ls" crossorigin="anonymous">
+<style>.pure-button{margin-bottom:4px;}</style>
+</head><body>
+<h1>OpenTripPlanner data import issue log TurnRestrictionBad</h1>
+<h2>Graph report for <em>graph.obj</em></h2>
+<p>
+<a class='pure-button button-barrierintersectinghighway' href="BarrierIntersectingHighway1.html" style='background-color: #FFFF80;'>BarrierIntersectingHighway 1</a>
+<a class='pure-button button-barrierintersectinghighway' href="BarrierIntersectingHighway2.html" style='background-color: #FFFF80;'>BarrierIntersectingHighway 2</a>
+<a class='pure-button button-differentlevelssharingbarrier' href="DifferentLevelsSharingBarrier.html" style='background-color: #FFD0FF;'>DifferentLevelsSharingBarrier</a>
+<a class='pure-button button-disconnectedosmnode' href="DisconnectedOsmNode.html" style='background-color: #90C8FF;'>DisconnectedOsmNode</a>
+<a class='pure-button button-floornumberunknownassumedgroundlevel' href="FloorNumberUnknownAssumedGroundLevel.html" style='background-color: #FFE060;'>FloorNumberUnknownAssumedGroundLevel</a>
+<a class='pure-button button-graphconnectivity' href="GraphConnectivity.html" style='background-color: #B0FF40;'>GraphConnectivity</a>
+<a class='pure-button button-graphislandbicycle' href="GraphIslandBICYCLE.html" style='background-color: #FF80FF;'>GraphIslandBICYCLE</a>
+<a class='pure-button button-graphislandbicyclenothroughtraffic' href="GraphIslandBICYCLENoThroughTraffic.html" style='background-color: #70A0FF;'>GraphIslandBICYCLENoThroughTraffic</a>
+<a class='pure-button button-graphislandcar' href="GraphIslandCAR1.html" style='background-color: #FFC000;'>GraphIslandCAR 1</a>
+<a class='pure-button button-graphislandcar' href="GraphIslandCAR2.html" style='background-color: #FFC000;'>GraphIslandCAR 2</a>
+<a class='pure-button button-graphislandcar' href="GraphIslandCAR3.html" style='background-color: #FFC000;'>GraphIslandCAR 3</a>
+<a class='pure-button button-graphislandcar' href="GraphIslandCAR4.html" style='background-color: #FFC000;'>GraphIslandCAR 4</a>
+<a class='pure-button button-graphislandcar' href="GraphIslandCAR5.html" style='background-color: #FFC000;'>GraphIslandCAR 5</a>
+<a class='pure-button button-graphislandcar' href="GraphIslandCAR6.html" style='background-color: #FFC000;'>GraphIslandCAR 6</a>
+<a class='pure-button button-graphislandcarnothroughtraffic' href="GraphIslandCARNoThroughTraffic.html" style='background-color: #80FF40;'>GraphIslandCARNoThroughTraffic</a>
+<a class='pure-button button-graphislandwalk' href="GraphIslandWALK.html" style='background-color: #FFB0FF;'>GraphIslandWALK</a>
+<a class='pure-button button-graphislandwalknothroughtraffic' href="GraphIslandWALKNoThroughTraffic.html" style='background-color: #90E0FF;'>GraphIslandWALKNoThroughTraffic</a>
+<a class='pure-button button-graphwide' href="Graphwide.html" style='background-color: #FFA000;'>Graphwide</a>
+<a class='pure-button button-invalidvehicleparkingcapacity' href="InvalidVehicleParkingCapacity.html" style='background-color: #E0FF70;'>InvalidVehicleParkingCapacity</a>
+<a class='pure-button button-isolatedstop' href="IsolatedStop.html" style='background-color: #D0A0FF;'>IsolatedStop</a>
+<a class='pure-button button-levelambiguous' href="LevelAmbiguous.html" style='background-color: #B0FFFF;'>LevelAmbiguous</a>
+<a class='pure-button button-parkandrideunlinked' href="ParkAndRideUnlinked.html" style='background-color: #FF8080;'>ParkAndRideUnlinked</a>
+<a class='pure-button button-prunedstopisland' href="PrunedStopIsland.html" style='background-color: #40FF40;'>PrunedStopIsland</a>
+<a class='pure-button button-repeatedstops' href="RepeatedStops.html" style='background-color: #A090FF;'>RepeatedStops</a>
+<a class='pure-button button-stopnotlinkedfortransfers' href="StopNotLinkedForTransfers.html" style='background-color: #90FFE0;'>StopNotLinkedForTransfers</a>
+<button class='pure-button pure-button-disabled button-turnrestrictionbad' style='background-color: #FF60B0;'>TurnRestrictionBad</button>
+<a class='pure-button button-turnrestrictionexception' href="TurnRestrictionException.html" style='background-color: #70FFB0;'>TurnRestrictionException</a>
+<a class='pure-button button-turnrestrictionunknown' href="TurnRestrictionUnknown.html" style='background-color: #FFFF40;'>TurnRestrictionUnknown</a>
+<a class='pure-button button-vertexwithoutedges' href="VertexWithoutEdges.html" style='background-color: #FFFF80;'>VertexWithoutEdges</a>
+</p>
+<ul id="log">
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/10870562'>10870562</a>. Reason: One of from|via|to edges are empty in relation</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/10870561'>10870561</a>. Reason: One of from|via|to edges are empty in relation</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/15737292'>15737292</a>. Reason: One of from|via|to edges are empty in relation</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/13110759'>13110759</a>. Reason: One of from|via|to edges are empty in relation</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/13110758'>13110758</a>. Reason: One of from|via|to edges are empty in relation</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/16545888'>16545888</a>. Reason: One of from|via|to edges are empty in relation</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/2425949'>2425949</a>. Reason: One of from|via|to edges are empty in relation</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/14664363'>14664363</a>. Reason: One of from|via|to edges are empty in relation</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/7678310'>7678310</a>. Reason: One of from|via|to edges are empty in relation</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/13739298'>13739298</a>. Reason: One of from|via|to edges are empty in relation</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/13739282'>13739282</a>. Reason: One of from|via|to edges are empty in relation</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/7632388'>7632388</a>. Reason: One of from|via|to edges are empty in relation</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/7632387'>7632387</a>. Reason: One of from|via|to edges are empty in relation</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/1307691'>1307691</a>. Reason: One of from|via|to edges are empty in relation</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/12640453'>12640453</a>. Reason: One of from|via|to edges are empty in relation</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/14720369'>14720369</a>. Reason: One of from|via|to edges are empty in relation</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/14694519'>14694519</a>. Reason: One of from|via|to edges are empty in relation</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/17262558'>17262558</a>. Reason: One of from|via|to edges are empty in relation</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/19021758'>19021758</a>. Reason: One of from|via|to edges are empty in relation</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/12805742'>12805742</a>. Reason: One of from|via|to edges are empty in relation</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/5948013'>5948013</a>. Reason: One of from|via|to edges are empty in relation</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/175387'>175387</a>. Reason: One of from|via|to edges are empty in relation</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/14705925'>14705925</a>. Reason: One of from|via|to edges are empty in relation</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/17011028'>17011028</a>. Reason: One of from|via|to edges are empty in relation</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/16214818'>16214818</a>. Reason: One of from|via|to edges are empty in relation</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/14102161'>14102161</a>. Reason: One of from|via|to edges are empty in relation</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/17439109'>17439109</a>. Reason: One of from|via|to edges are empty in relation</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/18470901'>18470901</a>. Reason: One of from|via|to edges are empty in relation</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/17506298'>17506298</a>. Reason: One of from|via|to edges are empty in relation</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/17506299'>17506299</a>. Reason: One of from|via|to edges are empty in relation</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/14685277'>14685277</a>. Reason: One of from|via|to edges are empty in relation</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/14042760'>14042760</a>. Reason: One of from|via|to edges are empty in relation</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/12850536'>12850536</a>. Reason: U-turn restriction is not on U-turn</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/8704967'>8704967</a>. Reason: Left turn restriction is not on edges which turn left</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/5471797'>5471797</a>. Reason: Left turn restriction is not on edges which turn left</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/16025059'>16025059</a>. Reason: Left turn restriction is not on edges which turn left</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/14254675'>14254675</a>. Reason: Left turn restriction is not on edges which turn left</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/15617810'>15617810</a>. Reason: Left turn restriction is not on edges which turn left</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/12850538'>12850538</a>. Reason: U-turn restriction is not on U-turn</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/1282174'>1282174</a>. Reason: No to edge found</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/16737826'>16737826</a>. Reason: Left turn restriction is not on edges which turn left</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/14973661'>14973661</a>. Reason: Left turn restriction is not on edges which turn left</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/13288399'>13288399</a>. Reason: Left turn restriction is not on edges which turn left</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/13288397'>13288397</a>. Reason: Left turn restriction is not on edges which turn left</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/15058190'>15058190</a>. Reason: Left turn restriction is not on edges which turn left</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/7626075'>7626075</a>. Reason: U-turn restriction is not on U-turn</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/15834632'>15834632</a>. Reason: No from edge found</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/14909971'>14909971</a>. Reason: Left turn restriction is not on edges which turn left</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/14909972'>14909972</a>. Reason: Left turn restriction is not on edges which turn left</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/13647474'>13647474</a>. Reason: U-turn restriction is not on U-turn</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/4672978'>4672978</a>. Reason: No from edge found</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/3307679'>3307679</a>. Reason: No from edge found</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/7000243'>7000243</a>. Reason: Left turn restriction is not on edges which turn left</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/7632414'>7632414</a>. Reason: No from edge found</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/7626076'>7626076</a>. Reason: U-turn restriction is not on U-turn</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/1732767'>1732767</a>. Reason: Straight turn restriction is not on edges which go straight</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/10443213'>10443213</a>. Reason: from-edge is null</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/10022255'>10022255</a>. Reason: Left turn restriction is not on edges which turn left</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/10824972'>10824972</a>. Reason: Left turn restriction is not on edges which turn left</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/4664615'>4664615</a>. Reason: to-edge is null</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/7326435'>7326435</a>. Reason: Left turn restriction is not on edges which turn left</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/17144191'>17144191</a>. Reason: No to edge found</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/5474965'>5474965</a>. Reason: Left turn restriction is not on edges which turn left</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/14700185'>14700185</a>. Reason: Left turn restriction is not on edges which turn left</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/13274313'>13274313</a>. Reason: Left turn restriction is not on edges which turn left</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/14694044'>14694044</a>. Reason: Left turn restriction is not on edges which turn left</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/12866814'>12866814</a>. Reason: Left turn restriction is not on edges which turn left</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/3366711'>3366711</a>. Reason: Left turn restriction is not on edges which turn left</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/9650824'>9650824</a>. Reason: U-turn restriction is not on U-turn</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/9650822'>9650822</a>. Reason: No from edge found</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/17362724'>17362724</a>. Reason: Left turn restriction is not on edges which turn left</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/17672991'>17672991</a>. Reason: Straight turn restriction is not on edges which go straight</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/14698344'>14698344</a>. Reason: Left turn restriction is not on edges which turn left</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/14705944'>14705944</a>. Reason: Left turn restriction is not on edges which turn left</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/14939056'>14939056</a>. Reason: Left turn restriction is not on edges which turn left</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/7626087'>7626087</a>. Reason: U-turn restriction is not on U-turn</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/11318356'>11318356</a>. Reason: No from edge found</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/1721089'>1721089</a>. Reason: No from edge found</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/1721087'>1721087</a>. Reason: No from edge found</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/7626310'>7626310</a>. Reason: U-turn restriction is not on U-turn</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/7626307'>7626307</a>. Reason: U-turn restriction is not on U-turn</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/7626313'>7626313</a>. Reason: U-turn restriction is not on U-turn</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/7626308'>7626308</a>. Reason: U-turn restriction is not on U-turn</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/15540622'>15540622</a>. Reason: U-turn restriction is not on U-turn</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/16730274'>16730274</a>. Reason: Left turn restriction is not on edges which turn left</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/14926009'>14926009</a>. Reason: Left turn restriction is not on edges which turn left</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/14694043'>14694043</a>. Reason: U-turn restriction is not on U-turn</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/14698354'>14698354</a>. Reason: U-turn restriction is not on U-turn</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/10442821'>10442821</a>. Reason: Left turn restriction is not on edges which turn left</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/12843246'>12843246</a>. Reason: U-turn restriction is not on U-turn</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/10442822'>10442822</a>. Reason: Left turn restriction is not on edges which turn left</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/10059298'>10059298</a>. Reason: Right turn restriction is not on edges which turn right</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/16906529'>16906529</a>. Reason: Left turn restriction is not on edges which turn left</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/16906527'>16906527</a>. Reason: Left turn restriction is not on edges which turn left</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/17538000'>17538000</a>. Reason: Left turn restriction is not on edges which turn left</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/10780873'>10780873</a>. Reason: Left turn restriction is not on edges which turn left</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/13166690'>13166690</a>. Reason: Left turn restriction is not on edges which turn left</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/13166691'>13166691</a>. Reason: Left turn restriction is not on edges which turn left</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/14698357'>14698357</a>. Reason: Left turn restriction is not on edges which turn left</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/15431951'>15431951</a>. Reason: Left turn restriction is not on edges which turn left</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/7678755'>7678755</a>. Reason: from-edge is null</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/7626081'>7626081</a>. Reason: U-turn restriction is not on U-turn</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/14694513'>14694513</a>. Reason: Left turn restriction is not on edges which turn left</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/9650821'>9650821</a>. Reason: No from edge found</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/7628459'>7628459</a>. Reason: U-turn restriction is not on U-turn</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/14735647'>14735647</a>. Reason: Left turn restriction is not on edges which turn left</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/1721580'>1721580</a>. Reason: Left turn restriction is not on edges which turn left</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/7628458'>7628458</a>. Reason: U-turn restriction is not on U-turn</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/14735649'>14735649</a>. Reason: Left turn restriction is not on edges which turn left</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/14052576'>14052576</a>. Reason: Straight turn restriction is not on edges which go straight</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/19222007'>19222007</a>. Reason: U-turn restriction is not on U-turn</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/13739276'>13739276</a>. Reason: No from edge found</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/12290511'>12290511</a>. Reason: Left turn restriction is not on edges which turn left</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/13739278'>13739278</a>. Reason: No from edge found</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/14718851'>14718851</a>. Reason: Left turn restriction is not on edges which turn left</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/14214105'>14214105</a>. Reason: Left turn restriction is not on edges which turn left</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/13048312'>13048312</a>. Reason: Left turn restriction is not on edges which turn left</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/15768434'>15768434</a>. Reason: Left turn restriction is not on edges which turn left</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/1853619'>1853619</a>. Reason: Left turn restriction is not on edges which turn left</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/7626133'>7626133</a>. Reason: U-turn restriction is not on U-turn</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/1269943'>1269943</a>. Reason: Left turn restriction is not on edges which turn left</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/7830579'>7830579</a>. Reason: U-turn restriction is not on U-turn</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/16730273'>16730273</a>. Reason: Left turn restriction is not on edges which turn left</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/15834628'>15834628</a>. Reason: Left turn restriction is not on edges which turn left</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/11016113'>11016113</a>. Reason: No from edge found</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/18903573'>18903573</a>. Reason: Left turn restriction is not on edges which turn left</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/18581157'>18581157</a>. Reason: Left turn restriction is not on edges which turn left</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/7632409'>7632409</a>. Reason: U-turn restriction is not on U-turn</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/7632413'>7632413</a>. Reason: No from edge found</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/1721090'>1721090</a>. Reason: No from edge found</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/7627002'>7627002</a>. Reason: U-turn restriction is not on U-turn</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/4588142'>4588142</a>. Reason: No from edge found</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/13077478'>13077478</a>. Reason: Left turn restriction is not on edges which turn left</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/15349319'>15349319</a>. Reason: Left turn restriction is not on edges which turn left</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/16384721'>16384721</a>. Reason: No to edge found</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/7713285'>7713285</a>. Reason: No from edge found</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/15058196'>15058196</a>. Reason: Left turn restriction is not on edges which turn left</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/14239336'>14239336</a>. Reason: Left turn restriction is not on edges which turn left</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/15312962'>15312962</a>. Reason: Left turn restriction is not on edges which turn left</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/14696507'>14696507</a>. Reason: Left turn restriction is not on edges which turn left</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/659671'>659671</a>. Reason: No from edge found</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/15431950'>15431950</a>. Reason: Left turn restriction is not on edges which turn left</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/15034143'>15034143</a>. Reason: Left turn restriction is not on edges which turn left</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/15034142'>15034142</a>. Reason: Left turn restriction is not on edges which turn left</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/10873888'>10873888</a>. Reason: Left turn restriction is not on edges which turn left</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/10022269'>10022269</a>. Reason: No from edge found</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/13739272'>13739272</a>. Reason: Straight turn restriction is not on edges which go straight</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/13739124'>13739124</a>. Reason: No from edge found</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/3307678'>3307678</a>. Reason: No from edge found</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/12713417'>12713417</a>. Reason: U-turn restriction is not on U-turn</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/12933211'>12933211</a>. Reason: Left turn restriction is not on edges which turn left</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/14661434'>14661434</a>. Reason: Left turn restriction is not on edges which turn left</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/14725979'>14725979</a>. Reason: Left turn restriction is not on edges which turn left</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/16763353'>16763353</a>. Reason: Left turn restriction is not on edges which turn left</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/10022251'>10022251</a>. Reason: No from edge found</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/13738942'>13738942</a>. Reason: Straight turn restriction is not on edges which go straight</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/7484632'>7484632</a>. Reason: Left turn restriction is not on edges which turn left</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/7796975'>7796975</a>. Reason: Left turn restriction is not on edges which turn left</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/12726465'>12726465</a>. Reason: Left turn restriction is not on edges which turn left</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/16783141'>16783141</a>. Reason: Left turn restriction is not on edges which turn left</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/17149371'>17149371</a>. Reason: Left turn restriction is not on edges which turn left</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/14876313'>14876313</a>. Reason: Left turn restriction is not on edges which turn left</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/8077610'>8077610</a>. Reason: No to edge found</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/1615609'>1615609</a>. Reason: Left turn restriction is not on edges which turn left</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/16025058'>16025058</a>. Reason: Left turn restriction is not on edges which turn left</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/11685851'>11685851</a>. Reason: Left turn restriction is not on edges which turn left</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/5471799'>5471799</a>. Reason: Right turn restriction is not on edges which turn right</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/7631861'>7631861</a>. Reason: U-turn restriction is not on U-turn</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/7631860'>7631860</a>. Reason: No from edge found</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/7895732'>7895732</a>. Reason: Left turn restriction is not on edges which turn left</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/7895729'>7895729</a>. Reason: Left turn restriction is not on edges which turn left</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/14725974'>14725974</a>. Reason: Left turn restriction is not on edges which turn left</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/7628455'>7628455</a>. Reason: U-turn restriction is not on U-turn</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/4664612'>4664612</a>. Reason: from-edge is null</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/17407327'>17407327</a>. Reason: Left turn restriction is not on edges which turn left</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/13024648'>13024648</a>. Reason: Left turn restriction is not on edges which turn left</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/4400362'>4400362</a>. Reason: U-turn restriction is not on U-turn</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/14192006'>14192006</a>. Reason: Left turn restriction is not on edges which turn left</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/17149320'>17149320</a>. Reason: Left turn restriction is not on edges which turn left</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/5734087'>5734087</a>. Reason: No from edge found</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/14735659'>14735659</a>. Reason: Left turn restriction is not on edges which turn left</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/18924794'>18924794</a>. Reason: Left turn restriction is not on edges which turn left</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/12757788'>12757788</a>. Reason: Left turn restriction is not on edges which turn left</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/7359860'>7359860</a>. Reason: No from edge found</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/7359861'>7359861</a>. Reason: No from edge found</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/1635981'>1635981</a>. Reason: Straight turn restriction is not on edges which go straight</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/17292651'>17292651</a>. Reason: Left turn restriction is not on edges which turn left</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/7687574'>7687574</a>. Reason: Left turn restriction is not on edges which turn left</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/13245149'>13245149</a>. Reason: Left turn restriction is not on edges which turn left</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/17001027'>17001027</a>. Reason: Left turn restriction is not on edges which turn left</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/7329003'>7329003</a>. Reason: Left turn restriction is not on edges which turn left</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/7329002'>7329002</a>. Reason: Left turn restriction is not on edges which turn left</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/7328995'>7328995</a>. Reason: Left turn restriction is not on edges which turn left</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/17406683'>17406683</a>. Reason: Left turn restriction is not on edges which turn left</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/7799202'>7799202</a>. Reason: Straight turn restriction is not on edges which go straight</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/17406681'>17406681</a>. Reason: Left turn restriction is not on edges which turn left</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/12946437'>12946437</a>. Reason: U-turn restriction is not on U-turn</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/1307501'>1307501</a>. Reason: Straight turn restriction is not on edges which go straight</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/15058195'>15058195</a>. Reason: Left turn restriction is not on edges which turn left</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/7326437'>7326437</a>. Reason: Left turn restriction is not on edges which turn left</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/5474982'>5474982</a>. Reason: Left turn restriction is not on edges which turn left</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/14733118'>14733118</a>. Reason: Left turn restriction is not on edges which turn left</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/7895736'>7895736</a>. Reason: Left turn restriction is not on edges which turn left</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/1740019'>1740019</a>. Reason: to-edge is null</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/15079473'>15079473</a>. Reason: Left turn restriction is not on edges which turn left</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/9525455'>9525455</a>. Reason: No to edge found</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/14077109'>14077109</a>. Reason: Left turn restriction is not on edges which turn left</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/7895734'>7895734</a>. Reason: Left turn restriction is not on edges which turn left</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/7415379'>7415379</a>. Reason: Left turn restriction is not on edges which turn left</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/17066015'>17066015</a>. Reason: Left turn restriction is not on edges which turn left</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/13738939'>13738939</a>. Reason: Straight turn restriction is not on edges which go straight</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/7631862'>7631862</a>. Reason: U-turn restriction is not on U-turn</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/13739062'>13739062</a>. Reason: No from edge found</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/14732043'>14732043</a>. Reason: Left turn restriction is not on edges which turn left</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/14732042'>14732042</a>. Reason: Left turn restriction is not on edges which turn left</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/14879241'>14879241</a>. Reason: Left turn restriction is not on edges which turn left</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/7796978'>7796978</a>. Reason: Left turn restriction is not on edges which turn left</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/5259200'>5259200</a>. Reason: No from edge found</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/5528566'>5528566</a>. Reason: U-turn restriction is not on U-turn</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/19683697'>19683697</a>. Reason: Left turn restriction is not on edges which turn left</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/1621088'>1621088</a>. Reason: Straight turn restriction is not on edges which go straight</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/16753397'>16753397</a>. Reason: Left turn restriction is not on edges which turn left</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/16848591'>16848591</a>. Reason: Left turn restriction is not on edges which turn left</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/16755120'>16755120</a>. Reason: Left turn restriction is not on edges which turn left</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/17149370'>17149370</a>. Reason: Left turn restriction is not on edges which turn left</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/14720738'>14720738</a>. Reason: No from edge found</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/14720737'>14720737</a>. Reason: No from edge found</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/14720736'>14720736</a>. Reason: No from edge found</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/14720735'>14720735</a>. Reason: No from edge found</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/13739277'>13739277</a>. Reason: No from edge found</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/15622726'>15622726</a>. Reason: Left turn restriction is not on edges which turn left</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/15058193'>15058193</a>. Reason: Left turn restriction is not on edges which turn left</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/1279651'>1279651</a>. Reason: Left turn restriction is not on edges which turn left</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/7632406'>7632406</a>. Reason: No from edge found</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/17648831'>17648831</a>. Reason: Left turn restriction is not on edges which turn left</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/5259192'>5259192</a>. Reason: Straight turn restriction is not on edges which go straight</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/7329001'>7329001</a>. Reason: Left turn restriction is not on edges which turn left</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/7328998'>7328998</a>. Reason: Left turn restriction is not on edges which turn left</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/4217641'>4217641</a>. Reason: Left turn restriction is not on edges which turn left</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/7687528'>7687528</a>. Reason: Left turn restriction is not on edges which turn left</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/14705942'>14705942</a>. Reason: Left turn restriction is not on edges which turn left</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/15607778'>15607778</a>. Reason: Left turn restriction is not on edges which turn left</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/7657742'>7657742</a>. Reason: No from edge found</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/14167051'>14167051</a>. Reason: U-turn restriction is not on U-turn</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/17537996'>17537996</a>. Reason: Left turn restriction is not on edges which turn left</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/1252230'>1252230</a>. Reason: Straight turn restriction is not on edges which go straight</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/10059292'>10059292</a>. Reason: No from edge found</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/14887429'>14887429</a>. Reason: Left turn restriction is not on edges which turn left</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/14939054'>14939054</a>. Reason: Left turn restriction is not on edges which turn left</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/7323067'>7323067</a>. Reason: U-turn restriction is not on U-turn</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/7982611'>7982611</a>. Reason: Left turn restriction is not on edges which turn left</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/7982610'>7982610</a>. Reason: Left turn restriction is not on edges which turn left</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/11685853'>11685853</a>. Reason: Left turn restriction is not on edges which turn left</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/11685852'>11685852</a>. Reason: Left turn restriction is not on edges which turn left</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/7687530'>7687530</a>. Reason: Left turn restriction is not on edges which turn left</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/1732768'>1732768</a>. Reason: Straight turn restriction is not on edges which go straight</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/16699841'>16699841</a>. Reason: Left turn restriction is not on edges which turn left</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/7323073'>7323073</a>. Reason: No from edge found</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/17506374'>17506374</a>. Reason: U-turn restriction is not on U-turn</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/13234433'>13234433</a>. Reason: Left turn restriction is not on edges which turn left</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/14694514'>14694514</a>. Reason: Left turn restriction is not on edges which turn left</li>
+<li>Bad turn restriction at relation <a href='http://www.openstreetmap.org/relation/14162296'>14162296</a>. Reason: Left turn restriction is not on edges which turn left</li>
+</ul>
+</body></html>

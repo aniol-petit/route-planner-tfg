@@ -1,0 +1,200 @@
+{
+  "type" : "FeatureCollection",
+  "features" : [ {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unlinked stops from pruned walk subgraph osm:node:665895987 of 1 street vertices and 1 stops 2:000200403018. Edge changes: 0 to nothru, 0 to no walking, 1 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.10848,49.614178],[6.108458,49.614387]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-56a7"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unlinked stops from pruned walk subgraph osm:node:7077427741 of 1 street vertices and 1 stops 2:000200409007. Edge changes: 0 to nothru, 0 to no walking, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.134299,49.63505],[6.134256,49.635082]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-56a8"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unlinked stops from pruned walk subgraph split_1783 of 2 street vertices and 1 stops 2:000190703004. Edge changes: 0 to nothru, 0 to no walking, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[5.945398,49.67954],[5.945398,49.67954],[5.945418,49.679479]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-56a9"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unlinked stops from pruned walk subgraph split_2054 of 2 street vertices and 1 stops 2:000220301034. Edge changes: 0 to nothru, 0 to no walking, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.090844,49.483253],[6.090844,49.483253],[6.090839,49.483279]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-56aa"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unlinked stops from pruned walk subgraph osm:node:11240567780 of 2 street vertices and 1 stops 2:000300000133. Edge changes: 0 to nothru, 2 to no walking, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[5.887877,49.638795],[5.900037,49.637721],[5.886967,49.638642]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-56ab"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unlinked stops from pruned walk subgraph split_372 of 2 street vertices and 1 stops 2:000200405025. Edge changes: 0 to nothru, 0 to no walking, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.125003,49.610483],[6.125003,49.610483],[6.125013,49.610454]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-56ac"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unlinked stops from pruned walk subgraph osm:node:2352285469 of 2 street vertices and 1 stops 2:000180703003. Edge changes: 0 to nothru, 0 to no walking, 2 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.499241,49.713102],[6.499058,49.713042],[6.499241,49.713103]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-56ad"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unlinked stops from pruned walk subgraph split_2512 of 2 street vertices and 1 stops 2:000200412025. Edge changes: 0 to nothru, 0 to no walking, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.127798,49.58496],[6.127798,49.58496],[6.127801,49.584947]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-56ae"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unlinked stops from pruned walk subgraph split_3992 of 2 street vertices and 1 stops 2:000140401014. Edge changes: 0 to nothru, 0 to no walking, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.171756,49.878138],[6.171756,49.878138],[6.171756,49.87813]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-56af"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unlinked stops from pruned walk subgraph split_4974 of 2 street vertices and 1 stops 2:000200417050. Edge changes: 0 to nothru, 0 to no walking, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.174749,49.636365],[6.174749,49.636365],[6.174766,49.636375]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-56b0"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unlinked stops from pruned walk subgraph split_4236 of 2 street vertices and 1 stops 2:000170804004. Edge changes: 0 to nothru, 0 to no walking, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.256633,49.805649],[6.256633,49.805649],[6.256601,49.805719]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-56b1"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unlinked stops from pruned walk subgraph osm:node:7038111226 of 3 street vertices and 1 stops 2:000200409006. Edge changes: 0 to nothru, 0 to no walking, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.153075,49.640144],[6.153069,49.64015],[6.153075,49.640144],[6.153049,49.640134]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-56b2"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unlinked stops from pruned walk subgraph osm:node:2007461433 of 3 street vertices and 1 stops 2:000200403021. Edge changes: 0 to nothru, 0 to no walking, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.102707,49.615834],[6.102707,49.615834],[6.10271,49.615841],[6.102653,49.615843]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-56b3"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unlinked stops from pruned walk subgraph osm:node:7952382960 of 4 street vertices and 1 stops 2:000140401005. Edge changes: 0 to nothru, 6 to no walking, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.169594,49.868775],[6.16993,49.868692],[6.171439,49.868712],[6.169922,49.86877],[6.172068,49.868736]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-56b4"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unlinked stops from pruned walk subgraph osm:node:6177413944 of 4 street vertices and 1 stops 2:000200419021. Edge changes: 0 to nothru, 0 to no walking, 4 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.115183,49.624789],[6.115183,49.624789],[6.115021,49.624981],[6.115378,49.624557],[6.115168,49.624784]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-56b5"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unlinked stops from pruned walk subgraph osm:node:3852489005 of 4 street vertices and 1 stops 2:000220402132. Edge changes: 0 to nothru, 2 to no walking, 2 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[5.978886,49.506942],[5.978898,49.506711],[5.978898,49.506711],[5.979125,49.506554],[5.97887,49.506704]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-56b6"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unlinked stops from pruned walk subgraph osm:node:5700636642 of 5 street vertices and 1 stops 2:000220301018. Edge changes: 0 to nothru, 0 to no walking, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.087479,49.492161],[6.088094,49.491963],[6.08716,49.491986],[6.087522,49.492038],[6.088094,49.491963],[6.0881,49.491982]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-56b7"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unlinked stops from pruned walk subgraph osm:node:7972844144 of 6 street vertices and 1 stops 2:000200405058. Edge changes: 0 to nothru, 0 to no walking, 10 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.130442,49.604268],[6.130853,49.603857],[6.130803,49.603839],[6.130673,49.604071],[6.130492,49.604286],[6.130673,49.604071],[6.130704,49.604082]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-56b8"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unlinked stops from pruned walk subgraph osm:node:2239582865 of 6 street vertices and 1 stops 1:LUX. Edge changes: 0 to nothru, 0 to no walking, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.204274,49.622692],[6.187436,49.616502],[6.204274,49.622692],[6.191026,49.617849],[6.190376,49.618586],[6.191246,49.617597],[6.204444,49.623333]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-56b9"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unlinked stops from pruned walk subgraph osm:node:7702388697 of 6 street vertices and 1 stops 2:000130106004. Edge changes: 0 to nothru, 0 to no walking, 10 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.176853,49.95412],[6.176812,49.954297],[6.176835,49.954354],[6.176796,49.95437],[6.176883,49.95415],[6.176812,49.954297],[6.176803,49.954296]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-56ba"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unlinked stops from pruned walk subgraph osm:node:5442902343:way:643116838 of 7 street vertices and 1 stops 2:000200417052. Edge changes: 0 to nothru, 0 to no walking, 12 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.176085,49.635693],[6.175677,49.635281],[6.175861,49.635437],[6.175861,49.635437],[6.176047,49.635706],[6.175722,49.635266],[6.175882,49.635463],[6.175902,49.635423]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-56bb"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unlinked stops from pruned walk subgraph osm:node:9350466813 of 7 street vertices and 1 stops 2:000200404031. Edge changes: 0 to nothru, 0 to no walking, 12 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.138766,49.590073],[6.138515,49.59066],[6.13866,49.590321],[6.138586,49.590671],[6.13866,49.590321],[6.138834,49.590084],[6.138597,49.590646],[6.138694,49.590327]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-56bc"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unlinked stops from pruned walk subgraph osm:node:-100076 of 9 street vertices and 1 stops 2:000180703008. Edge changes: 0 to nothru, 10 to no walking, 6 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.490708,49.72576],[6.490565,49.725451],[6.490708,49.72576],[6.489789,49.724822],[6.490679,49.725403],[6.490915,49.726014],[6.490455,49.725498],[6.490565,49.725451],[6.490344,49.725385],[6.49078,49.725731]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-56bd"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unlinked stops from pruned walk subgraph osm:node:7041887288 of 10 street vertices and 1 stops 2:000140701022. Edge changes: 0 to nothru, 0 to no walking, 18 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.107767,49.847945],[6.106508,49.846989],[6.107767,49.847945],[6.108148,49.848235],[6.106211,49.846795],[6.108967,49.848862],[6.107652,49.847858],[6.106042,49.846699],[6.105988,49.846751],[6.108854,49.848923],[6.107725,49.847968]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-56be"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unlinked stops from pruned walk subgraph osm:node:8835910264 of 12 street vertices and 1 stops 2:000160802003. Edge changes: 0 to nothru, 14 to no walking, 6 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.166615,49.700059],[6.166575,49.700146],[6.166503,49.699523],[6.166527,49.699429],[6.166527,49.699429],[6.166404,49.699779],[6.166721,49.699965],[6.166396,49.699517],[6.166765,49.70003],[6.167323,49.700196],[6.166796,49.699175],[6.167797,49.700408],[6.166595,49.699436]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-56bf"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unlinked stops from pruned walk subgraph osm:node:6071617259 of 14 street vertices and 1 stops 2:000220402046. Edge changes: 0 to nothru, 0 to no walking, 26 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[5.98718,49.495281],[5.987227,49.495253],[5.984444,49.493361],[5.984981,49.493747],[5.985154,49.493872],[5.984516,49.493412],[5.984527,49.493313],[5.98605,49.494531],[5.985154,49.493872],[5.985429,49.494069],[5.98542,49.494075],[5.985445,49.494096],[5.986097,49.494503],[5.98537,49.494027],[5.985087,49.493911]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-56c0"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unlinked stops from pruned walk subgraph osm:node:1852192070 of 14 street vertices and 1 stops 2:000200405039. Edge changes: 0 to nothru, 0 to no walking, 26 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.134481,49.603238],[6.134441,49.603042],[6.134424,49.602998],[6.13418,49.603068],[6.134448,49.603074],[6.134172,49.603117],[6.134212,49.603046],[6.134167,49.603082],[6.134271,49.603168],[6.134333,49.603196],[6.134163,49.6031],[6.134195,49.603135],[6.134478,49.603263],[6.134271,49.603168],[6.134332,49.603111]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-56c1"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unlinked stops from pruned walk subgraph osm:node:4892148057 of 25 street vertices and 1 stops 2:000200404026. Edge changes: 0 to nothru, 0 to no walking, 48 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.138081,49.597005],[6.137766,49.59687],[6.137802,49.596983],[6.137931,49.596733],[6.13818,49.596864],[6.138003,49.597107],[6.138004,49.597104],[6.13779,49.596982],[6.137755,49.597011],[6.137822,49.596996],[6.137778,49.596983],[6.137767,49.596987],[6.137825,49.597008],[6.137754,49.597002],[6.137605,49.596975],[6.138169,49.596911],[6.137821,49.596993],[6.137814,49.597022],[6.137759,49.596993],[6.137822,49.596996],[6.137822,49.597016],[6.138069,49.596804],[6.138137,49.596839],[6.137825,49.597001],[6.137812,49.596987],[6.137847,49.59699]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-56c2"
+  } ]
+}

@@ -1,0 +1,2923 @@
+{
+  "type" : "FeatureCollection",
+  "features" : [ {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:5855988293 containing vertex '{osm:node:5855988293 lat,lng=49.6272816,6.1108082}' at (6.110808, 49.627282) of 1 street vertices and 0 stops. Edge changes: 0 to nothru, 3 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.110808,49.627282]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-56c3"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:262664336 containing vertex '{osm:node:262664336 lat,lng=49.505529100000004,6.3689748}' at (6.368975, 49.505529) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 3 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.368975,49.505529],[6.367986,49.505593]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-56c4"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:25685887 containing vertex '{osm:node:25685887 lat,lng=49.5979831,6.3734123}' at (6.373412, 49.597983) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.373412,49.597983],[6.37544,49.596454]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-56c5"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:7927708841 containing vertex '{osm:node:7927708841 lat,lng=49.8798405,6.1432598}' at (6.143260, 49.879841) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.14326,49.879841],[6.143317,49.879999]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-56c6"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:7927708837 containing vertex '{osm:node:7927708837 lat,lng=49.8801817,6.142968000000001}' at (6.142968, 49.880182) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.142968,49.880182],[6.143614,49.880046]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-56c7"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:2519685304 containing vertex '{osm:node:2519685304 lat,lng=49.514894600000005,6.0179231}' at (6.017923, 49.514895) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 0 to no traversal, 2 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.017923,49.514895],[6.017984,49.514826]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-56c8"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:9062823200 containing vertex '{osm:node:9062823200 lat,lng=49.891542900000005,6.2241076}' at (6.224108, 49.891543) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.224108,49.891543],[6.224664,49.891349]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-56c9"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:262664341 containing vertex '{osm:node:262664341 lat,lng=49.505173000000006,6.3694294000000005}' at (6.369429, 49.505173) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.369429,49.505173],[6.368103,49.504992]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-56ca"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:8068765271 containing vertex '{osm:node:8068765271 lat,lng=49.8697208,6.165100300000001}' at (6.165100, 49.869721) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.1651,49.869721],[6.165582,49.869632]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-56cb"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:7948709036 containing vertex '{osm:node:7948709036 lat,lng=49.827826,6.2191092}' at (6.219109, 49.827826) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.219109,49.827826],[6.219323,49.82791]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-56cc"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:8679548995 containing vertex '{osm:node:8679548995 lat,lng=49.5246634,6.2616167}' at (6.261617, 49.524663) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.261617,49.524663],[6.261881,49.524517]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-56cd"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:8428956285 containing vertex '{osm:node:8428956285 lat,lng=49.863754500000006,6.1011457}' at (6.101146, 49.863755) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.101146,49.863755],[6.102508,49.864084]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-56ce"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:3028807365 containing vertex '{osm:node:3028807365 lat,lng=49.71044130000001,6.166352900000001}' at (6.166353, 49.710441) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 3 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.166353,49.710441],[6.170068,49.710769]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-56cf"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:3307180991 containing vertex '{osm:node:3307180991 lat,lng=49.8561412,6.185671500000001}' at (6.185672, 49.856141) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 3 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.185672,49.856141],[6.185755,49.855879]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-56d0"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:3339683505 containing vertex '{osm:node:3339683505 lat,lng=49.562011600000005,6.1423474}' at (6.142347, 49.562012) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 0 to no traversal, 2 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.142347,49.562012],[6.142807,49.561945]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-56d1"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:2564793341 containing vertex '{osm:node:2564793341 lat,lng=49.917066000000005,5.8961217}' at (5.896122, 49.917066) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[5.896122,49.917066],[5.896265,49.917036]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-56d2"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:7294915374 containing vertex '{osm:node:7294915374 lat,lng=49.4979449,6.0464133}' at (6.046413, 49.497945) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.046413,49.497945],[6.045411,49.498281]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-56d3"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:4652990755 containing vertex '{osm:node:4652990755 lat,lng=49.5038166,6.0963545}' at (6.096355, 49.503817) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 0 to no traversal, 1 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.096355,49.503817],[6.096287,49.503601]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-56d4"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:4652990744 containing vertex '{osm:node:4652990744 lat,lng=49.503529500000006,6.097255700000001}' at (6.097256, 49.503530) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 0 to no traversal, 1 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.097256,49.50353],[6.097255,49.503715]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-56d5"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:4200589361 containing vertex '{osm:node:4200589361 lat,lng=49.8138578,5.9071872}' at (5.907187, 49.813858) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[5.907187,49.813858],[5.908158,49.813757]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-56d6"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:13094030683 containing vertex '{osm:node:13094030683 lat,lng=50.024508000000004,6.091234200000001}' at (6.091234, 50.024508) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.091234,50.024508],[6.091431,50.02383]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-56d7"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:4213572235 containing vertex '{osm:node:4213572235 lat,lng=49.5622745,6.1243039}' at (6.124304, 49.562275) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.124304,49.562275],[6.123537,49.563258]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-56d8"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:3330153430 containing vertex '{osm:node:3330153430 lat,lng=49.487445,6.3567697}' at (6.356770, 49.487445) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.35677,49.487445],[6.356773,49.486891]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-56d9"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:8438300219 containing vertex '{osm:node:8438300219 lat,lng=50.039889,5.9362516}' at (5.936252, 50.039889) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[5.936252,50.039889],[5.937735,50.039628]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-56da"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:3248912124 containing vertex '{osm:node:3248912124 lat,lng=49.5283298,5.9343503}' at (5.934350, 49.528330) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[5.93435,49.52833],[5.934181,49.528815]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-56db"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:7596300351 containing vertex '{osm:node:7596300351 lat,lng=49.7220317,6.1431009}' at (6.143101, 49.722032) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.143101,49.722032],[6.144123,49.722046]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-56dc"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:8608715152 containing vertex '{osm:node:8608715152 lat,lng=49.6668492,6.0800931}' at (6.080093, 49.666849) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.080093,49.666849],[6.080868,49.666223]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-56dd"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:5228114272 containing vertex '{osm:node:5228114272 lat,lng=49.645036600000005,6.1394584000000005}' at (6.139458, 49.645037) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.139458,49.645037],[6.140254,49.64444]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-56de"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:1825964341 containing vertex '{osm:node:1825964341 lat,lng=49.5491942,6.0116525}' at (6.011653, 49.549194) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 0 to no traversal, 2 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.011653,49.549194],[6.011549,49.549191]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-56df"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:8428892936 containing vertex '{osm:node:8428892936 lat,lng=49.888634,6.11028}' at (6.110280, 49.888634) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.11028,49.888634],[6.109799,49.888799]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-56e0"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:9280306354 containing vertex '{osm:node:9280306354 lat,lng=49.483541900000006,6.106328400000001}' at (6.106328, 49.483542) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.106328,49.483542],[6.106317,49.483241]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-56e1"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:1834909641 containing vertex '{osm:node:1834909641 lat,lng=49.903215100000004,6.0836437000000005}' at (6.083644, 49.903215) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.083644,49.903215],[6.083615,49.903258]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-56e2"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:9120910834 containing vertex '{osm:node:9120910834 lat,lng=49.5088148,6.3600306}' at (6.360031, 49.508815) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 0 to no traversal, 2 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.360031,49.508815],[6.357561,49.508691]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-56e3"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:847133020 containing vertex '{osm:node:847133020 lat,lng=50.056535200000006,6.024250800000001}' at (6.024251, 50.056535) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.024251,50.056535],[6.023592,50.056377]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-56e4"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:6429180976 containing vertex '{osm:node:6429180976 lat,lng=49.708356200000004,6.1437489}' at (6.143749, 49.708356) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.143749,49.708356],[6.143607,49.70828]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-56e5"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:314960508 containing vertex '{osm:node:314960508 lat,lng=49.715451,6.107918300000001}' at (6.107918, 49.715451) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.107918,49.715451],[6.105848,49.715602]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-56e6"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:3200610616 containing vertex '{osm:node:3200610616 lat,lng=49.733857500000006,6.26698}' at (6.266980, 49.733858) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 0 to no traversal, 2 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.26698,49.733858],[6.26834,49.73422]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-56e7"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:3200610634 containing vertex '{osm:node:3200610634 lat,lng=49.735041900000006,6.2660907}' at (6.266091, 49.735042) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 0 to no traversal, 2 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.266091,49.735042],[6.263414,49.733389]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-56e8"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:3200610653 containing vertex '{osm:node:3200610653 lat,lng=49.73566640000001,6.2665489}' at (6.266549, 49.735666) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 0 to no traversal, 2 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.266549,49.735666],[6.268649,49.735821]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-56e9"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:4795511328 containing vertex '{osm:node:4795511328 lat,lng=49.6918237,6.3297561}' at (6.329756, 49.691824) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 0 to no traversal, 2 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.329756,49.691824],[6.3287,49.691747]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-56ea"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:8935302797 containing vertex '{osm:node:8935302797 lat,lng=49.700355,6.179102100000001}' at (6.179102, 49.700355) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.179102,49.700355],[6.177955,49.699983]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-56eb"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:4199896763 containing vertex '{osm:node:4199896763 lat,lng=49.8577935,5.981826300000001}' at (5.981826, 49.857794) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[5.981826,49.857793],[5.980462,49.859283]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-56ec"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:3326427280 containing vertex '{osm:node:3326427280 lat,lng=49.889448400000006,5.9731188}' at (5.973119, 49.889448) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[5.973119,49.889448],[5.973694,49.889068]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-56ed"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:358992807 containing vertex '{osm:node:358992807 lat,lng=49.9008284,6.1721411}' at (6.172141, 49.900828) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.172141,49.900828],[6.17067,49.901689]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-56ee"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:8302473991 containing vertex '{osm:node:8302473991 lat,lng=49.976006500000004,5.8708171}' at (5.870817, 49.976007) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[5.870817,49.976007],[5.869964,49.976468]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-56ef"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:8071797342 containing vertex '{osm:node:8071797342 lat,lng=49.8567802,6.127782300000001}' at (6.127782, 49.856780) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.127782,49.85678],[6.129596,49.857085]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-56f0"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:2587211202 containing vertex '{osm:node:2587211202 lat,lng=49.628198100000006,5.887895400000001}' at (5.887895, 49.628198) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 0 to no traversal, 2 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[5.887895,49.628198],[5.887911,49.628236]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-56f1"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:6739124135 containing vertex '{osm:node:6739124135 lat,lng=49.5535202,6.019939900000001}' at (6.019940, 49.553520) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.01994,49.55352],[6.021019,49.553617]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-56f2"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:8168787406 containing vertex '{osm:node:8168787406 lat,lng=50.0154203,5.849359000000001}' at (5.849359, 50.015420) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[5.849359,50.01542],[5.848956,50.015436]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-56f3"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:3232098062 containing vertex '{osm:node:3232098062 lat,lng=49.5306755,6.283984200000001}' at (6.283984, 49.530676) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.283984,49.530676],[6.284699,49.530335]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-56f4"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:6336372710 containing vertex '{osm:node:6336372710 lat,lng=49.633164900000004,5.8947471}' at (5.894747, 49.633165) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 3 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[5.894747,49.633165],[5.894234,49.633202]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-56f5"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:7811187182 containing vertex '{osm:node:7811187182 lat,lng=49.703532900000006,6.2241948}' at (6.224195, 49.703533) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.224195,49.703533],[6.224716,49.703373]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-56f6"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:12639398928 containing vertex '{osm:node:12639398928 lat,lng=49.4841027,6.0276934}' at (6.027693, 49.484103) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.027693,49.484103],[6.027452,49.483738]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-56f7"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:8434085650 containing vertex '{osm:node:8434085650 lat,lng=49.9678162,6.0485356}' at (6.048536, 49.967816) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.048536,49.967816],[6.047963,49.967638]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-56f8"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:8243771768 containing vertex '{osm:node:8243771768 lat,lng=49.8784623,6.1404318}' at (6.140432, 49.878462) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.140432,49.878462],[6.139617,49.878508]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-56f9"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:5194956901 containing vertex '{osm:node:5194956901 lat,lng=49.5613712,6.1790032}' at (6.179003, 49.561371) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 0 to no traversal, 2 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.179003,49.561371],[6.179046,49.561395]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-56fa"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:4638854929 containing vertex '{osm:node:4638854929 lat,lng=49.679647200000005,5.880043400000001}' at (5.880043, 49.679647) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[5.880043,49.679647],[5.880165,49.680016]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-56fb"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:8013480039 containing vertex '{osm:node:8013480039 lat,lng=50.0906328,6.1046157}' at (6.104616, 50.090633) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.104616,50.090633],[6.104256,50.090569]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-56fc"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:11079014595 containing vertex '{osm:node:11079014595 lat,lng=49.8020702,6.0908832}' at (6.090883, 49.802070) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.090883,49.80207],[6.091566,49.802028]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-56fd"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:9426500936 containing vertex '{osm:node:9426500936 lat,lng=50.034857800000005,6.0337151}' at (6.033715, 50.034858) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.033715,50.034858],[6.033111,50.0343]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-56fe"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:9088325519 containing vertex '{osm:node:9088325519 lat,lng=49.6101764,5.9559388}' at (5.955939, 49.610176) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[5.955939,49.610176],[5.955022,49.609052]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-56ff"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:7485527749 containing vertex '{osm:node:7485527749 lat,lng=49.9528825,6.063481800000001}' at (6.063482, 49.952883) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.063482,49.952883],[6.063366,49.952755]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5700"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:7530109681 containing vertex '{osm:node:7530109681 lat,lng=49.706819200000005,6.0576537}' at (6.057654, 49.706819) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.057654,49.706819],[6.057584,49.707046]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5701"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:2209675431 containing vertex '{osm:node:2209675431 lat,lng=49.504229900000006,5.9475081}' at (5.947508, 49.504230) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 0 to no traversal, 2 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[5.947508,49.50423],[5.947806,49.504654]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5702"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:8500577001 containing vertex '{osm:node:8500577001 lat,lng=49.827724200000006,6.0943021}' at (6.094302, 49.827724) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.094302,49.827724],[6.09441,49.827663]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5703"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:6185812868 containing vertex '{osm:node:6185812868 lat,lng=49.50777050000001,5.9970034000000005}' at (5.997003, 49.507771) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 0 to no traversal, 2 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[5.997003,49.507771],[5.997799,49.507008]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5704"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:8149304542 containing vertex '{osm:node:8149304542 lat,lng=49.9357886,6.2178722}' at (6.217872, 49.935789) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.217872,49.935789],[6.218172,49.935947]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5705"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:8149304560 containing vertex '{osm:node:8149304560 lat,lng=49.9355515,6.218975100000001}' at (6.218975, 49.935552) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.218975,49.935552],[6.219315,49.935226]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5706"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:9972749575 containing vertex '{osm:node:9972749575 lat,lng=49.5253025,5.9683054}' at (5.968305, 49.525303) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[5.968305,49.525303],[5.967877,49.525245]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5707"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:8068765255 containing vertex '{osm:node:8068765255 lat,lng=49.869898400000004,6.1644411}' at (6.164441, 49.869898) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.164441,49.869898],[6.164827,49.869635]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5708"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:6448528495 containing vertex '{osm:node:6448528495 lat,lng=49.699429300000006,5.9737603}' at (5.973760, 49.699429) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 0 to no traversal, 2 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[5.97376,49.699429],[5.973672,49.699553]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5709"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:428097371 containing vertex '{osm:node:428097371 lat,lng=49.7400268,6.0650687}' at (6.065069, 49.740027) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.065069,49.740027],[6.06556,49.740207]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-570a"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:4293188155 containing vertex '{osm:node:4293188155 lat,lng=49.674139100000005,5.9307986}' at (5.930799, 49.674139) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[5.930799,49.674139],[5.931466,49.673675]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-570b"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:899569973 containing vertex '{osm:node:899569973 lat,lng=49.843189200000005,6.113451700000001}' at (6.113452, 49.843189) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.113452,49.843189],[6.117446,49.844224]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-570c"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:11063302195 containing vertex '{osm:node:11063302195 lat,lng=49.7419443,6.1864789}' at (6.186479, 49.741944) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.186479,49.741944],[6.187019,49.741769]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-570d"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:7738432505 containing vertex '{osm:node:7738432505 lat,lng=50.039578500000005,6.055955900000001}' at (6.055956, 50.039579) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.055956,50.039579],[6.055822,50.039274]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-570e"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:8598062299 containing vertex '{osm:node:8598062299 lat,lng=49.9687405,5.8847364}' at (5.884736, 49.968741) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[5.884736,49.968741],[5.885623,49.968265]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-570f"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:9038455119 containing vertex '{osm:node:9038455119 lat,lng=49.7029635,6.240644100000001}' at (6.240644, 49.702964) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.240644,49.702964],[6.240377,49.703128]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5710"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:10769626927 containing vertex '{osm:node:10769626927 lat,lng=49.878237600000006,5.984853200000001}' at (5.984853, 49.878238) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 4 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[5.984853,49.878238],[5.984539,49.877965]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5711"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:433319846 containing vertex '{osm:node:433319846 lat,lng=49.5587749,6.092079900000001}' at (6.092080, 49.558775) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.09208,49.558775],[6.090379,49.556508]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5712"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:1317774316 containing vertex '{osm:node:1317774316 lat,lng=49.5256741,6.2415976}' at (6.241598, 49.525674) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.241598,49.525674],[6.238443,49.521634]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5713"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:8372037504 containing vertex '{osm:node:8372037504 lat,lng=49.826773200000005,5.8291522}' at (5.829152, 49.826773) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[5.829152,49.826773],[5.829112,49.826883]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5714"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:5832138616 containing vertex '{osm:node:5832138616 lat,lng=49.564757400000005,6.200915200000001}' at (6.200915, 49.564757) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.200915,49.564757],[6.204123,49.565037]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5715"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:5194879068 containing vertex '{osm:node:5194879068 lat,lng=49.5626862,6.1757941}' at (6.175794, 49.562686) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 0 to no traversal, 2 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.175794,49.562686],[6.175818,49.56273]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5716"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:5194879069 containing vertex '{osm:node:5194879069 lat,lng=49.5633229,6.173170900000001}' at (6.173171, 49.563323) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 0 to no traversal, 2 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.173171,49.563323],[6.173116,49.563302]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5717"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:5194879078 containing vertex '{osm:node:5194879078 lat,lng=49.559829500000006,6.179146800000001}' at (6.179147, 49.559830) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 0 to no traversal, 2 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.179147,49.55983],[6.179085,49.559785]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5718"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:5194879072 containing vertex '{osm:node:5194879072 lat,lng=49.5624879,6.182354800000001}' at (6.182355, 49.562488) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 0 to no traversal, 2 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.182355,49.562488],[6.182335,49.562516]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5719"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:5194879076 containing vertex '{osm:node:5194879076 lat,lng=49.5618946,6.1784870000000005}' at (6.178487, 49.561895) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 0 to no traversal, 2 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.178487,49.561895],[6.178491,49.561851]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-571a"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:5194879070 containing vertex '{osm:node:5194879070 lat,lng=49.562057300000006,6.177449}' at (6.177449, 49.562057) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 0 to no traversal, 2 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.177449,49.562057],[6.177488,49.562085]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-571b"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:8314382116 containing vertex '{osm:node:8314382116 lat,lng=50.034073400000004,6.0420620000000005}' at (6.042062, 50.034073) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.042062,50.034073],[6.041679,50.033961]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-571c"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:271815284 containing vertex '{osm:node:271815284 lat,lng=49.5770722,6.0296246}' at (6.029625, 49.577072) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.029625,49.577072],[6.028994,49.576849]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-571d"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:5221599589 containing vertex '{osm:node:5221599589 lat,lng=49.5938184,6.033933500000001}' at (6.033934, 49.593818) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.033934,49.593818],[6.033315,49.593828]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-571e"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:6001736497 containing vertex '{osm:node:6001736497 lat,lng=49.6415238,5.9851428}' at (5.985143, 49.641524) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 0 to no traversal, 2 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[5.985143,49.641524],[5.985116,49.64191]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-571f"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:4635445475 containing vertex '{osm:node:4635445475 lat,lng=49.645350900000004,5.911384}' at (5.911384, 49.645351) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 0 to no traversal, 2 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[5.911384,49.645351],[5.911399,49.645399]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5720"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:6001736179 containing vertex '{osm:node:6001736179 lat,lng=49.642988800000005,5.984434200000001}' at (5.984434, 49.642989) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 0 to no traversal, 2 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[5.984434,49.642989],[5.984718,49.64299]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5721"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:8950333783 containing vertex '{osm:node:8950333783 lat,lng=49.793221100000004,6.508164900000001}' at (6.508165, 49.793221) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 0 to no traversal, 2 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.508165,49.793221],[6.508255,49.793545]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5722"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:4708324159 containing vertex '{osm:node:4708324159 lat,lng=49.6762876,5.9416965}' at (5.941697, 49.676288) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[5.941696,49.676288],[5.941499,49.675921]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5723"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:5042824463 containing vertex '{osm:node:5042824463 lat,lng=49.576838200000005,5.9998344}' at (5.999834, 49.576838) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[5.999834,49.576838],[5.998542,49.575656]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5724"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:1243811487 containing vertex '{osm:node:1243811487 lat,lng=49.5848737,6.163123400000001}' at (6.163123, 49.584874) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.163123,49.584874],[6.162563,49.584368]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5725"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:8190678818 containing vertex '{osm:node:8190678818 lat,lng=49.8141102,5.8829465}' at (5.882947, 49.814110) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[5.882947,49.81411],[5.882917,49.814063]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5726"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:656088287 containing vertex '{osm:node:656088287 lat,lng=49.715836700000004,6.2188981000000005}' at (6.218898, 49.715837) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 0 to no traversal, 2 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.218898,49.715837],[6.220399,49.713959]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5727"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:799212159 containing vertex '{osm:node:799212159 lat,lng=49.7830172,6.199389}' at (6.199389, 49.783017) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.199389,49.783017],[6.197737,49.781945]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5728"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:1334011442 containing vertex '{osm:node:1334011442 lat,lng=49.7048058,6.2237616000000004}' at (6.223762, 49.704806) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.223762,49.704806],[6.223965,49.705683]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5729"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:11893197443 containing vertex '{osm:node:11893197443 lat,lng=49.993632700000006,6.0984448}' at (6.098445, 49.993633) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 3 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.098445,49.993633],[6.098984,49.994011]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-572a"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:11893197295 containing vertex '{osm:node:11893197295 lat,lng=49.9944069,6.1005288}' at (6.100529, 49.994407) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.100529,49.994407],[6.100397,49.994232]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-572b"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:8479096317 containing vertex '{osm:node:8479096317 lat,lng=49.6101849,6.0527384}' at (6.052738, 49.610185) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 4 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.052738,49.610185],[6.052737,49.609988]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-572c"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:1334518875 containing vertex '{osm:node:1334518875 lat,lng=49.8861435,6.138986500000001}' at (6.138987, 49.886144) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.138987,49.886144],[6.138875,49.886309]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-572d"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:3198830068 containing vertex '{osm:node:3198830068 lat,lng=49.6997147,6.1125813}' at (6.112581, 49.699715) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.112581,49.699715],[6.112501,49.698518]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-572e"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:5526174767 containing vertex '{osm:node:5526174767 lat,lng=49.609477600000005,6.1417444}' at (6.141744, 49.609478) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.141744,49.609478],[6.143733,49.609954]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-572f"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:7985050818 containing vertex '{osm:node:7985050818 lat,lng=49.9188929,6.2146233}' at (6.214623, 49.918893) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.214623,49.918893],[6.215939,49.91931]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5730"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:9466730585 containing vertex '{osm:node:9466730585 lat,lng=49.6899845,5.9132075}' at (5.913208, 49.689985) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 0 to no traversal, 2 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[5.913208,49.689985],[5.913118,49.690004]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5731"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:13096380293 containing vertex '{osm:node:13096380293 lat,lng=49.51485520000001,6.0771733}' at (6.077173, 49.514855) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.077173,49.514855],[6.076958,49.515839]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5732"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:7352246244 containing vertex '{osm:node:7352246244 lat,lng=49.6725286,5.9292974}' at (5.929297, 49.672529) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[5.929297,49.672529],[5.929075,49.672685]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5733"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:1356509999 containing vertex '{osm:node:1356509999 lat,lng=49.912881500000005,6.0886668}' at (6.088667, 49.912882) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.088667,49.912882],[6.088423,49.912983]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5734"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:2465167460 containing vertex '{osm:node:2465167460 lat,lng=49.608151500000005,6.1700946000000005}' at (6.170095, 49.608152) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.170095,49.608152],[6.170482,49.608486]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5735"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:314950112 containing vertex '{osm:node:314950112 lat,lng=49.7227417,6.0076077}' at (6.007608, 49.722742) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.007608,49.722742],[6.00715,49.723357]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5736"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:4436698563:way:24387542 containing vertex '{osm:node:4436698563:way:24387542 lat,lng=49.6098258,6.1322397}' at (6.132240, 49.609826) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.13224,49.609826],[6.13224,49.609826]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5737"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:3329387196 containing vertex '{osm:node:3329387196 lat,lng=49.8308167,5.8616168}' at (5.861617, 49.830817) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[5.861617,49.830817],[5.861933,49.831146]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5738"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:3240783190 containing vertex '{osm:node:3240783190 lat,lng=49.763542900000004,6.162599200000001}' at (6.162599, 49.763543) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 3 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.162599,49.763543],[6.162786,49.763265]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5739"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:836957834 containing vertex '{osm:node:836957834 lat,lng=49.93569,6.2144046}' at (6.214405, 49.935690) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.214405,49.93569],[6.215022,49.935776]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-573a"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:7903277920 containing vertex '{osm:node:7903277920 lat,lng=49.942169400000004,5.8859518}' at (5.885952, 49.942169) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[5.885952,49.942169],[5.885225,49.941504]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-573b"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:8590104625 containing vertex '{osm:node:8590104625 lat,lng=49.7101648,6.100632900000001}' at (6.100633, 49.710165) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.100633,49.710165],[6.099576,49.709983]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-573c"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:3201483936 containing vertex '{osm:node:3201483936 lat,lng=49.5624702,6.142543000000001}' at (6.142543, 49.562470) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 0 to no traversal, 2 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.142543,49.56247],[6.141857,49.562358]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-573d"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:259674732 containing vertex '{osm:node:259674732 lat,lng=49.6347018,6.0317515}' at (6.031752, 49.634702) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.031752,49.634702],[6.030891,49.63465]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-573e"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:12861482996 containing vertex '{osm:node:12861482996 lat,lng=49.507532100000006,5.9418120000000005}' at (5.941812, 49.507532) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 0 to no traversal, 2 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[5.941812,49.507532],[5.941844,49.507636]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-573f"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:12118040480 containing vertex '{osm:node:12118040480 lat,lng=49.601172600000005,6.1374779}' at (6.137478, 49.601173) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 4 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.137478,49.601173],[6.137267,49.601137]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5740"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:9674295275 containing vertex '{osm:node:9674295275 lat,lng=49.6323817,5.908161600000001}' at (5.908162, 49.632382) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[5.908162,49.632382],[5.907597,49.633328]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5741"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:276779323 containing vertex '{osm:node:276779323 lat,lng=49.546328100000004,5.973797}' at (5.973797, 49.546328) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 0 to no traversal, 2 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[5.973797,49.546328],[5.975558,49.546107]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5742"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:8752274712 containing vertex '{osm:node:8752274712 lat,lng=49.482183600000006,6.3401024}' at (6.340102, 49.482184) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.340102,49.482184],[6.339845,49.481656]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5743"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:6077176073 containing vertex '{osm:node:6077176073 lat,lng=49.621494000000006,6.086403000000001}' at (6.086403, 49.621494) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 0 to no traversal, 2 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.086403,49.621494],[6.086459,49.621579]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5744"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:7589262923 containing vertex '{osm:node:7589262923 lat,lng=49.565310200000006,6.1554001000000005}' at (6.155400, 49.565310) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 0 to no traversal, 2 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.1554,49.56531],[6.155735,49.565258]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5745"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:7770194166 containing vertex '{osm:node:7770194166 lat,lng=49.8485804,6.163755200000001}' at (6.163755, 49.848580) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.163755,49.84858],[6.16351,49.848927]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5746"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:2386999132 containing vertex '{osm:node:2386999132 lat,lng=49.874099400000006,6.166263000000001}' at (6.166263, 49.874099) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 0 to no traversal, 2 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.166263,49.874099],[6.167319,49.874038]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5747"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:8296525150 containing vertex '{osm:node:8296525150 lat,lng=49.9519997,6.0574404}' at (6.057440, 49.952000) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.05744,49.952],[6.057451,49.952241]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5748"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:1420932679 containing vertex '{osm:node:1420932679 lat,lng=49.688602,5.9164589}' at (5.916459, 49.688602) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[5.916459,49.688602],[5.916321,49.688401]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5749"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:3747164420 containing vertex '{osm:node:3747164420 lat,lng=49.557510300000004,6.0095548}' at (6.009555, 49.557510) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 0 to no traversal, 2 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.009555,49.55751],[6.009138,49.557069]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-574a"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:9700479803 containing vertex '{osm:node:9700479803 lat,lng=49.861059700000006,6.1674185}' at (6.167419, 49.861060) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 4 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.167419,49.86106],[6.167026,49.861173]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-574b"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:2040149840 containing vertex '{osm:node:2040149840 lat,lng=49.6830171,6.146616900000001}' at (6.146617, 49.683017) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.146617,49.683017],[6.147642,49.683059]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-574c"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:3610938217 containing vertex '{osm:node:3610938217 lat,lng=49.6624604,6.0977117000000005}' at (6.097712, 49.662460) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.097712,49.66246],[6.09529,49.661604]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-574d"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:7331713009 containing vertex '{osm:node:7331713009 lat,lng=49.9536882,6.1702757}' at (6.170276, 49.953688) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.170276,49.953688],[6.170776,49.954366]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-574e"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:443714252 containing vertex '{osm:node:443714252 lat,lng=49.512601100000005,6.2716460000000005}' at (6.271646, 49.512601) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.271646,49.512601],[6.275228,49.516254]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-574f"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:8378211418 containing vertex '{osm:node:8378211418 lat,lng=49.816491500000005,5.8704141000000005}' at (5.870414, 49.816492) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[5.870414,49.816492],[5.870098,49.817053]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5750"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:1135413633 containing vertex '{osm:node:1135413633 lat,lng=49.6601548,6.0104505}' at (6.010451, 49.660155) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 0 to no traversal, 2 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.010451,49.660155],[6.01035,49.66016]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5751"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:2562529340 containing vertex '{osm:node:2562529340 lat,lng=49.557463600000005,6.0093888}' at (6.009389, 49.557464) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 0 to no traversal, 2 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.009389,49.557464],[6.008993,49.557504]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5752"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:11876054295 containing vertex '{osm:node:11876054295 lat,lng=49.5835274,5.946921700000001}' at (5.946922, 49.583527) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[5.946922,49.583527],[5.946895,49.583504]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5753"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:7717077011 containing vertex '{osm:node:7717077011 lat,lng=49.5159047,6.0769564}' at (6.076956, 49.515905) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.076956,49.515905],[6.074625,49.515257]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5754"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:7563987605 containing vertex '{osm:node:7563987605 lat,lng=49.819413700000005,6.312782100000001}' at (6.312782, 49.819414) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.312782,49.819414],[6.312552,49.819272]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5755"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:4750679050 containing vertex '{osm:node:4750679050 lat,lng=49.6085926,6.1737788}' at (6.173779, 49.608593) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 0 to no traversal, 3 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.173779,49.608593],[6.173503,49.60814]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5756"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:2440632147 containing vertex '{osm:node:2440632147 lat,lng=49.678140400000004,6.0426321000000005}' at (6.042632, 49.678140) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.042632,49.67814],[6.040817,49.677538]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5757"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:9785666363 containing vertex '{osm:node:9785666363 lat,lng=49.519518600000005,6.1188099000000005}' at (6.118810, 49.519519) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 0 to no traversal, 3 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.11881,49.519519],[6.11821,49.519911]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5758"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:2061631154 containing vertex '{osm:node:2061631154 lat,lng=49.5777487,6.3188915}' at (6.318892, 49.577749) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.318892,49.577749],[6.316016,49.576884]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5759"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:3349789875 containing vertex '{osm:node:3349789875 lat,lng=49.578085300000005,6.035115}' at (6.035115, 49.578085) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.035115,49.578085],[6.034744,49.578487]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-575a"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:337283364 containing vertex '{osm:node:337283364 lat,lng=50.0182324,5.999892900000001}' at (5.999893, 50.018232) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[5.999893,50.018232],[5.999998,50.0187]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-575b"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:570861111 containing vertex '{osm:node:570861111 lat,lng=50.0215656,5.9965814}' at (5.996581, 50.021566) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[5.996581,50.021566],[5.996781,50.02168]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-575c"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:410611979 containing vertex '{osm:node:410611979 lat,lng=49.7134548,6.118808100000001}' at (6.118808, 49.713455) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.118808,49.713455],[6.118506,49.71303]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-575d"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:1839271460 containing vertex '{osm:node:1839271460 lat,lng=49.768770800000006,6.0583936000000005}' at (6.058394, 49.768771) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.058394,49.768771],[6.059429,49.768397]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-575e"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:1067017955 containing vertex '{osm:node:1067017955 lat,lng=49.6732371,5.9559134}' at (5.955913, 49.673237) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[5.955913,49.673237],[5.955613,49.673228]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-575f"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:9976720219 containing vertex '{osm:node:9976720219 lat,lng=49.690834900000006,5.9144885}' at (5.914489, 49.690835) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[5.914489,49.690835],[5.915538,49.691365]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5760"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:4696105849 containing vertex '{osm:node:4696105849 lat,lng=49.673515,5.9302209}' at (5.930221, 49.673515) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[5.930221,49.673515],[5.93045,49.673164]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5761"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:8230279731 containing vertex '{osm:node:8230279731 lat,lng=50.011348500000004,6.019689700000001}' at (6.019690, 50.011349) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.01969,50.011349],[6.01879,50.011209]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5762"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:9495965608 containing vertex '{osm:node:9495965608 lat,lng=49.699631200000006,6.1360039}' at (6.136004, 49.699631) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 0 to no traversal, 2 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.136004,49.699631],[6.13592,49.699704]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5763"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:1868609310 containing vertex '{osm:node:1868609310 lat,lng=49.6757356,6.112263700000001}' at (6.112264, 49.675736) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.112264,49.675736],[6.112268,49.675674]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5764"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:7552092391 containing vertex '{osm:node:7552092391 lat,lng=49.909485600000004,6.0643085}' at (6.064309, 49.909486) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.064309,49.909486],[6.0648,49.909689]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5765"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:321431991:way:132698488 containing vertex '{osm:node:321431991:way:132698488 lat,lng=49.813809400000004,6.420792700000001}' at (6.420793, 49.813809) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.420793,49.813809],[6.420793,49.813809]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5766"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:9200831200 containing vertex '{osm:node:9200831200 lat,lng=49.609352400000006,6.1323707}' at (6.132371, 49.609352) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 3 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.132371,49.609352],[6.132371,49.609352]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5767"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:9200831199 containing vertex '{osm:node:9200831199 lat,lng=49.6092926,6.1318859}' at (6.131886, 49.609293) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.131886,49.609293],[6.131886,49.609293]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5768"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:329999211 containing vertex '{osm:node:329999211 lat,lng=49.964751500000006,6.0262161}' at (6.026216, 49.964752) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.026216,49.964752],[6.026104,49.964846]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5769"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:25730653 containing vertex '{osm:node:25730653 lat,lng=49.598447,6.362439500000001}' at (6.362440, 49.598447) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.36244,49.598447],[6.362046,49.598271]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-576a"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:5048415135 containing vertex '{osm:node:5048415135 lat,lng=49.5651275,6.0290802}' at (6.029080, 49.565128) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.02908,49.565128],[6.029379,49.565194]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-576b"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:25728724 containing vertex '{osm:node:25728724 lat,lng=49.558098900000005,6.3218164}' at (6.321816, 49.558099) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.321816,49.558099],[6.324247,49.558604]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-576c"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:2982237945 containing vertex '{osm:node:2982237945 lat,lng=49.907490200000005,6.073310500000001}' at (6.073311, 49.907490) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.073311,49.90749],[6.072931,49.907339]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-576d"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:3661761134 containing vertex '{osm:node:3661761134 lat,lng=49.638626300000006,6.264785900000001}' at (6.264786, 49.638626) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.264786,49.638626],[6.26748,49.63888]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-576e"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:676899922 containing vertex '{osm:node:676899922 lat,lng=49.7784106,5.959360200000001}' at (5.959360, 49.778411) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[5.95936,49.778411],[5.958605,49.779022]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-576f"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:660645173 containing vertex '{osm:node:660645173 lat,lng=49.6172916,6.1391679}' at (6.139168, 49.617292) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.139168,49.617292],[6.139843,49.617309]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5770"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:1015039458 containing vertex '{osm:node:1015039458 lat,lng=49.5655553,5.9046949}' at (5.904695, 49.565555) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[5.904695,49.565555],[5.904226,49.565554]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5771"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:1404972687 containing vertex '{osm:node:1404972687 lat,lng=49.643974500000006,6.0362608}' at (6.036261, 49.643975) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.036261,49.643975],[6.035588,49.64426]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5772"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:5711596764 containing vertex '{osm:node:5711596764 lat,lng=49.492529100000006,6.0895774000000005}' at (6.089577, 49.492529) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.089577,49.492529],[6.089586,49.492194]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5773"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:2787180068 containing vertex '{osm:node:2787180068 lat,lng=49.9094811,6.0616944}' at (6.061694, 49.909481) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 3 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.061694,49.909481],[6.061801,49.909376]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5774"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:8390047915 containing vertex '{osm:node:8390047915 lat,lng=49.8278668,5.821488100000001}' at (5.821488, 49.827867) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[5.821488,49.827867],[5.818655,49.827458]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5775"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:8631436743 containing vertex '{osm:node:8631436743 lat,lng=49.512453900000004,6.103055800000001}' at (6.103056, 49.512454) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 0 to no traversal, 2 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.103056,49.512454],[6.103877,49.512288]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5776"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:1193830944 containing vertex '{osm:node:1193830944 lat,lng=49.547733300000004,6.1775525}' at (6.177553, 49.547733) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.177553,49.547733],[6.177685,49.547758]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5777"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:364499589 containing vertex '{osm:node:364499589 lat,lng=49.707064200000005,6.1461817000000005}' at (6.146182, 49.707064) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.146182,49.707064],[6.146365,49.706781]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5778"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:4345825797 containing vertex '{osm:node:4345825797 lat,lng=49.6093642,6.1399527}' at (6.139953, 49.609364) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 3 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.139953,49.609364],[6.139756,49.609314]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5779"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:13188470213 containing vertex '{osm:node:13188470213 lat,lng=49.5302208,6.1207098}' at (6.120710, 49.530221) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 0 to no traversal, 2 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.12071,49.530221],[6.120421,49.530141]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-577a"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:8050909706 containing vertex '{osm:node:8050909706 lat,lng=50.1404106,6.0155149}' at (6.015515, 50.140411) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.015515,50.140411],[6.01553,50.140862]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-577b"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:6480166816 containing vertex '{osm:node:6480166816 lat,lng=49.6514292,6.2226512000000005}' at (6.222651, 49.651429) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.222651,49.651429],[6.222657,49.651522]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-577c"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:8050910162 containing vertex '{osm:node:8050910162 lat,lng=50.148157700000006,6.017125500000001}' at (6.017126, 50.148158) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 0 to no traversal, 2 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.017126,50.148158],[6.017494,50.148675]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-577d"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:4200005866 containing vertex '{osm:node:4200005866 lat,lng=49.9056002,5.8516103}' at (5.851610, 49.905600) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[5.85161,49.9056],[5.852374,49.901478]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-577e"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:8622962750 containing vertex '{osm:node:8622962750 lat,lng=49.7445334,6.2015530000000005}' at (6.201553, 49.744533) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.201553,49.744533],[6.204899,49.745819]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-577f"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:8622962763 containing vertex '{osm:node:8622962763 lat,lng=49.7328704,6.1922196000000005}' at (6.192220, 49.732870) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.19222,49.73287],[6.192645,49.732538]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5780"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:4200006270 containing vertex '{osm:node:4200006270 lat,lng=49.9376006,5.8084842000000005}' at (5.808484, 49.937601) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[5.808484,49.937601],[5.805711,49.935884]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5781"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:11627086582 containing vertex '{osm:node:11627086582 lat,lng=49.4916229,6.1221890000000005}' at (6.122189, 49.491623) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.122189,49.491623],[6.118891,49.491577]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5782"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:4425511707 containing vertex '{osm:node:4425511707 lat,lng=49.8976958,5.7418161}' at (5.741816, 49.897696) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[5.741816,49.897696],[5.74189,49.897581]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5783"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:12505259346 containing vertex '{osm:node:12505259346 lat,lng=49.915195100000005,6.0465038}' at (6.046504, 49.915195) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.046504,49.915195],[6.046636,49.914899]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5784"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:1411884649 containing vertex '{osm:node:1411884649 lat,lng=49.7285958,6.386699800000001}' at (6.386700, 49.728596) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.3867,49.728596],[6.387339,49.728352]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5785"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:6782679202 containing vertex '{osm:node:6782679202 lat,lng=49.823363400000005,6.4698761000000005}' at (6.469876, 49.823363) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 0 to no traversal, 2 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.469876,49.823363],[6.469377,49.823524]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5786"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:5136439623 containing vertex '{osm:node:5136439623 lat,lng=49.551350600000006,6.189123400000001}' at (6.189123, 49.551351) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.189123,49.551351],[6.190492,49.552394]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5787"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:3343854855 containing vertex '{osm:node:3343854855 lat,lng=49.5447937,6.3626642}' at (6.362664, 49.544794) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.362664,49.544794],[6.362841,49.54492]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5788"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:317716684 containing vertex '{osm:node:317716684 lat,lng=49.949691400000006,5.9048356}' at (5.904836, 49.949691) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[5.904836,49.949691],[5.905258,49.949062]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5789"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:8252752607 containing vertex '{osm:node:8252752607 lat,lng=49.7288074,5.8384421}' at (5.838442, 49.728807) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 0 to no traversal, 2 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[5.838442,49.728807],[5.838427,49.728827]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-578a"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:8252752609 containing vertex '{osm:node:8252752609 lat,lng=49.728523,5.8367624000000005}' at (5.836762, 49.728523) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 0 to no traversal, 2 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[5.836762,49.728523],[5.836763,49.728558]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-578b"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:9366914727 containing vertex '{osm:node:9366914727 lat,lng=49.4846031,6.0196589000000005}' at (6.019659, 49.484603) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.019659,49.484603],[6.019482,49.48426]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-578c"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:5206695438 containing vertex '{osm:node:5206695438 lat,lng=49.5331939,6.0274695000000005}' at (6.027470, 49.533194) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 0 to no traversal, 2 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.02747,49.533194],[6.027605,49.533258]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-578d"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:7916171396 containing vertex '{osm:node:7916171396 lat,lng=49.8542999,5.8270207}' at (5.827021, 49.854300) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[5.827021,49.8543],[5.828357,49.855387]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-578e"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:8087602388 containing vertex '{osm:node:8087602388 lat,lng=50.0087423,6.000971900000001}' at (6.000972, 50.008742) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.000972,50.008742],[6.000427,50.009305]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-578f"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:1855424972 containing vertex '{osm:node:1855424972 lat,lng=49.468816100000005,6.0234078}' at (6.023408, 49.468816) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.023408,49.468816],[6.023407,49.468992]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5790"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:9495369578 containing vertex '{osm:node:9495369578 lat,lng=49.725623500000005,6.1218376}' at (6.121838, 49.725624) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.121838,49.725624],[6.121596,49.725607]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5791"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:8087601258 containing vertex '{osm:node:8087601258 lat,lng=50.0066858,6.0031593}' at (6.003159, 50.006686) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.003159,50.006686],[6.006165,50.007325]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5792"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:7983793872 containing vertex '{osm:node:7983793872 lat,lng=49.84604220000001,6.242219100000001}' at (6.242219, 49.846042) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.242219,49.846042],[6.242278,49.846098]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5793"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:10069443725 containing vertex '{osm:node:10069443725 lat,lng=49.9235744,6.178768900000001}' at (6.178769, 49.923574) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.178769,49.923574],[6.173498,49.919156]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5794"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:475514771 containing vertex '{osm:node:475514771 lat,lng=49.948827400000006,6.021824700000001}' at (6.021825, 49.948827) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 1 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.021825,49.948827],[6.021825,49.948827]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5795"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:8238084267 containing vertex '{osm:node:8238084267 lat,lng=49.989593000000006,6.0193667}' at (6.019367, 49.989593) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.019367,49.989593],[6.01957,49.989671]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5796"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:4425505813 containing vertex '{osm:node:4425505813 lat,lng=49.856230700000005,5.746515100000001}' at (5.746515, 49.856231) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[5.746515,49.856231],[5.749492,49.857105]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5797"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:4425505798 containing vertex '{osm:node:4425505798 lat,lng=49.8561429,5.7458952000000005}' at (5.745895, 49.856143) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 0 to no traversal, 2 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[5.745895,49.856143],[5.749819,49.856599]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5798"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:8238084225 containing vertex '{osm:node:8238084225 lat,lng=50.003196700000004,6.0678293000000005}' at (6.067829, 50.003197) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.067829,50.003197],[6.067102,50.002837]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5799"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:8238084201 containing vertex '{osm:node:8238084201 lat,lng=50.0021537,6.0691004}' at (6.069100, 50.002154) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.0691,50.002154],[6.069571,50.002543]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-579a"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:12232098764 containing vertex '{osm:node:12232098764 lat,lng=49.5787944,5.9683717000000005}' at (5.968372, 49.578794) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 0 to no traversal, 2 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[5.968372,49.578794],[5.968406,49.578847]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-579b"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:8238084843 containing vertex '{osm:node:8238084843 lat,lng=49.9936133,5.9914765}' at (5.991477, 49.993613) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 0 to no traversal, 2 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[5.991477,49.993613],[5.992479,49.993577]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-579c"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:7577476050 containing vertex '{osm:node:7577476050 lat,lng=49.7777559,6.3956778000000005}' at (6.395678, 49.777756) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.395678,49.777756],[6.395506,49.777848]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-579d"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:7577475986 containing vertex '{osm:node:7577475986 lat,lng=49.794191100000006,6.391875700000001}' at (6.391876, 49.794191) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.391876,49.794191],[6.38992,49.795725]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-579e"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:3290370434 containing vertex '{osm:node:3290370434 lat,lng=49.920863600000004,6.1257995}' at (6.125800, 49.920864) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.1258,49.920864],[6.126342,49.919978]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-579f"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:8626098197 containing vertex '{osm:node:8626098197 lat,lng=49.934389200000005,6.077220400000001}' at (6.077220, 49.934389) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.07722,49.934389],[6.075594,49.933832]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-57a0"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:861397937 containing vertex '{osm:node:861397937 lat,lng=49.7841662,6.0082008}' at (6.008201, 49.784166) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.008201,49.784166],[6.012005,49.785295]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-57a1"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:4580163779 containing vertex '{osm:node:4580163779 lat,lng=49.6944426,6.164753}' at (6.164753, 49.694443) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.164753,49.694443],[6.164255,49.694438]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-57a2"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:3320777720 containing vertex '{osm:node:3320777720 lat,lng=50.0389494,6.002745900000001}' at (6.002746, 50.038949) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.002746,50.038949],[6.00382,50.038767]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-57a3"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:8950634813 containing vertex '{osm:node:8950634813 lat,lng=49.7212946,6.4157212}' at (6.415721, 49.721295) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.415721,49.721295],[6.415511,49.721409]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-57a4"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:3241085612 containing vertex '{osm:node:3241085612 lat,lng=49.755369200000004,6.0872774000000005}' at (6.087277, 49.755369) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.087277,49.755369],[6.085831,49.753631]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-57a5"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:4021758747 containing vertex '{osm:node:4021758747 lat,lng=49.522637100000004,5.9614282}' at (5.961428, 49.522637) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 0 to no traversal, 2 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[5.961428,49.522637],[5.961476,49.522669]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-57a6"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:7470546153 containing vertex '{osm:node:7470546153 lat,lng=49.7955036,5.752431700000001}' at (5.752432, 49.795504) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[5.752432,49.795504],[5.751638,49.796575]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-57a7"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:8018402376 containing vertex '{osm:node:8018402376 lat,lng=50.1205523,6.0827945}' at (6.082795, 50.120552) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.082795,50.120552],[6.083724,50.119693]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-57a8"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:12800965170 containing vertex '{osm:node:12800965170 lat,lng=49.5405366,6.119362000000001}' at (6.119362, 49.540537) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.119362,49.540537],[6.122175,49.540584]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-57a9"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:8018402592 containing vertex '{osm:node:8018402592 lat,lng=50.119074700000006,6.070840700000001}' at (6.070841, 50.119075) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.070841,50.119075],[6.072963,50.119444]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-57aa"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:7984342347 containing vertex '{osm:node:7984342347 lat,lng=49.8526455,6.2576494}' at (6.257649, 49.852646) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.257649,49.852646],[6.255958,49.851973]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-57ab"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:11818466244 containing vertex '{osm:node:11818466244 lat,lng=49.5137907,6.0916838}' at (6.091684, 49.513791) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.091684,49.513791],[6.092228,49.513266]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-57ac"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:1495261704 containing vertex '{osm:node:1495261704 lat,lng=49.504188500000005,6.2696044}' at (6.269604, 49.504189) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.269604,49.504189],[6.269593,49.504158]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-57ad"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:8203493363 containing vertex '{osm:node:8203493363 lat,lng=50.1031428,6.0113738}' at (6.011374, 50.103143) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.011374,50.103143],[6.012607,50.103168]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-57ae"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:1187508342 containing vertex '{osm:node:1187508342 lat,lng=49.7024788,6.28884}' at (6.288840, 49.702479) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.28884,49.702479],[6.288153,49.7039]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-57af"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:4908357222 containing vertex '{osm:node:4908357222 lat,lng=49.763203700000005,6.5178244}' at (6.517824, 49.763204) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.517824,49.763204],[6.517656,49.763364]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-57b0"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:12757977201 containing vertex '{osm:node:12757977201 lat,lng=49.6214645,5.9712728}' at (5.971273, 49.621465) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[5.971273,49.621465],[5.970629,49.622729]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-57b1"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:6802586215 containing vertex '{osm:node:6802586215 lat,lng=49.733484700000005,6.0540171}' at (6.054017, 49.733485) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.054017,49.733485],[6.056384,49.731123]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-57b2"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:3273092770 containing vertex '{osm:node:3273092770 lat,lng=49.702988500000004,6.2385232}' at (6.238523, 49.702989) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.238523,49.702989],[6.238249,49.703261]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-57b3"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:8096534037 containing vertex '{osm:node:8096534037 lat,lng=49.862444700000005,5.847626}' at (5.847626, 49.862445) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[5.847626,49.862445],[5.8474,49.863025]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-57b4"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:1258807438 containing vertex '{osm:node:1258807438 lat,lng=49.6164543,6.4140382}' at (6.414038, 49.616454) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.414038,49.616454],[6.415182,49.617201]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-57b5"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:6512127516 containing vertex '{osm:node:6512127516 lat,lng=49.693869600000006,6.065688300000001}' at (6.065688, 49.693870) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 0 to no traversal, 2 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.065688,49.69387],[6.067025,49.693841]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-57b6"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:1148186218 containing vertex '{osm:node:1148186218 lat,lng=49.675061400000004,5.891714400000001}' at (5.891714, 49.675061) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[5.891714,49.675061],[5.892841,49.674237]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-57b7"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:4306479279 containing vertex '{osm:node:4306479279 lat,lng=49.616770900000006,5.9067968}' at (5.906797, 49.616771) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[5.906797,49.616771],[5.907638,49.617578]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-57b8"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:8115404859 containing vertex '{osm:node:8115404859 lat,lng=49.8152969,5.8702649000000005}' at (5.870265, 49.815297) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[5.870265,49.815297],[5.869596,49.815057]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-57b9"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:9848739201 containing vertex '{osm:node:9848739201 lat,lng=49.750044300000006,6.2655403000000005}' at (6.265540, 49.750044) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.26554,49.750044],[6.265258,49.750012]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-57ba"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:13191056506 containing vertex '{osm:node:13191056506 lat,lng=49.5426115,6.1920206}' at (6.192021, 49.542612) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.192021,49.542611],[6.193042,49.543316]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-57bb"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:11627080029 containing vertex '{osm:node:11627080029 lat,lng=49.4964384,6.136554500000001}' at (6.136555, 49.496438) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.136555,49.496438],[6.13657,49.49675]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-57bc"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:1324340361 containing vertex '{osm:node:1324340361 lat,lng=49.8463167,6.238198700000001}' at (6.238199, 49.846317) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.238199,49.846317],[6.239286,49.845344]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-57bd"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:6243214312 containing vertex '{osm:node:6243214312 lat,lng=49.7269413,6.0717809}' at (6.071781, 49.726941) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.071781,49.726941],[6.070504,49.729003]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-57be"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:6295642362 containing vertex '{osm:node:6295642362 lat,lng=49.935997500000006,6.213782800000001}' at (6.213783, 49.935998) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.213783,49.935998],[6.211913,49.934939]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-57bf"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:4438072564 containing vertex '{osm:node:4438072564 lat,lng=49.6924408,5.895368}' at (5.895368, 49.692441) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[5.895368,49.692441],[5.894872,49.694456]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-57c0"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:8252782834 containing vertex '{osm:node:8252782834 lat,lng=49.7277671,5.8315019}' at (5.831502, 49.727767) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 0 to no traversal, 2 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[5.831502,49.727767],[5.831482,49.727718]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-57c1"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:848274220 containing vertex '{osm:node:848274220 lat,lng=50.1317864,6.0858672}' at (6.085867, 50.131786) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.085867,50.131786],[6.08605,50.130964]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-57c2"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:8600391428 containing vertex '{osm:node:8600391428 lat,lng=49.8411873,6.3704758}' at (6.370476, 49.841187) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.370476,49.841187],[6.371073,49.841242]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-57c3"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:11177235999 containing vertex '{osm:node:11177235999 lat,lng=50.1521972,6.0143651}' at (6.014365, 50.152197) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.014365,50.152197],[6.01863,50.154927]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-57c4"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:11177235990 containing vertex '{osm:node:11177235990 lat,lng=50.158828,6.0136173}' at (6.013617, 50.158828) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.013617,50.158828],[6.014081,50.157145]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-57c5"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:11177235992 containing vertex '{osm:node:11177235992 lat,lng=50.1577046,6.0122122000000005}' at (6.012212, 50.157705) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.012212,50.157705],[6.012083,50.158032]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-57c6"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:11177236000 containing vertex '{osm:node:11177236000 lat,lng=50.15720880000001,6.015695900000001}' at (6.015696, 50.157209) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.015696,50.157209],[6.014172,50.154697]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-57c7"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:3329707283 containing vertex '{osm:node:3329707283 lat,lng=49.777992700000006,5.8796324}' at (5.879632, 49.777993) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[5.879632,49.777993],[5.880496,49.781089]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-57c8"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:2644448296 containing vertex '{osm:node:2644448296 lat,lng=49.5251352,5.8393326000000005}' at (5.839333, 49.525135) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[5.839333,49.525135],[5.839165,49.525192]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-57c9"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:8203493366 containing vertex '{osm:node:8203493366 lat,lng=50.1039657,6.011872400000001}' at (6.011872, 50.103966) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.011872,50.103966],[6.009489,50.102858]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-57ca"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:6243214359 containing vertex '{osm:node:6243214359 lat,lng=49.68303220000001,6.0424617000000005}' at (6.042462, 49.683032) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.042462,49.683032],[6.042397,49.683729]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-57cb"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:7801362381 containing vertex '{osm:node:7801362381 lat,lng=49.8418227,6.110685}' at (6.110685, 49.841823) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.110685,49.841823],[6.110607,49.841789]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-57cc"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:344429222 containing vertex '{osm:node:344429222 lat,lng=49.8845114,6.1225984}' at (6.122598, 49.884511) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.122598,49.884511],[6.120732,49.887277]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-57cd"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:700968761 containing vertex '{osm:node:700968761 lat,lng=49.6869663,6.035196900000001}' at (6.035197, 49.686966) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.035197,49.686966],[6.034686,49.686955]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-57ce"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:7999561911 containing vertex '{osm:node:7999561911 lat,lng=49.9340941,6.140096300000001}' at (6.140096, 49.934094) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.140096,49.934094],[6.144049,49.934394]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-57cf"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:8745612195 containing vertex '{osm:node:8745612195 lat,lng=49.5356218,6.1349878}' at (6.134988, 49.535622) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 0 to no traversal, 2 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.134988,49.535622],[6.13487,49.535646]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-57d0"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:8953228319 containing vertex '{osm:node:8953228319 lat,lng=49.73361310000001,6.495161400000001}' at (6.495161, 49.733613) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.495161,49.733613],[6.495045,49.733866]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-57d1"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:8261702987 containing vertex '{osm:node:8261702987 lat,lng=49.6786344,6.3027835}' at (6.302784, 49.678634) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.302784,49.678634],[6.303932,49.677112]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-57d2"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:344419539 containing vertex '{osm:node:344419539 lat,lng=49.7591078,6.0863177}' at (6.086318, 49.759108) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.086318,49.759108],[6.08846,49.760684]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-57d3"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:5888747946 containing vertex '{osm:node:5888747946 lat,lng=49.571234600000004,6.3515877000000005}' at (6.351588, 49.571235) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.351588,49.571235],[6.351276,49.571086]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-57d4"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:10875248441 containing vertex '{osm:node:10875248441 lat,lng=49.939004600000004,5.9098828}' at (5.909883, 49.939005) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[5.909883,49.939005],[5.909488,49.940012]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-57d5"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:7948709737 containing vertex '{osm:node:7948709737 lat,lng=49.826510500000005,6.2023022}' at (6.202302, 49.826511) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.202302,49.826511],[6.202285,49.826556]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-57d6"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:7962340544 containing vertex '{osm:node:7962340544 lat,lng=49.836435,6.1381001}' at (6.138100, 49.836435) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.1381,49.836435],[6.137762,49.836216]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-57d7"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:7962340498 containing vertex '{osm:node:7962340498 lat,lng=49.832747000000005,6.1343781}' at (6.134378, 49.832747) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.134378,49.832747],[6.132291,49.832856]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-57d8"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:5197217833 containing vertex '{osm:node:5197217833 lat,lng=49.780345800000006,6.091227900000001}' at (6.091228, 49.780346) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.091228,49.780346],[6.092391,49.780567]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-57d9"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:7104615011 containing vertex '{osm:node:7104615011 lat,lng=49.9021471,5.9573179000000005}' at (5.957318, 49.902147) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[5.957318,49.902147],[5.956168,49.902846]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-57da"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:7954476823 containing vertex '{osm:node:7954476823 lat,lng=49.799646700000004,5.771003400000001}' at (5.771003, 49.799647) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 3 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[5.771003,49.799647],[5.773008,49.800008]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-57db"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:8357119715 containing vertex '{osm:node:8357119715 lat,lng=49.615867200000004,6.1715913}' at (6.171591, 49.615867) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.171591,49.615867],[6.171862,49.616125]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-57dc"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:7962340905 containing vertex '{osm:node:7962340905 lat,lng=49.8439071,6.1410761}' at (6.141076, 49.843907) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.141076,49.843907],[6.14273,49.844228]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-57dd"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:7962341097 containing vertex '{osm:node:7962341097 lat,lng=49.834133900000005,6.122699600000001}' at (6.122700, 49.834134) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.1227,49.834134],[6.116405,49.833348]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-57de"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:7878452345 containing vertex '{osm:node:7878452345 lat,lng=49.510732100000006,6.2678707000000005}' at (6.267871, 49.510732) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.267871,49.510732],[6.267752,49.510857]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-57df"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:7878452342 containing vertex '{osm:node:7878452342 lat,lng=49.509948800000004,6.2649917}' at (6.264992, 49.509949) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.264992,49.509949],[6.264916,49.510033]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-57e0"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:428854202 containing vertex '{osm:node:428854202 lat,lng=49.712175200000004,6.0600624000000005}' at (6.060062, 49.712175) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.060062,49.712175],[6.060135,49.715122]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-57e1"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:3631200103 containing vertex '{osm:node:3631200103 lat,lng=49.5793757,5.8741972}' at (5.874197, 49.579376) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[5.874197,49.579376],[5.874463,49.579532]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-57e2"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:1172810661 containing vertex '{osm:node:1172810661 lat,lng=49.615884400000006,5.9112004}' at (5.911200, 49.615884) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[5.9112,49.615884],[5.911507,49.61542]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-57e3"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:3343886907 containing vertex '{osm:node:3343886907 lat,lng=49.994649800000005,6.0990966}' at (6.099097, 49.994650) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.099097,49.99465],[6.09924,49.99475]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-57e4"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:8326192308 containing vertex '{osm:node:8326192308 lat,lng=49.7355925,6.0602233000000005}' at (6.060223, 49.735593) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.060223,49.735593],[6.059754,49.733523]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-57e5"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:700968918 containing vertex '{osm:node:700968918 lat,lng=49.6925224,6.037405700000001}' at (6.037406, 49.692522) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.037406,49.692522],[6.036006,49.692219]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-57e6"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:11053562093 containing vertex '{osm:node:11053562093 lat,lng=49.6883277,6.3449667000000005}' at (6.344967, 49.688328) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.344967,49.688328],[6.347684,49.690794]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-57e7"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:4126645544 containing vertex '{osm:node:4126645544 lat,lng=49.6670061,5.9946565000000005}' at (5.994657, 49.667006) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 0 to no traversal, 2 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[5.994657,49.667006],[5.994501,49.667284]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-57e8"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:1308044037 containing vertex '{osm:node:1308044037 lat,lng=50.0559304,6.0291793}' at (6.029179, 50.055930) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 0 to no traversal, 2 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.029179,50.05593],[6.029292,50.055994]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-57e9"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:10212181262/2 containing vertex '{osm:node:10212181262/2 lat,lng=49.50031430000001,5.9458292}' at (5.945829, 49.500314) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 0 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[5.945829,49.500314],[5.945829,49.500314]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-57ea"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:1401370480 containing vertex '{osm:node:1401370480 lat,lng=49.9740544,5.8706639}' at (5.870664, 49.974054) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[5.870664,49.974054],[5.870189,49.973841]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-57eb"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:10212181262/3 containing vertex '{osm:node:10212181262/3 lat,lng=49.50031430000001,5.9458292}' at (5.945829, 49.500314) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 0 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[5.945829,49.500314],[5.945829,49.500314]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-57ec"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:1313805694 containing vertex '{osm:node:1313805694 lat,lng=50.1444744,6.002816}' at (6.002816, 50.144474) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.002816,50.144474],[6.010508,50.146682]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-57ed"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:8390647693 containing vertex '{osm:node:8390647693 lat,lng=50.074004900000006,6.0081348000000006}' at (6.008135, 50.074005) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.008135,50.074005],[6.01036,50.073857]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-57ee"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:447693668 containing vertex '{osm:node:447693668 lat,lng=49.644726500000004,6.4057525}' at (6.405753, 49.644727) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.405753,49.644727],[6.405979,49.644807]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-57ef"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:7600053244 containing vertex '{osm:node:7600053244 lat,lng=49.9454714,5.9482384}' at (5.948238, 49.945471) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[5.948238,49.945471],[5.945131,49.943518]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-57f0"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:7162297620 containing vertex '{osm:node:7162297620 lat,lng=49.4926017,6.3619569}' at (6.361957, 49.492602) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 3 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.361957,49.492602],[6.361978,49.492448]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-57f1"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:7933497143 containing vertex '{osm:node:7933497143 lat,lng=49.878741700000006,6.1972151}' at (6.197215, 49.878742) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.197215,49.878742],[6.197168,49.878436]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-57f2"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:7933497175 containing vertex '{osm:node:7933497175 lat,lng=49.894017700000006,6.2018702}' at (6.201870, 49.894018) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.20187,49.894018],[6.201585,49.893979]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-57f3"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:8148464395 containing vertex '{osm:node:8148464395 lat,lng=49.700811,6.0105822}' at (6.010582, 49.700811) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.010582,49.700811],[6.00893,49.699423]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-57f4"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:7933496807 containing vertex '{osm:node:7933496807 lat,lng=49.874281700000004,6.199967600000001}' at (6.199968, 49.874282) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.199968,49.874282],[6.198236,49.874255]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-57f5"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:1654600032 containing vertex '{osm:node:1654600032 lat,lng=49.573062300000004,5.851102200000001}' at (5.851102, 49.573062) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[5.851102,49.573062],[5.859586,49.571533]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-57f6"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:8601948756 containing vertex '{osm:node:8601948756 lat,lng=49.4719327,6.080945600000001}' at (6.080946, 49.471933) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 0 to no traversal, 2 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.080946,49.471933],[6.080722,49.471922]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-57f7"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:6446079059 containing vertex '{osm:node:6446079059 lat,lng=49.531568,5.8682924000000005}' at (5.868292, 49.531568) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[5.868292,49.531568],[5.868394,49.532254]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-57f8"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:7964953451 containing vertex '{osm:node:7964953451 lat,lng=49.810375,5.9616809}' at (5.961681, 49.810375) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[5.961681,49.810375],[5.962895,49.80952]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-57f9"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:933748112 containing vertex '{osm:node:933748112 lat,lng=49.809224500000006,5.9486384}' at (5.948638, 49.809225) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[5.948638,49.809225],[5.947957,49.808886]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-57fa"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:7064774854 containing vertex '{osm:node:7064774854 lat,lng=49.650782400000004,5.9869212}' at (5.986921, 49.650782) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 0 to no traversal, 2 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[5.986921,49.650782],[5.988361,49.649962]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-57fb"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:5641804620 containing vertex '{osm:node:5641804620 lat,lng=49.72746840000001,6.1846831}' at (6.184683, 49.727468) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.184683,49.727468],[6.183903,49.728107]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-57fc"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:5058291963 containing vertex '{osm:node:5058291963 lat,lng=49.82961340000001,6.2545842}' at (6.254584, 49.829613) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.254584,49.829613],[6.262889,49.828914]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-57fd"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:1401370514 containing vertex '{osm:node:1401370514 lat,lng=49.9743208,5.8704704}' at (5.870470, 49.974321) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[5.87047,49.974321],[5.869014,49.975127]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-57fe"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:1520395297 containing vertex '{osm:node:1520395297 lat,lng=49.5915103,6.0488695}' at (6.048870, 49.591510) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.04887,49.59151],[6.048798,49.591438]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-57ff"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:7086250898 containing vertex '{osm:node:7086250898 lat,lng=49.970297,6.0350668}' at (6.035067, 49.970297) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.035067,49.970297],[6.036374,49.970783]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5800"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:11423123777 containing vertex '{osm:node:11423123777 lat,lng=49.9367722,5.9528129000000005}' at (5.952813, 49.936772) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[5.952813,49.936772],[5.954994,49.937]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5801"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:471287198 containing vertex '{osm:node:471287198 lat,lng=49.9406316,6.063518}' at (6.063518, 49.940632) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.063518,49.940632],[6.064864,49.931309]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5802"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:4200056381 containing vertex '{osm:node:4200056381 lat,lng=49.919645700000004,5.9521651}' at (5.952165, 49.919646) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[5.952165,49.919646],[5.950875,49.917475]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5803"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:4200056364 containing vertex '{osm:node:4200056364 lat,lng=49.918313700000006,5.9582936}' at (5.958294, 49.918314) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[5.958294,49.918314],[5.956793,49.919641]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5804"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:4200056386 containing vertex '{osm:node:4200056386 lat,lng=49.921206600000005,5.9403908}' at (5.940391, 49.921207) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[5.940391,49.921207],[5.940023,49.921525]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5805"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:6835121390 containing vertex '{osm:node:6835121390 lat,lng=49.472345600000004,6.0797558}' at (6.079756, 49.472346) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.079756,49.472346],[6.079723,49.472024]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5806"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:6510591856 containing vertex '{osm:node:6510591856 lat,lng=49.610039900000004,6.0358236000000005}' at (6.035824, 49.610040) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.035824,49.61004],[6.035753,49.609893]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5807"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:7988045252 containing vertex '{osm:node:7988045252 lat,lng=49.88385,6.148126}' at (6.148126, 49.883850) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.148126,49.88385],[6.148125,49.884322]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5808"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:2433722409 containing vertex '{osm:node:2433722409 lat,lng=49.4600974,6.0950169}' at (6.095017, 49.460097) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.095017,49.460097],[6.094894,49.459343]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5809"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:1405053603 containing vertex '{osm:node:1405053603 lat,lng=50.002211,6.1492411}' at (6.149241, 50.002211) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.149241,50.002211],[6.149911,50.005947]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-580a"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:7562852877 containing vertex '{osm:node:7562852877 lat,lng=49.7950646,6.3742872}' at (6.374287, 49.795065) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.374287,49.795065],[6.373767,49.795217]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-580b"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:1708086183 containing vertex '{osm:node:1708086183 lat,lng=50.000773,6.042162800000001}' at (6.042163, 50.000773) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.042163,50.000773],[6.040984,49.998069]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-580c"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:262664338 containing vertex '{osm:node:262664338 lat,lng=49.505428200000004,6.369009}' at (6.369009, 49.505428) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 0 to no traversal, 2 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.369009,49.505428],[6.368655,49.505429]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-580d"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:6650050934 containing vertex '{osm:node:6650050934 lat,lng=49.8786542,6.2743601}' at (6.274360, 49.878654) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 0 to no traversal, 2 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.27436,49.878654],[6.272477,49.877864]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-580e"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:9955664581 containing vertex '{osm:node:9955664581 lat,lng=49.8908545,6.082073500000001}' at (6.082074, 49.890855) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.082074,49.890855],[6.081761,49.891126]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-580f"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:9612234383 containing vertex '{osm:node:9612234383 lat,lng=49.84683750000001,6.1055272}' at (6.105527, 49.846838) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.105527,49.846838],[6.106072,49.847356]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5810"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:11952191956 containing vertex '{osm:node:11952191956 lat,lng=49.783175400000005,6.215710100000001}' at (6.215710, 49.783175) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.21571,49.783175],[6.215811,49.783225]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5811"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:7829185259 containing vertex '{osm:node:7829185259 lat,lng=49.9587336,6.0747555}' at (6.074756, 49.958734) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.074756,49.958734],[6.071945,49.957459]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5812"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:8684254629 containing vertex '{osm:node:8684254629 lat,lng=49.5155236,6.2541718}' at (6.254172, 49.515524) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.254172,49.515524],[6.253735,49.515142]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5813"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:3404195561 containing vertex '{osm:node:3404195561 lat,lng=49.7242705,5.851061400000001}' at (5.851061, 49.724271) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[5.851061,49.724271],[5.851379,49.724506]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5814"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:7522478580 containing vertex '{osm:node:7522478580 lat,lng=49.6986846,6.082788000000001}' at (6.082788, 49.698685) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.082788,49.698685],[6.082776,49.69876]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5815"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:4200583974 containing vertex '{osm:node:4200583974 lat,lng=49.8678243,5.9614174}' at (5.961417, 49.867824) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[5.961417,49.867824],[5.961597,49.86712]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5816"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:8987819846 containing vertex '{osm:node:8987819846 lat,lng=49.851107500000005,5.956321900000001}' at (5.956322, 49.851108) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[5.956322,49.851108],[5.956546,49.851153]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5817"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:7931428492 containing vertex '{osm:node:7931428492 lat,lng=49.9023866,6.1940293}' at (6.194029, 49.902387) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.194029,49.902387],[6.195455,49.902597]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5818"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:2285350459 containing vertex '{osm:node:2285350459 lat,lng=49.8561526,5.998919000000001}' at (5.998919, 49.856153) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[5.998919,49.856153],[5.994629,49.854988]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5819"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:8124875126 containing vertex '{osm:node:8124875126 lat,lng=49.902331100000005,6.1705427}' at (6.170543, 49.902331) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.170543,49.902331],[6.169932,49.90202]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-581a"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:2271186727/default level containing vertex '{osm:node:2271186727/default level lat,lng=49.600582700000004,6.1365615}' at (6.136562, 49.600583) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 0 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.136562,49.600583],[6.136562,49.600583]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-581b"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:3339180580 containing vertex '{osm:node:3339180580 lat,lng=50.0471942,6.0658881000000004}' at (6.065888, 50.047194) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.065888,50.047194],[6.065641,50.047206]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-581c"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:3541028356 containing vertex '{osm:node:3541028356 lat,lng=49.5972352,6.117901900000001}' at (6.117902, 49.597235) of 1 street vertices and 1 stops. Edge changes: 0 to nothru, 0 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.117902,49.597235],[6.117916,49.597233]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-581d"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:11764474258 containing vertex '{osm:node:11764474258 lat,lng=50.1072283,5.9021638}' at (5.902164, 50.107228) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[5.902164,50.107228],[5.903248,50.107724]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-581e"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:8421586726 containing vertex '{osm:node:8421586726 lat,lng=49.807379600000004,6.2441450000000005}' at (6.244145, 49.807380) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.244145,49.80738],[6.244733,49.806418]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-581f"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:7704924238 containing vertex '{osm:node:7704924238 lat,lng=49.524639900000004,5.8713046}' at (5.871305, 49.524640) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 3 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[5.871305,49.52464],[5.872217,49.524886]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5820"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:2007461147 containing vertex '{osm:node:2007461147 lat,lng=49.6076275,6.1881727}' at (6.188173, 49.607628) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.188173,49.607627],[6.189702,49.606828]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5821"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:8182562353 containing vertex '{osm:node:8182562353 lat,lng=49.732550100000005,5.849787200000001}' at (5.849787, 49.732550) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 0 to no traversal, 2 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[5.849787,49.73255],[5.849755,49.7326]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5822"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:4044875806 containing vertex '{osm:node:4044875806 lat,lng=49.5846652,5.9206764000000005}' at (5.920676, 49.584665) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[5.920676,49.584665],[5.920534,49.584793]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5823"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:1550271847 containing vertex '{osm:node:1550271847 lat,lng=49.5177697,5.8378915000000005}' at (5.837892, 49.517770) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[5.837892,49.51777],[5.840481,49.515209]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5824"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:8381262648 containing vertex '{osm:node:8381262648 lat,lng=49.604590900000005,6.3587102}' at (6.358710, 49.604591) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.35871,49.604591],[6.357322,49.605111]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5825"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:2007461638 containing vertex '{osm:node:2007461638 lat,lng=49.642897700000006,6.1200406}' at (6.120041, 49.642898) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.120041,49.642898],[6.119876,49.643081]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5826"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:4200590785 containing vertex '{osm:node:4200590785 lat,lng=49.8391345,5.890395300000001}' at (5.890395, 49.839135) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[5.890395,49.839135],[5.888779,49.837323]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5827"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:4200590461 containing vertex '{osm:node:4200590461 lat,lng=49.8271742,5.898195800000001}' at (5.898196, 49.827174) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[5.898196,49.827174],[5.899815,49.826839]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5828"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:3565142617 containing vertex '{osm:node:3565142617 lat,lng=49.9436304,5.812039100000001}' at (5.812039, 49.943630) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[5.812039,49.94363],[5.813861,49.944302]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5829"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:5046221068 containing vertex '{osm:node:5046221068 lat,lng=49.8740688,6.261692}' at (6.261692, 49.874069) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.261692,49.874069],[6.261622,49.873959]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-582a"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:8901822365 containing vertex '{osm:node:8901822365 lat,lng=49.7430819,6.2641751}' at (6.264175, 49.743082) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.264175,49.743082],[6.264075,49.742985]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-582b"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:76484873 containing vertex '{osm:node:76484873 lat,lng=49.7968326,6.3007638}' at (6.300764, 49.796833) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.300764,49.796833],[6.298627,49.795135]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-582c"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:76486526 containing vertex '{osm:node:76486526 lat,lng=49.6784167,6.298649800000001}' at (6.298650, 49.678417) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.29865,49.678417],[6.296862,49.680576]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-582d"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:1426016189 containing vertex '{osm:node:1426016189 lat,lng=49.523528400000004,6.164215}' at (6.164215, 49.523528) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.164215,49.523528],[6.164277,49.523568]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-582e"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:1711764090 containing vertex '{osm:node:1711764090 lat,lng=49.7282383,6.0120849000000005}' at (6.012085, 49.728238) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.012085,49.728238],[6.011656,49.728569]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-582f"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:4200589986 containing vertex '{osm:node:4200589986 lat,lng=49.8222067,5.8702223}' at (5.870222, 49.822207) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[5.870222,49.822207],[5.870506,49.822413]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5830"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:5502359518 containing vertex '{osm:node:5502359518 lat,lng=49.722136600000006,6.0559921}' at (6.055992, 49.722137) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 3 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.055992,49.722137],[6.056019,49.72221]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5831"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:4202165309 containing vertex '{osm:node:4202165309 lat,lng=49.804628,6.015424800000001}' at (6.015425, 49.804628) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.015425,49.804628],[6.016655,49.803309]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5832"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:4202165324 containing vertex '{osm:node:4202165324 lat,lng=49.8083704,6.014577200000001}' at (6.014577, 49.808370) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.014577,49.80837],[6.0145,49.806991]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5833"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:1439653425 containing vertex '{osm:node:1439653425 lat,lng=49.833875500000005,6.3335417000000005}' at (6.333542, 49.833876) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.333542,49.833876],[6.333198,49.833792]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5834"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:3134167117 containing vertex '{osm:node:3134167117 lat,lng=50.139418500000005,6.059045500000001}' at (6.059046, 50.139419) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.059046,50.139419],[6.058511,50.13928]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5835"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:4202165164 containing vertex '{osm:node:4202165164 lat,lng=49.791670100000005,5.8544348}' at (5.854435, 49.791670) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[5.854435,49.79167],[5.85267,49.791928]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5836"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:7959729126 containing vertex '{osm:node:7959729126 lat,lng=49.8560625,6.1826889000000005}' at (6.182689, 49.856063) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.182689,49.856063],[6.181096,49.855616]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5837"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:1711762953 containing vertex '{osm:node:1711762953 lat,lng=49.720603700000005,5.9686513}' at (5.968651, 49.720604) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[5.968651,49.720604],[5.968685,49.722461]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5838"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:1524565433 containing vertex '{osm:node:1524565433 lat,lng=49.6611397,5.9103604}' at (5.910360, 49.661140) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[5.91036,49.66114],[5.908813,49.661028]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5839"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:1827620666 containing vertex '{osm:node:1827620666 lat,lng=50.1231078,6.114705000000001}' at (6.114705, 50.123108) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.114705,50.123108],[6.114813,50.122915]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-583a"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:389016824 containing vertex '{osm:node:389016824 lat,lng=49.7532976,6.3542671}' at (6.354267, 49.753298) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 3 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.354267,49.753298],[6.353935,49.753369]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-583b"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:4438029355 containing vertex '{osm:node:4438029355 lat,lng=49.692937900000004,5.968629900000001}' at (5.968630, 49.692938) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[5.96863,49.692938],[5.968236,49.693236]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-583c"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:4438029332 containing vertex '{osm:node:4438029332 lat,lng=49.6899266,5.9604625}' at (5.960463, 49.689927) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[5.960463,49.689927],[5.960104,49.689839]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-583d"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:4438029317 containing vertex '{osm:node:4438029317 lat,lng=49.688420400000005,5.9590128}' at (5.959013, 49.688420) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[5.959013,49.68842],[5.960839,49.6889]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-583e"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:1192702752 containing vertex '{osm:node:1192702752 lat,lng=50.1428573,6.0615471}' at (6.061547, 50.142857) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.061547,50.142857],[6.060707,50.142092]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-583f"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:4438029303 containing vertex '{osm:node:4438029303 lat,lng=49.6871303,5.9475544000000005}' at (5.947554, 49.687130) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[5.947554,49.68713],[5.947294,49.686477]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5840"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:8225427658 containing vertex '{osm:node:8225427658 lat,lng=49.729247400000006,6.067877500000001}' at (6.067878, 49.729247) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.067878,49.729247],[6.065333,49.728186]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5841"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:3378393154 containing vertex '{osm:node:3378393154 lat,lng=49.6645684,6.2961903}' at (6.296190, 49.664568) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.29619,49.664568],[6.293516,49.664738]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5842"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:8257934525 containing vertex '{osm:node:8257934525 lat,lng=49.684642700000005,6.415514000000001}' at (6.415514, 49.684643) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.415514,49.684643],[6.416715,49.684951]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5843"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:1316403265 containing vertex '{osm:node:1316403265 lat,lng=49.783053100000004,6.5055651}' at (6.505565, 49.783053) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.505565,49.783053],[6.504763,49.78362]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5844"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:1450615514 containing vertex '{osm:node:1450615514 lat,lng=49.512915,6.219142000000001}' at (6.219142, 49.512915) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.219142,49.512915],[6.217854,49.513942]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5845"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:2273211177 containing vertex '{osm:node:2273211177 lat,lng=49.683505600000004,6.1288516}' at (6.128852, 49.683506) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 3 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.128852,49.683506],[6.128831,49.682878]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5846"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:2254860885 containing vertex '{osm:node:2254860885 lat,lng=49.571193900000004,5.9468845}' at (5.946885, 49.571194) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[5.946885,49.571194],[5.947554,49.571526]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5847"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:9514697901 containing vertex '{osm:node:9514697901 lat,lng=49.724149000000004,6.1352707}' at (6.135271, 49.724149) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.135271,49.724149],[6.135283,49.724692]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5848"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:8676373744 containing vertex '{osm:node:8676373744 lat,lng=49.5144431,6.2782681}' at (6.278268, 49.514443) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.278268,49.514443],[6.278483,49.514592]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5849"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:4199942925 containing vertex '{osm:node:4199942925 lat,lng=49.8632021,5.8906567}' at (5.890657, 49.863202) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[5.890657,49.863202],[5.891519,49.861015]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-584a"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:4199942922 containing vertex '{osm:node:4199942922 lat,lng=49.8627466,5.920749900000001}' at (5.920750, 49.862747) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[5.92075,49.862747],[5.919387,49.862018]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-584b"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:2018416149 containing vertex '{osm:node:2018416149 lat,lng=49.478117000000005,6.0194897}' at (6.019490, 49.478117) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.01949,49.478117],[6.018945,49.478507]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-584c"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:925817516 containing vertex '{osm:node:925817516 lat,lng=50.1168507,6.0265656000000005}' at (6.026566, 50.116851) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.026566,50.116851],[6.024402,50.119018]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-584d"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:5339796342 containing vertex '{osm:node:5339796342 lat,lng=49.7257918,6.047267000000001}' at (6.047267, 49.725792) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 0 to no traversal, 2 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.047267,49.725792],[6.046938,49.725802]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-584e"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:7749903738 containing vertex '{osm:node:7749903738 lat,lng=49.7806237,6.121086}' at (6.121086, 49.780624) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.121086,49.780624],[6.123837,49.781497]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-584f"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:7749903748 containing vertex '{osm:node:7749903748 lat,lng=49.7814921,6.124467800000001}' at (6.124468, 49.781492) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.124468,49.781492],[6.127503,49.781924]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5850"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:7999994723 containing vertex '{osm:node:7999994723 lat,lng=49.933046600000004,6.1441663}' at (6.144166, 49.933047) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.144166,49.933047],[6.144641,49.933124]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5851"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:8098546701 containing vertex '{osm:node:8098546701 lat,lng=49.62301,6.1762731}' at (6.176273, 49.623010) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.176273,49.62301],[6.173315,49.623248]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5852"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:9267760832 containing vertex '{osm:node:9267760832 lat,lng=49.857049,6.0033819}' at (6.003382, 49.857049) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.003382,49.857049],[6.003561,49.857609]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5853"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:340248794 containing vertex '{osm:node:340248794 lat,lng=49.6582061,6.3731207}' at (6.373121, 49.658206) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.373121,49.658206],[6.374774,49.655617]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5854"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:7999994563 containing vertex '{osm:node:7999994563 lat,lng=49.936645600000006,6.1362901}' at (6.136290, 49.936646) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.13629,49.936646],[6.140238,49.937143]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5855"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:3893234877 containing vertex '{osm:node:3893234877 lat,lng=49.4920904,6.285588000000001}' at (6.285588, 49.492090) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 0 to no traversal, 2 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.285588,49.49209],[6.285562,49.492203]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5856"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:1014945937 containing vertex '{osm:node:1014945937 lat,lng=49.686232200000006,5.8929688}' at (5.892969, 49.686232) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[5.892969,49.686232],[5.894539,49.686816]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5857"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:8303021160 containing vertex '{osm:node:8303021160 lat,lng=49.982419900000004,5.8603451}' at (5.860345, 49.982420) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[5.860345,49.98242],[5.859963,49.981964]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5858"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:4199946328 containing vertex '{osm:node:4199946328 lat,lng=49.86685790000001,5.9158748}' at (5.915875, 49.866858) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[5.915875,49.866858],[5.919773,49.864365]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5859"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:7999994918 containing vertex '{osm:node:7999994918 lat,lng=49.9446103,6.154267000000001}' at (6.154267, 49.944610) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 0 to no traversal, 2 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.154267,49.94461],[6.153542,49.944282]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-585a"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:705088171 containing vertex '{osm:node:705088171 lat,lng=49.506426700000006,6.260470300000001}' at (6.260470, 49.506427) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.26047,49.506427],[6.256705,49.507896]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-585b"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:2356047093 containing vertex '{osm:node:2356047093 lat,lng=49.7116514,6.238438}' at (6.238438, 49.711651) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.238438,49.711651],[6.238256,49.711472]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-585c"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:3244695858 containing vertex '{osm:node:3244695858 lat,lng=49.777211,6.1030696}' at (6.103070, 49.777211) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.10307,49.777211],[6.101344,49.776318]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-585d"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:3244695851 containing vertex '{osm:node:3244695851 lat,lng=49.77330490000001,6.1018248}' at (6.101825, 49.773305) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.101825,49.773305],[6.102487,49.773242]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-585e"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:3244695840 containing vertex '{osm:node:3244695840 lat,lng=49.7742209,6.1020406000000005}' at (6.102041, 49.774221) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.102041,49.774221],[6.102899,49.774805]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-585f"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:8952138569 containing vertex '{osm:node:8952138569 lat,lng=49.7855703,5.904299}' at (5.904299, 49.785570) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[5.904299,49.78557],[5.904233,49.785621]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5860"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:6177293243/-1 containing vertex '{osm:node:6177293243/-1 lat,lng=49.643824,5.9176165}' at (5.917617, 49.643824) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 0 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[5.917617,49.643824],[5.917617,49.643824]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5861"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:6646813024 containing vertex '{osm:node:6646813024 lat,lng=49.80472940000001,6.308955200000001}' at (6.308955, 49.804729) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[6.308955,49.804729],[6.309119,49.805031]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5862"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Pruned CAR subgraph osm:node:8412080165 containing vertex '{osm:node:8412080165 lat,lng=49.943258500000006,5.894407200000001}' at (5.894407, 49.943259) of 2 street vertices and 0 stops. Edge changes: 0 to nothru, 2 to no traversal, 0 erased"
+    },
+    "geometry" : {"type":"MultiPoint","coordinates":[[5.894407,49.943259],[5.897684,49.944121]]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5863"
+  } ]
+}

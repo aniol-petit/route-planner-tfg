@@ -1,0 +1,1712 @@
+{
+  "type" : "FeatureCollection",
+  "features" : [ {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000500000074 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[6.594208,49.773597]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5380"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000500000072 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[6.55534,49.607026]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5381"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000500000073 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[6.752801,49.312435]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5382"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000500000078 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[6.645455,49.759151]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5383"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000500000079 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[6.65199,49.756972]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5384"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000500000077 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[6.628239,49.752539]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5385"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000500000082 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[6.628198,49.744847]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5386"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000500000080 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[6.638462,49.761608]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5387"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000500000068 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[6.251514,49.932181]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5388"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000500000070 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[6.990367,49.24023]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5389"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000500000058 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[6.538767,49.507808]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-538a"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000500000059 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[6.523843,49.50488]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-538b"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000500000051 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[6.451903,49.651375]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-538c"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000500000056 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[6.518579,49.505172]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-538d"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000500000042 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[6.359763,49.96701]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-538e"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000500000039 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[6.593422,49.491695]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-538f"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000500000036 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[6.418996,49.961489]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5390"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000500000037 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[6.607518,49.493498]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5391"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000500000030 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[6.745313,49.506568]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5392"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000500000031 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[6.732628,49.506662]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5393"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000500000034 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[6.63395,49.441667]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5394"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000500000035 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[6.477099,49.579158]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5395"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000500000032 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[6.740856,49.50676]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5396"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000500000033 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[6.63444,49.436936]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5397"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000500000027 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[6.573201,49.699987]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5398"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000500000028 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[6.577287,49.703707]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5399"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000500000029 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[6.764534,49.808198]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-539a"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000500000023 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[6.503518,49.97516]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-539b"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000500000024 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[6.431051,49.962405]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-539c"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000500000021 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[6.509001,49.596852]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-539d"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000500000017 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[6.423056,49.961445]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-539e"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000500000014 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[6.320433,49.972306]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-539f"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000500000018 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[6.542404,49.604682]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-53a0"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000500000019 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[6.550666,49.707375]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-53a1"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000500000013 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[6.304519,49.969787]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-53a2"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000500000010 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[6.711075,49.346701]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-53a3"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000500000011 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[6.271144,49.953992]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-53a4"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000500000005 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[6.451546,49.598255]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-53a5"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000500000009 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[6.527101,49.976053]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-53a6"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000500000096 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[6.633876,49.763377]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-53a7"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000500000095 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[6.626635,49.767475]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-53a8"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000500000085 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[6.556371,49.606355]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-53a9"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000500000086 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[6.544814,49.704588]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-53aa"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000500000083 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[6.646138,49.75939]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-53ab"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000500000084 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[6.636803,49.744609]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-53ac"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000500000093 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[6.758812,49.816822]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-53ad"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000500000090 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[6.426249,49.609479]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-53ae"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000500000162 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[6.750601,49.507229]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-53af"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000500000163 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[6.652113,49.757577]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-53b0"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000500000160 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[6.759448,49.504693]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-53b1"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000500000161 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[6.756212,49.510819]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-53b2"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000500000159 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[6.761213,49.507794]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-53b3"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000500000155 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[6.636019,49.747588]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-53b4"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000500000156 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[6.613519,49.737043]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-53b5"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000500000148 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[6.642548,49.753803]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-53b6"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000500000140 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[6.63467,49.744781]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-53b7"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000500000138 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[6.622754,49.739778]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-53b8"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000500000139 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[6.631849,49.739722]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-53b9"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000500000115 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[6.552619,49.709081]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-53ba"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000500000113 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[6.627153,49.44187]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-53bb"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000500000114 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[6.030448,50.232917]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-53bc"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000500000118 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[6.531452,49.600914]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-53bd"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000500000112 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[6.753809,49.81587]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-53be"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000500000106 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[6.582505,49.719586]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-53bf"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000500104061 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[6.376321,49.473387]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-53c0"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000500104065 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[6.387786,49.478703]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-53c1"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000500104064 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[6.383557,49.472319]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-53c2"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000500104063 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[6.371484,49.473988]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-53c3"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000300000091 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[5.819594,49.595774]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-53c4"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000300000090 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[5.828112,49.593552]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-53c5"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000300000088 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[5.866615,49.648582]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-53c6"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000300000087 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[5.87601,49.648999]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-53c7"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000300000086 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[6.007069,50.195739]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-53c8"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000300000089 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[5.862395,49.648063]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-53c9"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000300000099 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[5.801852,49.566333]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-53ca"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000300000098 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[5.814741,49.564259]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-53cb"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000300000097 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[5.821924,49.563557]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-53cc"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000300000022 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[5.824178,49.67787]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-53cd"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000300000021 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[5.710148,49.999927]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-53ce"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000300000020 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[5.724055,50.006214]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-53cf"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000300000023 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[5.716878,49.998255]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-53d0"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000300000029 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[5.818823,49.98593]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-53d1"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000300000027 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[5.724794,49.995349]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-53d2"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000300000031 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[5.824093,49.699379]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-53d3"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000300000030 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[5.719461,50.006021]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-53d4"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000300000035 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[5.953846,50.189785]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-53d5"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000300000004 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[5.8146,49.682294]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-53d6"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000300000003 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[5.808321,49.680772]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-53d7"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000300000002 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[5.817819,49.69138]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-53d8"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000300000001 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[5.810372,49.685867]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-53d9"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000300000008 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[5.826913,49.563208]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-53da"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000300000007 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[5.834111,49.562902]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-53db"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000300000006 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[5.80645,49.682672]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-53dc"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000300000005 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[5.817727,49.685358]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-53dd"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000300000011 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[5.829005,49.564004]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-53de"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000300000010 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[5.837335,49.562666]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-53df"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000300000015 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[5.809569,49.680347]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-53e0"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000300000013 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[5.815487,49.672755]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-53e1"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000300000012 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[5.810142,49.687264]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-53e2"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000300000019 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[5.809706,49.566802]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-53e3"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000300000018 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[5.805526,49.568962]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-53e4"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000300000017 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[5.82912,49.563935]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-53e5"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000300000073 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[6.129895,50.279146]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-53e6"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000300000072 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[6.118833,50.273106]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-53e7"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000300000071 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[6.110735,50.261732]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-53e8"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000300000070 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[6.083259,50.230261]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-53e9"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000300000069 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[5.997516,50.219566]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-53ea"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000300000076 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[6.126803,50.278736]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-53eb"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000300000075 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[6.125893,50.274738]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-53ec"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000300000074 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[6.131192,50.281391]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-53ed"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000300000051 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[5.869818,49.649839]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-53ee"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000300000050 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[5.889106,49.647885]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-53ef"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000300000043 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[5.818298,49.592922]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-53f0"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000300000042 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[5.738495,49.992514]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-53f1"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000300000045 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[5.850253,49.609929]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-53f2"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000300000062 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[5.822615,49.593374]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-53f3"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000300000061 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[5.820716,49.594689]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-53f4"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000300000060 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[5.833222,49.593719]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-53f5"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000300000055 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[5.832218,49.632468]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-53f6"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000300000054 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[5.839445,49.638082]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-53f7"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000300000053 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[5.840794,49.64142]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-53f8"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000300000052 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[5.843397,49.651298]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-53f9"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000300000059 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[5.850602,49.6058]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-53fa"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000300000057 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[5.848148,49.611869]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-53fb"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000300000056 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[5.83709,49.630595]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-53fc"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000300000107 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[5.780372,49.98629]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-53fd"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000300000109 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[5.790428,49.990545]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-53fe"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000300000108 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[5.782154,49.989056]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-53ff"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000300000110 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[5.717507,50.002331]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5400"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000300000111 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[5.747563,49.990907]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5401"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000300000141 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[5.806279,49.689496]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5402"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000300000140 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[5.784788,49.751996]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5403"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000300000132 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[5.799114,49.564215]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5404"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000300000136 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[5.810051,49.6749]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5405"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000300000135 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[5.823275,49.689586]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5406"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000300000133 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[5.886967,49.638642]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5407"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000300000139 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[5.786444,49.750476]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5408"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000300000138 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[5.808559,49.61341]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5409"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000300000137 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[5.821528,49.678544]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-540a"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000500103054 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[6.471113,49.507319]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-540b"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000500105066 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[6.427757,49.529798]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-540c"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000500101067 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[6.376334,49.517298]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-540d"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000500102043 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[6.376413,49.539296]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-540e"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000500102044 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[6.38332,49.529044]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-540f"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000500102045 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[6.379041,49.534111]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5410"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000400000138 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[6.210876,49.352737]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5411"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000400000139 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[6.207988,49.362159]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5412"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000400000136 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[6.185795,49.351094]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5413"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000400000137 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[6.198372,49.35346]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5414"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000400000134 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[5.780953,49.311719]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5415"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000400000135 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[5.767328,49.308387]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5416"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000400000132 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[5.792213,49.315271]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5417"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000400000130 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[5.805798,49.325032]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5418"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000400000131 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[5.79979,49.320025]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5419"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000400000129 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[5.870055,49.356213]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-541a"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000400000125 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[6.170349,48.947923]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-541b"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000400000123 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[5.915071,49.384739]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-541c"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000400000124 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[6.210241,49.401907]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-541d"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000400000150 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[6.165695,49.394318]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-541e"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000400000160 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[5.902337,49.374888]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-541f"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000400000149 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[5.794112,49.522753]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5420"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000400000147 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[5.773753,49.521512]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5421"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000400000148 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[5.792207,49.521665]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5422"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000400000145 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[5.781151,49.498937]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5423"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000400000146 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[5.775173,49.524925]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5424"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000400000143 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[5.79356,49.530979]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5425"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000400000144 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[5.766674,49.512137]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5426"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000400000140 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[5.95029,49.472647]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5427"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000400000168 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[5.945325,49.252171]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5428"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000400000165 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[5.930263,49.324522]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5429"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000400000166 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[5.967718,49.288651]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-542a"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000400000163 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[6.17943,49.464171]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-542b"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000400000164 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[5.927405,49.459121]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-542c"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000400000161 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[5.959902,49.478622]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-542d"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000400000162 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[5.930022,49.470905]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-542e"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000400000118 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[5.973257,49.398172]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-542f"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000400000116 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[6.138346,49.357369]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5430"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000400000117 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[5.941366,49.41601]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5431"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000400000115 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[6.13446,49.358109]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5432"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000400000112 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[5.870651,49.493739]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5433"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000400000103 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[5.937913,49.474533]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5434"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000400000101 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[5.944148,49.475292]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5435"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000400000102 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[5.929944,49.470597]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5436"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000400000100 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[5.954207,49.46827]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5437"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000400000019 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[5.785027,49.518614]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5438"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000400000017 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[5.789713,49.520282]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5439"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000400000015 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[6.066027,49.329059]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-543a"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000400000016 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[5.798763,49.523494]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-543b"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000400000014 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[6.11117,49.35904]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-543c"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000400000011 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[6.202494,49.398022]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-543d"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000400000007 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[6.24014,49.407348]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-543e"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000400000002 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[5.95873,49.478591]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-543f"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000400000039 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[5.762924,49.51662]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5440"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000400000037 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[5.764483,49.523979]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5441"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000400000038 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[5.769388,49.517296]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5442"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000400000035 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[5.768786,49.513644]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5443"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000400000036 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[5.77054,49.510715]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5444"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000400000033 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[5.773572,49.512087]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5445"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000400000034 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[5.776371,49.526461]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5446"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000400000031 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[5.771077,49.518711]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5447"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000400000032 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[5.75995,49.514153]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5448"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000400000030 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[5.768368,49.513687]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5449"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000400000029 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[5.763766,49.520396]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-544a"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000400000026 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[5.795328,49.532467]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-544b"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000400000027 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[5.798948,49.534403]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-544c"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000400000024 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[6.157018,49.407573]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-544d"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000400000025 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[5.80178,49.535273]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-544e"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000400000023 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[5.895141,49.369477]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-544f"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000400000020 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[5.80194,49.523932]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5450"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000400000021 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[5.779987,49.517079]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5451"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000400000054 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[5.794916,49.542784]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5452"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000400000051 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[5.786849,49.499888]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5453"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000400000052 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[5.778261,49.49919]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5454"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000400000048 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[6.157669,49.403468]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5455"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000400000049 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[5.78372,49.501051]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5456"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000400000045 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[5.902952,49.368832]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5457"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000400000042 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[5.764639,49.52643]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5458"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000400000040 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[5.762484,49.511974]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5459"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000400000041 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[5.774107,49.515718]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-545a"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000400000050 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[5.778907,49.501133]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-545b"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000400000079 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[5.817847,49.529473]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-545c"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000400000077 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[6.103565,49.363051]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-545d"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000400000078 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[5.807665,49.524954]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-545e"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000400000075 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[5.918444,49.495221]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-545f"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000400000074 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[5.919358,49.492987]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5460"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000400000082 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[5.814449,49.527526]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5461"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000400000083 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[6.258188,49.419203]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5462"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000400000080 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[5.82256,49.531186]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5463"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000400000081 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[5.810963,49.526296]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5464"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000400000069 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[6.170436,49.378987]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5465"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000400000066 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[6.021494,49.442053]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5466"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000400000065 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[6.160457,49.400307]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5467"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000400000071 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[6.17705,49.109459]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5468"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000400000070 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[5.769383,49.512968]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5469"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000400000099 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[5.957122,49.472467]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-546a"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000400000098 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[6.169669,49.353975]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-546b"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000400000096 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[6.28745,49.469977]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-546c"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000400000088 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[5.801362,49.510358]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-546d"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000400000086 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[5.804157,49.509446]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-546e"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000400000087 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[5.805927,49.5107]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-546f"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000400000092 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[6.162442,49.359412]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5470"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 2:000400000090 to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[6.176388,49.353033]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5471"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 1:FRA to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[8.562152,50.037933]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5472"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Unable to link stop 1:CDG to the street graph"
+    },
+    "geometry" : {"type":"Point","coordinates":[2.547778,49.009722]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5473"
+  } ]
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<title>Graph report for OTP Graph</title>
+<meta charset="utf-8">
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css" integrity="sha384-X38yfunGUhNzHpBaEBsWLO+A0HDYOQi8ufWDkZ0k9e0eXz/tH3II7uKZ9msv++Ls" crossorigin="anonymous">
+<style>.pure-button{margin-bottom:4px;}</style>
+</head><body>
+<h1>OpenTripPlanner data import issue log PrunedStopIsland</h1>
+<h2>Graph report for <em>graph.obj</em></h2>
+<p>
+<a class='pure-button button-barrierintersectinghighway' href="BarrierIntersectingHighway1.html" style='background-color: #FFFF80;'>BarrierIntersectingHighway 1</a>
+<a class='pure-button button-barrierintersectinghighway' href="BarrierIntersectingHighway2.html" style='background-color: #FFFF80;'>BarrierIntersectingHighway 2</a>
+<a class='pure-button button-differentlevelssharingbarrier' href="DifferentLevelsSharingBarrier.html" style='background-color: #FFD0FF;'>DifferentLevelsSharingBarrier</a>
+<a class='pure-button button-disconnectedosmnode' href="DisconnectedOsmNode.html" style='background-color: #90C8FF;'>DisconnectedOsmNode</a>
+<a class='pure-button button-floornumberunknownassumedgroundlevel' href="FloorNumberUnknownAssumedGroundLevel.html" style='background-color: #FFE060;'>FloorNumberUnknownAssumedGroundLevel</a>
+<a class='pure-button button-graphconnectivity' href="GraphConnectivity.html" style='background-color: #B0FF40;'>GraphConnectivity</a>
+<a class='pure-button button-graphislandbicycle' href="GraphIslandBICYCLE.html" style='background-color: #FF80FF;'>GraphIslandBICYCLE</a>
+<a class='pure-button button-graphislandbicyclenothroughtraffic' href="GraphIslandBICYCLENoThroughTraffic.html" style='background-color: #70A0FF;'>GraphIslandBICYCLENoThroughTraffic</a>
+<a class='pure-button button-graphislandcar' href="GraphIslandCAR1.html" style='background-color: #FFC000;'>GraphIslandCAR 1</a>
+<a class='pure-button button-graphislandcar' href="GraphIslandCAR2.html" style='background-color: #FFC000;'>GraphIslandCAR 2</a>
+<a class='pure-button button-graphislandcar' href="GraphIslandCAR3.html" style='background-color: #FFC000;'>GraphIslandCAR 3</a>
+<a class='pure-button button-graphislandcar' href="GraphIslandCAR4.html" style='background-color: #FFC000;'>GraphIslandCAR 4</a>
+<a class='pure-button button-graphislandcar' href="GraphIslandCAR5.html" style='background-color: #FFC000;'>GraphIslandCAR 5</a>
+<a class='pure-button button-graphislandcar' href="GraphIslandCAR6.html" style='background-color: #FFC000;'>GraphIslandCAR 6</a>
+<a class='pure-button button-graphislandcarnothroughtraffic' href="GraphIslandCARNoThroughTraffic.html" style='background-color: #80FF40;'>GraphIslandCARNoThroughTraffic</a>
+<a class='pure-button button-graphislandwalk' href="GraphIslandWALK.html" style='background-color: #FFB0FF;'>GraphIslandWALK</a>
+<a class='pure-button button-graphislandwalknothroughtraffic' href="GraphIslandWALKNoThroughTraffic.html" style='background-color: #90E0FF;'>GraphIslandWALKNoThroughTraffic</a>
+<a class='pure-button button-graphwide' href="Graphwide.html" style='background-color: #FFA000;'>Graphwide</a>
+<a class='pure-button button-invalidvehicleparkingcapacity' href="InvalidVehicleParkingCapacity.html" style='background-color: #E0FF70;'>InvalidVehicleParkingCapacity</a>
+<a class='pure-button button-isolatedstop' href="IsolatedStop.html" style='background-color: #D0A0FF;'>IsolatedStop</a>
+<a class='pure-button button-levelambiguous' href="LevelAmbiguous.html" style='background-color: #B0FFFF;'>LevelAmbiguous</a>
+<a class='pure-button button-parkandrideunlinked' href="ParkAndRideUnlinked.html" style='background-color: #FF8080;'>ParkAndRideUnlinked</a>
+<button class='pure-button pure-button-disabled button-prunedstopisland' style='background-color: #40FF40;'>PrunedStopIsland</button>
+<a class='pure-button button-repeatedstops' href="RepeatedStops.html" style='background-color: #A090FF;'>RepeatedStops</a>
+<a class='pure-button button-stopnotlinkedfortransfers' href="StopNotLinkedForTransfers.html" style='background-color: #90FFE0;'>StopNotLinkedForTransfers</a>
+<a class='pure-button button-turnrestrictionbad' href="TurnRestrictionBad.html" style='background-color: #FF60B0;'>TurnRestrictionBad</a>
+<a class='pure-button button-turnrestrictionexception' href="TurnRestrictionException.html" style='background-color: #70FFB0;'>TurnRestrictionException</a>
+<a class='pure-button button-turnrestrictionunknown' href="TurnRestrictionUnknown.html" style='background-color: #FFFF40;'>TurnRestrictionUnknown</a>
+<a class='pure-button button-vertexwithoutedges' href="VertexWithoutEdges.html" style='background-color: #FFFF80;'>VertexWithoutEdges</a>
+</p>
+<a class="pure-button" href="./PrunedStopIsland.geojson">Open issues in a GeoJSON file</a><ul id="log">
+<li>Unlinked stops from pruned walk <a href='http://www.openstreetmap.org/node/4892148057'>subgraph 4892148057</a> of 25 street vertices and 1 stops 2:000200404026. Edge changes: 0 to nothru, 0 to no walking, 48 erased</li>
+<li>Unlinked stops from pruned walk <a href='http://www.openstreetmap.org/node/1852192070'>subgraph 1852192070</a> of 14 street vertices and 1 stops 2:000200405039. Edge changes: 0 to nothru, 0 to no walking, 26 erased</li>
+<li>Unlinked stops from pruned walk <a href='http://www.openstreetmap.org/node/6071617259'>subgraph 6071617259</a> of 14 street vertices and 1 stops 2:000220402046. Edge changes: 0 to nothru, 0 to no walking, 26 erased</li>
+<li>Unlinked stops from pruned walk <a href='http://www.openstreetmap.org/node/8835910264'>subgraph 8835910264</a> of 12 street vertices and 1 stops 2:000160802003. Edge changes: 0 to nothru, 14 to no walking, 6 erased</li>
+<li>Unlinked stops from pruned walk <a href='http://www.openstreetmap.org/node/7041887288'>subgraph 7041887288</a> of 10 street vertices and 1 stops 2:000140701022. Edge changes: 0 to nothru, 0 to no walking, 18 erased</li>
+<li>Unlinked stops from pruned walk <a href='http://www.openstreetmap.org/node/-100076'>subgraph -100076</a> of 9 street vertices and 1 stops 2:000180703008. Edge changes: 0 to nothru, 10 to no walking, 6 erased</li>
+<li>Unlinked stops from pruned walk <a href='http://www.openstreetmap.org/node/9350466813'>subgraph 9350466813</a> of 7 street vertices and 1 stops 2:000200404031. Edge changes: 0 to nothru, 0 to no walking, 12 erased</li>
+<li>Unlinked stops from pruned walk subgraph osm:node:5442902343:way:643116838 of 7 street vertices and 1 stops 2:000200417052. Edge changes: 0 to nothru, 0 to no walking, 12 erased</li>
+<li>Unlinked stops from pruned walk <a href='http://www.openstreetmap.org/node/7702388697'>subgraph 7702388697</a> of 6 street vertices and 1 stops 2:000130106004. Edge changes: 0 to nothru, 0 to no walking, 10 erased</li>
+<li>Unlinked stops from pruned walk <a href='http://www.openstreetmap.org/node/2239582865'>subgraph 2239582865</a> of 6 street vertices and 1 stops 1:LUX. Edge changes: 0 to nothru, 0 to no walking, 0 erased</li>
+<li>Unlinked stops from pruned walk <a href='http://www.openstreetmap.org/node/7972844144'>subgraph 7972844144</a> of 6 street vertices and 1 stops 2:000200405058. Edge changes: 0 to nothru, 0 to no walking, 10 erased</li>
+<li>Unlinked stops from pruned walk <a href='http://www.openstreetmap.org/node/5700636642'>subgraph 5700636642</a> of 5 street vertices and 1 stops 2:000220301018. Edge changes: 0 to nothru, 0 to no walking, 0 erased</li>
+<li>Unlinked stops from pruned walk <a href='http://www.openstreetmap.org/node/3852489005'>subgraph 3852489005</a> of 4 street vertices and 1 stops 2:000220402132. Edge changes: 0 to nothru, 2 to no walking, 2 erased</li>
+<li>Unlinked stops from pruned walk <a href='http://www.openstreetmap.org/node/6177413944'>subgraph 6177413944</a> of 4 street vertices and 1 stops 2:000200419021. Edge changes: 0 to nothru, 0 to no walking, 4 erased</li>
+<li>Unlinked stops from pruned walk <a href='http://www.openstreetmap.org/node/7952382960'>subgraph 7952382960</a> of 4 street vertices and 1 stops 2:000140401005. Edge changes: 0 to nothru, 6 to no walking, 0 erased</li>
+<li>Unlinked stops from pruned walk <a href='http://www.openstreetmap.org/node/2007461433'>subgraph 2007461433</a> of 3 street vertices and 1 stops 2:000200403021. Edge changes: 0 to nothru, 0 to no walking, 0 erased</li>
+<li>Unlinked stops from pruned walk <a href='http://www.openstreetmap.org/node/7038111226'>subgraph 7038111226</a> of 3 street vertices and 1 stops 2:000200409006. Edge changes: 0 to nothru, 0 to no walking, 0 erased</li>
+<li>Unlinked stops from pruned walk subgraph split_4236 of 2 street vertices and 1 stops 2:000170804004. Edge changes: 0 to nothru, 0 to no walking, 0 erased</li>
+<li>Unlinked stops from pruned walk subgraph split_4974 of 2 street vertices and 1 stops 2:000200417050. Edge changes: 0 to nothru, 0 to no walking, 0 erased</li>
+<li>Unlinked stops from pruned walk subgraph split_3992 of 2 street vertices and 1 stops 2:000140401014. Edge changes: 0 to nothru, 0 to no walking, 0 erased</li>
+<li>Unlinked stops from pruned walk subgraph split_2512 of 2 street vertices and 1 stops 2:000200412025. Edge changes: 0 to nothru, 0 to no walking, 0 erased</li>
+<li>Unlinked stops from pruned walk <a href='http://www.openstreetmap.org/node/2352285469'>subgraph 2352285469</a> of 2 street vertices and 1 stops 2:000180703003. Edge changes: 0 to nothru, 0 to no walking, 2 erased</li>
+<li>Unlinked stops from pruned walk subgraph split_372 of 2 street vertices and 1 stops 2:000200405025. Edge changes: 0 to nothru, 0 to no walking, 0 erased</li>
+<li>Unlinked stops from pruned walk <a href='http://www.openstreetmap.org/node/11240567780'>subgraph 11240567780</a> of 2 street vertices and 1 stops 2:000300000133. Edge changes: 0 to nothru, 2 to no walking, 0 erased</li>
+<li>Unlinked stops from pruned walk subgraph split_2054 of 2 street vertices and 1 stops 2:000220301034. Edge changes: 0 to nothru, 0 to no walking, 0 erased</li>
+<li>Unlinked stops from pruned walk subgraph split_1783 of 2 street vertices and 1 stops 2:000190703004. Edge changes: 0 to nothru, 0 to no walking, 0 erased</li>
+<li>Unlinked stops from pruned walk <a href='http://www.openstreetmap.org/node/7077427741'>subgraph 7077427741</a> of 1 street vertices and 1 stops 2:000200409007. Edge changes: 0 to nothru, 0 to no walking, 0 erased</li>
+<li>Unlinked stops from pruned walk <a href='http://www.openstreetmap.org/node/665895987'>subgraph 665895987</a> of 1 street vertices and 1 stops 2:000200403018. Edge changes: 0 to nothru, 0 to no walking, 1 erased</li>
+</ul>
+</body></html>

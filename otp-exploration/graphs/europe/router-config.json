@@ -1,0 +1,14 @@
+{
+    "routingDefaults": {
+      "walkSpeed": 1.33,
+      "bikeSpeed": 4.1,
+      "carSpeed": 13.9,
+      "transferSlack": "PT2M",
+      "boardSlack": "PT0S",
+      "alightSlack": "PT0S",
+      "transferPenalty": 0,
+      "waitReluctance": 0.8,
+      "walkReluctance": 2.0
+    }
+  }
+  

@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<title>Graph report for OTP Graph</title>
+<meta charset="utf-8">
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css" integrity="sha384-X38yfunGUhNzHpBaEBsWLO+A0HDYOQi8ufWDkZ0k9e0eXz/tH3II7uKZ9msv++Ls" crossorigin="anonymous">
+<style>.pure-button{margin-bottom:4px;}</style>
+</head><body>
+<h1>OpenTripPlanner data import issue log StopNotLinkedForTransfers</h1>
+<h2>Graph report for <em>graph.obj</em></h2>
+<p>
+<a class='pure-button button-barrierintersectinghighway' href="BarrierIntersectingHighway1.html" style='background-color: #FFFF80;'>BarrierIntersectingHighway 1</a>
+<a class='pure-button button-barrierintersectinghighway' href="BarrierIntersectingHighway2.html" style='background-color: #FFFF80;'>BarrierIntersectingHighway 2</a>
+<a class='pure-button button-differentlevelssharingbarrier' href="DifferentLevelsSharingBarrier.html" style='background-color: #FFD0FF;'>DifferentLevelsSharingBarrier</a>
+<a class='pure-button button-disconnectedosmnode' href="DisconnectedOsmNode.html" style='background-color: #90C8FF;'>DisconnectedOsmNode</a>
+<a class='pure-button button-floornumberunknownassumedgroundlevel' href="FloorNumberUnknownAssumedGroundLevel.html" style='background-color: #FFE060;'>FloorNumberUnknownAssumedGroundLevel</a>
+<a class='pure-button button-graphconnectivity' href="GraphConnectivity.html" style='background-color: #B0FF40;'>GraphConnectivity</a>
+<a class='pure-button button-graphislandbicycle' href="GraphIslandBICYCLE.html" style='background-color: #FF80FF;'>GraphIslandBICYCLE</a>
+<a class='pure-button button-graphislandbicyclenothroughtraffic' href="GraphIslandBICYCLENoThroughTraffic.html" style='background-color: #70A0FF;'>GraphIslandBICYCLENoThroughTraffic</a>
+<a class='pure-button button-graphislandcar' href="GraphIslandCAR1.html" style='background-color: #FFC000;'>GraphIslandCAR 1</a>
+<a class='pure-button button-graphislandcar' href="GraphIslandCAR2.html" style='background-color: #FFC000;'>GraphIslandCAR 2</a>
+<a class='pure-button button-graphislandcar' href="GraphIslandCAR3.html" style='background-color: #FFC000;'>GraphIslandCAR 3</a>
+<a class='pure-button button-graphislandcar' href="GraphIslandCAR4.html" style='background-color: #FFC000;'>GraphIslandCAR 4</a>
+<a class='pure-button button-graphislandcar' href="GraphIslandCAR5.html" style='background-color: #FFC000;'>GraphIslandCAR 5</a>
+<a class='pure-button button-graphislandcar' href="GraphIslandCAR6.html" style='background-color: #FFC000;'>GraphIslandCAR 6</a>
+<a class='pure-button button-graphislandcarnothroughtraffic' href="GraphIslandCARNoThroughTraffic.html" style='background-color: #80FF40;'>GraphIslandCARNoThroughTraffic</a>
+<a class='pure-button button-graphislandwalk' href="GraphIslandWALK.html" style='background-color: #FFB0FF;'>GraphIslandWALK</a>
+<a class='pure-button button-graphislandwalknothroughtraffic' href="GraphIslandWALKNoThroughTraffic.html" style='background-color: #90E0FF;'>GraphIslandWALKNoThroughTraffic</a>
+<a class='pure-button button-graphwide' href="Graphwide.html" style='background-color: #FFA000;'>Graphwide</a>
+<a class='pure-button button-invalidvehicleparkingcapacity' href="InvalidVehicleParkingCapacity.html" style='background-color: #E0FF70;'>InvalidVehicleParkingCapacity</a>
+<a class='pure-button button-isolatedstop' href="IsolatedStop.html" style='background-color: #D0A0FF;'>IsolatedStop</a>
+<a class='pure-button button-levelambiguous' href="LevelAmbiguous.html" style='background-color: #B0FFFF;'>LevelAmbiguous</a>
+<a class='pure-button button-parkandrideunlinked' href="ParkAndRideUnlinked.html" style='background-color: #FF8080;'>ParkAndRideUnlinked</a>
+<a class='pure-button button-prunedstopisland' href="PrunedStopIsland.html" style='background-color: #40FF40;'>PrunedStopIsland</a>
+<a class='pure-button button-repeatedstops' href="RepeatedStops.html" style='background-color: #A090FF;'>RepeatedStops</a>
+<button class='pure-button pure-button-disabled button-stopnotlinkedfortransfers' style='background-color: #90FFE0;'>StopNotLinkedForTransfers</button>
+<a class='pure-button button-turnrestrictionbad' href="TurnRestrictionBad.html" style='background-color: #FF60B0;'>TurnRestrictionBad</a>
+<a class='pure-button button-turnrestrictionexception' href="TurnRestrictionException.html" style='background-color: #70FFB0;'>TurnRestrictionException</a>
+<a class='pure-button button-turnrestrictionunknown' href="TurnRestrictionUnknown.html" style='background-color: #FFFF40;'>TurnRestrictionUnknown</a>
+<a class='pure-button button-vertexwithoutedges' href="VertexWithoutEdges.html" style='background-color: #FFFF80;'>VertexWithoutEdges</a>
+</p>
+<a class="pure-button" href="./StopNotLinkedForTransfers.geojson">Open issues in a GeoJSON file</a><ul id="log">
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.954296&mlon=6.176803&layers=T">"Stolzembourg, S.E.O. (2:000130106004)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.963251&mlon=6.169557&layers=T">"Stolzembourg, Bei der Bréck (2:000130106002)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=50.096121&mlon=6.057518&layers=T">"Hupperdange, Schull (2:000110104002)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.751511&mlon=6.204804&layers=T">"Schmët (2:000160403001)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.930545&mlon=5.788077&layers=T">"Harlange, Bréck (2:000120703002)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.967838&mlon=5.884828&layers=T">"Winseler, Rosskämmchen (2:000121009002)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.658934&mlon=6.17461&layers=T">"Stafelter (2:000201005001)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=50.036485&mlon=6.129956&layers=T">"Rodershausen, Kiirch (2:000110407001)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=50.159759&mlon=6.106164&layers=T">"Leithum, Bei der aler Schull (2:000110705001)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.821965&mlon=6.349881&layers=T">"Berdorf, Duerfplaz (2:000170301004)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.911203&mlon=5.992568&layers=T">"Tadler, al Schoul (2:000120507001)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.517298&mlon=6.376334&layers=T">"Besch, Chemiewerk (2:000500101067)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.50462&mlon=6.372647&layers=T">"Besch, Ortsmitte B419 (2:000500101059)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.734247&mlon=6.393489&layers=T">"Berbourg, Schoulstrooss (2:000180601001)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.951546&mlon=6.055776&layers=T">"Schlindermanderscheid, Um Friedbësch (2:000140309004)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.912267&mlon=6.193831&layers=T">"Fouhren, Halt (2:000130204001)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=50.032758&mlon=6.037541&layers=T">"Munshausen, bei der Kierch (2:000110113002)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.850229&mlon=6.359117&layers=T">"Bollendorf-Pont, Pont (2:000170302003)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=50.035673&mlon=6.036859&layers=T">"Munshausen, Iewescht Duerf (2:000110113001)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.846901&mlon=6.367936&layers=T">"Bollendorf-Pont, Hamicht (2:000170302002)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.785323&mlon=6.369366&layers=T">"Scheidgen, Biweschland (2:000170403001)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.876571&mlon=6.221437&layers=T">"Bettendorf, Beim Schlass (2:000140201003)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.892085&mlon=6.160078&layers=T">"Bastendorf, Beim Terrain (2:000130201001)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.986932&mlon=6.162376&layers=T">"Hosingen, Gemönnerbréck (2:000110403008)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.353033&mlon=6.176388&layers=T">"Thionville, Porte Saarlouis (2:000400000090)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.359412&mlon=6.162442&layers=T">"Thionville, Foch Kiosque (2:000400000092)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.5107&mlon=5.805927&layers=T">"St. Charles, Eglise (2:000400000087)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.509446&mlon=5.804157&layers=T">"St. Charles, Château d'Eau (2:000400000086)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.510358&mlon=5.801362&layers=T">"St. Charles, Rhin (2:000400000088)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.469977&mlon=6.28745&layers=T">"Beyren-lès-Sierck, Église (2:000400000096)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.353975&mlon=6.169669&layers=T">"Thionville, Gare (2:000400000098)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.472467&mlon=5.957122&layers=T">"Audun-le-Tiche, Mairie (2:000400000099)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.512968&mlon=5.769383&layers=T">"Longwy, Gare (2:000400000070)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.109459&mlon=6.17705&layers=T">"Metz-Ville, Gare (2:000400000071)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.400307&mlon=6.160457&layers=T">"Hettange Grande, Cité des Jardins (2:000400000065)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.442053&mlon=6.021494&layers=T">"Ottange, Pl. de Montcontour (2:000400000066)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.378987&mlon=6.170436&layers=T">"Manom, Centre Commercial (2:000400000069)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.526296&mlon=5.810963&layers=T">"Saulnes, Les Pierrettes (2:000400000081)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.531186&mlon=5.82256&layers=T">"Saulnes, Place (2:000400000080)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.419203&mlon=6.258188&layers=T">"Sentzich, Cimetière (2:000400000083)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.527526&mlon=5.814449&layers=T">"Saulnes, Salvador Allende (2:000400000082)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.492987&mlon=5.919358&layers=T">"Rédange, Mairie (2:000400000074)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.495221&mlon=5.918444&layers=T">"Rédange, rue de Belvaux (2:000400000075)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.524954&mlon=5.807665&layers=T">"Saulnes, Allée des Roses (2:000400000078)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.363051&mlon=6.103565&layers=T">"Metzange, P+R Metzange (2:000400000077)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.529473&mlon=5.817847&layers=T">"Saulnes, Auguste Rase (2:000400000079)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.501133&mlon=5.778907&layers=T">"Mexy, Ecole (2:000400000050)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.515718&mlon=5.774107&layers=T">"Longwy, St. Louis (2:000400000041)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.511974&mlon=5.762484&layers=T">"Longwy, rue de Metz (2:000400000040)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.52643&mlon=5.764639&layers=T">"Longwy, 8 mai 45 (2:000400000042)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.368832&mlon=5.902952&layers=T">"Audun-Le-Roman, Brassens (2:000400000045)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.501051&mlon=5.78372&layers=T">"Mexy, Condé (2:000400000049)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.403468&mlon=6.157669&layers=T">"Hettange Grande, Place Schuman (2:000400000048)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.49919&mlon=5.778261&layers=T">"Mexy, Lorraine (2:000400000052)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.499888&mlon=5.786849&layers=T">"Mexy, La Forchette (2:000400000051)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.542784&mlon=5.794916&layers=T">"Mt.St.Martin, Auchan PED (2:000400000054)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.517079&mlon=5.779987&layers=T">"Herserange, St. Eloi (2:000400000021)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.523932&mlon=5.80194&layers=T">"Herserange, Quatre Vents (2:000400000020)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.369477&mlon=5.895141&layers=T">"Audun-le-Roman, Eglise (2:000400000023)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.535273&mlon=5.80178&layers=T">"Longlaville, Elsa Triolet (2:000400000025)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.407573&mlon=6.157018&layers=T">"Hettange-Grande, Gare SNCF (2:000400000024)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.534403&mlon=5.798948&layers=T">"Longlaville, Maison du Peuple (2:000400000027)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.532467&mlon=5.795328&layers=T">"Longlaville, Mairie (2:000400000026)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.520396&mlon=5.763766&layers=T">"Longwy, 11 Novembre 1918 (2:000400000029)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.513687&mlon=5.768368&layers=T">"Longwy, Bas/Espace Bus (2:000400000030)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.514153&mlon=5.75995&layers=T">"Longwy, Home City (2:000400000032)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.518711&mlon=5.771077&layers=T">"Longwy, Espace Saintignon Lidl (2:000400000031)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.526461&mlon=5.776371&layers=T">"Longwy, Lebrun Bessemer (2:000400000034)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.512087&mlon=5.773572&layers=T">"Longwy, Lafontaine (2:000400000033)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.510715&mlon=5.77054&layers=T">"Longwy, Merlin (2:000400000036)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.513644&mlon=5.768786&layers=T">"Longwy, Gare routière (2:000400000035)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.517296&mlon=5.769388&layers=T">"Longwy, Récollets (2:000400000038)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.949612&mlon=5.795477&layers=T">"Tarchamps, Kierch (2:000120708001)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.733645&mlon=6.228802&layers=T">"Godbrange, Op der Haerdchen (2:000180507008)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.734368&mlon=6.232661&layers=T">"Godbrange, Bei der Kiirch (2:000180507001)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.920903&mlon=5.902181&layers=T">"Kaundorf, An der Hielt (2:000120704001)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.863556&mlon=6.313227&layers=T">"Reisdorf, Hermeswis (2:000141203006)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.717725&mlon=6.09&layers=T">"Schoenfels, Duerf (2:000160909001)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.719185&mlon=6.091522&layers=T">"Schoenfels, Schlass (2:000160909002)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.7789&mlon=5.81064&layers=T">"Petit-Nobressart, Am Pesch (2:000150304001)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.523979&mlon=5.764483&layers=T">"Longwy, Place Darche (2:000400000037)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.51662&mlon=5.762924&layers=T">"Longwy, République (2:000400000039)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.970009&mlon=6.089379&layers=T">"Hoscheid-Dickt, Um Pëtz (2:000110413001)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.478591&mlon=5.95873&layers=T">"Audun-le-Tiche, Gare (2:000400000002)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.407348&mlon=6.24014&layers=T">"Cattenom, Gendarmerie CD (2:000400000007)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.398022&mlon=6.202494&layers=T">"Garche, Route de Mondorf (2:000400000011)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.35904&mlon=6.11117&layers=T">"Elange-Veymerange, Stade (2:000400000014)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.523494&mlon=5.798763&layers=T">"Herserange, Concorde (2:000400000016)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.329059&mlon=6.066027&layers=T">"Hayange, Esplanade (2:000400000015)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.520282&mlon=5.789713&layers=T">"Herserange, La Folie (2:000400000017)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.518614&mlon=5.785027&layers=T">"Herserange, Mairie (2:000400000019)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.46827&mlon=5.954207&layers=T">"Audun-le-Tiche, Place du Château (2:000400000100)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.470597&mlon=5.929944&layers=T">"Villerupt, Barbusse (Église) (2:000400000102)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.475292&mlon=5.944148&layers=T">"Audun-le-Tiche, Résidence Vian (2:000400000101)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.474533&mlon=5.937913&layers=T">"Audun-le-Tiche, Saint Nicolas (2:000400000103)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=50.016666&mlon=6.136457&layers=T">"Eisenbach, Kounenhaff (2:000110406004)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.493739&mlon=5.870651&layers=T">"Hussigny, Place de l'Eglise (2:000400000112)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.358109&mlon=6.13446&layers=T">"Thionville, Arlon (2:000400000115)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.41601&mlon=5.941366&layers=T">"Aumetz, Poste (2:000400000117)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.357369&mlon=6.138346&layers=T">"Thionville, Esch (2:000400000116)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.398172&mlon=5.973257&layers=T">"Ludelange, Carrefour (2:000400000118)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.470905&mlon=5.930022&layers=T">"Villerupt, Barbusse (2:000400000162)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.478622&mlon=5.959902&layers=T">"Audun-le-Tiche, Gare routière (2:000400000161)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.459121&mlon=5.927405&layers=T">"Cantebonne, Libération (2:000400000164)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.464171&mlon=6.17943&layers=T">"Roussy-le-Village, P&R (2:000400000163)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.288651&mlon=5.967718&layers=T">"Avril, Libération (2:000400000166)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.324522&mlon=5.930263&layers=T">"Trieux, Marie (2:000400000165)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.252171&mlon=5.945325&layers=T">"Val de Briey, Albert 1er (2:000400000168)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.472647&mlon=5.95029&layers=T">"Audun-le-Tiche, Cimetière (2:000400000140)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.512137&mlon=5.766674&layers=T">"Longwy, Labro (2:000400000144)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.530979&mlon=5.79356&layers=T">"Longlaville, Marcellin Berthelot (2:000400000143)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.524925&mlon=5.775173&layers=T">"Longwy, Kinépolis Cabinet Médical (2:000400000146)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.498937&mlon=5.781151&layers=T">"Mexy, La Grotte (2:000400000145)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.521665&mlon=5.792207&layers=T">"Herserange, Paris (2:000400000148)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.521512&mlon=5.773753&layers=T">"Longwy, Saintignon Peugeot (2:000400000147)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=50.017293&mlon=5.947714&layers=T">"Selscheid, Ennëscht Wis (2:000120904003)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.522753&mlon=5.794112&layers=T">"Herserange, Godfroy (2:000400000149)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.374888&mlon=5.902337&layers=T">"Audun-le-Roman, Parking transfrontalier (2:000400000160)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.394318&mlon=6.165695&layers=T">"Hettange Grande, Tilleuls (2:000400000150)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.401907&mlon=6.210241&layers=T">"Garche, Chênaie (2:000400000124)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=50.020003&mlon=5.948799&layers=T">"Selscheid, Roudebësch (2:000120904002)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.384739&mlon=5.915071&layers=T">"Beuvillers, Centre (2:000400000123)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=48.947923&mlon=6.170349&layers=T">"Louvigny (F), Gare TGV Lorraine (2:000400000125)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.356213&mlon=5.870055&layers=T">"Malavillers, Mairie (2:000400000129)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.320025&mlon=5.79979&layers=T">"Landres, Intermarché (2:000400000131)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.325032&mlon=5.805798&layers=T">"Landres, Gare (2:000400000130)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.315271&mlon=5.792213&layers=T">"Landres, Croisette (2:000400000132)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.308387&mlon=5.767328&layers=T">"Piennes, Zone d'activités (2:000400000135)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.311719&mlon=5.780953&layers=T">"Piennes, Place (2:000400000134)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.35346&mlon=6.198372&layers=T">"Yutz, Arc en Ciel (2:000400000137)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.351094&mlon=6.185795&layers=T">"Yutz, Roosevelt (2:000400000136)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.362159&mlon=6.207988&layers=T">"Yutz, AéroPark P&R (2:000400000139)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.352737&mlon=6.210876&layers=T">"Yutz, Foyer AMLI (2:000400000138)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.98243&mlon=6.123884&layers=T">"Wahlhausen, Kiirch (2:000110409006)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.72159&mlon=5.960935&layers=T">"Calmus, Lannekneppchen (2:000150701001)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.724957&mlon=5.963016&layers=T">"Calmus, Wäschbur (2:000150701003)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.484653&mlon=6.324071&layers=T">"Burmerange, Résidence Stoffels (2:000210604002)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.920453&mlon=5.848107&layers=T">"Bavigne, Gemeng (2:000120701001)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.902908&mlon=5.77908&layers=T">"Surré, Bei der Bréck (2:000120102001)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.94342&mlon=5.785728&layers=T">"Watrange, Walter (2:000120709001)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.925767&mlon=6.17298&layers=T">"Walsdorf, An der Gaass (2:000130208002)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.917047&mlon=6.225733&layers=T">"Bettel, Bei der Schmëdd (2:000130202002)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.973633&mlon=6.052524&layers=T">"Consthum, Knupp (2:000110404003)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.998612&mlon=5.948214&layers=T">"Eschweiler (Wiltz), Hielert (2:000120902003)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.995608&mlon=5.947553&layers=T">"Eschweiler (Wiltz), Gaass (2:000120902001)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.869979&mlon=5.901645&layers=T">"Kuborn (2:000151005001)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.534111&mlon=6.379041&layers=T">"Nennig, Sparkasse (2:000500102045)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.529044&mlon=6.38332&layers=T">"Nennig, Römische Villa (2:000500102044)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.539296&mlon=6.376413&layers=T">"Nennig, Bahnhof (2:000500102043)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.737043&mlon=6.613519&layers=T">"Euren, Eisenbahnstraße (2:000500000156)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.747588&mlon=6.636019&layers=T">"Trier, Gilbertstraße (2:000500000155)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.507794&mlon=6.761213&layers=T">"Losheim, Abzweig im Haag (2:000500000159)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.510819&mlon=6.756212&layers=T">"Losheim, Globus Wolfsborn (2:000500000161)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.504693&mlon=6.759448&layers=T">"Losheim, Globus Baumarkt (2:000500000160)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.757577&mlon=6.652113&layers=T">"Trier, Hauptbahnhof (Bus) (2:000500000163)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.507229&mlon=6.750601&layers=T">"Losheim, Haagstraße (2:000500000162)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.609479&mlon=6.426249&layers=T">"Wincheringen, Wincheringen Ort (2:000500000090)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.816822&mlon=6.758812&layers=T">"Schweich, P&R (2:000500000093)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.744609&mlon=6.636803&layers=T">"Trier, Süd (2:000500000084)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.75939&mlon=6.646138&layers=T">"Trier, Theodor-Heuss-Allee (2:000500000083)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.704588&mlon=6.544814&layers=T">"Wasserliesch, Reiniger Kreuz (2:000500000086)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.606355&mlon=6.556371&layers=T">"Saarburg, Bahnhof-Güterstrasse (2:000500000085)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.767475&mlon=6.626635&layers=T">"Trier, Hochschule (2:000500000095)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.763377&mlon=6.633876&layers=T">"Trier, Zurlaubener Ufer (2:000500000096)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.788059&mlon=5.838831&layers=T">"Lannen, Schoul (2:000150602001)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.811345&mlon=6.494152&layers=T">"Rosport, Source (2:000170611005)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.808594&mlon=6.502551&layers=T">"Rosport, Camping (2:000170611001)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.746679&mlon=6.188797&layers=T">"Fischbach (Mersch), Beim Schlass (2:000160402003)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.799935&mlon=6.391311&layers=T">"Lauterborn (2:000170502001)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.84543&mlon=5.791647&layers=T">"Bigonville, Réimerwee (2:000150502005)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.899881&mlon=6.036389&layers=T">"Kehmen, Bei der Kiirch (2:000140305001)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.892104&mlon=6.235272&layers=T">"Hoesdorf, Kranzenhaff (2:000141202001)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=50.098956&mlon=5.921321&layers=T">"Hoffelt, Bei der Kirich (2:000110811002)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=50.016455&mlon=5.9648&layers=T">"Knaphoscheid, Dahl (2:000120910001)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=50.011624&mlon=5.962382&layers=T">"Knaphoscheid, Schenten (2:000120910002)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=50.018517&mlon=5.966248&layers=T">"Knaphoscheid, Kleinhoscheid (2:000120910003)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.801516&mlon=6.185301&layers=T">"Nommern, Aechelbur (2:000161003004)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.797669&mlon=6.175462&layers=T">"Nommern, Griechten (2:000161003001)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.900791&mlon=5.884507&layers=T">"Insenborn, Duerf (2:000120510001)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.507565&mlon=6.148432&layers=T">"Hellange, Kiirch (2:000220503003)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.976053&mlon=6.527101&layers=T">"Bitburg, ZOB (2:000500000009)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.598255&mlon=6.451546&layers=T">"Bilzingen Ort, Wincheringen (2:000500000005)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.953992&mlon=6.271144&layers=T">"Geichlingen, B50 Abzw. Lahr (2:000500000011)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.346701&mlon=6.711075&layers=T">"Dillingen (Saar), Eissporthalle (2:000500000010)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.969787&mlon=6.304519&layers=T">"Niedergeckler, Kapelle (2:000500000013)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.707375&mlon=6.550666&layers=T">"Igel (2:000500000019)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.604682&mlon=6.542404&layers=T">"Saarburg, Heckingplatz (2:000500000018)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.972306&mlon=6.320433&layers=T">"Sinspelt, GH Pax (2:000500000014)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.961445&mlon=6.423056&layers=T">"Oberweis, GH Wirtz (2:000500000017)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.596852&mlon=6.509001&layers=T">"Saarburg, Kahren (2:000500000021)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.962405&mlon=6.431051&layers=T">"Oberweis, Buchbind. Ollinger (2:000500000024)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.97516&mlon=6.503518&layers=T">"Bitburg, Steinebrück Kreuzung (2:000500000023)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.808198&mlon=6.764534&layers=T">"Longuich, Parkplatz (2:000500000029)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.703707&mlon=6.577287&layers=T">"Kreuz-Konz (2:000500000028)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.699987&mlon=6.573201&layers=T">"Konz, Konz Mitte (2:000500000027)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.436936&mlon=6.63444&layers=T">"Merzig, Bahnhof (2:000500000033)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.50676&mlon=6.740856&layers=T">"Losheim, Merziger Str. (2:000500000032)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.579158&mlon=6.477099&layers=T">"Merzkirchen, Abzw. (2:000500000035)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.441667&mlon=6.63395&layers=T">"Merzig, Stadthalle (2:000500000034)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.506662&mlon=6.732628&layers=T">"Losheim, Heimlingen (2:000500000031)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.506568&mlon=6.745313&layers=T">"Losheim, Bahnhof (2:000500000030)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.493498&mlon=6.607518&layers=T">"Mettlach, Geissert (2:000500000037)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.961489&mlon=6.418996&layers=T">"Oberweis, Schule (2:000500000036)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.491695&mlon=6.593422&layers=T">"Mettlach, Park (2:000500000039)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.96701&mlon=6.359763&layers=T">"Brimingen, Abzw. (2:000500000042)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.505172&mlon=6.518579&layers=T">"Orscholz, Sportplatz (2:000500000056)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.651375&mlon=6.451903&layers=T">"Nittel, Rochusstrasse (2:000500000051)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.653915&mlon=6.441822&layers=T">"Nittel, Bahnhof (2:000500000050)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.710288&mlon=6.505074&layers=T">"Oberbillig, Kirche (2:000500000053)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.50488&mlon=6.523843&layers=T">"Orscholz, Post (2:000500000059)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.507808&mlon=6.538767&layers=T">"Orscholz, Rehaklinik (2:000500000058)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.24023&mlon=6.990367&layers=T">"Saarbrücken, Hauptbahnhof (Bus) (2:000500000070)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.932181&mlon=6.251514&layers=T">"Körperich, Obersgegen (2:000500000068)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.761608&mlon=6.638462&layers=T">"Trier, Nordallee (2:000500000080)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.744847&mlon=6.628198&layers=T">"Trier, Pacelliufer (2:000500000082)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.752539&mlon=6.628239&layers=T">"Trier, Bei der Römerbrücke (2:000500000077)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.756972&mlon=6.65199&layers=T">"Trier, Hauptbahnhof (2:000500000079)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.759151&mlon=6.645455&layers=T">"Trier, Christophstr. (2:000500000078)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.312435&mlon=6.752801&layers=T">"Saarlouis, Kleiner Markt (2:000500000073)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.607026&mlon=6.55534&layers=T">"Saarburg, Bahnhof-Brückenstr. (2:000500000072)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.773597&mlon=6.594208&layers=T">"Sirzenich, P&R B51 (2:000500000074)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.794055&mlon=5.820596&layers=T">"Roodt (Redange), Schoul (2:000150305001)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.701033&mlon=6.017761&layers=T">"Bour, Bour (2:000161109001)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.887255&mlon=6.065888&layers=T">"Welscheid, Jongerts (2:000140310002)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.886862&mlon=6.060017&layers=T">"Welscheid, Bei der Bréck (2:000140310001)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.473988&mlon=6.371484&layers=T">"Perl, Maimühle (2:000500104063)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.472319&mlon=6.383557&layers=T">"Perl, Abzw. Siercker Str. (2:000500104064)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.478703&mlon=6.387786&layers=T">"Perl, Schengen Lyzeum (2:000500104065)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.473387&mlon=6.376321&layers=T">"Perl, Bahnhofstrasse (2:000500104061)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=50.032163&mlon=5.972021&layers=T">"Weicherdange, Kirelshaff (2:000110105003)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=50.037783&mlon=5.984727&layers=T">"Weicherdange, Café Bourg (2:000110105001)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=50.093937&mlon=6.027251&layers=T">"Maulusmühle, Cliärrwer Strooss (2:000110722004)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.806389&mlon=5.7909&layers=T">"Holtz, Molkerei (2:000150507001)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.809503&mlon=5.794851&layers=T">"Holtz, Um Bur (2:000150507002)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.529798&mlon=6.427757&layers=T">"Sinz, Ortsmitte (2:000500105066)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.814221&mlon=6.481992&layers=T">"Steinheim, Maeleck (2:000170612002)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.729417&mlon=6.079877&layers=T">"Mersch, Hunnebour (2:000160904013)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.936437&mlon=6.09985&layers=T">"Gralingen, Bei der Schull (2:000130102002)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.783115&mlon=6.472484&layers=T">"Dickweiler, Duerfplaz (2:000170608001)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.719586&mlon=6.582505&layers=T">"Zewen, Kantstraße (2:000500000106)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.81587&mlon=6.753809&layers=T">"Schweich, B53 (2:000500000112)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.600914&mlon=6.531452&layers=T">"Saarburg, Im Fichtenhain (2:000500000118)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=50.232917&mlon=6.030448&layers=T">"Maldingen, Kirche (2:000500000114)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.44187&mlon=6.627153&layers=T">"Merzig, Hilbringer Brücke (2:000500000113)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.709081&mlon=6.552619&layers=T">"Igel, Kirche (2:000500000115)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.739722&mlon=6.631849&layers=T">"Trier, St. Matthias Rodestr. (2:000500000139)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.739778&mlon=6.622754&layers=T">"Trier, Messepark P+R (2:000500000138)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.744781&mlon=6.63467&layers=T">"Trier, Südbahnhof (2:000500000140)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.753803&mlon=6.642548&layers=T">"Trier, Konstantin Basilika (2:000500000148)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.762597&mlon=6.160016&layers=T">"Angelsberg, Paafendall (2:000160401001)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.897652&mlon=6.20589&layers=T">"Longsdorf, Pompstatioun (2:000130206001)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.839964&mlon=6.376068&layers=T">"Weilerbach, Laufenwehr (2:000170304001)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.71746&mlon=5.95043&layers=T">"Ehner, Krier (2:000150702002)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.507319&mlon=6.471113&layers=T">"Oberleuken, Ortsmitte (2:000500103054)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.678544&mlon=5.821528&layers=T">"Arlon, Clinique (2:000300000137)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.61341&mlon=5.808559&layers=T">"Differt, Institut Cardijn (2:000300000138)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.750476&mlon=5.786444&layers=T">"Attert, Voie de la Liberté 84 (2:000300000139)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.638642&mlon=5.886967&layers=T">"Sterpenich, rue de Grass (2:000300000133)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.689586&mlon=5.823275&layers=T">"Arlon, Callemeyn (2:000300000135)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.6749&mlon=5.810051&layers=T">"Arlon, Athénée Royale (2:000300000136)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.564215&mlon=5.799114&layers=T">"Aubange, Gare routière (2:000300000132)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.956538&mlon=6.190971&layers=T">"Bivels, Op der Loch (2:000130101003)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.751996&mlon=5.784788&layers=T">"Attert, Maison communale (2:000300000140)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.689496&mlon=5.806279&layers=T">"Arlon, Bon coin (2:000300000141)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.990907&mlon=5.747563&layers=T">"Marvie, A la Boule (Glacier) (2:000300000111)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.982676&mlon=5.789891&layers=T">"Wardin, rue de Wiltz (2:000300000112)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=50.002331&mlon=5.717507&layers=T">"Bastogne, Hôtel de Ville (2:000300000110)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.989056&mlon=5.782154&layers=T">"Wardin, rue de Bastogne 46 (2:000300000108)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.990545&mlon=5.790428&layers=T">"Wardin, École (2:000300000109)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.98629&mlon=5.780372&layers=T">"Wardin, rue de Bastogne 22 (2:000300000107)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.630595&mlon=5.83709&layers=T">"Hondelange, rue du Pont (2:000300000056)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.611869&mlon=5.848148&layers=T">"Sélange, rue du Bois (2:000300000057)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.6058&mlon=5.850602&layers=T">"Sélange, rue de Clemency (2:000300000059)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.651298&mlon=5.843397&layers=T">"Autelhaut, Eglise (2:000300000052)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.64142&mlon=5.840794&layers=T">"Hondelange, Chemin des Mines (2:000300000053)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.638082&mlon=5.839445&layers=T">"Hondelange, rue de la Biff (2:000300000054)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.632468&mlon=5.832218&layers=T">"Hondelange, Centre (aire de jeux) (2:000300000055)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.593719&mlon=5.833222&layers=T">"Messancy, rue de Luxembourg 69 (2:000300000060)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.594689&mlon=5.820716&layers=T">"Messancy, rue du Château (2:000300000061)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.593374&mlon=5.822615&layers=T">"Messancy, Cités (2:000300000062)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.609929&mlon=5.850253&layers=T">"Sélange, Eglise (2:000300000045)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.992514&mlon=5.738495&layers=T">"Bastogne, Route de Wiltz 180 (2:000300000042)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.592922&mlon=5.818298&layers=T">"Messancy, Gare (2:000300000043)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.647885&mlon=5.889106&layers=T">"Sterpenich, Église (2:000300000050)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.649839&mlon=5.869818&layers=T">"Barnich-Autelbas, Eglise (2:000300000051)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=50.281391&mlon=6.131192&layers=T">"St. Vith, Triangel (2:000300000074)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=50.274738&mlon=6.125893&layers=T">"St. Vith, Bischhöfliche Schule (2:000300000075)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=50.278736&mlon=6.126803&layers=T">"St. Vith, An den Linden (2:000300000076)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=50.219566&mlon=5.997516&layers=T">"Beho, rue de l'Eglise (2:000300000069)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=50.230261&mlon=6.083259&layers=T">"Grüfflingen, Houffalizerstrasse (2:000300000070)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=50.261732&mlon=6.110735&layers=T">"St. Vith, Mailust (2:000300000071)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=50.273106&mlon=6.118833&layers=T">"St. Vith, Geschäftskomplex (2:000300000072)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=50.279146&mlon=6.129895&layers=T">"St. Vith, Maria Goretti (2:000300000073)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.563935&mlon=5.82912&layers=T">"Athus, Gare (2:000300000017)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.568962&mlon=5.805526&layers=T">"Aubange, Place (2:000300000018)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.566802&mlon=5.809706&layers=T">"Aubange, Village (2:000300000019)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.687264&mlon=5.810142&layers=T">"Arlon, Inst. St. Marie (ISMA) (2:000300000012)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.672755&mlon=5.815487&layers=T">"Arlon, Institut Itela (ISI) (2:000300000013)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.680347&mlon=5.809569&layers=T">"Arlon, Gare (2:000300000015)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.562666&mlon=5.837335&layers=T">"Athus, Garage Peugeot (2:000300000010)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.564004&mlon=5.829005&layers=T">"Athus, Gare routière (2:000300000011)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.685358&mlon=5.817727&layers=T">"Arlon, Pl.des Chasseurs Ard. (2:000300000005)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.682672&mlon=5.80645&layers=T">"Arlon, rue Léon Castilhon (2:000300000006)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.562902&mlon=5.834111&layers=T">"Athus, Centre (Grand Rue) (2:000300000007)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.563208&mlon=5.826913&layers=T">"Athus, Croisement Gare (2:000300000008)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.685867&mlon=5.810372&layers=T">"Arlon, Square Astrid (2:000300000001)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.69138&mlon=5.817819&layers=T">"Arlon, Cimetière (2:000300000002)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.680772&mlon=5.808321&layers=T">"Arlon, Gare routière (2:000300000003)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.682294&mlon=5.8146&layers=T">"Arlon, Institut notre Dame (INDA) (2:000300000004)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=50.189785&mlon=5.953846&layers=T">"Gouvy, Gare (2:000300000035)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=50.006021&mlon=5.719461&layers=T">"Bastogne, Pépinère (2:000300000030)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.699379&mlon=5.824093&layers=T">"Frassem, Carrefour (2:000300000031)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.995349&mlon=5.724794&layers=T">"Bastogne, Home Market (2:000300000027)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.98593&mlon=5.818823&layers=T">"Bras, Carrefour (2:000300000029)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.998255&mlon=5.716878&layers=T">"Bastogne, Place Merceny (2:000300000023)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=50.006214&mlon=5.724055&layers=T">"Bastogne, Centre Sportif (2:000300000020)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.999927&mlon=5.710148&layers=T">"Bastogne, Gare Sud Athénée Royal (2:000300000021)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.67787&mlon=5.824178&layers=T">"Arlon, Clairefontaine (2:000300000022)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.563557&mlon=5.821924&layers=T">"Athus, Clinique (2:000300000097)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.564259&mlon=5.814741&layers=T">"Aubange, rue d'Athus (2:000300000098)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.566333&mlon=5.801852&layers=T">"Aubange, Ecole (2:000300000099)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.648063&mlon=5.862395&layers=T">"Autelbas, rue d'Autelhaut (2:000300000089)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=50.195739&mlon=6.007069&layers=T">"Deiffelt, Carrefour (2:000300000086)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.648999&mlon=5.87601&layers=T">"Barnich, Ecole (2:000300000087)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.648582&mlon=5.866615&layers=T">"Autelbas, Centre (2:000300000088)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.593552&mlon=5.828112&layers=T">"Messancy, rue de Luxembourg 43 (2:000300000090)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.595774&mlon=5.819594&layers=T">"Messancy, Promenade (2:000300000091)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.614387&mlon=6.108458&layers=T">"Belair, Rue d'Ostende (2:000200403018)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.953641&mlon=6.105355&layers=T">"Merscheid (Putscheid), Hennischtgaass (2:000130103001)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.876206&mlon=5.885433&layers=T">"Neunhausen, An der Urt (2:000120512001)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.722126&mlon=6.218121&layers=T">"Altlinster, Altlinster (2:000180501001)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.609367&mlon=6.32453&layers=T">"Canach, Post (2:000210401004)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.67371&mlon=6.005196&layers=T">"Nospelt, Beim Gliesener (2:000190605001)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.009722&mlon=2.547778&layers=T">"Charles de Gaulle Airport (1:CDG)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.704012&mlon=6.212011&layers=T">"Bourglinster, Buchholz (2:000180504003)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.703398&mlon=6.217713&layers=T">"Bourglinster, Am Duerf (2:000180504002)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.707081&mlon=6.217451&layers=T">"Bourglinster, Am Brill (2:000180504001)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=50.037933&mlon=8.562152&layers=T">"Frankfurt Airport (1:FRA)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.945873&mlon=6.080463&layers=T">"Hoscheid, Kräizgaass (2:000110412002)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=50.165094&mlon=6.090044&layers=T">"Beiler, Beim Krécks (2:000110701003)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=50.164186&mlon=6.087887&layers=T">"Beiler, Bei der aler Schull (2:000110701002)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=50.160386&mlon=6.08879&layers=T">"Beiler, Op der Halt (2:000110701001)"</a> not near any other stops; no transfers are possible.</li>
+<li>Stop <a href="http://www.openstreetmap.org/?mlat=49.909868&mlon=6.064279&layers=T">"Bourscheid, Bei der Kiirch (2:000140301001)"</a> not near any other stops; no transfers are possible.</li>
+</ul>
+</body></html>

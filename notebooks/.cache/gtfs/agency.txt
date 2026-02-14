@@ -1,0 +1,7 @@
+"agency_id","agency_name","agency_url","agency_timezone","agency_lang","agency_phone"
+1,"Régime Général des Transports Routiers","https://www.mobiliteit.lu/fr/","Europe/Berlin","",""
+6,"Ville de Luxembourg - Service Autobus","https://www.vdl.lu/fr/se-deplacer/en-bus","Europe/Berlin","",""
+11,"Chemins de Fer Luxembourgeois","https://www.cfl.lu/","Europe/Berlin","",""
+16,"TICE","https://www.tice.lu/","Europe/Berlin","",""
+111,"Luxtram","https://www.luxtram.lu/","Europe/Berlin","",""
+171,"Société Nationale des Chemins de Fer Luxembourgeois","https://www.cfl.lu/","Europe/Berlin","",""

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<title>Graph report for OTP Graph</title>
+<meta charset="utf-8">
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css" integrity="sha384-X38yfunGUhNzHpBaEBsWLO+A0HDYOQi8ufWDkZ0k9e0eXz/tH3II7uKZ9msv++Ls" crossorigin="anonymous">
+<style>.pure-button{margin-bottom:4px;}</style>
+</head><body>
+<h1>OpenTripPlanner data import issue log LevelAmbiguous</h1>
+<h2>Graph report for <em>graph.obj</em></h2>
+<p>
+<a class='pure-button button-barrierintersectinghighway' href="BarrierIntersectingHighway1.html" style='background-color: #FFFF80;'>BarrierIntersectingHighway 1</a>
+<a class='pure-button button-barrierintersectinghighway' href="BarrierIntersectingHighway2.html" style='background-color: #FFFF80;'>BarrierIntersectingHighway 2</a>
+<a class='pure-button button-differentlevelssharingbarrier' href="DifferentLevelsSharingBarrier.html" style='background-color: #FFD0FF;'>DifferentLevelsSharingBarrier</a>
+<a class='pure-button button-disconnectedosmnode' href="DisconnectedOsmNode.html" style='background-color: #90C8FF;'>DisconnectedOsmNode</a>
+<a class='pure-button button-floornumberunknownassumedgroundlevel' href="FloorNumberUnknownAssumedGroundLevel.html" style='background-color: #FFE060;'>FloorNumberUnknownAssumedGroundLevel</a>
+<a class='pure-button button-graphconnectivity' href="GraphConnectivity.html" style='background-color: #B0FF40;'>GraphConnectivity</a>
+<a class='pure-button button-graphislandbicycle' href="GraphIslandBICYCLE.html" style='background-color: #FF80FF;'>GraphIslandBICYCLE</a>
+<a class='pure-button button-graphislandbicyclenothroughtraffic' href="GraphIslandBICYCLENoThroughTraffic.html" style='background-color: #70A0FF;'>GraphIslandBICYCLENoThroughTraffic</a>
+<a class='pure-button button-graphislandcar' href="GraphIslandCAR1.html" style='background-color: #FFC000;'>GraphIslandCAR 1</a>
+<a class='pure-button button-graphislandcar' href="GraphIslandCAR2.html" style='background-color: #FFC000;'>GraphIslandCAR 2</a>
+<a class='pure-button button-graphislandcar' href="GraphIslandCAR3.html" style='background-color: #FFC000;'>GraphIslandCAR 3</a>
+<a class='pure-button button-graphislandcar' href="GraphIslandCAR4.html" style='background-color: #FFC000;'>GraphIslandCAR 4</a>
+<a class='pure-button button-graphislandcar' href="GraphIslandCAR5.html" style='background-color: #FFC000;'>GraphIslandCAR 5</a>
+<a class='pure-button button-graphislandcar' href="GraphIslandCAR6.html" style='background-color: #FFC000;'>GraphIslandCAR 6</a>
+<a class='pure-button button-graphislandcarnothroughtraffic' href="GraphIslandCARNoThroughTraffic.html" style='background-color: #80FF40;'>GraphIslandCARNoThroughTraffic</a>
+<a class='pure-button button-graphislandwalk' href="GraphIslandWALK.html" style='background-color: #FFB0FF;'>GraphIslandWALK</a>
+<a class='pure-button button-graphislandwalknothroughtraffic' href="GraphIslandWALKNoThroughTraffic.html" style='background-color: #90E0FF;'>GraphIslandWALKNoThroughTraffic</a>
+<a class='pure-button button-graphwide' href="Graphwide.html" style='background-color: #FFA000;'>Graphwide</a>
+<a class='pure-button button-invalidvehicleparkingcapacity' href="InvalidVehicleParkingCapacity.html" style='background-color: #E0FF70;'>InvalidVehicleParkingCapacity</a>
+<a class='pure-button button-isolatedstop' href="IsolatedStop.html" style='background-color: #D0A0FF;'>IsolatedStop</a>
+<button class='pure-button pure-button-disabled button-levelambiguous' style='background-color: #B0FFFF;'>LevelAmbiguous</button>
+<a class='pure-button button-parkandrideunlinked' href="ParkAndRideUnlinked.html" style='background-color: #FF8080;'>ParkAndRideUnlinked</a>
+<a class='pure-button button-prunedstopisland' href="PrunedStopIsland.html" style='background-color: #40FF40;'>PrunedStopIsland</a>
+<a class='pure-button button-repeatedstops' href="RepeatedStops.html" style='background-color: #A090FF;'>RepeatedStops</a>
+<a class='pure-button button-stopnotlinkedfortransfers' href="StopNotLinkedForTransfers.html" style='background-color: #90FFE0;'>StopNotLinkedForTransfers</a>
+<a class='pure-button button-turnrestrictionbad' href="TurnRestrictionBad.html" style='background-color: #FF60B0;'>TurnRestrictionBad</a>
+<a class='pure-button button-turnrestrictionexception' href="TurnRestrictionException.html" style='background-color: #70FFB0;'>TurnRestrictionException</a>
+<a class='pure-button button-turnrestrictionunknown' href="TurnRestrictionUnknown.html" style='background-color: #FFFF40;'>TurnRestrictionUnknown</a>
+<a class='pure-button button-vertexwithoutedges' href="VertexWithoutEdges.html" style='background-color: #FFFF80;'>VertexWithoutEdges</a>
+</p>
+<ul id="log">
+<li>Could not infer floor number for layer called <a href='https://www.openstreetmap.org/way/52094231'>'0;1' (52094231)</a>Vertical movement will still be possible, but elevator cost might be incorrect. Consider an OSM level map.</li>
+<li>Could not infer floor number for layer called <a href='https://www.openstreetmap.org/way/93639090'>'0;1;2' (93639090)</a>Vertical movement will still be possible, but elevator cost might be incorrect. Consider an OSM level map.</li>
+<li>Could not infer floor number for layer called <a href='https://www.openstreetmap.org/way/123660845'>'-1;0' (123660845)</a>Vertical movement will still be possible, but elevator cost might be incorrect. Consider an OSM level map.</li>
+<li>Could not infer floor number for layer called <a href='https://www.openstreetmap.org/way/123660846'>'-1;0' (123660846)</a>Vertical movement will still be possible, but elevator cost might be incorrect. Consider an OSM level map.</li>
+<li>Could not infer floor number for layer called <a href='https://www.openstreetmap.org/way/123660847'>'-1;0' (123660847)</a>Vertical movement will still be possible, but elevator cost might be incorrect. Consider an OSM level map.</li>
+<li>Could not infer floor number for layer called <a href='https://www.openstreetmap.org/way/123660848'>'-1;0' (123660848)</a>Vertical movement will still be possible, but elevator cost might be incorrect. Consider an OSM level map.</li>
+<li>Could not infer floor number for layer called <a href='https://www.openstreetmap.org/way/123660849'>'-1;0' (123660849)</a>Vertical movement will still be possible, but elevator cost might be incorrect. Consider an OSM level map.</li>
+<li>Could not infer floor number for layer called <a href='https://www.openstreetmap.org/way/123660851'>'-1;0' (123660851)</a>Vertical movement will still be possible, but elevator cost might be incorrect. Consider an OSM level map.</li>
+<li>Could not infer floor number for layer called <a href='https://www.openstreetmap.org/way/123660852'>'-1;0' (123660852)</a>Vertical movement will still be possible, but elevator cost might be incorrect. Consider an OSM level map.</li>
+<li>Could not infer floor number for layer called <a href='https://www.openstreetmap.org/way/123660858'>'-1;0' (123660858)</a>Vertical movement will still be possible, but elevator cost might be incorrect. Consider an OSM level map.</li>
+<li>Could not infer floor number for layer called <a href='https://www.openstreetmap.org/way/123660860'>'-1;0' (123660860)</a>Vertical movement will still be possible, but elevator cost might be incorrect. Consider an OSM level map.</li>
+<li>Could not infer floor number for layer called <a href='https://www.openstreetmap.org/way/123660862'>'-1;0' (123660862)</a>Vertical movement will still be possible, but elevator cost might be incorrect. Consider an OSM level map.</li>
+<li>Could not infer floor number for layer called <a href='https://www.openstreetmap.org/way/123660864'>'-1;0' (123660864)</a>Vertical movement will still be possible, but elevator cost might be incorrect. Consider an OSM level map.</li>
+<li>Could not infer floor number for layer called <a href='https://www.openstreetmap.org/way/198144654'>'-1;0' (198144654)</a>Vertical movement will still be possible, but elevator cost might be incorrect. Consider an OSM level map.</li>
+<li>Could not infer floor number for layer called <a href='https://www.openstreetmap.org/way/217850507'>'0;1' (217850507)</a>Vertical movement will still be possible, but elevator cost might be incorrect. Consider an OSM level map.</li>
+<li>Could not infer floor number for layer called <a href='https://www.openstreetmap.org/way/368797716'>'0;-1' (368797716)</a>Vertical movement will still be possible, but elevator cost might be incorrect. Consider an OSM level map.</li>
+<li>Could not infer floor number for layer called <a href='https://www.openstreetmap.org/way/368797717'>'0;-1' (368797717)</a>Vertical movement will still be possible, but elevator cost might be incorrect. Consider an OSM level map.</li>
+<li>Could not infer floor number for layer called <a href='https://www.openstreetmap.org/way/369544004'>'0;1' (369544004)</a>Vertical movement will still be possible, but elevator cost might be incorrect. Consider an OSM level map.</li>
+<li>Could not infer floor number for layer called <a href='https://www.openstreetmap.org/way/393764317'>'0;1' (393764317)</a>Vertical movement will still be possible, but elevator cost might be incorrect. Consider an OSM level map.</li>
+<li>Could not infer floor number for layer called <a href='https://www.openstreetmap.org/way/394662439'>'-1;0' (394662439)</a>Vertical movement will still be possible, but elevator cost might be incorrect. Consider an OSM level map.</li>
+<li>Could not infer floor number for layer called <a href='https://www.openstreetmap.org/way/394662442'>'-1;0' (394662442)</a>Vertical movement will still be possible, but elevator cost might be incorrect. Consider an OSM level map.</li>
+<li>Could not infer floor number for layer called <a href='https://www.openstreetmap.org/way/394671359'>'-1;0' (394671359)</a>Vertical movement will still be possible, but elevator cost might be incorrect. Consider an OSM level map.</li>
+<li>Could not infer floor number for layer called <a href='https://www.openstreetmap.org/way/394671361'>'-1;0' (394671361)</a>Vertical movement will still be possible, but elevator cost might be incorrect. Consider an OSM level map.</li>
+<li>Could not infer floor number for layer called <a href='https://www.openstreetmap.org/way/434474324'>'0;-1' (434474324)</a>Vertical movement will still be possible, but elevator cost might be incorrect. Consider an OSM level map.</li>
+<li>Could not infer floor number for layer called <a href='https://www.openstreetmap.org/way/434474331'>'0,-1' (434474331)</a>Vertical movement will still be possible, but elevator cost might be incorrect. Consider an OSM level map.</li>
+<li>Could not infer floor number for layer called <a href='https://www.openstreetmap.org/way/434474348'>'0;-1' (434474348)</a>Vertical movement will still be possible, but elevator cost might be incorrect. Consider an OSM level map.</li>
+<li>Could not infer floor number for layer called <a href='https://www.openstreetmap.org/way/502762876'>'1;2' (502762876)</a>Vertical movement will still be possible, but elevator cost might be incorrect. Consider an OSM level map.</li>
+<li>Could not infer floor number for layer called <a href='https://www.openstreetmap.org/way/502762879'>'1;2' (502762879)</a>Vertical movement will still be possible, but elevator cost might be incorrect. Consider an OSM level map.</li>
+<li>Could not infer floor number for layer called <a href='https://www.openstreetmap.org/way/502762882'>'1;2' (502762882)</a>Vertical movement will still be possible, but elevator cost might be incorrect. Consider an OSM level map.</li>
+<li>Could not infer floor number for layer called <a href='https://www.openstreetmap.org/way/502762883'>'1;2' (502762883)</a>Vertical movement will still be possible, but elevator cost might be incorrect. Consider an OSM level map.</li>
+<li>Could not infer floor number for layer called <a href='https://www.openstreetmap.org/way/545919590'>'1;2' (545919590)</a>Vertical movement will still be possible, but elevator cost might be incorrect. Consider an OSM level map.</li>
+<li>Could not infer floor number for layer called <a href='https://www.openstreetmap.org/way/545919595'>'0;1' (545919595)</a>Vertical movement will still be possible, but elevator cost might be incorrect. Consider an OSM level map.</li>
+<li>Could not infer floor number for layer called <a href='https://www.openstreetmap.org/way/545919600'>'1;2' (545919600)</a>Vertical movement will still be possible, but elevator cost might be incorrect. Consider an OSM level map.</li>
+<li>Could not infer floor number for layer called <a href='https://www.openstreetmap.org/way/545919603'>'1;2' (545919603)</a>Vertical movement will still be possible, but elevator cost might be incorrect. Consider an OSM level map.</li>
+<li>Could not infer floor number for layer called <a href='https://www.openstreetmap.org/way/545919605'>'1;2' (545919605)</a>Vertical movement will still be possible, but elevator cost might be incorrect. Consider an OSM level map.</li>
+<li>Could not infer floor number for layer called <a href='https://www.openstreetmap.org/way/545919607'>'1;2' (545919607)</a>Vertical movement will still be possible, but elevator cost might be incorrect. Consider an OSM level map.</li>
+<li>Could not infer floor number for layer called <a href='https://www.openstreetmap.org/way/545919610'>'1;2' (545919610)</a>Vertical movement will still be possible, but elevator cost might be incorrect. Consider an OSM level map.</li>
+<li>Could not infer floor number for layer called <a href='https://www.openstreetmap.org/way/630262533'>'-1;0' (630262533)</a>Vertical movement will still be possible, but elevator cost might be incorrect. Consider an OSM level map.</li>
+<li>Could not infer floor number for layer called <a href='https://www.openstreetmap.org/way/646086360'>'0;1' (646086360)</a>Vertical movement will still be possible, but elevator cost might be incorrect. Consider an OSM level map.</li>
+<li>Could not infer floor number for layer called <a href='https://www.openstreetmap.org/way/646086361'>'0;1' (646086361)</a>Vertical movement will still be possible, but elevator cost might be incorrect. Consider an OSM level map.</li>
+<li>Could not infer floor number for layer called <a href='https://www.openstreetmap.org/way/671228219'>'-1;0' (671228219)</a>Vertical movement will still be possible, but elevator cost might be incorrect. Consider an OSM level map.</li>
+<li>Could not infer floor number for layer called <a href='https://www.openstreetmap.org/way/671228224'>'-1;0' (671228224)</a>Vertical movement will still be possible, but elevator cost might be incorrect. Consider an OSM level map.</li>
+<li>Could not infer floor number for layer called <a href='https://www.openstreetmap.org/way/671228225'>'-1;0' (671228225)</a>Vertical movement will still be possible, but elevator cost might be incorrect. Consider an OSM level map.</li>
+<li>Could not infer floor number for layer called <a href='https://www.openstreetmap.org/way/683164658'>'0;1' (683164658)</a>Vertical movement will still be possible, but elevator cost might be incorrect. Consider an OSM level map.</li>
+<li>Could not infer floor number for layer called <a href='https://www.openstreetmap.org/way/755467187'>'-1;0' (755467187)</a>Vertical movement will still be possible, but elevator cost might be incorrect. Consider an OSM level map.</li>
+<li>Could not infer floor number for layer called <a href='https://www.openstreetmap.org/way/755467188'>'-1;0' (755467188)</a>Vertical movement will still be possible, but elevator cost might be incorrect. Consider an OSM level map.</li>
+<li>Could not infer floor number for layer called <a href='https://www.openstreetmap.org/way/755467189'>'-1;0' (755467189)</a>Vertical movement will still be possible, but elevator cost might be incorrect. Consider an OSM level map.</li>
+<li>Could not infer floor number for layer called <a href='https://www.openstreetmap.org/way/849935833'>'0;1' (849935833)</a>Vertical movement will still be possible, but elevator cost might be incorrect. Consider an OSM level map.</li>
+<li>Could not infer floor number for layer called <a href='https://www.openstreetmap.org/way/983299472'>'0;1' (983299472)</a>Vertical movement will still be possible, but elevator cost might be incorrect. Consider an OSM level map.</li>
+<li>Could not infer floor number for layer called <a href='https://www.openstreetmap.org/way/983299473'>'0;1' (983299473)</a>Vertical movement will still be possible, but elevator cost might be incorrect. Consider an OSM level map.</li>
+<li>Could not infer floor number for layer called <a href='https://www.openstreetmap.org/way/983299474'>'0;1' (983299474)</a>Vertical movement will still be possible, but elevator cost might be incorrect. Consider an OSM level map.</li>
+<li>Could not infer floor number for layer called <a href='https://www.openstreetmap.org/way/983299475'>'0;1' (983299475)</a>Vertical movement will still be possible, but elevator cost might be incorrect. Consider an OSM level map.</li>
+<li>Could not infer floor number for layer called <a href='https://www.openstreetmap.org/way/983299476'>'0;1' (983299476)</a>Vertical movement will still be possible, but elevator cost might be incorrect. Consider an OSM level map.</li>
+<li>Could not infer floor number for layer called <a href='https://www.openstreetmap.org/way/1025994091'>'-1;0' (1025994091)</a>Vertical movement will still be possible, but elevator cost might be incorrect. Consider an OSM level map.</li>
+<li>Could not infer floor number for layer called <a href='https://www.openstreetmap.org/way/1116548199'>'1;2' (1116548199)</a>Vertical movement will still be possible, but elevator cost might be incorrect. Consider an OSM level map.</li>
+<li>Could not infer floor number for layer called <a href='https://www.openstreetmap.org/way/1117490612'>'0;1' (1117490612)</a>Vertical movement will still be possible, but elevator cost might be incorrect. Consider an OSM level map.</li>
+<li>Could not infer floor number for layer called <a href='https://www.openstreetmap.org/way/1201403870'>'0;-1' (1201403870)</a>Vertical movement will still be possible, but elevator cost might be incorrect. Consider an OSM level map.</li>
+<li>Could not infer floor number for layer called <a href='https://www.openstreetmap.org/way/1201403871'>'0;-1' (1201403871)</a>Vertical movement will still be possible, but elevator cost might be incorrect. Consider an OSM level map.</li>
+<li>Could not infer floor number for layer called <a href='https://www.openstreetmap.org/way/1201403872'>'0;-1' (1201403872)</a>Vertical movement will still be possible, but elevator cost might be incorrect. Consider an OSM level map.</li>
+<li>Could not infer floor number for layer called <a href='https://www.openstreetmap.org/way/1213306719'>'0;1' (1213306719)</a>Vertical movement will still be possible, but elevator cost might be incorrect. Consider an OSM level map.</li>
+<li>Could not infer floor number for layer called <a href='https://www.openstreetmap.org/way/1213306722'>'0;1' (1213306722)</a>Vertical movement will still be possible, but elevator cost might be incorrect. Consider an OSM level map.</li>
+<li>Could not infer floor number for layer called <a href='https://www.openstreetmap.org/way/1213306723'>'0;1' (1213306723)</a>Vertical movement will still be possible, but elevator cost might be incorrect. Consider an OSM level map.</li>
+<li>Could not infer floor number for layer called <a href='https://www.openstreetmap.org/way/1214273137'>'0;-1' (1214273137)</a>Vertical movement will still be possible, but elevator cost might be incorrect. Consider an OSM level map.</li>
+<li>Could not infer floor number for layer called <a href='https://www.openstreetmap.org/way/1264784114'>'-1;0' (1264784114)</a>Vertical movement will still be possible, but elevator cost might be incorrect. Consider an OSM level map.</li>
+<li>Could not infer floor number for layer called <a href='https://www.openstreetmap.org/way/1264784115'>'-1;0' (1264784115)</a>Vertical movement will still be possible, but elevator cost might be incorrect. Consider an OSM level map.</li>
+<li>Could not infer floor number for layer called <a href='https://www.openstreetmap.org/way/1264784116'>'-1;0' (1264784116)</a>Vertical movement will still be possible, but elevator cost might be incorrect. Consider an OSM level map.</li>
+<li>Could not infer floor number for layer called <a href='https://www.openstreetmap.org/way/1264784117'>'-1;0' (1264784117)</a>Vertical movement will still be possible, but elevator cost might be incorrect. Consider an OSM level map.</li>
+<li>Could not infer floor number for layer called <a href='https://www.openstreetmap.org/way/1264784118'>'-1;0' (1264784118)</a>Vertical movement will still be possible, but elevator cost might be incorrect. Consider an OSM level map.</li>
+</ul>
+</body></html>

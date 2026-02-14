@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<title>Graph report for OTP Graph</title>
+<meta charset="utf-8">
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css" integrity="sha384-X38yfunGUhNzHpBaEBsWLO+A0HDYOQi8ufWDkZ0k9e0eXz/tH3II7uKZ9msv++Ls" crossorigin="anonymous">
+<style>.pure-button{margin-bottom:4px;}</style>
+</head><body>
+<h1>OpenTripPlanner data import issue log IsolatedStop</h1>
+<h2>Graph report for <em>graph.obj</em></h2>
+<p>
+<a class='pure-button button-barrierintersectinghighway' href="BarrierIntersectingHighway1.html" style='background-color: #FFFF80;'>BarrierIntersectingHighway 1</a>
+<a class='pure-button button-barrierintersectinghighway' href="BarrierIntersectingHighway2.html" style='background-color: #FFFF80;'>BarrierIntersectingHighway 2</a>
+<a class='pure-button button-differentlevelssharingbarrier' href="DifferentLevelsSharingBarrier.html" style='background-color: #FFD0FF;'>DifferentLevelsSharingBarrier</a>
+<a class='pure-button button-disconnectedosmnode' href="DisconnectedOsmNode.html" style='background-color: #90C8FF;'>DisconnectedOsmNode</a>
+<a class='pure-button button-floornumberunknownassumedgroundlevel' href="FloorNumberUnknownAssumedGroundLevel.html" style='background-color: #FFE060;'>FloorNumberUnknownAssumedGroundLevel</a>
+<a class='pure-button button-graphconnectivity' href="GraphConnectivity.html" style='background-color: #B0FF40;'>GraphConnectivity</a>
+<a class='pure-button button-graphislandbicycle' href="GraphIslandBICYCLE.html" style='background-color: #FF80FF;'>GraphIslandBICYCLE</a>
+<a class='pure-button button-graphislandbicyclenothroughtraffic' href="GraphIslandBICYCLENoThroughTraffic.html" style='background-color: #70A0FF;'>GraphIslandBICYCLENoThroughTraffic</a>
+<a class='pure-button button-graphislandcar' href="GraphIslandCAR1.html" style='background-color: #FFC000;'>GraphIslandCAR 1</a>
+<a class='pure-button button-graphislandcar' href="GraphIslandCAR2.html" style='background-color: #FFC000;'>GraphIslandCAR 2</a>
+<a class='pure-button button-graphislandcar' href="GraphIslandCAR3.html" style='background-color: #FFC000;'>GraphIslandCAR 3</a>
+<a class='pure-button button-graphislandcar' href="GraphIslandCAR4.html" style='background-color: #FFC000;'>GraphIslandCAR 4</a>
+<a class='pure-button button-graphislandcar' href="GraphIslandCAR5.html" style='background-color: #FFC000;'>GraphIslandCAR 5</a>
+<a class='pure-button button-graphislandcar' href="GraphIslandCAR6.html" style='background-color: #FFC000;'>GraphIslandCAR 6</a>
+<a class='pure-button button-graphislandcarnothroughtraffic' href="GraphIslandCARNoThroughTraffic.html" style='background-color: #80FF40;'>GraphIslandCARNoThroughTraffic</a>
+<a class='pure-button button-graphislandwalk' href="GraphIslandWALK.html" style='background-color: #FFB0FF;'>GraphIslandWALK</a>
+<a class='pure-button button-graphislandwalknothroughtraffic' href="GraphIslandWALKNoThroughTraffic.html" style='background-color: #90E0FF;'>GraphIslandWALKNoThroughTraffic</a>
+<a class='pure-button button-graphwide' href="Graphwide.html" style='background-color: #FFA000;'>Graphwide</a>
+<a class='pure-button button-invalidvehicleparkingcapacity' href="InvalidVehicleParkingCapacity.html" style='background-color: #E0FF70;'>InvalidVehicleParkingCapacity</a>
+<button class='pure-button pure-button-disabled button-isolatedstop' style='background-color: #D0A0FF;'>IsolatedStop</button>
+<a class='pure-button button-levelambiguous' href="LevelAmbiguous.html" style='background-color: #B0FFFF;'>LevelAmbiguous</a>
+<a class='pure-button button-parkandrideunlinked' href="ParkAndRideUnlinked.html" style='background-color: #FF8080;'>ParkAndRideUnlinked</a>
+<a class='pure-button button-prunedstopisland' href="PrunedStopIsland.html" style='background-color: #40FF40;'>PrunedStopIsland</a>
+<a class='pure-button button-repeatedstops' href="RepeatedStops.html" style='background-color: #A090FF;'>RepeatedStops</a>
+<a class='pure-button button-stopnotlinkedfortransfers' href="StopNotLinkedForTransfers.html" style='background-color: #90FFE0;'>StopNotLinkedForTransfers</a>
+<a class='pure-button button-turnrestrictionbad' href="TurnRestrictionBad.html" style='background-color: #FF60B0;'>TurnRestrictionBad</a>
+<a class='pure-button button-turnrestrictionexception' href="TurnRestrictionException.html" style='background-color: #70FFB0;'>TurnRestrictionException</a>
+<a class='pure-button button-turnrestrictionunknown' href="TurnRestrictionUnknown.html" style='background-color: #FFFF40;'>TurnRestrictionUnknown</a>
+<a class='pure-button button-vertexwithoutedges' href="VertexWithoutEdges.html" style='background-color: #FFFF80;'>VertexWithoutEdges</a>
+</p>
+<a class="pure-button" href="./IsolatedStop.geojson">Open issues in a GeoJSON file</a><ul id="log">
+<li>Unable to link stop 1:CDG to the street graph</li>
+<li>Unable to link stop 1:FRA to the street graph</li>
+<li>Unable to link stop 2:000400000090 to the street graph</li>
+<li>Unable to link stop 2:000400000092 to the street graph</li>
+<li>Unable to link stop 2:000400000087 to the street graph</li>
+<li>Unable to link stop 2:000400000086 to the street graph</li>
+<li>Unable to link stop 2:000400000088 to the street graph</li>
+<li>Unable to link stop 2:000400000096 to the street graph</li>
+<li>Unable to link stop 2:000400000098 to the street graph</li>
+<li>Unable to link stop 2:000400000099 to the street graph</li>
+<li>Unable to link stop 2:000400000070 to the street graph</li>
+<li>Unable to link stop 2:000400000071 to the street graph</li>
+<li>Unable to link stop 2:000400000065 to the street graph</li>
+<li>Unable to link stop 2:000400000066 to the street graph</li>
+<li>Unable to link stop 2:000400000069 to the street graph</li>
+<li>Unable to link stop 2:000400000081 to the street graph</li>
+<li>Unable to link stop 2:000400000080 to the street graph</li>
+<li>Unable to link stop 2:000400000083 to the street graph</li>
+<li>Unable to link stop 2:000400000082 to the street graph</li>
+<li>Unable to link stop 2:000400000074 to the street graph</li>
+<li>Unable to link stop 2:000400000075 to the street graph</li>
+<li>Unable to link stop 2:000400000078 to the street graph</li>
+<li>Unable to link stop 2:000400000077 to the street graph</li>
+<li>Unable to link stop 2:000400000079 to the street graph</li>
+<li>Unable to link stop 2:000400000050 to the street graph</li>
+<li>Unable to link stop 2:000400000041 to the street graph</li>
+<li>Unable to link stop 2:000400000040 to the street graph</li>
+<li>Unable to link stop 2:000400000042 to the street graph</li>
+<li>Unable to link stop 2:000400000045 to the street graph</li>
+<li>Unable to link stop 2:000400000049 to the street graph</li>
+<li>Unable to link stop 2:000400000048 to the street graph</li>
+<li>Unable to link stop 2:000400000052 to the street graph</li>
+<li>Unable to link stop 2:000400000051 to the street graph</li>
+<li>Unable to link stop 2:000400000054 to the street graph</li>
+<li>Unable to link stop 2:000400000021 to the street graph</li>
+<li>Unable to link stop 2:000400000020 to the street graph</li>
+<li>Unable to link stop 2:000400000023 to the street graph</li>
+<li>Unable to link stop 2:000400000025 to the street graph</li>
+<li>Unable to link stop 2:000400000024 to the street graph</li>
+<li>Unable to link stop 2:000400000027 to the street graph</li>
+<li>Unable to link stop 2:000400000026 to the street graph</li>
+<li>Unable to link stop 2:000400000029 to the street graph</li>
+<li>Unable to link stop 2:000400000030 to the street graph</li>
+<li>Unable to link stop 2:000400000032 to the street graph</li>
+<li>Unable to link stop 2:000400000031 to the street graph</li>
+<li>Unable to link stop 2:000400000034 to the street graph</li>
+<li>Unable to link stop 2:000400000033 to the street graph</li>
+<li>Unable to link stop 2:000400000036 to the street graph</li>
+<li>Unable to link stop 2:000400000035 to the street graph</li>
+<li>Unable to link stop 2:000400000038 to the street graph</li>
+<li>Unable to link stop 2:000400000037 to the street graph</li>
+<li>Unable to link stop 2:000400000039 to the street graph</li>
+<li>Unable to link stop 2:000400000002 to the street graph</li>
+<li>Unable to link stop 2:000400000007 to the street graph</li>
+<li>Unable to link stop 2:000400000011 to the street graph</li>
+<li>Unable to link stop 2:000400000014 to the street graph</li>
+<li>Unable to link stop 2:000400000016 to the street graph</li>
+<li>Unable to link stop 2:000400000015 to the street graph</li>
+<li>Unable to link stop 2:000400000017 to the street graph</li>
+<li>Unable to link stop 2:000400000019 to the street graph</li>
+<li>Unable to link stop 2:000400000100 to the street graph</li>
+<li>Unable to link stop 2:000400000102 to the street graph</li>
+<li>Unable to link stop 2:000400000101 to the street graph</li>
+<li>Unable to link stop 2:000400000103 to the street graph</li>
+<li>Unable to link stop 2:000400000112 to the street graph</li>
+<li>Unable to link stop 2:000400000115 to the street graph</li>
+<li>Unable to link stop 2:000400000117 to the street graph</li>
+<li>Unable to link stop 2:000400000116 to the street graph</li>
+<li>Unable to link stop 2:000400000118 to the street graph</li>
+<li>Unable to link stop 2:000400000162 to the street graph</li>
+<li>Unable to link stop 2:000400000161 to the street graph</li>
+<li>Unable to link stop 2:000400000164 to the street graph</li>
+<li>Unable to link stop 2:000400000163 to the street graph</li>
+<li>Unable to link stop 2:000400000166 to the street graph</li>
+<li>Unable to link stop 2:000400000165 to the street graph</li>
+<li>Unable to link stop 2:000400000168 to the street graph</li>
+<li>Unable to link stop 2:000400000140 to the street graph</li>
+<li>Unable to link stop 2:000400000144 to the street graph</li>
+<li>Unable to link stop 2:000400000143 to the street graph</li>
+<li>Unable to link stop 2:000400000146 to the street graph</li>
+<li>Unable to link stop 2:000400000145 to the street graph</li>
+<li>Unable to link stop 2:000400000148 to the street graph</li>
+<li>Unable to link stop 2:000400000147 to the street graph</li>
+<li>Unable to link stop 2:000400000149 to the street graph</li>
+<li>Unable to link stop 2:000400000160 to the street graph</li>
+<li>Unable to link stop 2:000400000150 to the street graph</li>
+<li>Unable to link stop 2:000400000124 to the street graph</li>
+<li>Unable to link stop 2:000400000123 to the street graph</li>
+<li>Unable to link stop 2:000400000125 to the street graph</li>
+<li>Unable to link stop 2:000400000129 to the street graph</li>
+<li>Unable to link stop 2:000400000131 to the street graph</li>
+<li>Unable to link stop 2:000400000130 to the street graph</li>
+<li>Unable to link stop 2:000400000132 to the street graph</li>
+<li>Unable to link stop 2:000400000135 to the street graph</li>
+<li>Unable to link stop 2:000400000134 to the street graph</li>
+<li>Unable to link stop 2:000400000137 to the street graph</li>
+<li>Unable to link stop 2:000400000136 to the street graph</li>
+<li>Unable to link stop 2:000400000139 to the street graph</li>
+<li>Unable to link stop 2:000400000138 to the street graph</li>
+<li>Unable to link stop 2:000500102045 to the street graph</li>
+<li>Unable to link stop 2:000500102044 to the street graph</li>
+<li>Unable to link stop 2:000500102043 to the street graph</li>
+<li>Unable to link stop 2:000500101067 to the street graph</li>
+<li>Unable to link stop 2:000500105066 to the street graph</li>
+<li>Unable to link stop 2:000500103054 to the street graph</li>
+<li>Unable to link stop 2:000300000137 to the street graph</li>
+<li>Unable to link stop 2:000300000138 to the street graph</li>
+<li>Unable to link stop 2:000300000139 to the street graph</li>
+<li>Unable to link stop 2:000300000133 to the street graph</li>
+<li>Unable to link stop 2:000300000135 to the street graph</li>
+<li>Unable to link stop 2:000300000136 to the street graph</li>
+<li>Unable to link stop 2:000300000132 to the street graph</li>
+<li>Unable to link stop 2:000300000140 to the street graph</li>
+<li>Unable to link stop 2:000300000141 to the street graph</li>
+<li>Unable to link stop 2:000300000111 to the street graph</li>
+<li>Unable to link stop 2:000300000110 to the street graph</li>
+<li>Unable to link stop 2:000300000108 to the street graph</li>
+<li>Unable to link stop 2:000300000109 to the street graph</li>
+<li>Unable to link stop 2:000300000107 to the street graph</li>
+<li>Unable to link stop 2:000300000056 to the street graph</li>
+<li>Unable to link stop 2:000300000057 to the street graph</li>
+<li>Unable to link stop 2:000300000059 to the street graph</li>
+<li>Unable to link stop 2:000300000052 to the street graph</li>
+<li>Unable to link stop 2:000300000053 to the street graph</li>
+<li>Unable to link stop 2:000300000054 to the street graph</li>
+<li>Unable to link stop 2:000300000055 to the street graph</li>
+<li>Unable to link stop 2:000300000060 to the street graph</li>
+<li>Unable to link stop 2:000300000061 to the street graph</li>
+<li>Unable to link stop 2:000300000062 to the street graph</li>
+<li>Unable to link stop 2:000300000045 to the street graph</li>
+<li>Unable to link stop 2:000300000042 to the street graph</li>
+<li>Unable to link stop 2:000300000043 to the street graph</li>
+<li>Unable to link stop 2:000300000050 to the street graph</li>
+<li>Unable to link stop 2:000300000051 to the street graph</li>
+<li>Unable to link stop 2:000300000074 to the street graph</li>
+<li>Unable to link stop 2:000300000075 to the street graph</li>
+<li>Unable to link stop 2:000300000076 to the street graph</li>
+<li>Unable to link stop 2:000300000069 to the street graph</li>
+<li>Unable to link stop 2:000300000070 to the street graph</li>
+<li>Unable to link stop 2:000300000071 to the street graph</li>
+<li>Unable to link stop 2:000300000072 to the street graph</li>
+<li>Unable to link stop 2:000300000073 to the street graph</li>
+<li>Unable to link stop 2:000300000017 to the street graph</li>
+<li>Unable to link stop 2:000300000018 to the street graph</li>
+<li>Unable to link stop 2:000300000019 to the street graph</li>
+<li>Unable to link stop 2:000300000012 to the street graph</li>
+<li>Unable to link stop 2:000300000013 to the street graph</li>
+<li>Unable to link stop 2:000300000015 to the street graph</li>
+<li>Unable to link stop 2:000300000010 to the street graph</li>
+<li>Unable to link stop 2:000300000011 to the street graph</li>
+<li>Unable to link stop 2:000300000005 to the street graph</li>
+<li>Unable to link stop 2:000300000006 to the street graph</li>
+<li>Unable to link stop 2:000300000007 to the street graph</li>
+<li>Unable to link stop 2:000300000008 to the street graph</li>
+<li>Unable to link stop 2:000300000001 to the street graph</li>
+<li>Unable to link stop 2:000300000002 to the street graph</li>
+<li>Unable to link stop 2:000300000003 to the street graph</li>
+<li>Unable to link stop 2:000300000004 to the street graph</li>
+<li>Unable to link stop 2:000300000035 to the street graph</li>
+<li>Unable to link stop 2:000300000030 to the street graph</li>
+<li>Unable to link stop 2:000300000031 to the street graph</li>
+<li>Unable to link stop 2:000300000027 to the street graph</li>
+<li>Unable to link stop 2:000300000029 to the street graph</li>
+<li>Unable to link stop 2:000300000023 to the street graph</li>
+<li>Unable to link stop 2:000300000020 to the street graph</li>
+<li>Unable to link stop 2:000300000021 to the street graph</li>
+<li>Unable to link stop 2:000300000022 to the street graph</li>
+<li>Unable to link stop 2:000300000097 to the street graph</li>
+<li>Unable to link stop 2:000300000098 to the street graph</li>
+<li>Unable to link stop 2:000300000099 to the street graph</li>
+<li>Unable to link stop 2:000300000089 to the street graph</li>
+<li>Unable to link stop 2:000300000086 to the street graph</li>
+<li>Unable to link stop 2:000300000087 to the street graph</li>
+<li>Unable to link stop 2:000300000088 to the street graph</li>
+<li>Unable to link stop 2:000300000090 to the street graph</li>
+<li>Unable to link stop 2:000300000091 to the street graph</li>
+<li>Unable to link stop 2:000500104063 to the street graph</li>
+<li>Unable to link stop 2:000500104064 to the street graph</li>
+<li>Unable to link stop 2:000500104065 to the street graph</li>
+<li>Unable to link stop 2:000500104061 to the street graph</li>
+<li>Unable to link stop 2:000500000106 to the street graph</li>
+<li>Unable to link stop 2:000500000112 to the street graph</li>
+<li>Unable to link stop 2:000500000118 to the street graph</li>
+<li>Unable to link stop 2:000500000114 to the street graph</li>
+<li>Unable to link stop 2:000500000113 to the street graph</li>
+<li>Unable to link stop 2:000500000115 to the street graph</li>
+<li>Unable to link stop 2:000500000139 to the street graph</li>
+<li>Unable to link stop 2:000500000138 to the street graph</li>
+<li>Unable to link stop 2:000500000140 to the street graph</li>
+<li>Unable to link stop 2:000500000148 to the street graph</li>
+<li>Unable to link stop 2:000500000156 to the street graph</li>
+<li>Unable to link stop 2:000500000155 to the street graph</li>
+<li>Unable to link stop 2:000500000159 to the street graph</li>
+<li>Unable to link stop 2:000500000161 to the street graph</li>
+<li>Unable to link stop 2:000500000160 to the street graph</li>
+<li>Unable to link stop 2:000500000163 to the street graph</li>
+<li>Unable to link stop 2:000500000162 to the street graph</li>
+<li>Unable to link stop 2:000500000090 to the street graph</li>
+<li>Unable to link stop 2:000500000093 to the street graph</li>
+<li>Unable to link stop 2:000500000084 to the street graph</li>
+<li>Unable to link stop 2:000500000083 to the street graph</li>
+<li>Unable to link stop 2:000500000086 to the street graph</li>
+<li>Unable to link stop 2:000500000085 to the street graph</li>
+<li>Unable to link stop 2:000500000095 to the street graph</li>
+<li>Unable to link stop 2:000500000096 to the street graph</li>
+<li>Unable to link stop 2:000500000009 to the street graph</li>
+<li>Unable to link stop 2:000500000005 to the street graph</li>
+<li>Unable to link stop 2:000500000011 to the street graph</li>
+<li>Unable to link stop 2:000500000010 to the street graph</li>
+<li>Unable to link stop 2:000500000013 to the street graph</li>
+<li>Unable to link stop 2:000500000019 to the street graph</li>
+<li>Unable to link stop 2:000500000018 to the street graph</li>
+<li>Unable to link stop 2:000500000014 to the street graph</li>
+<li>Unable to link stop 2:000500000017 to the street graph</li>
+<li>Unable to link stop 2:000500000021 to the street graph</li>
+<li>Unable to link stop 2:000500000024 to the street graph</li>
+<li>Unable to link stop 2:000500000023 to the street graph</li>
+<li>Unable to link stop 2:000500000029 to the street graph</li>
+<li>Unable to link stop 2:000500000028 to the street graph</li>
+<li>Unable to link stop 2:000500000027 to the street graph</li>
+<li>Unable to link stop 2:000500000033 to the street graph</li>
+<li>Unable to link stop 2:000500000032 to the street graph</li>
+<li>Unable to link stop 2:000500000035 to the street graph</li>
+<li>Unable to link stop 2:000500000034 to the street graph</li>
+<li>Unable to link stop 2:000500000031 to the street graph</li>
+<li>Unable to link stop 2:000500000030 to the street graph</li>
+<li>Unable to link stop 2:000500000037 to the street graph</li>
+<li>Unable to link stop 2:000500000036 to the street graph</li>
+<li>Unable to link stop 2:000500000039 to the street graph</li>
+<li>Unable to link stop 2:000500000042 to the street graph</li>
+<li>Unable to link stop 2:000500000056 to the street graph</li>
+<li>Unable to link stop 2:000500000051 to the street graph</li>
+<li>Unable to link stop 2:000500000059 to the street graph</li>
+<li>Unable to link stop 2:000500000058 to the street graph</li>
+<li>Unable to link stop 2:000500000070 to the street graph</li>
+<li>Unable to link stop 2:000500000068 to the street graph</li>
+<li>Unable to link stop 2:000500000080 to the street graph</li>
+<li>Unable to link stop 2:000500000082 to the street graph</li>
+<li>Unable to link stop 2:000500000077 to the street graph</li>
+<li>Unable to link stop 2:000500000079 to the street graph</li>
+<li>Unable to link stop 2:000500000078 to the street graph</li>
+<li>Unable to link stop 2:000500000073 to the street graph</li>
+<li>Unable to link stop 2:000500000072 to the street graph</li>
+<li>Unable to link stop 2:000500000074 to the street graph</li>
+</ul>
+</body></html>

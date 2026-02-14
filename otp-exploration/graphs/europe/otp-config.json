@@ -1,0 +1,8 @@
+{
+    "otpConfigVersion": "3",
+    "apis": [
+      { "type": "legacy", "path": "/" },
+      { "type": "gtfs-graphql", "path": "/gtfs/v1" },
+      { "type": "transmodel-graphql", "path": "/transmodel/v3" }
+    ]
+  }

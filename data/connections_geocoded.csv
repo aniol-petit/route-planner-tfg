@@ -1,0 +1,260 @@
+origin,lat_origin,lon_origin,formatted_origin,destination,lat_destination,lon_destination,formatted_destination,country
+VIE,48.10499675,16.5848987032657,"Vienna International Airport, Am Ziegelofen, 1300 Schwechat, Austria",Wien Hbf,48.1849883,16.3779391,"Vienna Central Station, Am Hauptbahnhof 1, 1100 Vienna, Austria",Austria
+SZG,47.793329,13.002616,"Salzburg Airport, 5020 Salzburg, Austria",Salzburg Hbf,47.8130618,13.045853,"Salzburg Hauptbahnhof, Südtiroler Platz 1, 5020 Salzburg, Austria",Austria
+INN,47.2602,11.344,"Inn, Austria",Innsbruck Hbf,47.2632966,11.4010207,"Innsbruck Hauptbahnhof, Autoverladung, 6020 Innsbruck, Austria",Austria
+GRZ,46.989684,15.441843,"Graz Airport, 8073 Lebern, Austria",Graz Hbf,47.072105,15.417372,"Graz Hauptbahnhof, 8020 Graz, Austria",Austria
+LNZ,48.236128,14.194502,"Linz Airport, 4063 Hörsching, Austria",Linz Hbf,48.2904714,14.291161192462294,"Linz Hauptbahnhof, Bahnhofplatz 3-6, 4020 Linz, Austria",Austria
+KLU,46.644421,14.331896,"Klagenfurt Airport, 9062 Klagenfurt, Austria",Klagenfurt Hbf,46.6163148,14.311665626785176,"Klagenfurt Hauptbahnhof, Fromillerstraße, 9020 Klagenfurt, Austria",Austria
+ANR,51.188809,4.451061,"Antwerp International Airport, 2600 Antwerp, Belgium",Antwerpen Centraal,51.2159949,4.4211011,"Antwerpen-Centraal, Koningin Astridplein 27, 2018 Antwerp, Belgium",Belgium
+ANR,51.188809,4.451061,"Antwerp International Airport, 2600 Antwerp, Belgium",Antwerpen-Berchem,51.1997015,4.4323348,"Antwerpen-Berchem, Binnensingel, 2600 Antwerp, Belgium",Belgium
+BRU,50.901,4.4856,"Brussels-Capital, Belgium",Brussels Airport - Zaventem,50.897673,4.483303,"Brussels National Airport, 1930 Zaventem, Belgium",Belgium
+BRU,50.901,4.4856,"Brussels-Capital, Belgium",Bruxelles Midi,50.8356748,4.3362419,"Brussels-Midi, Galerie M - M-galerij, 1060 Saint-Gilles - Sint-Gillis, Belgium",Belgium
+BRU,50.901,4.4856,"Brussels-Capital, Belgium",Mechelen,51.0175,4.4818,"Mechelen, Antwerp, Belgium",Belgium
+LGG,50.6374,5.4432,"Liège Airport, Rue de l'Aéroport, 4460 Grâce-Hollogne, Belgium",Liège-Guillemins,50.62455075,5.566168777741272,"Gare de Liège-Guillemins, Place des Guillemins 2, 4000 Liège, Belgium",Belgium
+Antwerpen Centraal,51.2159949,4.4211011,"Antwerpen-Centraal, Koningin Astridplein 27, 2018 Antwerp, Belgium",Antwerpen-Berchem,51.1997015,4.4323348,"Antwerpen-Berchem, Binnensingel, 2600 Antwerp, Belgium",Belgium
+Antwerpen-Berchem,51.1997015,4.4323348,"Antwerpen-Berchem, Binnensingel, 2600 Antwerp, Belgium",Antwerpen-Noorderdokken,51.2613742,4.4277566,"Antwerpen-Noorderdokken, Argentiniëlaan, 2030 Antwerp, Belgium",Belgium
+Antwerpen-Noorderdokken,51.2613742,4.4277566,"Antwerpen-Noorderdokken, Argentiniëlaan, 2030 Antwerp, Belgium",Ekeren,51.2781955,4.4209857,"Ekeren, Antwerp, VAN, Belgium",Belgium
+Bruxelles Midi,50.8356748,4.3362419,"Brussels-Midi, Galerie M - M-galerij, 1060 Saint-Gilles - Sint-Gillis, Belgium",Bruxelles-Midi Eurostar,50.8357,4.3365,"Bruxelles, Vivier d'Oie / Diesdelle, BU, Belgium",Belgium
+Brussels Airport - Zaventem,50.897673,4.483303,"Brussels National Airport, 1930 Zaventem, Belgium",Bruxelles Midi,50.8356748,4.3362419,"Brussels-Midi, Galerie M - M-galerij, 1060 Saint-Gilles - Sint-Gillis, Belgium",Belgium
+Brussels Airport - Zaventem,50.897673,4.483303,"Brussels National Airport, 1930 Zaventem, Belgium",Mechelen,51.0175,4.4818,"Mechelen, Antwerp, Belgium",Belgium
+Liège-Guillemins,50.62455075,5.566168777741272,"Gare de Liège-Guillemins, Place des Guillemins 2, 4000 Liège, Belgium",Vise,50.7383,5.7005,"Visé, WLG, Belgium",Belgium
+Namur,50.4665284,4.8661892,"Namur, WNA, Belgium",Ciney,50.29136,5.091497,"Ciney, WNA, Belgium",Belgium
+Ciney,50.29136,5.091497,"Ciney, WNA, Belgium",Rochefort-Jemelle,50.1578,5.2625,"Rochefort-Jemelle, Route de Forrières, 5580 Jemelle, Belgium",Belgium
+ZAG,45.74027185,16.072247467592717,"Zagreb International Airport, Avenija Ivana Pavla II., 10410 City of Velika Gorica, Croatia",Zagreb Glavni kolodvor,45.8044464,15.9788333,"Zagreb Central Railway Station, Trg kralja Tomislava 12, 10000 City of Zagreb, Croatia",Croatia
+Zagreb Glavni kolodvor,45.8044464,15.9788333,"Zagreb Central Railway Station, Trg kralja Tomislava 12, 10000 City of Zagreb, Croatia",Zapresic,45.8572728,15.8050436,"Town of Zaprešić, Croatia",Croatia
+Zapresic,45.8572728,15.8050436,"Town of Zaprešić, Croatia",Veliko Trgovisce,46.0025312,15.8448908,"Veliko Trgovišće, Croatia",Croatia
+Veliko Trgovisce,46.0025312,15.8448908,"Veliko Trgovišće, Croatia",Velika Ves,46.1253458,15.8931088,"Velika Ves, Croatia",Croatia
+Velika Ves,46.1253458,15.8931088,"Velika Ves, Croatia",Zagorje,46.0983218,15.9377404,"Krapina-Zagorje County, Croatia",Croatia
+PRG,50.1020451,14.270566315440009,"Václav Havel Airport Prague, K Letišti 1019/6, 161 00 Capital City of Prague, Czechia",Praha hl.n.,50.0829628,14.4360939,"Prague Main Station, Wilsonova, 116 47 Capital City of Prague, Czechia",Czechia
+PRG,50.1020451,14.270566315440009,"Václav Havel Airport Prague, K Letišti 1019/6, 161 00 Capital City of Prague, Czechia",Praha-Holesovice,50.1106578,14.4397509,"Praha-Holešovice, Pod Dráhou, 170 00 Capital City of Prague, Czechia",Czechia
+BRQ,49.152487050000005,16.690091442049045,"Letiště Brno Tuřany, Letiště Brno-Tuřany 904/1, 627 00 Brno, Czechia",Brno hl.n.,49.1911221,16.6131116,"Brno hlavní nádraží, Nádražní 418/1, 601 69 Brno, Czechia",Czechia
+OSR,49.696337,18.114251,"Ostrava Leos Janacek Airport 401, 742 51 Mošnov, Czechia",Ostrava-Svinov,49.8210342,18.2098888,"Ostrava-Svinov, náměstí Dr. Brauna, 721 00 Ostrava, Czechia",Czechia
+OSR,49.696337,18.114251,"Ostrava Leos Janacek Airport 401, 742 51 Mošnov, Czechia",Ostrava hl.n.,49.8504,18.2674,"Fakultní nemocnice Ostrava, 708 00 Ostrava, Czechia",Czechia
+PED,50.0164307,15.73653943919216,"Pardubice Airport, Pražská, 530 66 Pardubice, Czechia",Pardubice hl.n.,50.0316,15.7565,"Pardubice, Palackého třída, 532 20 Pardubice, Czechia",Czechia
+Praha hl.n.,50.0829628,14.4360939,"Prague Main Station, Wilsonova, 116 47 Capital City of Prague, Czechia",Praha-Holesovice,50.1106578,14.4397509,"Praha-Holešovice, Pod Dráhou, 170 00 Capital City of Prague, Czechia",Czechia
+Praha hl.n.,50.0829628,14.4360939,"Prague Main Station, Wilsonova, 116 47 Capital City of Prague, Czechia",Praha-Liben,50.1033,14.4935,"Sokolovna Praha Libeň, U Libeňského zámku, 180 48 Capital City of Prague, Czechia",Czechia
+Praha-Holesovice,50.1106578,14.4397509,"Praha-Holešovice, Pod Dráhou, 170 00 Capital City of Prague, Czechia",Praha-Liben,50.1033,14.4935,"Sokolovna Praha Libeň, U Libeňského zámku, 180 48 Capital City of Prague, Czechia",Czechia
+Ostrava hl.n.,49.8504,18.2674,"Fakultní nemocnice Ostrava, 708 00 Ostrava, Czechia",Ostrava-Svinov,49.8210342,18.2098888,"Ostrava-Svinov, náměstí Dr. Brauna, 721 00 Ostrava, Czechia",Czechia
+Ostrava hl.n.,49.8504,18.2674,"Fakultní nemocnice Ostrava, 708 00 Ostrava, Czechia",Bohumin,49.9041537,18.3574288,"Bohumín, Moravia-Silesia, Czechia",Czechia
+Decin hl.n.,50.7734783,14.201296,"Děčín hlavní nádraží, Čsl. mládeže, 405 01 Děčín, Czechia",Decin-Certova voda,50.8171363,14.2214055,"Děčín-Čertova Voda, Strážní, 405 01 Děčín, Czechia",Czechia
+Most,50.5032737,13.636112,"Most, Northwest, Czechia",Bilina Kyselka,50.5463,13.7654,"Bílina kyselka, Kyselská, 418 01 Bílina, Czechia",Czechia
+Lichkov,50.0978527,16.6660119,"Lichkov, Northeast, Czechia",Roztoki Bystrzyckie,50.2227,16.7118,,Czechia
+Kaplice,48.7389045,14.493718,"Kaplice, Southwest, Czechia",Horni Dvoriste,48.595,14.39,"Horní Dvořiště, Southwest, Czechia",Czechia
+CPH,55.618,12.6508,"Citycamp cph, 1441 Copenhagen, Denmark",Taarnby st,55.6298,12.602,"Taarnby Naturskole bålplads, Dragør Municipality, Denmark",Denmark
+CPH,55.618,12.6508,"Citycamp cph, 1441 Copenhagen, Denmark",Koebenhavn H,55.6727,12.5645,"Vandflyverhangaren, Refshalevej, 1432 Copenhagen, Denmark",Denmark
+Taarnby st,55.6298,12.602,"Taarnby Naturskole bålplads, Dragør Municipality, Denmark",Koebenhavn H,55.6727,12.5645,"Vandflyverhangaren, Refshalevej, 1432 Copenhagen, Denmark",Denmark
+Koebenhavn H,55.6727,12.5645,"Vandflyverhangaren, Refshalevej, 1432 Copenhagen, Denmark",Hoeje Taastrup st,55.64821,12.26986,"Taastrup St., Taastrup Torv, 2630 Taastrup, Denmark",Denmark
+Hoeje Taastrup st,55.64821,12.26986,"Taastrup St., Taastrup Torv, 2630 Taastrup, Denmark",Roskilde st,55.6379094,12.0840409,"Roskilde St. (Stationscentret), Stationscentret, 4000 Roskilde, Denmark",Denmark
+RKE,55.587913,12.127464,"Roskilde Airport, 4030 Snoldelev, Denmark",Roskilde st,55.6379094,12.0840409,"Roskilde St. (Stationscentret), Stationscentret, 4000 Roskilde, Denmark",Denmark
+ODE,55.4751004,10.327968321284803,"Hans Christian Andersen Airport, Beldringevej, 5270 Allesø, Denmark",Odense st,55.4014,10.3854,"Saint Canute's Cathedral, Flakhaven, 5000 Odense, Denmark",Denmark
+Fredericia st,55.56280325,9.752060309095206,"Fredericia Street Bastion, Norgesgade, 7000 Fredericia, Denmark",Middelfart st,55.5074,9.736,"Middelfart, Bjergbanksvej, 5500 Middelfart, Denmark",Denmark
+STN,51.88696515,0.2441929015733029,"London Stansted Airport, A120, Uttlesford, CM24 1PY, United Kingdom",London Liverpool Street,51.5182105,-0.0814269,"London Liverpool Street, Great Eastern Walkway, City of London, EC2M 3AJ, United Kingdom",United Kingdom
+LCY,51.504241,0.052981,"London City Airport, Newham, E16 2PJ, United Kingdom",London Liverpool Street,51.5182105,-0.0814269,"London Liverpool Street, Great Eastern Walkway, City of London, EC2M 3AJ, United Kingdom",United Kingdom
+SEN,51.569623,0.691894,"London Southend Airport, Rochford, United Kingdom",London Liverpool Street,51.5182105,-0.0814269,"London Liverpool Street, Great Eastern Walkway, City of London, EC2M 3AJ, United Kingdom",United Kingdom
+LTN,51.877774,-0.373442,"London Luton Airport, Luton, LU2 9LY, United Kingdom",London St. Pancras International,51.5327196,-0.1270027,"London St. Pancras International, Euston Road, City of London, N1C 4QP, United Kingdom",United Kingdom
+LGW,51.156556,-0.1616,"London Gatwick Airport, Crawley, RH6 0NN, United Kingdom",London St. Pancras International,51.5327196,-0.1270027,"London St. Pancras International, Euston Road, City of London, N1C 4QP, United Kingdom",United Kingdom
+LHR,51.47,-0.4543,"Expeditors LHR, London, TW14 8RS, United Kingdom",London St. Pancras International,51.5327196,-0.1270027,"London St. Pancras International, Euston Road, City of London, N1C 4QP, United Kingdom",United Kingdom
+London Liverpool Street,51.5182105,-0.0814269,"London Liverpool Street, Great Eastern Walkway, City of London, EC2M 3AJ, United Kingdom",London St. Pancras International,51.5327196,-0.1270027,"London St. Pancras International, Euston Road, City of London, N1C 4QP, United Kingdom",United Kingdom
+Colchester,51.8896903,0.8994651,"yes, Colchester, ENG, United Kingdom",London Liverpool Street,51.5182105,-0.0814269,"London Liverpool Street, Great Eastern Walkway, City of London, EC2M 3AJ, United Kingdom",United Kingdom
+Colchester,51.8896903,0.8994651,"yes, Colchester, ENG, United Kingdom",Harwich International,51.9452,1.253,"Harwich Redoubt Fort, Harwich, CO12 3LT, United Kingdom",United Kingdom
+CDG,49.0068908,2.571081969101916,"Charles de Gaulle International Airport, 93290 Tremblay-en-France, France",Paris Nord,48.881399,2.357438,"Gare du Nord (RER), Rue du Faubourg Saint-Denis, 75010 Paris, France",France
+CDG,49.0068908,2.571081969101916,"Charles de Gaulle International Airport, 93290 Tremblay-en-France, France",Paris Est,48.8770979,2.3594905,"Paris Gare de l'Est, Place du 11 Novembre 1918, 75010 Paris, France",France
+CDG,49.0068908,2.571081969101916,"Charles de Gaulle International Airport, 93290 Tremblay-en-France, France",Marne la Vallée-Chessy,48.87026355,2.782803052345335,"Marne-la-Vallée – Chessy, Place des Passagers du Vent, 77700 Chessy, France",France
+CDG,49.0068908,2.571081969101916,"Charles de Gaulle International Airport, 93290 Tremblay-en-France, France",ORY,48.73005955,2.367831255814345,"Paris–Orly Airport, D 118, 91380 Chilly-Mazarin, France",France
+ORY,48.73005955,2.367831255814345,"Paris–Orly Airport, D 118, 91380 Chilly-Mazarin, France",Paris Gare de Lyon,48.8446832,2.3737743,"Gare de Lyon, Place Louis Armand, 75012 Paris, France",France
+LYS,43.1300341,-0.3525601,"Lys, NAQ, France",Lyon Part Dieu,45.7605271,4.8606553,"Lyon Part-Dieu, Place de la Vilette, 69003 Lyon, France",France
+MRS,43.443585,5.219273,"Aéroport de Marseille Provence, 13127 Vitrolles, France",Marseille-St-Charles,43.3032635,5.3811927,"Marseille-Saint-Charles, Square Narvik, 13001 Marseille, France",France
+SXB,48.54057,7.629923,"Strasbourg-Entzheim Airport, 67960 Entzheim, France",Strasbourg,48.5851,7.7342,"Strasbourg, GES, France",France
+ETZ,48.979845,6.247925,"Aeroport de Metz-Nancy-Lorraine, 57420 Goin, France",Lorraine TGV,48.9469,6.1755,"Lorraine, Allée des Belles Rives, 03700 Bellerive-sur-Allier, France",France
+BSL,47.09524355,-1.281901811929458,"BSL Papeterie, Rue du Docteur Maurice Boutin, 44190 Clisson, France",St-Louis (Haut-Rhin),47.5902442,7.5552861,"Saint-Louis (Haut-Rhin), Place de la Gare, 68300 Saint-Louis, France",France
+LIL,50.568433,3.099958,"Lille - Lesquin International Airport, 59273 Fretin, France",Lille Europe,50.6392,3.0758,"Écluse n°4 de Charbonnière, Rue de la 4ème Division Blindée Américaine, 35760 Saint-Grégoire, France",France
+LIL,50.568433,3.099958,"Lille - Lesquin International Airport, 59273 Fretin, France",Lille Flandres,50.636,3.0706,"Écluse n°4 de Charbonnière, Rue de la 4ème Division Blindée Américaine, 35760 Saint-Grégoire, France",France
+DIJ,47.268806,5.085438,"Dijon-Bourgogne Airport, 21600 Ouges, France",Dijon Ville,47.3235,5.0273,"Golf Dijon Bourgogne Jacques Laffite, 21490 Norges-la-Ville, France",France
+DLE,47.0417424,5.4276467654311045,"Dole – Jura Airport, Impasse du Brejon, 39100 Gevry, France",Dole Ville,47.096209,5.488029,"Dole, Place de la Gare, 39100 Dole, France",France
+Paris Nord,48.881399,2.357438,"Gare du Nord (RER), Rue du Faubourg Saint-Denis, 75010 Paris, France",Paris Est,48.8770979,2.3594905,"Paris Gare de l'Est, Place du 11 Novembre 1918, 75010 Paris, France",France
+Paris Nord,48.881399,2.357438,"Gare du Nord (RER), Rue du Faubourg Saint-Denis, 75010 Paris, France",Paris Nord Eurostar,48.8809,2.3553,"Paris (Paris), VP, France",France
+Paris Gare de Lyon,48.8446832,2.3737743,"Gare de Lyon, Place Louis Armand, 75012 Paris, France",Paris Lyon Banlieue,48.8443,2.3744,"Zelys Paris, Tunnel Brotteaux-Servient, 69003 Lyon, France",France
+Lille Europe,50.6392,3.0758,"Écluse n°4 de Charbonnière, Rue de la 4ème Division Blindée Américaine, 35760 Saint-Grégoire, France",Lille Europe Eurostar,50.6392,3.0758,"Écluse n°4 de Charbonnière, Rue de la 4ème Division Blindée Américaine, 35760 Saint-Grégoire, France",France
+Lille Europe,50.6392,3.0758,"Écluse n°4 de Charbonnière, Rue de la 4ème Division Blindée Américaine, 35760 Saint-Grégoire, France",Lille Flandres,50.636,3.0706,"Écluse n°4 de Charbonnière, Rue de la 4ème Division Blindée Américaine, 35760 Saint-Grégoire, France",France
+Marseille-St-Charles,43.3032635,5.3811927,"Marseille-Saint-Charles, Square Narvik, 13001 Marseille, France",Marseille-Blancarde,43.3032,5.414,"Marseille-Blancarde, Boulevard Fraissinet, 13004 Marseille, France",France
+Strasbourg Strasbourg Etoile Bourse,48.5744,7.7564,"20 Place de la Gare, 67083 Strasbourg, France",Frankreich,46.603354,1.8883335,France,France
+Annecy Annecy,45.8992348,6.1288847,"Annecy, ARA, France",Gare routière,48.92136210107144,2.411261248196973,"Gare routière, 93120 La Courneuve, France",France
+BUD,47.4336,19.2365,"Budapest Liszt Ferenc International Airport, Vecsés, 4, 2220, Hungary",Budapest-Nyugati,47.5107203,19.0574804,"Budapest-Nyugati, Budapest, Nyugati aluljáró, 1062, Hungary",Hungary
+BUD,47.4336,19.2365,"Budapest Liszt Ferenc International Airport, Vecsés, 4, 2220, Hungary",Budapest-Keleti,47.500412,19.08398,"Budapest Keleti Station, Budapest, Baross tér 1, 1087, Hungary",Hungary
+BUD,47.4336,19.2365,"Budapest Liszt Ferenc International Airport, Vecsés, 4, 2220, Hungary",Budapest-Kelenföld,47.4642992,19.0206155,"Budapest-Kelenföld, Budapest, Etele tér 5-7, 1115, Hungary",Hungary
+Budapest-Keleti,47.500412,19.08398,"Budapest Keleti Station, Budapest, Baross tér 1, 1087, Hungary",Budapest-Nyugati,47.5107203,19.0574804,"Budapest-Nyugati, Budapest, Nyugati aluljáró, 1062, Hungary",Hungary
+Budapest-Keleti,47.500412,19.08398,"Budapest Keleti Station, Budapest, Baross tér 1, 1087, Hungary",Budapest-Déli,47.4994789,19.0248757,"Budapest-Déli, Budapest, Alkotás utca, 1012, Hungary",Hungary
+Budapest-Keleti,47.500412,19.08398,"Budapest Keleti Station, Budapest, Baross tér 1, 1087, Hungary",Budapest-Kelenföld,47.4642992,19.0206155,"Budapest-Kelenföld, Budapest, Etele tér 5-7, 1115, Hungary",Hungary
+Budapest-Nyugati,47.5107203,19.0574804,"Budapest-Nyugati, Budapest, Nyugati aluljáró, 1062, Hungary",Budapest-Kelenföld,47.4642992,19.0206155,"Budapest-Kelenföld, Budapest, Etele tér 5-7, 1115, Hungary",Hungary
+Budapest-Déli,47.4994789,19.0248757,"Budapest-Déli, Budapest, Alkotás utca, 1012, Hungary",Budapest-Kelenföld,47.4642992,19.0206155,"Budapest-Kelenföld, Budapest, Etele tér 5-7, 1115, Hungary",Hungary
+Sopron,47.6803063,16.5983457,"Sopron, GS, Hungary",Nagycenk,47.6034133,16.6977433,"Nagycenk, GS, Hungary",Hungary
+Vac,47.7782873,19.1278294,"Vác, PE, Hungary",Szob,47.8164,18.8761,"Szob, PE, Hungary",Hungary
+Györ,47.684,17.6338,"Győr Homoksor, Gyor, Szkíta utca, 9011, Hungary",Györszentivan,47.666551,17.783968,"Bőny, Hungary",Hungary
+Györszentivan,47.666551,17.783968,"Bőny, Hungary",Nagyszentjanos,47.7144,17.8723,"Nagyszentjános, GS, Hungary",Hungary
+Hegyeshalom,47.9144882,17.1558011,"Hegyeshalom, GS, Hungary",Mosonmagyarovar,47.8731793,17.2722342,"Mosonmagyaróvár, GS, Hungary",Hungary
+Mosonmagyarovar,47.8731793,17.2722342,"Mosonmagyaróvár, GS, Hungary",Kimle-Karolyhaza,47.80407,17.34267,"Kimle KSE, Kimle, Fő út, 9181, Hungary",Hungary
+Kimle-Karolyhaza,47.80407,17.34267,"Kimle KSE, Kimle, Fő út, 9181, Hungary",Lébény-Mosonszentmiklos,47.75659,17.42421,"Lébény Kertészet, 9154, Hungary",Hungary
+Lébény-Mosonszentmiklos,47.75659,17.42421,"Lébény Kertészet, 9154, Hungary",Györ,47.684,17.6338,"Győr Homoksor, Gyor, Szkíta utca, 9011, Hungary",Hungary
+Tatabanya,47.583845,18.3979855,"Tatabánya, KE, Hungary",Szar,47.4787964,18.5185002,"Szár, FE, Hungary",Hungary
+Szar,47.4787964,18.5185002,"Szár, FE, Hungary",Bicske,47.495,18.6322,"Bicske, FE, Hungary",Hungary
+Nyiregyhaza,47.9557802,21.7167982,"Nyíregyháza, SZ, Hungary",Kisvarda,48.2217,22.0772,"Kisvárda, SZ, Hungary",Hungary
+Bekescsaba,46.6798003,21.0985425,"Békéscsaba, BE, Hungary",Ketegyhaza,46.5455442,21.1856277,"Kétegyháza, BE, Hungary",Hungary
+MXP,45.6301,8.7255,"Milan-Malpensa International Airport, 21019 Somma Lombardo VA, Italy",Milano Centrale,45.4858786,9.2042617,"Milano Centrale, Piazza Duca d'Aosta, 20124 Milan MI, Italy",Italy
+MXP,45.6301,8.7255,"Milan-Malpensa International Airport, 21019 Somma Lombardo VA, Italy",Milano Nord Cadorna,45.4684048,9.175523,"Milano Cadorna, Piazzale Luigi Cadorna, 20123 Milan MI, Italy",Italy
+MXP,45.6301,8.7255,"Milan-Malpensa International Airport, 21019 Somma Lombardo VA, Italy",Milano Porta Garibaldi,45.4845605,9.1873439,"Milano Porta Garibaldi railway station, Piazza Sigmund Freud, 20100 Milan MI, Italy",Italy
+LIN,45.4613,9.281,"Linate Airport, Tangenziale Est, 20059 Milan MI, Italy",Milano Centrale,45.4858786,9.2042617,"Milano Centrale, Piazza Duca d'Aosta, 20124 Milan MI, Italy",Italy
+BGY,45.6689,9.7004,"Aeroporto Militare Antonio Locatelli, 24068 Paderno BG, Italy",Milano Centrale,45.4858786,9.2042617,"Milano Centrale, Piazza Duca d'Aosta, 20124 Milan MI, Italy",Italy
+FCO,41.8003,12.2389,"Amazon FCO 2, Colleferro RM, Italy",Roma Termini,41.9005815,12.5025272,"Rome, Galleria Termini, 00185 Rome RM, Italy",Italy
+FCO,41.8003,12.2389,"Amazon FCO 2, Colleferro RM, Italy",Roma Tiburtina,41.91119,12.5315602,"Roma Tiburtina, Circonvallazione della Stazione Tiburtina, 00162 Rome RM, Italy",Italy
+CIA,41.79954695,12.591271133206927,"Rome Ciampino Airport, Via Giovanni XXIII, 00043 Ciampino RM, Italy",Roma Termini,41.9005815,12.5025272,"Rome, Galleria Termini, 00185 Rome RM, Italy",Italy
+VCE,45.5053,12.3518,"Venice Marco Polo Airport, 30012 Venice VE, Italy",Venezia Mestre,45.482462,12.2317016,"Venezia Mestre, Piazzale Pietro Favretti, 1, 30171 Venice VE, Italy",Italy
+VCE,45.5053,12.3518,"Venice Marco Polo Airport, 30012 Venice VE, Italy",Venezia Santa Lucia,45.4410753,12.3210322,"Venezia Santa Lucia, Fondamenta Santa Lucia, 30121 Venice VE, Italy",Italy
+TSF,45.647975,12.194465,"Treviso Airport, 31100 Treviso TV, Italy",Treviso Centrale,45.6600557,12.2452188,"Treviso Centrale, Piazzale Duca d'Aosta, 31100 Treviso TV, Italy",Italy
+TSF,45.647975,12.194465,"Treviso Airport, 31100 Treviso TV, Italy",Venezia Mestre,45.482462,12.2317016,"Venezia Mestre, Piazzale Pietro Favretti, 1, 30171 Venice VE, Italy",Italy
+BLQ,44.535,11.2886,"BLQ Skatepark, 40012 Lippo BO, Italy",Bologna Centrale,44.5059335,11.3403927,"Bologna Centrale, Piazzale Ovest, 40121 Bologna BO, Italy",Italy
+VRN,45.39717245,10.885895928972548,"Verona Villafranca Airport, Via Aeroporto, 1, 37066 Villafranca di Verona VR, Italy",Verona Porta Nuova,45.429182,10.9823706,"Verona Porta Nuova, Piazzale Venticinque Aprile, 37122 Verona VR, Italy",Italy
+TRN,45.197829,7.648729,"Turin Airport, 10077 Caselle Torinese TO, Italy",Torino Porta Susa,45.0715765,7.6658551,"Torino Porta Susa, Corso Inghilterra, 10140 Turin TO, Italy",Italy
+Milano Centrale,45.4858786,9.2042617,"Milano Centrale, Piazza Duca d'Aosta, 20124 Milan MI, Italy",Milano Porta Garibaldi,45.4845605,9.1873439,"Milano Porta Garibaldi railway station, Piazza Sigmund Freud, 20100 Milan MI, Italy",Italy
+Milano Centrale,45.4858786,9.2042617,"Milano Centrale, Piazza Duca d'Aosta, 20124 Milan MI, Italy",Milano Nord Cadorna,45.4684048,9.175523,"Milano Cadorna, Piazzale Luigi Cadorna, 20123 Milan MI, Italy",Italy
+Milano Centrale,45.4858786,9.2042617,"Milano Centrale, Piazza Duca d'Aosta, 20124 Milan MI, Italy",Milano Lambrate,45.4854753,9.2376864,"Milano Lambrate, Sottopassaggio Centrale, 20134 Milan MI, Italy",Italy
+Roma Termini,41.9005815,12.5025272,"Rome, Galleria Termini, 00185 Rome RM, Italy",Roma Tiburtina,41.91119,12.5315602,"Roma Tiburtina, Circonvallazione della Stazione Tiburtina, 00162 Rome RM, Italy",Italy
+Venezia Mestre,45.482462,12.2317016,"Venezia Mestre, Piazzale Pietro Favretti, 1, 30171 Venice VE, Italy",Venezia Santa Lucia,45.4410753,12.3210322,"Venezia Santa Lucia, Fondamenta Santa Lucia, 30121 Venice VE, Italy",Italy
+Como S. Giovanni,45.8090266,9.0727772,"Como San Giovanni, Piazzale San Gottardo, 22100 Como CO, Italy",Como Nord Camerlata,45.817948,9.0832882,"Como, Via Torno, 22100 Como CO, Italy",Italy
+Levanto,44.1699056,9.6120397,"Levanto, SP, Italy",Monterosso,45.3653424,11.7624377,"Monterosso (Abano Terme), PD, Italy",Italy
+Domodossola,46.1152451,8.2920459,"Domodossola, VB, Italy",Iselle di Trasquera,46.2043654,8.19337212099156,"Cimitero di Iselle, 28868 Trasquera VB, Italy",Italy
+Bolzano/Bozen,46.4984781,11.3547399,"Bolzano - Bozen, BZ, Italy",Brennero/Brenner,45.01922515,7.648145681086365,"Carrozzeria Brennero, Via Michele Kerbaker, 10127 Turin TO, Italy",Italy
+Bologna Centrale,44.5059335,11.3403927,"Bologna Centrale, Piazzale Ovest, 40121 Bologna BO, Italy",Ferrara,44.8372737,11.6186451,"44121-44124 Ferrara FE, Italy",Italy
+Verona Porta Nuova,45.429182,10.9823706,"Verona Porta Nuova, Piazzale Venticinque Aprile, 37122 Verona VR, Italy",Peschiera del Garda,45.4389454,10.6920171,"Peschiera del Garda, VR, Italy",Italy
+Schaanwald Zollamt,47.2176544,9.5690725,"Schaanwald Zollamt, Vorarlberger-Strasse, 9486 Schaanwald, Liechtenstein",Nendeln,47.1973842,9.5430689,"Nendeln, Liechtenstein",Liechtenstein
+Nendeln,47.1973842,9.5430689,"Nendeln, Liechtenstein",Schaan-Vaduz,47.168219,9.513044,"Friedhof Schaan, 9494 Schaan, Liechtenstein",Liechtenstein
+Schaan-Vaduz,47.168219,9.513044,"Friedhof Schaan, 9494 Schaan, Liechtenstein",Triesen Säga,47.106109,9.530253,"Friedhof Triesen, 9495 Triesen, Liechtenstein",Liechtenstein
+AMS,52.32698005,4.74150530038293,"Amsterdam Airport Schiphol, 1171 VM Badhoevedorp, Netherlands",Schiphol (Airport),52.3058439,4.754118198437629,"Schiphol, Energiestraat, 1118 CK Schiphol, Netherlands",Netherlands
+AMS,52.32698005,4.74150530038293,"Amsterdam Airport Schiphol, 1171 VM Badhoevedorp, Netherlands",Amsterdam Centraal,52.37233395,4.914231749531422,"Amsterdam, Prins Hendrikkade, 1018 AA Amsterdam, Netherlands",Netherlands
+AMS,52.32698005,4.74150530038293,"Amsterdam Airport Schiphol, 1171 VM Badhoevedorp, Netherlands",Amsterdam Zuid,52.3388074,4.873191,"Amsterdam Zuid, Zuidplein 10, 1077 XV Amsterdam, Netherlands",Netherlands
+RTM,51.784138,3.872205,"RTM Ouddorp, 3253 MD Ouddorp, Netherlands",Rotterdam Centraal,51.9433308,4.1278005,"Rotterdam, Luxemburgweg, 3198 LN Rotterdam, Netherlands",Netherlands
+EIN,51.45190135,5.374880299362334,"Eindhoven Airport, Welschappad, 5657 AD Eindhoven, Netherlands",Eindhoven Centraal,51.4429623,5.4795265,"Eindhoven Centraal, Kennedyplein 202, 5611 ZT Eindhoven, Netherlands",Netherlands
+MST,52.215214,6.890534,"Parkeergarage MST, 7512 BA Enschede, Netherlands",Maastricht,50.8512438,5.6909768,"Maastricht, LI, Netherlands",Netherlands
+MST,52.215214,6.890534,"Parkeergarage MST, 7512 BA Enschede, Netherlands",Meerssen,50.90470915,5.735207828646779,"Meerssen, LI, Netherlands",Netherlands
+Amsterdam Centraal,52.37233395,4.914231749531422,"Amsterdam, Prins Hendrikkade, 1018 AA Amsterdam, Netherlands",Amsterdam Centraal Eurostar,52.37233395,4.914231749531422,"Amsterdam, Prins Hendrikkade, 1018 AA Amsterdam, Netherlands",Netherlands
+Amsterdam Centraal,52.37233395,4.914231749531422,"Amsterdam, Prins Hendrikkade, 1018 AA Amsterdam, Netherlands",Utrecht Centraal,53.2020069,5.800345000274763,"Utrecht, Tweebaksmarkt, 8911 KX Leeuwarden, Netherlands",Netherlands
+Amsterdam Centraal,52.37233395,4.914231749531422,"Amsterdam, Prins Hendrikkade, 1018 AA Amsterdam, Netherlands",Rotterdam Centraal,51.9433308,4.1278005,"Rotterdam, Luxemburgweg, 3198 LN Rotterdam, Netherlands",Netherlands
+Rotterdam Centraal,51.9433308,4.1278005,"Rotterdam, Luxemburgweg, 3198 LN Rotterdam, Netherlands",Rotterdam Centraal Eurostar,51.9433308,4.1278005,"Rotterdam, Luxemburgweg, 3198 LN Rotterdam, Netherlands",Netherlands
+Rotterdam Centraal,51.9433308,4.1278005,"Rotterdam, Luxemburgweg, 3198 LN Rotterdam, Netherlands",Breda,51.5887845,4.7760237,"Breda, NB, Netherlands",Netherlands
+Utrecht Centraal,53.2020069,5.800345000274763,"Utrecht, Tweebaksmarkt, 8911 KX Leeuwarden, Netherlands",Schiphol (Airport),52.3058439,4.754118198437629,"Schiphol, Energiestraat, 1118 CK Schiphol, Netherlands",Netherlands
+Utrecht Centraal,53.2020069,5.800345000274763,"Utrecht, Tweebaksmarkt, 8911 KX Leeuwarden, Netherlands",Amersfoort Centraal,52.153898,5.3740976,"Amersfoort Centraal, Stationshal, 3818 LE Amersfoort, Netherlands",Netherlands
+Utrecht Centraal,53.2020069,5.800345000274763,"Utrecht, Tweebaksmarkt, 8911 KX Leeuwarden, Netherlands",Arnhem Centraal,51.9844332,5.9011598,"Arnhem Centraal, Renssenstraat 17, 6811 MC Arnhem, Netherlands",Netherlands
+Utrecht Centraal,53.2020069,5.800345000274763,"Utrecht, Tweebaksmarkt, 8911 KX Leeuwarden, Netherlands",Driebergen-Zeist,52.0652455,5.2602392,"Driebergen-Zeist, Stationsplein, 3972 KZ Driebergen-Rijsenburg, Netherlands",Netherlands
+Breda,51.5887845,4.7760237,"Breda, NB, Netherlands",Tilburg,51.5562404,5.0886014,"Tilburg, NB, Netherlands",Netherlands
+Tilburg,51.5562404,5.0886014,"Tilburg, NB, Netherlands",Eindhoven Centraal,51.4429623,5.4795265,"Eindhoven Centraal, Kennedyplein 202, 5611 ZT Eindhoven, Netherlands",Netherlands
+Arnhem Centraal,51.9844332,5.9011598,"Arnhem Centraal, Renssenstraat 17, 6811 MC Arnhem, Netherlands","Nijmegen Centraal Station (Bus), Niederlande",51.787793,5.744956,"Bus 99: Uden Busstation => Nijmegen Centraal Station, Verspreide huizen Lunen, Alverna, Wijchen, Netherlands",Netherlands
+Arnhem Centraal,51.9844332,5.9011598,"Arnhem Centraal, Renssenstraat 17, 6811 MC Arnhem, Netherlands",Zevenaar,51.9279081,6.077526279085048,"Zevenaar, GE, Netherlands",Netherlands
+"Nijmegen Centraal Station (Bus), Niederlande",51.787793,5.744956,"Bus 99: Uden Busstation => Nijmegen Centraal Station, Verspreide huizen Lunen, Alverna, Wijchen, Netherlands","Ubbergen Beek Sportpark, Niederlande",51.581644,4.793207,"Sportpark, Breda, NB, Netherlands",Netherlands
+Hengelo,52.2658726,6.7924049,"Hengelo, OV, Netherlands",Oldenzaal,52.3116616,6.9241615,"Oldenzaal, OV, Netherlands",Netherlands
+Maastricht,50.8512438,5.6909768,"Maastricht, LI, Netherlands",Sittard,50.992006,5.866375,"Sittard, Sittard-Geleen, Netherlands",Netherlands
+Maastricht,50.8512438,5.6909768,"Maastricht, LI, Netherlands",Valkenburg(NL),50.8647531,5.8312518,"Valkenburg, LI, Netherlands",Netherlands
+Maastricht,50.8512438,5.6909768,"Maastricht, LI, Netherlands",Eijsden,50.7782686,5.7075337,"Eijsden, LI, Netherlands",Netherlands
+Sittard,50.992006,5.866375,"Sittard, Sittard-Geleen, Netherlands",Schinnen,50.9425257,5.8861938,"Schinnen, LI, Netherlands",Netherlands
+Schinnen,50.9425257,5.8861938,"Schinnen, LI, Netherlands",Nuth,50.9171887,5.8838254,"Nuth, LI, Netherlands",Netherlands
+Apeldoorn,52.2156457,5.9639485,"Apeldoorn, GE, Netherlands",Deventer,52.26948965,6.236488628052996,"Deventer, OV, Netherlands",Netherlands
+Apeldoorn,52.2156457,5.9639485,"Apeldoorn, GE, Netherlands",Amersfoort Centraal,52.153898,5.3740976,"Amersfoort Centraal, Stationshal, 3818 LE Amersfoort, Netherlands",Netherlands
+OSL,60.194965,11.090201,"Oslo Airport, Gardermoen, 2032 Nordre Børke, Norway",Oslo S,59.910902,10.750636,"Old Oslo Central Station (Oslo East), 0154 Oslo, Norway",Norway
+OSL,60.194965,11.090201,"Oslo Airport, Gardermoen, 2032 Nordre Børke, Norway",Ski,59.7199326,10.8382736,"Ski, Norway",Norway
+Oslo S,59.910902,10.750636,"Old Oslo Central Station (Oslo East), 0154 Oslo, Norway",Ski,59.7199326,10.8382736,"Ski, Norway",Norway
+Oslo S,59.910902,10.750636,"Old Oslo Central Station (Oslo East), 0154 Oslo, Norway",Kongsvinger,60.1899109,12.21603674554007,"Kongsvinger, Norway",Norway
+Oslo S,59.910902,10.750636,"Old Oslo Central Station (Oslo East), 0154 Oslo, Norway",Halden,59.0680555,11.53719102751631,"Halden, Norway",Norway
+Ski,59.7199326,10.8382736,"Ski, Norway",Halden,59.0680555,11.53719102751631,"Halden, Norway",Norway
+GDN,54.3762064,18.474455102751115,"Gdansk Lech Walesa Airport, Juliusza Słowackiego 200, 80-298 Gdańsk, Poland",Gdansk Port Lotniczy,54.3827282,18.4665403,"Gdańsk Port Lotniczy, Juliusza Słowackiego, 80-298 Gdańsk, Poland",Poland
+GDN,54.3762064,18.474455102751115,"Gdansk Lech Walesa Airport, Juliusza Słowackiego 200, 80-298 Gdańsk, Poland",Gdansk Osowa,54.4223889,18.4528085,"Gdańsk Osowa, Letniskowa, 80-299 Gdańsk, Poland",Poland
+WAW,52.16306505,20.970814903702912,"Warsaw Chopin Airport, Żwirki i Wigury, 00-001 Warsaw, Poland",Warszawa Centralna,52.2288207,21.00316,"Warsaw Central, Aleje Jerozolimskie 54, 00-024 Warsaw, Poland",Poland
+WAW,52.16306505,20.970814903702912,"Warsaw Chopin Airport, Żwirki i Wigury, 00-001 Warsaw, Poland",Warszawa Zachodnia,52.21987555,20.96836629249472,"Podstacja trakcyjna ""Warszawa Zachodnia Południowa"", Podstacja trakcyjna ""Warszawa Zachodnia Południowa, 02-354 Warsaw, Poland",Poland
+KRK,50.0782553,19.78625376760332,"John Paul II International Airport Kraków-Balice, Kapitana Mieczysława Medweckiego 1, 32-083 Balice, Poland",Krakow Glowny,50.0686663,19.947802,"Krakow Main Station, Świętego Rafała Kalinowskiego, 31-154 Krakow, Poland",Poland
+POZ,52.42056395,16.83179248052985,"Poznań-Ławica Airport, Startowa, 60-412 Poznan, Poland",Poznan Glowny,52.41143,16.915722,"Podstacja trakcyjna ""Poznań, 61-704 Poznan, Poland",Poland
+LCJ,51.727348,19.401356,"Port Lotniczy Łódź im. Władysława Reymonta, 94-328 Łódź, Poland",Lodz Chojny,51.711430750000005,19.48584190356784,"Chojny, Łódź, LD, Poland",Poland
+LCJ,51.727348,19.401356,"Port Lotniczy Łódź im. Władysława Reymonta, 94-328 Łódź, Poland",Pabianice,51.6639859,19.3535024,"Gmina Pabianice (Pabianice), LD, Poland",Poland
+Gdansk Port Lotniczy,54.3827282,18.4665403,"Gdańsk Port Lotniczy, Juliusza Słowackiego, 80-298 Gdańsk, Poland",Gdansk Osowa,54.4223889,18.4528085,"Gdańsk Osowa, Letniskowa, 80-299 Gdańsk, Poland",Poland
+Gdansk Osowa,54.4223889,18.4528085,"Gdańsk Osowa, Letniskowa, 80-299 Gdańsk, Poland",Gdynia Karwiny,54.4698814,18.5088468,"Gdynia Karwiny, Strzelców, 81-531 Gdynia, Poland",Poland
+Gdynia Glowna,54.5217877,18.5268255,"Gdynia Główna, Morska, 81-324 Gdynia, Poland",Sopot,54.4447922,18.5684902,"Sopot, PM, Poland",Poland
+Warszawa Centralna,52.2288207,21.00316,"Warsaw Central, Aleje Jerozolimskie 54, 00-024 Warsaw, Poland",Warszawa Zachodnia,52.21987555,20.96836629249472,"Podstacja trakcyjna ""Warszawa Zachodnia Południowa"", Podstacja trakcyjna ""Warszawa Zachodnia Południowa, 02-354 Warsaw, Poland",Poland
+Bystrzyca Klodzka,50.2968684,16.652017,"Bystrzyca Kłodzka, DS, Poland",Bystrzyca Kl. Przed.,50.962395,17.39454,"Gmina Oława (Bystrzyca), DS, Poland",Poland
+Zgorzelec,51.15178695,15.014432971933283,"Zgorzelec, DS, Poland",Piensk,51.2457834,15.0449871,"Pieńsk, DS, Poland",Poland
+Grodzisk Mazowiecki,52.1066223,20.6313441,"Grodzisk Mazowiecki, MZ, Poland",Zyrardow,52.0543308,20.4435009,"Żyrardów, MZ, Poland",Poland
+Konin,52.2301933,18.2521112,"Konin, WP, Poland",Kolo,52.2019866,18.6359912,"Koło, WP, Poland",Poland
+OTP,44.56833895,26.10255358111181,"Henri Coandă International Airport (OTP), Calea Bucureștilor, 075150 Otopeni, Romania",Bucuresti Nord Gara A,44.4459598,26.0760245,"Gara de Nord, Bucharest, Romania",Romania
+BBU,44.50029205,26.090228324484794,"Aurel Vlaicu International Airport, Șoseaua București-Ploiești 40, 013695 Bucharest, Romania",Bucuresti Nord Gara A,44.4459598,26.0760245,"Gara de Nord, Bucharest, Romania",Romania
+OTP,44.56833895,26.10255358111181,"Henri Coandă International Airport (OTP), Calea Bucureștilor, 075150 Otopeni, Romania",BBU,44.50029205,26.090228324484794,"Aurel Vlaicu International Airport, Șoseaua București-Ploiești 40, 013695 Bucharest, Romania",Romania
+ARW,46.1754589,21.26569283388953,"Arad International Airport, Aleea Aeroport 4, 310059 Arad, Romania",Arad,46.1753793,21.3196342,"Arad, Romania",Romania
+SBZ,45.787503,24.09066,"Sibiu International Airport, 550018 Cristian, Romania",Sibiu,45.7973912,24.1519202,"Sibiu, Romania",Romania
+Arad,46.1753793,21.3196342,"Arad, Romania",Curtici,46.3444844,21.3069092,"Curtici (Curtici), Romania",Romania
+Simeria,45.8475432,23.0162168,"Simeria (Simeria), Romania",Orastie,45.8367637,23.1958453,"Orăștie, Romania",Romania
+Predeal,45.5026879,25.5761577,"Predeal (Predeal), Romania",Sinaia,45.3455492,25.5481496,"Sinaia (Sinaia), Romania",Romania
+Caracal,44.1123292,24.3463095,"Caracal, Romania",Draganesti Olt,44.1684732,24.5219723,"Drăgănești-Olt (Drăgănești-Olt), Romania",Romania
+BTS,48.170844,17.210040749031158,"M. R. Stefanik International Airport, D4, 900 28 Ivanka pri Dunaji, Slovakia",Bratislava hl.st.,48.1590296,17.1064675,"Bratislava main station, Franz Liszt Square, 811 04 Bratislava, Slovakia",Slovakia
+Bratislava hl.st.,48.1590296,17.1064675,"Bratislava main station, Franz Liszt Square, 811 04 Bratislava, Slovakia",Devinska Nova Ves,48.2091751,16.973894,"Devínska Nová Ves, Bratislava, Slovakia",Slovakia
+LJU,46.22247455,14.463829368212778,"Ljubljana Jože Pučnik Airport, Zgornji Brnik 130a, 4210 Zgornji Brnik, Slovenia",Ljubljana,46.0500268,14.5069289,"Ljubljana, Slovenia",Slovenia
+Maribor,46.5576439,15.6455854,"Maribor, Slovenia",Sentilj,46.6696034,15.768830580455049,"Šentilj, Slovenia",Slovenia
+ARN,59.646698,17.940996,"Stockholm-Arlanda Airport, 195 61 Sigtuna kommun, Sweden",Stockholm Central,59.33012,18.054745,"Stockholm Waterfront, 121 27 Stockholm, Sweden",Sweden
+BMA,59.354529,17.94480952159809,"Stockholm-Bromma Airport, Ulvsundavägen 168 67, 168 72 Stockholm, Sweden",Stockholm Central,59.33012,18.054745,"Stockholm Waterfront, 121 27 Stockholm, Sweden",Sweden
+ARN,59.646698,17.940996,"Stockholm-Arlanda Airport, 195 61 Sigtuna kommun, Sweden",BMA,59.354529,17.94480952159809,"Stockholm-Bromma Airport, Ulvsundavägen 168 67, 168 72 Stockholm, Sweden",Sweden
+GOT,57.66241475,12.287763001236742,"Gothenburg Landvetter Airport, Flygplatsvägen, 438 80 Härryda kommun, Sweden",Göteborg Central,57.7093483,11.9731864,"Gothenburg Central, Nils Ericsonsplatsen, 411 03 Gothenburg, Sweden",Sweden
+MMX,55.53405,13.369685,"Malmö Airport, 233 71 Sturup, Sweden",Malmö Central,55.609698,13.000112,"Malmö centralstation, 211 22 Malmö, Sweden",Sweden
+AGH,56.2972346,12.852846835898422,"Ängelholm-Helsingborg Airport, Viggenvägen, 262 74 Barkåkra, Sweden",Helsingborg Central,56.038273,12.699817,"Lunds universitet Campus Helsingborg, 259 71 Helsingborg, Sweden",Sweden
+NRK,58.585144,16.234512,"Norrköping Airport, Norrköping, Sweden",Norrköping Central,58.582815,16.147165,"Norrköping, Norrkoping, Sweden",Sweden
+VBY,57.661995,18.3436,"Visby Airport, Visby, Sweden",Visby st,57.6379361,18.297982,"Visby, Sweden",Sweden
+Stockholm Central,59.33012,18.054745,"Stockholm Waterfront, 121 27 Stockholm, Sweden",BMA,59.354529,17.94480952159809,"Stockholm-Bromma Airport, Ulvsundavägen 168 67, 168 72 Stockholm, Sweden",Sweden
+Malmö Central,55.609698,13.000112,"Malmö centralstation, 211 22 Malmö, Sweden",Malmö Hyllie station,55.5627474,12.9758659,"Hyllie stationstorg, 215 32 Malmö, Sweden",Sweden
+Göteborg Central,57.7093483,11.9731864,"Gothenburg Central, Nils Ericsonsplatsen, 411 03 Gothenburg, Sweden",Mölndal Nedre station,57.6562521,12.0185922,"Mölndal, Kungsbackaleden, 431 30 Mölndal, Sweden",Sweden
+GVA,46.23068,6.108511,"Geneva International Airport, 1220 Le Grand-Saconnex, Switzerland","Genève, gare Cornavin",46.2102288,6.1426218,"Geneva Railway Station, Metro Shopping, 1201 Geneva, Switzerland",Switzerland
+GVA,46.23068,6.108511,"Geneva International Airport, 1220 Le Grand-Saconnex, Switzerland","Plan-les-Ouates, Galaise",46.1635844,6.1062587,"Galaise, Route de Saint-Julien, 1228 Plan-les-Ouates, Switzerland",Switzerland
+ZRH,47.463388050000006,8.553366081422642,"Zürich Airport, Riedmattstrasse, 8058 Rümlang, Switzerland",Zürich HB,47.378459,8.538217,"Zürich Hauptbahnhof, 8050 Zurich, Switzerland",Switzerland
+ZRH,47.463388050000006,8.553366081422642,"Zürich Airport, Riedmattstrasse, 8058 Rümlang, Switzerland",Winterthur,47.4991723,8.7291498,"Winterthur, Zurich, Switzerland",Switzerland
+BRN,46.91221345,7.498597416883485,"Bern Airport, Flugplatzstrasse, 3123 Belp, Switzerland",Bern,46.9484742,7.4521749,"Bern, BE, Switzerland",Switzerland
+LUG,46.00406865,8.909830760363633,"Aeroporto di Lugano-Agno, Via Giacomo Rusca, 6892 Agno, Switzerland",Paradiso(CH),45.9897313,8.9461979,"Paradiso, TI, Switzerland",Switzerland
+ACH,47.485912,9.558358,"Flugplatz St. Gallen-Altenrhein, 9425 Altenrhein, Switzerland",St. Margrethen SG,47.4510277,9.6410249,"St. Margrethen, St. Gallen, Switzerland",Switzerland
+Basel SBB,47.5476225,7.5896417,"Basel SBB, Centralbahnstrasse, 4002 Basel, Switzerland",Basel Bad Bf,47.5673633,7.607273475162112,"DB Reisezentrum Basel Bad Bf, Bad. Bahnhof-Passage, 5068 Basel, Switzerland",Switzerland
+Basel SBB,47.5476225,7.5896417,"Basel SBB, Centralbahnstrasse, 4002 Basel, Switzerland",Basel St. Johann,47.5576281,7.573721729855549,"Israelitische Religionsgesellschaft Basel, Birkenstrasse, 4003 Basel, Switzerland",Switzerland
+Basel SBB,47.5476225,7.5896417,"Basel SBB, Centralbahnstrasse, 4002 Basel, Switzerland","Basel, Claraplatz",47.561858150000006,7.59396894705433,"Claraplatz, 4005 Basel, Switzerland",Switzerland
+"Genève, gare Cornavin",46.2102288,6.1426218,"Geneva Railway Station, Metro Shopping, 1201 Geneva, Switzerland",Nyon,46.3820585,6.2402791,"Nyon, VD, Switzerland",Switzerland
+Lausanne,46.5218269,6.6327025,"Lausanne, VD, Switzerland",Renens VD,46.5349093,6.5928442,"Renens, VD, Switzerland",Switzerland
+Zürich HB,47.378459,8.538217,"Zürich Hauptbahnhof, 8050 Zurich, Switzerland",Baden(CH),47.4736827,8.3086822,"Baden, AG, Switzerland",Switzerland
+Zürich HB,47.378459,8.538217,"Zürich Hauptbahnhof, 8050 Zurich, Switzerland",Winterthur,47.4991723,8.7291498,"Winterthur, Zurich, Switzerland",Switzerland
+Schaffhausen,47.6960491,8.634513,"Schaffhausen, SH, Switzerland",Neuhausen(CH),47.6811644,8.6197347,"Neuhausen am Rheinfall, SH, Switzerland",Switzerland
+Neuhausen(CH),47.6811644,8.6197347,"Neuhausen am Rheinfall, SH, Switzerland",Neuhausen Rheinfall,47.6811701,8.621484192653064,"Feuerwehr Neuhausen, Feuerwehrmagazin, 8212 Neuhausen am Rheinfall, Switzerland",Switzerland
+Schaffhausen,47.6960491,8.634513,"Schaffhausen, SH, Switzerland",Thayngen,47.7470005,8.7061689,"Thayngen, SH, Switzerland",Switzerland
+Buchs SG,47.1627634,9.4764086,"Buchs (SG), St. Gallen, Switzerland",Altstätten SG,47.3782189,9.5413964,"Altstätten, St. Gallen, Switzerland",Switzerland
+St. Margrethen SG,47.4510277,9.6410249,"St. Margrethen, St. Gallen, Switzerland",Altstätten SG,47.3782189,9.5413964,"Altstätten, St. Gallen, Switzerland",Switzerland
+Paradiso(CH),45.9897313,8.9461979,"Paradiso, TI, Switzerland",Melide,45.9544353,8.9476217,"Melide (Melide), TI, Switzerland",Switzerland
+Chiasso,45.8355209,9.0290169,"Chiasso, TI, Switzerland",Stabio,45.8499456,8.9376319,"Stabio, TI, Switzerland",Switzerland
+KBP,50.3401779,30.891557297991227,"Boryspil International Airport, Kyivskyi Shliakh Street, Boryspil Raion, Boryspil, 08303, Ukraine",Kiev Pass,50.340516,30.550956,"Ramada Encore Kiev, Kyiv, 04000, Ukraine",Ukraine
+IEV,50.40673035,30.44446776773265,"Igor Sikorsky Kyiv International Airport (Zhuliany), Promenysta Street, Solomianskyi district, Kyiv, 03066, Ukraine",Kiev Pass,50.340516,30.550956,"Ramada Encore Kiev, Kyiv, 04000, Ukraine",Ukraine
+KBP,50.3401779,30.891557297991227,"Boryspil International Airport, Kyivskyi Shliakh Street, Boryspil Raion, Boryspil, 08303, Ukraine",IEV,50.40673035,30.44446776773265,"Igor Sikorsky Kyiv International Airport (Zhuliany), Promenysta Street, Solomianskyi district, Kyiv, 03066, Ukraine",Ukraine
+LWO,49.816439,23.955009,"Lviv Danylo Halytskyi International Airport, Lviv, 81136, Ukraine",Lviv,49.841952,24.0315921,"Lviv Raion, Lviv, Lviv Oblast, Ukraine",Ukraine
+UDJ,48.63582435,22.26068962869202,"Uzhhorod International Airport, Ivana Zapisochnoho Street, Chervenytsia, Uzhhorod, 88017, Ukraine",Chop,48.4313665,22.2063694,"Chop (Chop), Zakarpattia Oblast, Ukraine",Ukraine
+Chop,48.4313665,22.2063694,"Chop (Chop), Zakarpattia Oblast, Ukraine",Mukacheve,48.439978,22.721264,"Mukacheve, MM, Ukraine",Ukraine
+Mukacheve,48.439978,22.721264,"Mukacheve, MM, Ukraine",Svalyava,48.5529185,23.01243932161094,"Svalyava customs office, Shevchenka Street, Mukachevo Raion, Nelipyno, 89308, Ukraine",Ukraine
+Ternopil,49.6630002,25.6167516,"Ternopil Oblast, Ukraine",Volochysk,49.5358446,26.2126215,"Volochysk (Volochysk), Khmelnytskyi Oblast, Ukraine",Ukraine
+FRA,50.0379,8.5622,"Frankfurt Airport, 60549 Frankfurt, Germany",Frankfurt Flughafen,50.05336,8.57001,"Hundepension Frankfurt Flughafen, 64545 Frankfurt, Germany",Germany
+FRA,50.0379,8.5622,"Frankfurt Airport, 60549 Frankfurt, Germany",Frankfurt (Main) Hbf,50.1066539,8.6625808,"Frankfurt (Main) Hauptbahnhof, Mannheimer Straße, 60329 Frankfurt, Germany",Germany
+BER,53.0758196,8.8071646,"Bremen, HB, Germany",Berlin Hbf,52.5249451,13.3696614,"Berlin Central Station, Europaplatz 1, 10557 Berlin, Germany",Germany
+BER,53.0758196,8.8071646,"Bremen, HB, Germany",Berlin Südkreuz,52.4759806,13.3650726,"Südkreuz (Ringbahn), General-Pape-Straße 1, 12101 Berlin, Germany",Germany
+MUC,48.331845,11.73242,"Surftown MUC, 85821 Hallbergmoos, Germany",München Hbf,48.14048,11.55997,"Munich Central Station, Paul-Heyse-Unterführung, 80335 Munich, Germany",Germany
+HAM,47.581963,12.870851,"Ham-Ham, Ramsau b. Berchtesgaden, Germany",Hamburg Hbf,53.5526959,10.0075644,"Hamburg Hauptbahnhof, Südsteg, 20099 Hamburg, Germany",Germany
+DUS,51.277267,6.766319,"Düsseldorf Airport, 40463 Dusseldorf, Germany",Düsseldorf Hbf,51.219734,6.7943015,"Düsseldorf Central Station, Weg Gleis 12, 40210 Dusseldorf, Germany",Germany
+CGN,50.86778175,7.138960985502128,"Cologne Bonn Airport, Heinrich-Steinmann-Straße 12, 51147 Cologne, Germany",Köln Hbf,50.94343,6.95865,"Cologne Central Station, Trankgasse 11, 50667 Cologne, Germany",Germany
+STR,48.68842195,9.205392504886913,"Manfred Rommel Airport Stuttgart, Zeuglesweberweg, 70599 Stuttgart, Germany",Stuttgart Hbf,48.7866164,9.185634393260887,"Stuttgart Hauptbahnhof, Am Schloßgarten, 70173 Stuttgart, Germany",Germany
+HAJ,52.46144075,9.686333736626429,"Hannover Airport, Im Wohlde, 30855 Langenhagen, Germany",Hannover Hbf,52.3769504,9.7416533,"Hanover Central Station, Niki-de-Saint-Phalle-Promenade, 30159 Hanover, Germany",Germany
+LEJ,51.4211901,12.229585904866344,"Leipzig/Halle Airport, Terminalring 11, 04435 Schkeuditz, Germany",Leipzig Hbf,51.3465518,12.3830858,"Leipzig Hauptbahnhof, Willy-Brandt-Platz 5, 04109 Leipzig, Germany",Germany
+NUE,49.492565,11.0891,"Albrecht Dürer Airport Nuremberg, 90411 Nuremberg, Germany",Nürnberg Hbf,49.4451991,11.0823089,"Nürnberg Hauptbahnhof, Mitteltunnel, 90443 Nuremberg, Germany",Germany
+DRS,51.1342993,13.769480779988587,"Dresden Airport, Flughafenstraße, 01109 Dresden, Germany",Dresden Hbf,51.0402452,13.7320768,"Dresden Hbf, Wiener Platz 4, 01069 Dresden, Germany",Germany
+BRE,53.0453419,8.789641688895548,"Bremen Airport, Flughafenallee 20, 28199 Bremen, Germany",Bremen Hbf,53.0831456,8.81354208352343,"Bremen Hauptbahnhof, Bahnhofsplatz 15, 16, 28195 Bremen, Germany",Germany
+SCN,49.216959,7.109501,"Saarbrücken Airport, Saarbrücken, Germany",Saarbrücken Hbf,49.240491,6.990655,"Saarbrücken Hbf, 66111 Saarbrücken, Germany",Germany
+Frankfurt Flughafen,50.05336,8.57001,"Hundepension Frankfurt Flughafen, 64545 Frankfurt, Germany",Frankfurt (Main) Hbf,50.1066539,8.6625808,"Frankfurt (Main) Hauptbahnhof, Mannheimer Straße, 60329 Frankfurt, Germany",Germany
+Berlin Hbf,52.5249451,13.3696614,"Berlin Central Station, Europaplatz 1, 10557 Berlin, Germany",Berlin Südkreuz,52.4759806,13.3650726,"Südkreuz (Ringbahn), General-Pape-Straße 1, 12101 Berlin, Germany",Germany
+München Hbf,48.14048,11.55997,"Munich Central Station, Paul-Heyse-Unterführung, 80335 Munich, Germany",Rosenheim,47.8539273,12.127262,"Rosenheim, BY, Germany",Germany
+München Hbf,48.14048,11.55997,"Munich Central Station, Paul-Heyse-Unterführung, 80335 Munich, Germany",Passau,48.5748229,13.4609744,"Passau, BY, Germany",Germany
+Köln Hbf,50.94343,6.95865,"Cologne Central Station, Trankgasse 11, 50667 Cologne, Germany",Aachen Hbf,50.7677663,6.0913818,"Aachen Central Train Station, Bahnhofstraße 2a, 52064 Aachen, Germany",Germany
+Frankfurt (Main) Hbf,50.1066539,8.6625808,"Frankfurt (Main) Hauptbahnhof, Mannheimer Straße, 60329 Frankfurt, Germany",Stuttgart Hbf,48.7866164,9.185634393260887,"Stuttgart Hauptbahnhof, Am Schloßgarten, 70173 Stuttgart, Germany",Germany
+Frankfurt (Main) Hbf,50.1066539,8.6625808,"Frankfurt (Main) Hauptbahnhof, Mannheimer Straße, 60329 Frankfurt, Germany",Köln Hbf,50.94343,6.95865,"Cologne Central Station, Trankgasse 11, 50667 Cologne, Germany",Germany
+Düsseldorf Hbf,51.219734,6.7943015,"Düsseldorf Central Station, Weg Gleis 12, 40210 Dusseldorf, Germany",Köln Hbf,50.94343,6.95865,"Cologne Central Station, Trankgasse 11, 50667 Cologne, Germany",Germany
+Lindau-Reutin,47.5524552,9.7031148,"Lindau-Reutin, Bregenzer Straße 46, 88131 Lindau (Bodensee), Germany",Freilassing,47.8409723,12.9823914,"Freilassing, BY, Germany",Germany
+LUX,49.62639055,6.209444584614825,"Luxembourg Airport, Route de Remich, 2436 Luxembourg, Luxembourg",Luxembourg,49.8158683,6.1296751,Luxembourg,Luxembourg
+Luxembourg,49.8158683,6.1296751,Luxembourg,Rodange,49.5511046,5.8434572,"Rodange, Route de Luxembourg, 4833 Pétange, Luxembourg",Luxembourg

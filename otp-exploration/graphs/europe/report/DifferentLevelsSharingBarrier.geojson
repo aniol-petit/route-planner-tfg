@@ -1,0 +1,452 @@
+{
+  "type" : "FeatureCollection",
+  "features" : [ {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Node 7266428330 is a barrier node but ways on different layers / levels are connected to it. Please check if the barrier actually blocks traversal, if not, please remove the node from the barrier."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.217602,49.809823]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5340"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Node 7858246940 is a barrier node but ways on different layers / levels are connected to it. Please check if the barrier actually blocks traversal, if not, please remove the node from the barrier."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.217691,49.809652]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5341"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Node 647570327 is a barrier node but ways on different layers / levels are connected to it. Please check if the barrier actually blocks traversal, if not, please remove the node from the barrier."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.128786,49.6112]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5342"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Node 8595716372 is a barrier node but ways on different layers / levels are connected to it. Please check if the barrier actually blocks traversal, if not, please remove the node from the barrier."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.128775,49.611228]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5343"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Node 8595716373 is a barrier node but ways on different layers / levels are connected to it. Please check if the barrier actually blocks traversal, if not, please remove the node from the barrier."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.128765,49.611255]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5344"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Node 8595716374 is a barrier node but ways on different layers / levels are connected to it. Please check if the barrier actually blocks traversal, if not, please remove the node from the barrier."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.128756,49.611279]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5345"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Node 8595716375 is a barrier node but ways on different layers / levels are connected to it. Please check if the barrier actually blocks traversal, if not, please remove the node from the barrier."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.128738,49.611328]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5346"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Node 8595716376 is a barrier node but ways on different layers / levels are connected to it. Please check if the barrier actually blocks traversal, if not, please remove the node from the barrier."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.128727,49.611355]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5347"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Node 8595716377 is a barrier node but ways on different layers / levels are connected to it. Please check if the barrier actually blocks traversal, if not, please remove the node from the barrier."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.128713,49.611392]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5348"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Node 644795365 is a barrier node but ways on different layers / levels are connected to it. Please check if the barrier actually blocks traversal, if not, please remove the node from the barrier."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.155529,49.624174]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5349"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Node 646953496 is a barrier node but ways on different layers / levels are connected to it. Please check if the barrier actually blocks traversal, if not, please remove the node from the barrier."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.155908,49.62405]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-534a"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Node 2641905011 is a barrier node but ways on different layers / levels are connected to it. Please check if the barrier actually blocks traversal, if not, please remove the node from the barrier."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.008216,49.640439]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-534b"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Node 847566763 is a barrier node but ways on different layers / levels are connected to it. Please check if the barrier actually blocks traversal, if not, please remove the node from the barrier."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.136563,49.611832]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-534c"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Node 392696093 is a barrier node but ways on different layers / levels are connected to it. Please check if the barrier actually blocks traversal, if not, please remove the node from the barrier."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.090308,49.748705]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-534d"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Node 1104429551 is a barrier node but ways on different layers / levels are connected to it. Please check if the barrier actually blocks traversal, if not, please remove the node from the barrier."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.128689,49.605627]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-534e"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Node 1104429838 is a barrier node but ways on different layers / levels are connected to it. Please check if the barrier actually blocks traversal, if not, please remove the node from the barrier."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.129267,49.604927]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-534f"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Node 262965726 is a barrier node but ways on different layers / levels are connected to it. Please check if the barrier actually blocks traversal, if not, please remove the node from the barrier."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.223641,49.928452]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5350"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Node 8806091578 is a barrier node but ways on different layers / levels are connected to it. Please check if the barrier actually blocks traversal, if not, please remove the node from the barrier."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.155045,49.570855]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5351"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Node 302954493 is a barrier node but ways on different layers / levels are connected to it. Please check if the barrier actually blocks traversal, if not, please remove the node from the barrier."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.129055,49.654826]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5352"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Node 621652865 is a barrier node but ways on different layers / levels are connected to it. Please check if the barrier actually blocks traversal, if not, please remove the node from the barrier."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.167667,49.634042]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5353"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Node 621660441 is a barrier node but ways on different layers / levels are connected to it. Please check if the barrier actually blocks traversal, if not, please remove the node from the barrier."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.167412,49.634214]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5354"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Node 476610128 is a barrier node but ways on different layers / levels are connected to it. Please check if the barrier actually blocks traversal, if not, please remove the node from the barrier."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.153103,49.622886]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5355"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Node 270512230 is a barrier node but ways on different layers / levels are connected to it. Please check if the barrier actually blocks traversal, if not, please remove the node from the barrier."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.177424,49.55717]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5356"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Node 6600911926 is a barrier node but ways on different layers / levels are connected to it. Please check if the barrier actually blocks traversal, if not, please remove the node from the barrier."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.211733,49.598946]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5357"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Node 3109638558 is a barrier node but ways on different layers / levels are connected to it. Please check if the barrier actually blocks traversal, if not, please remove the node from the barrier."
+    },
+    "geometry" : {"type":"Point","coordinates":[5.894688,49.561595]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5358"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Node 847566774 is a barrier node but ways on different layers / levels are connected to it. Please check if the barrier actually blocks traversal, if not, please remove the node from the barrier."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.136677,49.611673]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5359"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Node 540212550 is a barrier node but ways on different layers / levels are connected to it. Please check if the barrier actually blocks traversal, if not, please remove the node from the barrier."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.137382,49.62688]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-535a"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Node 6967178518 is a barrier node but ways on different layers / levels are connected to it. Please check if the barrier actually blocks traversal, if not, please remove the node from the barrier."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.107633,49.576416]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-535b"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Node 287418815 is a barrier node but ways on different layers / levels are connected to it. Please check if the barrier actually blocks traversal, if not, please remove the node from the barrier."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.107457,49.596542]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-535c"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Node 287419078 is a barrier node but ways on different layers / levels are connected to it. Please check if the barrier actually blocks traversal, if not, please remove the node from the barrier."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.107458,49.596384]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-535d"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Node 3852489001 is a barrier node but ways on different layers / levels are connected to it. Please check if the barrier actually blocks traversal, if not, please remove the node from the barrier."
+    },
+    "geometry" : {"type":"Point","coordinates":[5.977971,49.506745]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-535e"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Node 442964770 is a barrier node but ways on different layers / levels are connected to it. Please check if the barrier actually blocks traversal, if not, please remove the node from the barrier."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.110471,49.746815]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-535f"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Node 306410219 is a barrier node but ways on different layers / levels are connected to it. Please check if the barrier actually blocks traversal, if not, please remove the node from the barrier."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.099142,49.814629]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5360"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Node 2577667060 is a barrier node but ways on different layers / levels are connected to it. Please check if the barrier actually blocks traversal, if not, please remove the node from the barrier."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.142277,49.610444]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5361"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Node 2577667046 is a barrier node but ways on different layers / levels are connected to it. Please check if the barrier actually blocks traversal, if not, please remove the node from the barrier."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.14085,49.610137]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5362"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Node 5190516858 is a barrier node but ways on different layers / levels are connected to it. Please check if the barrier actually blocks traversal, if not, please remove the node from the barrier."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.219585,49.776478]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5363"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Node 1676910802 is a barrier node but ways on different layers / levels are connected to it. Please check if the barrier actually blocks traversal, if not, please remove the node from the barrier."
+    },
+    "geometry" : {"type":"Point","coordinates":[5.93546,49.502459]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5364"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Node 1676910815 is a barrier node but ways on different layers / levels are connected to it. Please check if the barrier actually blocks traversal, if not, please remove the node from the barrier."
+    },
+    "geometry" : {"type":"Point","coordinates":[5.935889,49.503238]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5365"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Node 68710332 is a barrier node but ways on different layers / levels are connected to it. Please check if the barrier actually blocks traversal, if not, please remove the node from the barrier."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.158502,49.603434]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5366"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Node 632286089 is a barrier node but ways on different layers / levels are connected to it. Please check if the barrier actually blocks traversal, if not, please remove the node from the barrier."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.170219,49.631672]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5367"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Node 1800793036 is a barrier node but ways on different layers / levels are connected to it. Please check if the barrier actually blocks traversal, if not, please remove the node from the barrier."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.129412,49.608859]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5368"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Node 1800793044 is a barrier node but ways on different layers / levels are connected to it. Please check if the barrier actually blocks traversal, if not, please remove the node from the barrier."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.128271,49.608887]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5369"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Node 1800793116 is a barrier node but ways on different layers / levels are connected to it. Please check if the barrier actually blocks traversal, if not, please remove the node from the barrier."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.128521,49.609432]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-536a"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Node 1499311361 is a barrier node but ways on different layers / levels are connected to it. Please check if the barrier actually blocks traversal, if not, please remove the node from the barrier."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.500903,49.747384]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-536b"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Node 392696094 is a barrier node but ways on different layers / levels are connected to it. Please check if the barrier actually blocks traversal, if not, please remove the node from the barrier."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.090343,49.748933]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-536c"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Node 10220560286 is a barrier node but ways on different layers / levels are connected to it. Please check if the barrier actually blocks traversal, if not, please remove the node from the barrier."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.099063,49.7572]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-536d"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Node 1767944824 is a barrier node but ways on different layers / levels are connected to it. Please check if the barrier actually blocks traversal, if not, please remove the node from the barrier."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.135808,49.611527]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-536e"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Node 3354326885 is a barrier node but ways on different layers / levels are connected to it. Please check if the barrier actually blocks traversal, if not, please remove the node from the barrier."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.361113,49.492547]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-536f"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Node 625836500 is a barrier node but ways on different layers / levels are connected to it. Please check if the barrier actually blocks traversal, if not, please remove the node from the barrier."
+    },
+    "geometry" : {"type":"Point","coordinates":[5.905021,49.564365]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5370"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Node 10220485085 is a barrier node but ways on different layers / levels are connected to it. Please check if the barrier actually blocks traversal, if not, please remove the node from the barrier."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.098337,49.757685]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5371"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Node 286316403 is a barrier node but ways on different layers / levels are connected to it. Please check if the barrier actually blocks traversal, if not, please remove the node from the barrier."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.133189,49.647]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5372"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Node 286316386 is a barrier node but ways on different layers / levels are connected to it. Please check if the barrier actually blocks traversal, if not, please remove the node from the barrier."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.132632,49.646936]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5373"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Node 7803474177 is a barrier node but ways on different layers / levels are connected to it. Please check if the barrier actually blocks traversal, if not, please remove the node from the barrier."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.161234,49.865461]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5374"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Node 3717305279 is a barrier node but ways on different layers / levels are connected to it. Please check if the barrier actually blocks traversal, if not, please remove the node from the barrier."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.501777,49.74757]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5375"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Node 864675896 is a barrier node but ways on different layers / levels are connected to it. Please check if the barrier actually blocks traversal, if not, please remove the node from the barrier."
+    },
+    "geometry" : {"type":"Point","coordinates":[5.833714,49.526108]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5376"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Node 1399659345 is a barrier node but ways on different layers / levels are connected to it. Please check if the barrier actually blocks traversal, if not, please remove the node from the barrier."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.063262,49.583256]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5377"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Node 1399659343 is a barrier node but ways on different layers / levels are connected to it. Please check if the barrier actually blocks traversal, if not, please remove the node from the barrier."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.063198,49.583239]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5378"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Node 9124271187 is a barrier node but ways on different layers / levels are connected to it. Please check if the barrier actually blocks traversal, if not, please remove the node from the barrier."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.197585,49.60379]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-5379"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Node 65244154 is a barrier node but ways on different layers / levels are connected to it. Please check if the barrier actually blocks traversal, if not, please remove the node from the barrier."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.118876,49.50955]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-537a"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Node 2977050689 is a barrier node but ways on different layers / levels are connected to it. Please check if the barrier actually blocks traversal, if not, please remove the node from the barrier."
+    },
+    "geometry" : {"type":"Point","coordinates":[5.9272,49.562672]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-537b"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Node 2231759126 is a barrier node but ways on different layers / levels are connected to it. Please check if the barrier actually blocks traversal, if not, please remove the node from the barrier."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.085771,49.480072]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-537c"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Node 1701819950 is a barrier node but ways on different layers / levels are connected to it. Please check if the barrier actually blocks traversal, if not, please remove the node from the barrier."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.13075,49.616487]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-537d"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Node 528601843 is a barrier node but ways on different layers / levels are connected to it. Please check if the barrier actually blocks traversal, if not, please remove the node from the barrier."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.094602,49.601315]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-537e"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Node 528601844 is a barrier node but ways on different layers / levels are connected to it. Please check if the barrier actually blocks traversal, if not, please remove the node from the barrier."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.094746,49.601444]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-537f"
+  } ]
+}

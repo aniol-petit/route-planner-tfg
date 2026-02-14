@@ -1,0 +1,11 @@
+{
+  "type" : "FeatureCollection",
+  "features" : [ {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Node 8978136595 in way 970191436 is coincident but disconnected with area 24824429"
+    },
+    "geometry" : {"type":"Point","coordinates":[5.917685,49.644028]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-6bec"
+  } ]
+}

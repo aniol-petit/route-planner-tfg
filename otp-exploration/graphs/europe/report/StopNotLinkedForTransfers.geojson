@@ -1,0 +1,2405 @@
+{
+  "type" : "FeatureCollection",
+  "features" : [ {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000140301001 lat,lng=49.909868,6.064279} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.064279,49.909868]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-7411"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000110701001 lat,lng=50.160386,6.08879} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.08879,50.160386]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-7412"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000110701002 lat,lng=50.164186,6.087887} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.087887,50.164186]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-7413"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000110701003 lat,lng=50.165094,6.090044} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.090044,50.165094]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-7414"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000110412002 lat,lng=49.945873,6.080463} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.080463,49.945873]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-7415"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {1:FRA lat,lng=50.037933,8.562152} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[8.562152,50.037933]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-7416"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000180504001 lat,lng=49.707081,6.217451} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.217451,49.707081]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-7417"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000180504002 lat,lng=49.703398,6.217713} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.217713,49.703398]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-7418"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000180504003 lat,lng=49.704012,6.212011} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.212011,49.704012]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-7419"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {1:CDG lat,lng=49.009722,2.547778} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[2.547778,49.009722]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-741a"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000190605001 lat,lng=49.67371,6.005196} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.005196,49.67371]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-741b"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000210401004 lat,lng=49.609367,6.32453} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.32453,49.609367]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-741c"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000180501001 lat,lng=49.722126,6.218121} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.218121,49.722126]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-741d"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000120512001 lat,lng=49.876206,5.885433} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[5.885433,49.876206]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-741e"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000130103001 lat,lng=49.953641,6.105355} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.105355,49.953641]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-741f"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000200403018 lat,lng=49.614387,6.108458} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.108458,49.614387]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-7420"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000300000091 lat,lng=49.595774,5.819594} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[5.819594,49.595774]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-7421"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000300000090 lat,lng=49.593552,5.828112} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[5.828112,49.593552]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-7422"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000300000088 lat,lng=49.648582,5.866615} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[5.866615,49.648582]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-7423"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000300000087 lat,lng=49.648999,5.87601} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[5.87601,49.648999]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-7424"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000300000086 lat,lng=50.195739,6.007069} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.007069,50.195739]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-7425"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000300000089 lat,lng=49.648063,5.862395} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[5.862395,49.648063]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-7426"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000300000099 lat,lng=49.566333,5.801852} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[5.801852,49.566333]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-7427"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000300000098 lat,lng=49.564259,5.814741} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[5.814741,49.564259]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-7428"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000300000097 lat,lng=49.563557,5.821924} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[5.821924,49.563557]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-7429"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000300000022 lat,lng=49.67787,5.824178} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[5.824178,49.67787]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-742a"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000300000021 lat,lng=49.999927,5.710148} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[5.710148,49.999927]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-742b"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000300000020 lat,lng=50.006214,5.724055} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[5.724055,50.006214]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-742c"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000300000023 lat,lng=49.998255,5.716878} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[5.716878,49.998255]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-742d"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000300000029 lat,lng=49.98593,5.818823} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[5.818823,49.98593]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-742e"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000300000027 lat,lng=49.995349,5.724794} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[5.724794,49.995349]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-742f"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000300000031 lat,lng=49.699379,5.824093} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[5.824093,49.699379]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-7430"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000300000030 lat,lng=50.006021,5.719461} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[5.719461,50.006021]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-7431"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000300000035 lat,lng=50.189785,5.953846} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[5.953846,50.189785]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-7432"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000300000004 lat,lng=49.682294,5.8146} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[5.8146,49.682294]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-7433"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000300000003 lat,lng=49.680772,5.808321} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[5.808321,49.680772]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-7434"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000300000002 lat,lng=49.69138,5.817819} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[5.817819,49.69138]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-7435"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000300000001 lat,lng=49.685867,5.810372} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[5.810372,49.685867]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-7436"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000300000008 lat,lng=49.563208,5.826913} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[5.826913,49.563208]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-7437"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000300000007 lat,lng=49.562902,5.834111} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[5.834111,49.562902]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-7438"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000300000006 lat,lng=49.682672,5.80645} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[5.80645,49.682672]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-7439"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000300000005 lat,lng=49.685358,5.817727} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[5.817727,49.685358]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-743a"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000300000011 lat,lng=49.564004,5.829005} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[5.829005,49.564004]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-743b"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000300000010 lat,lng=49.562666,5.837335} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[5.837335,49.562666]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-743c"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000300000015 lat,lng=49.680347,5.809569} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[5.809569,49.680347]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-743d"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000300000013 lat,lng=49.672755,5.815487} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[5.815487,49.672755]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-743e"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000300000012 lat,lng=49.687264,5.810142} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[5.810142,49.687264]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-743f"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000300000019 lat,lng=49.566802,5.809706} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[5.809706,49.566802]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-7440"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000300000018 lat,lng=49.568962,5.805526} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[5.805526,49.568962]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-7441"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000300000017 lat,lng=49.563935,5.82912} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[5.82912,49.563935]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-7442"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000300000073 lat,lng=50.279146,6.129895} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.129895,50.279146]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-7443"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000300000072 lat,lng=50.273106,6.118833} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.118833,50.273106]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-7444"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000300000071 lat,lng=50.261732,6.110735} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.110735,50.261732]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-7445"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000300000070 lat,lng=50.230261,6.083259} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.083259,50.230261]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-7446"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000300000069 lat,lng=50.219566,5.997516} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[5.997516,50.219566]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-7447"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000300000076 lat,lng=50.278736,6.126803} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.126803,50.278736]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-7448"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000300000075 lat,lng=50.274738,6.125893} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.125893,50.274738]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-7449"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000300000074 lat,lng=50.281391,6.131192} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.131192,50.281391]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-744a"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000300000051 lat,lng=49.649839,5.869818} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[5.869818,49.649839]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-744b"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000300000050 lat,lng=49.647885,5.889106} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[5.889106,49.647885]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-744c"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000300000043 lat,lng=49.592922,5.818298} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[5.818298,49.592922]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-744d"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000300000042 lat,lng=49.992514,5.738495} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[5.738495,49.992514]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-744e"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000300000045 lat,lng=49.609929,5.850253} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[5.850253,49.609929]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-744f"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000300000062 lat,lng=49.593374,5.822615} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[5.822615,49.593374]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-7450"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000300000061 lat,lng=49.594689,5.820716} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[5.820716,49.594689]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-7451"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000300000060 lat,lng=49.593719,5.833222} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[5.833222,49.593719]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-7452"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000300000055 lat,lng=49.632468,5.832218} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[5.832218,49.632468]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-7453"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000300000054 lat,lng=49.638082,5.839445} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[5.839445,49.638082]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-7454"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000300000053 lat,lng=49.64142,5.840794} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[5.840794,49.64142]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-7455"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000300000052 lat,lng=49.651298,5.843397} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[5.843397,49.651298]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-7456"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000300000059 lat,lng=49.6058,5.850602} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[5.850602,49.6058]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-7457"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000300000057 lat,lng=49.611869,5.848148} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[5.848148,49.611869]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-7458"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000300000056 lat,lng=49.630595,5.83709} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[5.83709,49.630595]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-7459"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000300000107 lat,lng=49.98629,5.780372} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[5.780372,49.98629]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-745a"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000300000109 lat,lng=49.990545,5.790428} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[5.790428,49.990545]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-745b"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000300000108 lat,lng=49.989056,5.782154} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[5.782154,49.989056]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-745c"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000300000110 lat,lng=50.002331,5.717507} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[5.717507,50.002331]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-745d"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000300000112 lat,lng=49.982676,5.789891} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[5.789891,49.982676]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-745e"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000300000111 lat,lng=49.990907,5.747563} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[5.747563,49.990907]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-745f"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000300000141 lat,lng=49.689496,5.806279} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[5.806279,49.689496]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-7460"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000300000140 lat,lng=49.751996,5.784788} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[5.784788,49.751996]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-7461"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000130101003 lat,lng=49.956538,6.190971} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.190971,49.956538]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-7462"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000300000132 lat,lng=49.564215,5.799114} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[5.799114,49.564215]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-7463"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000300000136 lat,lng=49.6749,5.810051} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[5.810051,49.6749]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-7464"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000300000135 lat,lng=49.689586,5.823275} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[5.823275,49.689586]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-7465"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000300000133 lat,lng=49.638642,5.886967} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[5.886967,49.638642]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-7466"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000300000139 lat,lng=49.750476,5.786444} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[5.786444,49.750476]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-7467"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000300000138 lat,lng=49.61341,5.808559} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[5.808559,49.61341]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-7468"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000300000137 lat,lng=49.678544,5.821528} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[5.821528,49.678544]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-7469"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000500103054 lat,lng=49.507319,6.471113} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.471113,49.507319]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-746a"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000150702002 lat,lng=49.71746,5.95043} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[5.95043,49.71746]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-746b"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000170304001 lat,lng=49.839964,6.376068} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.376068,49.839964]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-746c"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000130206001 lat,lng=49.897652,6.20589} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.20589,49.897652]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-746d"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000160401001 lat,lng=49.762597,6.160016} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.160016,49.762597]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-746e"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000500000148 lat,lng=49.753803,6.642548} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.642548,49.753803]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-746f"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000500000140 lat,lng=49.744781,6.63467} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.63467,49.744781]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-7470"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000500000138 lat,lng=49.739778,6.622754} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.622754,49.739778]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-7471"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000500000139 lat,lng=49.739722,6.631849} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.631849,49.739722]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-7472"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000500000115 lat,lng=49.709081,6.552619} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.552619,49.709081]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-7473"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000500000113 lat,lng=49.44187,6.627153} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.627153,49.44187]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-7474"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000500000114 lat,lng=50.232917,6.030448} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.030448,50.232917]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-7475"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000500000118 lat,lng=49.600914,6.531452} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.531452,49.600914]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-7476"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000500000112 lat,lng=49.81587,6.753809} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.753809,49.81587]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-7477"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000500000106 lat,lng=49.719586,6.582505} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.582505,49.719586]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-7478"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000170608001 lat,lng=49.783115,6.472484} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.472484,49.783115]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-7479"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000130102002 lat,lng=49.936437,6.09985} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.09985,49.936437]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-747a"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000160904013 lat,lng=49.729417,6.079877} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.079877,49.729417]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-747b"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000170612002 lat,lng=49.814221,6.481992} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.481992,49.814221]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-747c"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000500105066 lat,lng=49.529798,6.427757} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.427757,49.529798]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-747d"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000150507002 lat,lng=49.809503,5.794851} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[5.794851,49.809503]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-747e"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000150507001 lat,lng=49.806389,5.7909} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[5.7909,49.806389]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-747f"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000110722004 lat,lng=50.093937,6.027251} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.027251,50.093937]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-7480"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000110105001 lat,lng=50.037783,5.984727} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[5.984727,50.037783]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-7481"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000110105003 lat,lng=50.032163,5.972021} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[5.972021,50.032163]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-7482"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000500104061 lat,lng=49.473387,6.376321} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.376321,49.473387]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-7483"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000500104065 lat,lng=49.478703,6.387786} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.387786,49.478703]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-7484"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000500104064 lat,lng=49.472319,6.383557} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.383557,49.472319]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-7485"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000500104063 lat,lng=49.473988,6.371484} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.371484,49.473988]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-7486"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000140310001 lat,lng=49.886862,6.060017} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.060017,49.886862]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-7487"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000140310002 lat,lng=49.887255,6.065888} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.065888,49.887255]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-7488"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000161109001 lat,lng=49.701033,6.017761} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.017761,49.701033]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-7489"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000150305001 lat,lng=49.794055,5.820596} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[5.820596,49.794055]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-748a"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000500000074 lat,lng=49.773597,6.594208} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.594208,49.773597]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-748b"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000500000072 lat,lng=49.607026,6.55534} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.55534,49.607026]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-748c"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000500000073 lat,lng=49.312435,6.752801} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.752801,49.312435]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-748d"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000500000078 lat,lng=49.759151,6.645455} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.645455,49.759151]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-748e"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000500000079 lat,lng=49.756972,6.65199} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.65199,49.756972]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-748f"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000500000077 lat,lng=49.752539,6.628239} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.628239,49.752539]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-7490"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000500000082 lat,lng=49.744847,6.628198} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.628198,49.744847]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-7491"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000500000080 lat,lng=49.761608,6.638462} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.638462,49.761608]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-7492"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000500000068 lat,lng=49.932181,6.251514} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.251514,49.932181]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-7493"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000500000070 lat,lng=49.24023,6.990367} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.990367,49.24023]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-7494"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000500000058 lat,lng=49.507808,6.538767} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.538767,49.507808]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-7495"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000500000059 lat,lng=49.50488,6.523843} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.523843,49.50488]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-7496"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000500000053 lat,lng=49.710288,6.505074} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.505074,49.710288]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-7497"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000500000050 lat,lng=49.653915,6.441822} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.441822,49.653915]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-7498"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000500000051 lat,lng=49.651375,6.451903} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.451903,49.651375]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-7499"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000500000056 lat,lng=49.505172,6.518579} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.518579,49.505172]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-749a"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000500000042 lat,lng=49.96701,6.359763} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.359763,49.96701]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-749b"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000500000039 lat,lng=49.491695,6.593422} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.593422,49.491695]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-749c"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000500000036 lat,lng=49.961489,6.418996} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.418996,49.961489]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-749d"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000500000037 lat,lng=49.493498,6.607518} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.607518,49.493498]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-749e"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000500000030 lat,lng=49.506568,6.745313} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.745313,49.506568]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-749f"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000500000031 lat,lng=49.506662,6.732628} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.732628,49.506662]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-74a0"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000500000034 lat,lng=49.441667,6.63395} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.63395,49.441667]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-74a1"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000500000035 lat,lng=49.579158,6.477099} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.477099,49.579158]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-74a2"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000500000032 lat,lng=49.50676,6.740856} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.740856,49.50676]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-74a3"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000500000033 lat,lng=49.436936,6.63444} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.63444,49.436936]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-74a4"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000500000027 lat,lng=49.699987,6.573201} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.573201,49.699987]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-74a5"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000500000028 lat,lng=49.703707,6.577287} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.577287,49.703707]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-74a6"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000500000029 lat,lng=49.808198,6.764534} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.764534,49.808198]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-74a7"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000500000023 lat,lng=49.97516,6.503518} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.503518,49.97516]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-74a8"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000500000024 lat,lng=49.962405,6.431051} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.431051,49.962405]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-74a9"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000500000021 lat,lng=49.596852,6.509001} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.509001,49.596852]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-74aa"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000500000017 lat,lng=49.961445,6.423056} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.423056,49.961445]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-74ab"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000500000014 lat,lng=49.972306,6.320433} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.320433,49.972306]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-74ac"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000500000018 lat,lng=49.604682,6.542404} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.542404,49.604682]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-74ad"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000500000019 lat,lng=49.707375,6.550666} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.550666,49.707375]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-74ae"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000500000013 lat,lng=49.969787,6.304519} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.304519,49.969787]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-74af"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000500000010 lat,lng=49.346701,6.711075} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.711075,49.346701]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-74b0"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000500000011 lat,lng=49.953992,6.271144} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.271144,49.953992]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-74b1"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000500000005 lat,lng=49.598255,6.451546} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.451546,49.598255]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-74b2"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000500000009 lat,lng=49.976053,6.527101} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.527101,49.976053]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-74b3"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000220503003 lat,lng=49.507565,6.148432} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.148432,49.507565]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-74b4"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000120510001 lat,lng=49.900791,5.884507} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[5.884507,49.900791]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-74b5"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000161003001 lat,lng=49.797669,6.175462} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.175462,49.797669]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-74b6"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000161003004 lat,lng=49.801516,6.185301} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.185301,49.801516]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-74b7"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000120910003 lat,lng=50.018517,5.966248} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[5.966248,50.018517]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-74b8"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000120910002 lat,lng=50.011624,5.962382} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[5.962382,50.011624]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-74b9"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000120910001 lat,lng=50.016455,5.9648} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[5.9648,50.016455]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-74ba"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000110811002 lat,lng=50.098956,5.921321} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[5.921321,50.098956]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-74bb"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000141202001 lat,lng=49.892104,6.235272} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.235272,49.892104]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-74bc"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000140305001 lat,lng=49.899881,6.036389} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.036389,49.899881]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-74bd"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000150502005 lat,lng=49.84543,5.791647} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[5.791647,49.84543]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-74be"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000170502001 lat,lng=49.799935,6.391311} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.391311,49.799935]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-74bf"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000160402003 lat,lng=49.746679,6.188797} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.188797,49.746679]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-74c0"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000170611001 lat,lng=49.808594,6.502551} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.502551,49.808594]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-74c1"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000170611005 lat,lng=49.811345,6.494152} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.494152,49.811345]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-74c2"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000150602001 lat,lng=49.788059,5.838831} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[5.838831,49.788059]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-74c3"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000500000096 lat,lng=49.763377,6.633876} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.633876,49.763377]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-74c4"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000500000095 lat,lng=49.767475,6.626635} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.626635,49.767475]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-74c5"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000500000085 lat,lng=49.606355,6.556371} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.556371,49.606355]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-74c6"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000500000086 lat,lng=49.704588,6.544814} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.544814,49.704588]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-74c7"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000500000083 lat,lng=49.75939,6.646138} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.646138,49.75939]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-74c8"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000500000084 lat,lng=49.744609,6.636803} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.636803,49.744609]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-74c9"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000500000093 lat,lng=49.816822,6.758812} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.758812,49.816822]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-74ca"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000500000090 lat,lng=49.609479,6.426249} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.426249,49.609479]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-74cb"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000500000162 lat,lng=49.507229,6.750601} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.750601,49.507229]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-74cc"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000500000163 lat,lng=49.757577,6.652113} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.652113,49.757577]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-74cd"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000500000160 lat,lng=49.504693,6.759448} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.759448,49.504693]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-74ce"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000500000161 lat,lng=49.510819,6.756212} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.756212,49.510819]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-74cf"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000500000159 lat,lng=49.507794,6.761213} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.761213,49.507794]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-74d0"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000500000155 lat,lng=49.747588,6.636019} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.636019,49.747588]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-74d1"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000500000156 lat,lng=49.737043,6.613519} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.613519,49.737043]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-74d2"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000500102043 lat,lng=49.539296,6.376413} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.376413,49.539296]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-74d3"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000500102044 lat,lng=49.529044,6.38332} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.38332,49.529044]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-74d4"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000500102045 lat,lng=49.534111,6.379041} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.379041,49.534111]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-74d5"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000151005001 lat,lng=49.869979,5.901645} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[5.901645,49.869979]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-74d6"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000120902001 lat,lng=49.995608,5.947553} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[5.947553,49.995608]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-74d7"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000120902003 lat,lng=49.998612,5.948214} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[5.948214,49.998612]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-74d8"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000110404003 lat,lng=49.973633,6.052524} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.052524,49.973633]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-74d9"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000130202002 lat,lng=49.917047,6.225733} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.225733,49.917047]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-74da"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000130208002 lat,lng=49.925767,6.17298} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.17298,49.925767]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-74db"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000120709001 lat,lng=49.94342,5.785728} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[5.785728,49.94342]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-74dc"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000120102001 lat,lng=49.902908,5.77908} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[5.77908,49.902908]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-74dd"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000120701001 lat,lng=49.920453,5.848107} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[5.848107,49.920453]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-74de"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000210604002 lat,lng=49.484653,6.324071} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.324071,49.484653]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-74df"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000150701003 lat,lng=49.724957,5.963016} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[5.963016,49.724957]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-74e0"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000150701001 lat,lng=49.72159,5.960935} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[5.960935,49.72159]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-74e1"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000110409006 lat,lng=49.98243,6.123884} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.123884,49.98243]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-74e2"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000400000138 lat,lng=49.352737,6.210876} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.210876,49.352737]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-74e3"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000400000139 lat,lng=49.362159,6.207988} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.207988,49.362159]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-74e4"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000400000136 lat,lng=49.351094,6.185795} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.185795,49.351094]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-74e5"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000400000137 lat,lng=49.35346,6.198372} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.198372,49.35346]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-74e6"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000400000134 lat,lng=49.311719,5.780953} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[5.780953,49.311719]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-74e7"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000400000135 lat,lng=49.308387,5.767328} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[5.767328,49.308387]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-74e8"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000400000132 lat,lng=49.315271,5.792213} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[5.792213,49.315271]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-74e9"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000400000130 lat,lng=49.325032,5.805798} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[5.805798,49.325032]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-74ea"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000400000131 lat,lng=49.320025,5.79979} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[5.79979,49.320025]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-74eb"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000400000129 lat,lng=49.356213,5.870055} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[5.870055,49.356213]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-74ec"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000400000125 lat,lng=48.947923,6.170349} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.170349,48.947923]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-74ed"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000400000123 lat,lng=49.384739,5.915071} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[5.915071,49.384739]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-74ee"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000120904002 lat,lng=50.020003,5.948799} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[5.948799,50.020003]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-74ef"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000400000124 lat,lng=49.401907,6.210241} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.210241,49.401907]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-74f0"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000400000150 lat,lng=49.394318,6.165695} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.165695,49.394318]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-74f1"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000400000160 lat,lng=49.374888,5.902337} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[5.902337,49.374888]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-74f2"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000400000149 lat,lng=49.522753,5.794112} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[5.794112,49.522753]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-74f3"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000120904003 lat,lng=50.017293,5.947714} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[5.947714,50.017293]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-74f4"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000400000147 lat,lng=49.521512,5.773753} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[5.773753,49.521512]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-74f5"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000400000148 lat,lng=49.521665,5.792207} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[5.792207,49.521665]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-74f6"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000400000145 lat,lng=49.498937,5.781151} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[5.781151,49.498937]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-74f7"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000400000146 lat,lng=49.524925,5.775173} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[5.775173,49.524925]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-74f8"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000400000143 lat,lng=49.530979,5.79356} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[5.79356,49.530979]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-74f9"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000400000144 lat,lng=49.512137,5.766674} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[5.766674,49.512137]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-74fa"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000400000140 lat,lng=49.472647,5.95029} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[5.95029,49.472647]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-74fb"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000400000168 lat,lng=49.252171,5.945325} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[5.945325,49.252171]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-74fc"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000400000165 lat,lng=49.324522,5.930263} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[5.930263,49.324522]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-74fd"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000400000166 lat,lng=49.288651,5.967718} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[5.967718,49.288651]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-74fe"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000400000163 lat,lng=49.464171,6.17943} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.17943,49.464171]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-74ff"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000400000164 lat,lng=49.459121,5.927405} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[5.927405,49.459121]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-7500"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000400000161 lat,lng=49.478622,5.959902} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[5.959902,49.478622]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-7501"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000400000162 lat,lng=49.470905,5.930022} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[5.930022,49.470905]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-7502"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000400000118 lat,lng=49.398172,5.973257} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[5.973257,49.398172]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-7503"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000400000116 lat,lng=49.357369,6.138346} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.138346,49.357369]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-7504"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000400000117 lat,lng=49.41601,5.941366} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[5.941366,49.41601]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-7505"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000400000115 lat,lng=49.358109,6.13446} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.13446,49.358109]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-7506"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000400000112 lat,lng=49.493739,5.870651} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[5.870651,49.493739]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-7507"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000110406004 lat,lng=50.016666,6.136457} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.136457,50.016666]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-7508"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000400000103 lat,lng=49.474533,5.937913} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[5.937913,49.474533]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-7509"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000400000101 lat,lng=49.475292,5.944148} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[5.944148,49.475292]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-750a"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000400000102 lat,lng=49.470597,5.929944} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[5.929944,49.470597]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-750b"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000400000100 lat,lng=49.46827,5.954207} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[5.954207,49.46827]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-750c"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000400000019 lat,lng=49.518614,5.785027} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[5.785027,49.518614]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-750d"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000400000017 lat,lng=49.520282,5.789713} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[5.789713,49.520282]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-750e"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000400000015 lat,lng=49.329059,6.066027} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.066027,49.329059]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-750f"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000400000016 lat,lng=49.523494,5.798763} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[5.798763,49.523494]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-7510"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000400000014 lat,lng=49.35904,6.11117} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.11117,49.35904]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-7511"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000400000011 lat,lng=49.398022,6.202494} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.202494,49.398022]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-7512"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000400000007 lat,lng=49.407348,6.24014} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.24014,49.407348]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-7513"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000400000002 lat,lng=49.478591,5.95873} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[5.95873,49.478591]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-7514"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000110413001 lat,lng=49.970009,6.089379} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.089379,49.970009]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-7515"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000400000039 lat,lng=49.51662,5.762924} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[5.762924,49.51662]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-7516"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000400000037 lat,lng=49.523979,5.764483} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[5.764483,49.523979]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-7517"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000150304001 lat,lng=49.7789,5.81064} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[5.81064,49.7789]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-7518"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000160909002 lat,lng=49.719185,6.091522} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.091522,49.719185]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-7519"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000160909001 lat,lng=49.717725,6.09} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.09,49.717725]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-751a"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000141203006 lat,lng=49.863556,6.313227} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.313227,49.863556]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-751b"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000120704001 lat,lng=49.920903,5.902181} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[5.902181,49.920903]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-751c"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000180507001 lat,lng=49.734368,6.232661} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.232661,49.734368]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-751d"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000180507008 lat,lng=49.733645,6.228802} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.228802,49.733645]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-751e"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000120708001 lat,lng=49.949612,5.795477} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[5.795477,49.949612]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-751f"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000400000038 lat,lng=49.517296,5.769388} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[5.769388,49.517296]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-7520"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000400000035 lat,lng=49.513644,5.768786} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[5.768786,49.513644]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-7521"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000400000036 lat,lng=49.510715,5.77054} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[5.77054,49.510715]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-7522"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000400000033 lat,lng=49.512087,5.773572} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[5.773572,49.512087]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-7523"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000400000034 lat,lng=49.526461,5.776371} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[5.776371,49.526461]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-7524"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000400000031 lat,lng=49.518711,5.771077} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[5.771077,49.518711]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-7525"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000400000032 lat,lng=49.514153,5.75995} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[5.75995,49.514153]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-7526"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000400000030 lat,lng=49.513687,5.768368} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[5.768368,49.513687]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-7527"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000400000029 lat,lng=49.520396,5.763766} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[5.763766,49.520396]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-7528"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000400000026 lat,lng=49.532467,5.795328} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[5.795328,49.532467]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-7529"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000400000027 lat,lng=49.534403,5.798948} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[5.798948,49.534403]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-752a"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000400000024 lat,lng=49.407573,6.157018} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.157018,49.407573]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-752b"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000400000025 lat,lng=49.535273,5.80178} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[5.80178,49.535273]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-752c"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000400000023 lat,lng=49.369477,5.895141} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[5.895141,49.369477]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-752d"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000400000020 lat,lng=49.523932,5.80194} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[5.80194,49.523932]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-752e"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000400000021 lat,lng=49.517079,5.779987} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[5.779987,49.517079]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-752f"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000400000054 lat,lng=49.542784,5.794916} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[5.794916,49.542784]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-7530"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000400000051 lat,lng=49.499888,5.786849} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[5.786849,49.499888]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-7531"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000400000052 lat,lng=49.49919,5.778261} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[5.778261,49.49919]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-7532"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000400000048 lat,lng=49.403468,6.157669} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.157669,49.403468]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-7533"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000400000049 lat,lng=49.501051,5.78372} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[5.78372,49.501051]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-7534"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000400000045 lat,lng=49.368832,5.902952} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[5.902952,49.368832]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-7535"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000400000042 lat,lng=49.52643,5.764639} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[5.764639,49.52643]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-7536"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000400000040 lat,lng=49.511974,5.762484} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[5.762484,49.511974]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-7537"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000400000041 lat,lng=49.515718,5.774107} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[5.774107,49.515718]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-7538"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000400000050 lat,lng=49.501133,5.778907} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[5.778907,49.501133]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-7539"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000400000079 lat,lng=49.529473,5.817847} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[5.817847,49.529473]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-753a"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000400000077 lat,lng=49.363051,6.103565} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.103565,49.363051]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-753b"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000400000078 lat,lng=49.524954,5.807665} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[5.807665,49.524954]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-753c"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000400000075 lat,lng=49.495221,5.918444} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[5.918444,49.495221]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-753d"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000400000074 lat,lng=49.492987,5.919358} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[5.919358,49.492987]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-753e"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000400000082 lat,lng=49.527526,5.814449} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[5.814449,49.527526]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-753f"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000400000083 lat,lng=49.419203,6.258188} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.258188,49.419203]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-7540"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000400000080 lat,lng=49.531186,5.82256} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[5.82256,49.531186]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-7541"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000400000081 lat,lng=49.526296,5.810963} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[5.810963,49.526296]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-7542"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000400000069 lat,lng=49.378987,6.170436} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.170436,49.378987]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-7543"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000400000066 lat,lng=49.442053,6.021494} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.021494,49.442053]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-7544"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000400000065 lat,lng=49.400307,6.160457} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.160457,49.400307]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-7545"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000400000071 lat,lng=49.109459,6.17705} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.17705,49.109459]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-7546"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000400000070 lat,lng=49.512968,5.769383} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[5.769383,49.512968]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-7547"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000400000099 lat,lng=49.472467,5.957122} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[5.957122,49.472467]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-7548"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000400000098 lat,lng=49.353975,6.169669} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.169669,49.353975]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-7549"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000400000096 lat,lng=49.469977,6.28745} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.28745,49.469977]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-754a"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000400000088 lat,lng=49.510358,5.801362} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[5.801362,49.510358]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-754b"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000400000086 lat,lng=49.509446,5.804157} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[5.804157,49.509446]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-754c"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000400000087 lat,lng=49.5107,5.805927} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[5.805927,49.5107]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-754d"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000400000092 lat,lng=49.359412,6.162442} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.162442,49.359412]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-754e"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000400000090 lat,lng=49.353033,6.176388} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.176388,49.353033]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-754f"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000110403008 lat,lng=49.986932,6.162376} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.162376,49.986932]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-7550"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000130201001 lat,lng=49.892085,6.160078} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.160078,49.892085]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-7551"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000140201003 lat,lng=49.876571,6.221437} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.221437,49.876571]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-7552"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000170403001 lat,lng=49.785323,6.369366} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.369366,49.785323]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-7553"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000170302002 lat,lng=49.846901,6.367936} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.367936,49.846901]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-7554"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000110113001 lat,lng=50.035673,6.036859} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.036859,50.035673]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-7555"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000170302003 lat,lng=49.850229,6.359117} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.359117,49.850229]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-7556"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000110113002 lat,lng=50.032758,6.037541} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.037541,50.032758]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-7557"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000130204001 lat,lng=49.912267,6.193831} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.193831,49.912267]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-7558"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000140309004 lat,lng=49.951546,6.055776} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.055776,49.951546]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-7559"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000180601001 lat,lng=49.734247,6.393489} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.393489,49.734247]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-755a"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000500101059 lat,lng=49.50462,6.372647} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.372647,49.50462]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-755b"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000500101067 lat,lng=49.517298,6.376334} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.376334,49.517298]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-755c"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000120507001 lat,lng=49.911203,5.992568} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[5.992568,49.911203]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-755d"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000170301004 lat,lng=49.821965,6.349881} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.349881,49.821965]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-755e"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000110705001 lat,lng=50.159759,6.106164} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.106164,50.159759]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-755f"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000110407001 lat,lng=50.036485,6.129956} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.129956,50.036485]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-7560"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000201005001 lat,lng=49.658934,6.17461} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.17461,49.658934]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-7561"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000121009002 lat,lng=49.967838,5.884828} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[5.884828,49.967838]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-7562"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000120703002 lat,lng=49.930545,5.788077} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[5.788077,49.930545]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-7563"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000160403001 lat,lng=49.751511,6.204804} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.204804,49.751511]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-7564"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000110104002 lat,lng=50.096121,6.057518} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.057518,50.096121]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-7565"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000130106002 lat,lng=49.963251,6.169557} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.169557,49.963251]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-7566"
+  }, {
+    "type" : "Feature",
+    "properties" : {
+      "description" : "Stop {2:000130106004 lat,lng=49.954296,6.176803} not near any other stops; no transfers are possible."
+    },
+    "geometry" : {"type":"Point","coordinates":[6.176803,49.954296]},
+    "id" : "fid--316f20da_19a9c9f6aa5_-7567"
+  } ]
+}

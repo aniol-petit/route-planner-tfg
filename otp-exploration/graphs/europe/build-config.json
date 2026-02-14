@@ -1,0 +1,10 @@
+{
+  "osmWayPropertySet": "default",
+  "areaVisibility": false,
+  "maxTransferDistance": 2000,
+  "linkingMaxDistance": 200,
+  "parentStopLinking": true,
+  "stationTransfers": true,
+  "dataImportReport": true,
+  "subwayAccessTime": 0
+}
