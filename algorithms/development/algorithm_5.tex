@@ -1,0 +1,124 @@
+\documentclass{article}
+
+% ============================================================================
+% Packages
+% ============================================================================
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{algorithm} 
+\usepackage{caption} 
+\usepackage{tikz}
+
+% WE USE ALGPSEUDOCODEX INSTEAD OF ALGPSEUDOCODE
+% 'noEnd=true' hides "end if", "end for" to match the style of your image (Baum et al.)
+% 'indLines=true' draws the vertical lines automatically
+\usepackage[noEnd=true, indLines=true]{algpseudocodex}
+
+% ============================================================================
+% Configuration & Custom Commands
+% ============================================================================
+
+% 1. Customize the Vertical Lines (make them black and thin like the image)
+\tikzset{algpxIndentLine/.style={draw=black, very thin}}
+
+% 2. Custom Inputs/Outputs with Line Jump
+% Input commands are not defined, so use \algnewcommand
+\algnewcommand\algorithmicinput{\textbf{Input:}}
+\algnewcommand\Input{\item[\algorithmicinput]\mbox{}\par} 
+% Output commands are already defined, so use \algrenewcommand
+\algrenewcommand\algorithmicoutput{\textbf{Output:}}
+\algrenewcommand\Output{\item[\algorithmicoutput]\mbox{}\par}
+
+% 3. Keywords - ensure proper spacing
+\algnewcommand\And{\ \textbf{and}\ }
+\algnewcommand\Or{\ \textbf{or}\ }
+
+% 4. Comments styled with //
+% We redefine the comment symbol to be //
+\algrenewcommand\algorithmiccomment[1]{\hfill // #1}
+\newcommand{\CommentLine}[1]{
+    \State // \textit{#1}
+}
+
+% ============================================================================
+% The Document
+% ============================================================================
+\begin{document}
+\pagestyle{empty}
+\allowdisplaybreaks[1] 
+\setcounter{page}{1}
+
+% ============================================================================
+% Algorithm 5
+% ============================================================================
+
+\setcounter{algorithm}{4}
+\begin{center}
+    % Top Rule
+    \hrule height 0.8pt
+    \vspace{0.3em}
+    % Caption
+    \captionof{algorithm}{Minimum Transit Time (MTT) Precomputation}
+    \label{alg:mtt_precomputation}
+    \vspace{0.2em}
+    % Middle Rule
+    \hrule height 0.5pt
+\end{center}
+
+\begin{algorithmic}[1] % [1] enables line numbering
+    
+    % INPUT
+    \Input
+    \begin{itemize}
+        \item $V$. Set of nodes
+        \item $E_s$. Set of scheduled edges $(v,u,dep,arr)$
+        \item $E_t$. Set of transfer edges $(v,w,\Delta)$
+        \item $\text{country}(v)$. Country associated with node $v$
+    \end{itemize}
+
+    % OUTPUT
+    \Output
+    \begin{itemize}
+        \item $MTT$. Map of each country to the absolute minimum time required to enter it
+    \end{itemize}
+    \vspace{0.5em} 
+
+    \State Initialize $MTT(c) \leftarrow \infty$ for all $c \in$ unique countries
+
+    \vspace{0.5em}
+    \CommentLine{Process scheduled edges}
+    \ForAll{$(v,u,dep,arr) \in E_s$}
+        \If{$\text{country}(v) \neq \text{country}(u)$}
+            \State $\text{transit\_time} \leftarrow arr - dep$
+            \If{$\text{transit\_time} < MTT(\text{country}(u))$}
+                \State $MTT(\text{country}(u)) \leftarrow \text{transit\_time}$
+            \EndIf
+        \EndIf
+    \EndFor
+
+    \vspace{0.5em}
+    \CommentLine{Process transfer edges (e.g., cross-border footpaths or local transit)}
+    \ForAll{$(v,w,\Delta) \in E_t$}
+        \If{$\text{country}(v) \neq \text{country}(w)$}
+            \If{$\Delta < MTT(\text{country}(w))$}
+                \State $MTT(\text{country}(w)) \leftarrow \Delta$
+            \EndIf
+        \EndIf
+    \EndFor
+
+    \State \Return $MTT$
+
+\end{algorithmic}
+
+% Bottom Rule
+\hrule height 0.8pt
+
+\vspace{1.5em}
+In Algorithm 5 we add a precomputation step that calculates the minimum transit times for each country. Basically, we are trying to determine for each country, the minimum time it takes to enter and then exit the country. This can be seen as the "cost" of visiting a country. 
+
+This will be helpful to make the UB pruning more strict, since as it was so far, it was considering that maybe we could reach 20 countries in 5 hours. This way, we will force that the countries must be visited in the remaining time considering their assigned MTT. 
+
+Using the minimal time ensures we are not loosing optimality, since you need at least that amount of time or more to visit the country, so we are not pruning any solutions that are actually valid.
+
+\end{document}

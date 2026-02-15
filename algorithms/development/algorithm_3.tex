@@ -1,0 +1,149 @@
+\documentclass{article}
+
+% ============================================================================
+% Packages
+% ============================================================================
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{algorithm} 
+\usepackage{caption} 
+\usepackage{tikz}
+
+% WE USE ALGPSEUDOCODEX INSTEAD OF ALGPSEUDOCODE
+% 'noEnd=true' hides "end if", "end for" to match the style of your image (Baum et al.)
+% 'indLines=true' draws the vertical lines automatically
+\usepackage[noEnd=true, indLines=true]{algpseudocodex}
+
+% ============================================================================
+% Configuration & Custom Commands
+% ============================================================================
+
+% 1. Customize the Vertical Lines (make them black and thin like the image)
+\tikzset{algpxIndentLine/.style={draw=black, very thin}}
+
+% 2. Custom Inputs/Outputs with Line Jump
+% Input commands are not defined, so use \algnewcommand
+\algnewcommand\algorithmicinput{\textbf{Input:}}
+\algnewcommand\Input{\item[\algorithmicinput]\mbox{}\par} 
+% Output commands are already defined, so use \algrenewcommand
+\algrenewcommand\algorithmicoutput{\textbf{Output:}}
+\algrenewcommand\Output{\item[\algorithmicoutput]\mbox{}\par}
+
+% 3. Keywords - ensure proper spacing
+\algnewcommand\And{\ \textbf{and}\ }
+\algnewcommand\Or{\ \textbf{or}\ }
+
+% 4. Comments styled with //
+% We redefine the comment symbol to be //
+\algrenewcommand\algorithmiccomment[1]{\hfill // #1}
+\newcommand{\CommentLine}[1]{
+    \State // \textit{#1}
+}
+
+% ============================================================================
+% The Document
+% ============================================================================
+\begin{document}
+\pagestyle{empty}
+\allowdisplaybreaks[1] 
+\setcounter{page}{1}
+
+% ============================================================================
+% Algorithm 3
+% ============================================================================
+
+\setcounter{algorithm}{2}
+\begin{center}
+    % Top Rule
+    \hrule height 0.8pt
+    \vspace{0.3em}
+    % Caption
+    \captionof{algorithm}{Relaxed reachability backpropagation}
+    \label{alg:relaxed_reachability_backpropagation}
+    \vspace{0.2em}
+    % Middle Rule
+    \hrule height 0.5pt
+\end{center}
+
+\begin{algorithmic}[1] % [1] enables line numbering
+    
+    % INPUT
+    \Input
+    \begin{itemize}
+        \item $V$. Set of nodes
+        \item $E_s$. Set of scheduled edges $(v,u,dep,arr)$
+        \item $E_t$. Set of transfer edges $(v,w,\Delta)$
+        \item $\text{country}(v)$. Country associated with node $v$
+        \item $\text{bucket}(t)$. Time bucket mapping function
+        \item $B_{\text{max}}$. Maximum bucket index within 24-hour horizon
+    \end{itemize}
+
+    % OUTPUT
+    \Output
+    \begin{itemize}
+        \item $R(v,b)$. Set of reachable countries for all $v \in V$, $b \in \{0,\ldots,B_{\text{max}}\}$
+    \end{itemize}
+    \vspace{0.5em} 
+
+    \CommentLine{Initialize reachability sets}
+    \ForAll{$v \in V$}
+        \For{$b = 0$ to $B_{\text{max}}$}
+            \State $R(v,b) \leftarrow \{\text{country}(v)\}$
+        \EndFor
+    \EndFor
+
+    \vspace{0.5em}
+    \CommentLine{Build relaxed adjacency lists}
+    \State Initialize $\text{Adj}(v,b) \leftarrow \emptyset$ for all $v \in V$, $b \in \{0,\ldots,B_{\text{max}}\}$
+
+    \vspace{0.5em}
+    \CommentLine{Scheduled edges}
+    \ForAll{$(v,u,dep,arr)\in E_s$}
+        \State $b \leftarrow \text{bucket}(dep)$
+        \State $b' \leftarrow \text{bucket}(arr)$
+        \If{$0 \le b \le B_{\text{max}} \land 0 \le b' \le B_{\text{max}}$}
+            \State $\text{Adj}(v,b) \leftarrow \text{Adj}(v,b) \cup \{(u,b')\}$
+        \EndIf
+    \EndFor
+
+    \vspace{0.5em}
+    \CommentLine{Transfer edges}
+    \ForAll{$(v,w,\Delta)\in E_t$}
+        \For{$b = 0$ to $B_{\text{max}}$}
+            \State $t \leftarrow \text{start\_time\_of\_bucket}(b)$
+            \State $t' \leftarrow t + \Delta$
+            \State $b' \leftarrow \text{bucket}(t')$
+            \If{$0 \le b' \le B_{\text{max}}$}
+                \State $\text{Adj}(v,b) \leftarrow \text{Adj}(v,b) \cup \{(w,b')\}$
+            \EndIf
+        \EndFor
+    \EndFor
+
+    \vspace{0.5em}
+    \CommentLine{Backward propagation over time buckets}
+    \For{$b = B_{\text{max}}$ downto $0$}
+        \Repeat
+            \State $\text{changed} \leftarrow \text{false}$
+            \ForAll{$v \in V$}
+                \ForAll{$(u,b') \in \text{Adj}(v,b)$}
+                    \If{$R(u,b') \setminus R(v,b) \neq \emptyset$}
+                        \State $R(v,b) \leftarrow R(v,b) \cup R(u,b')$
+                        \State $\text{changed} \leftarrow \text{true}$
+                    \EndIf
+                \EndFor
+            \EndFor
+        \Until{$\text{changed} = \text{false}$}
+    \EndFor
+
+    \State \Return $R$
+
+\end{algorithmic}
+
+% Bottom Rule
+\hrule height 0.8pt
+
+\vspace{1.5em}
+This requires of some preprocessing time, but we only need to run it once and then we have our reachable country sets precomputed to feed our main algorithm at any time we see convenient.
+
+\end{document}

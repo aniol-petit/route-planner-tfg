@@ -70,7 +70,7 @@ Paris Nord,Paris Est,France,6
 Paris Nord,Paris Nord Eurostar,France,3
 Lille Europe,Lille Flandres,France,4
 Marseille-St-Charles,Marseille-Blancarde,France,12
-Annecy Annecy, Gare routière,France,1
+Annecy,"Annecy, Gare routiere",France,1
 BUD,Budapest-Nyugati,Hungary,35
 BUD,Budapest-Keleti,Hungary,29
 BUD,Budapest-Kelenföld,Hungary,34
@@ -110,9 +110,9 @@ Como S. Giovanni,Como Nord Camerlata,Italy,10
 Levanto,Monterosso,Italy,9
 Bologna Centrale,Ferrara,Italy,37
 Verona Porta Nuova,Peschiera del Garda,Italy,28
-Schaanwald Zollamt,Nendeln,Liechtenstein,6
+"Schaanwald, Zollamt",Nendeln,Liechtenstein,6
 Nendeln,Schaan-Vaduz,Liechtenstein,8
-Schaan-Vaduz,Triesen Säga,Liechtenstein,15
+Schaan-Vaduz,Triesen Sega,Liechtenstein,15
 AMS,Schiphol (Airport),Netherlands,2
 AMS,Amsterdam Centraal,Netherlands,23
 AMS,Amsterdam Zuid,Netherlands,12
@@ -228,7 +228,7 @@ SCN,Saarbrücken Hbf,Germany,18
 Frankfurt Flughafen,Frankfurt (Main) Hbf,Germany,17
 Berlin Hbf,Berlin Südkreuz,Germany,16
 München Hbf,Rosenheim,Germany,59
-München Hbf,Passau,Germany,65
+München Hbf,Passau Hbf,Germany,65
 Köln Hbf,Aachen Hbf,Germany,58
 Frankfurt (Main) Hbf,Köln Hbf,Germany,65
 Düsseldorf Hbf,Köln Hbf,Germany,38

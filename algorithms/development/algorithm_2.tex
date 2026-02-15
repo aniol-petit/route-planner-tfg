@@ -1,0 +1,194 @@
+\documentclass{article}
+
+% ============================================================================
+% Packages
+% ============================================================================
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{algorithm} 
+\usepackage{caption} 
+\usepackage{tikz}
+
+% WE USE ALGPSEUDOCODEX INSTEAD OF ALGPSEUDOCODE
+% 'noEnd=true' hides "end if", "end for" to match the style of your image (Baum et al.)
+% 'indLines=true' draws the vertical lines automatically
+\usepackage[noEnd=true, indLines=true]{algpseudocodex}
+
+% ============================================================================
+% Configuration & Custom Commands
+% ============================================================================
+
+% 1. Customize the Vertical Lines (make them black and thin like the image)
+\tikzset{algpxIndentLine/.style={draw=black, very thin}}
+
+% 2. Custom Inputs/Outputs with Line Jump
+% Input commands are not defined, so use \algnewcommand
+\algnewcommand\algorithmicinput{\textbf{Input:}}
+\algnewcommand\Input{\item[\algorithmicinput]\mbox{}\par} 
+% Output commands are already defined, so use \algrenewcommand
+\algrenewcommand\algorithmicoutput{\textbf{Output:}}
+\algrenewcommand\Output{\item[\algorithmicoutput]\mbox{}\par}
+
+% 3. Keywords - ensure proper spacing
+\algnewcommand\And{\ \textbf{and}\ }
+\algnewcommand\Or{\ \textbf{or}\ }
+
+% 4. Comments styled with //
+% We redefine the comment symbol to be //
+\algrenewcommand\algorithmiccomment[1]{\hfill // #1}
+\newcommand{\CommentLine}[1]{
+    \State // \textit{#1}
+}
+
+% ============================================================================
+% The Document
+% ============================================================================
+\begin{document}
+\pagestyle{empty}
+\allowdisplaybreaks[1] 
+\setcounter{page}{1}
+
+% ============================================================================
+% Algorithm 2
+% ============================================================================
+
+\setcounter{algorithm}{1}
+\begin{center}
+    % Top Rule
+    \hrule height 0.8pt
+    \vspace{0.3em}
+    % Caption
+    \captionof{algorithm}{Label-setting algorithm with UB pruning for maximum country coverage}
+    \label{alg:label_setting_ub_pruning}
+    \vspace{0.2em}
+    % Middle Rule
+    \hrule height 0.5pt
+\end{center}
+
+\begin{algorithmic}[1] % [1] enables line numbering
+    
+    % INPUT
+    \Input
+    \begin{itemize}
+        \item $V$. Set of nodes
+        \item $E_s$. Set of scheduled edges $(v,u,dep,arr)$
+        \item $E_t$. Set of transfer edges $(v,w,\Delta)$
+        \item $\text{country}(v)$. Country associated with node $v$
+        \item $R(v,b)$. Precomputed reachable country sets
+        \item $\text{bucket}(t)$. Time bucket mapping function
+    \end{itemize}
+
+    % OUTPUT
+    \Output
+    \begin{itemize}
+        \item $P$. Sequence of labels representing a route within 24 hours
+    \end{itemize}
+    \vspace{0.5em} 
+
+    % INITIALIZATION
+    \State Initialize $\text{Labels}(v) \leftarrow \emptyset$ for all $v \in V$
+    \State Initialize queue $Q \leftarrow \emptyset$
+    \State Initialize $\text{best\_label} \leftarrow \text{null}$
+
+    \vspace{0.5em}
+    \CommentLine{Initialize labels at departures}
+    \ForAll{$v \in V$}
+        \ForAll{scheduled departure from $v$ at time $dep$ with arrival $arr$}
+            \State $L \leftarrow (v,dep,\{\text{country}(v)\},\text{pred}=\text{null},\text{start\_time}=dep)$
+            \State $\text{Labels}(v) \leftarrow \text{Labels}(v) \cup \{L\}$
+            \State $Q \leftarrow Q \cup \{L\}$
+        \EndFor
+    \EndFor
+
+    \vspace{0.5em}
+    \CommentLine{Main loop}
+    \While{$Q \neq \emptyset$}
+        \State extract $L=(v,t,C,\text{pred},\text{start\_time})$ from $Q$
+
+        \CommentLine{Enforce 24-hour journey limit}
+        \If{$t - \text{start\_time} > 24:00$}
+            \State \textbf{continue}
+        \EndIf
+
+        \CommentLine{Upper bound pruning}
+        \State $b \leftarrow \text{bucket}(t)$
+        \State $\text{UB} \leftarrow |R(v,b) \setminus C|$
+        \If{$\text{best\_label} \neq \text{null} \land |C| + \text{UB} \le |\text{best\_label}.C|$}
+            \State \textbf{continue}
+        \EndIf
+
+        \CommentLine{Update best label}
+        \If{$\text{best\_label}=\text{null} \lor |C|>|\text{best\_label}.C|$}
+            \State $\text{best\_label} \leftarrow L$
+        \EndIf
+
+        \vspace{0.5em}
+        \CommentLine{Extend via scheduled edges}
+        \ForAll{$(v,u,dep,arr)\in E_s$}
+            \If{$dep \ge t \land dep - \text{start\_time} \le 24:00$}
+                \State $t_{\text{new}} \leftarrow arr$
+                \If{$t_{\text{new}} - \text{start\_time} > 24:00$}
+                    \State \textbf{continue}
+                \EndIf
+                \State $C' \leftarrow C \cup \{\text{country}(u)\}$
+                \State $L' \leftarrow (u,t_{\text{new}},C',\text{pred}=L,\text{start\_time}=\text{start\_time})$
+                
+                \Statex % Empty line for better readability of the multiline condition
+                \If{$\nexists L''\in\text{Labels}(u)$ such that \par
+                    \hskip\algorithmicindent $(L''.t \le t_{\text{new}} \land L''.C \supseteq C' \land 
+                    (L''.t < t_{\text{new}} \lor L''.C \neq C'))$}
+                    
+                    \State remove all $L''\in\text{Labels}(u)$ such that \par
+                    \hskip\algorithmicindent $(t_{\text{new}} \le L''.t \land C' \supseteq L''.C \land 
+                    (t_{\text{new}} < L''.t \lor C' \neq L''.C))$
+                    \State $\text{Labels}(u) \leftarrow \text{Labels}(u) \cup \{L'\}$
+                    \State $Q \leftarrow Q \cup \{L'\}$
+                \EndIf
+            \EndIf
+        \EndFor
+
+        \vspace{0.5em}
+        \CommentLine{Extend via transfers}
+        \ForAll{$(v,w,\Delta)\in E_t$}
+            \State $t_{\text{new}} \leftarrow t + \Delta$
+            \If{$t_{\text{new}} - \text{start\_time} > 24:00$}
+                \State \textbf{continue}
+            \EndIf
+            \State $L' \leftarrow (w,t_{\text{new}},C,\text{pred}=L,\text{start\_time}=\text{start\_time})$
+            
+            \Statex % Empty line
+            \If{$\nexists L''\in\text{Labels}(w)$ such that \par
+                \hskip\algorithmicindent $(L''.t \le t_{\text{new}} \land L''.C \supseteq C \land 
+                (L''.t < t_{\text{new}} \lor L''.C \neq C))$}
+                
+                \State remove all $L''\in\text{Labels}(w)$ such that \par
+                \hskip\algorithmicindent $(t_{\text{new}} \le L''.t \land C \supseteq L''.C \land 
+                (t_{\text{new}} < L''.t \lor C \neq L''.C))$
+                \State $\text{Labels}(w) \leftarrow \text{Labels}(w) \cup \{L'\}$
+                \State $Q \leftarrow Q \cup \{L'\}$
+            \EndIf
+        \EndFor
+    \EndWhile
+
+    \vspace{0.5em}
+    \CommentLine{Reconstruct path}
+    \State $P \leftarrow$ empty sequence
+    \State $L \leftarrow \text{best\_label}$
+    \While{$L \neq \text{null}$}
+        \State prepend $L$ to $P$
+        \State $L \leftarrow L.\text{pred}$
+    \EndWhile
+
+    \State \Return $P$
+
+\end{algorithmic}
+
+% Bottom Rule
+\hrule height 0.8pt
+\vspace {1.5em}
+In Algorithm 2 we make a change that targets one of the main issues in Algorithm 1: the explosion of labels, which are rarely pruned due to the very relaxed conditions of dominance. 
+
+As seen in the notes, we use the Upper Bound of reachable countries from each node at a specific time (bucket) to prune hopeless results that would otherwise stay alive.
+
+\end{document}

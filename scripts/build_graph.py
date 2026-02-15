@@ -72,18 +72,45 @@ def build_graph():
     # Initialize the graph
     G = nx.MultiDiGraph()
     
-    # 1. Add airport nodes from airports_df.csv
-    print("Loading airports...")
+    # Load airports_df for country lookup
+    print("Loading airport reference data...")
     airports_df = pd.read_csv('../data/final_data/airports_df.csv')
-    airport_countries = {}
+    airport_countries_lookup = {}
     for _, row in airports_df.iterrows():
         iata_code = row['iata_code']
         country = row['country_name']
         if pd.notna(iata_code):
-            G.add_node(iata_code, country=country, node_type='airport')
-            airport_countries[iata_code] = country
+            airport_countries_lookup[iata_code] = country
     
-    print(f"Added {len(airport_countries)} airport nodes")
+    # 1. Add airport nodes from flights_df.csv (only from filtered flights)
+    print("Loading flights and extracting airport nodes...")
+    flights_df = pd.read_csv('../data/final_data/flights_df.csv')
+    
+    # Filter flights for 2026-01-21 and 2026-01-22
+    flights_df['departure_scheduled'] = pd.to_datetime(flights_df['departure_scheduled'], errors='coerce')
+    flights_df_filtered = flights_df[
+        (flights_df['departure_scheduled'].dt.date == pd.Timestamp('2026-01-21').date()) |
+        (flights_df['departure_scheduled'].dt.date == pd.Timestamp('2026-01-22').date())
+    ]
+    
+    # Extract unique airports from departure_airport and arrival_airport
+    unique_airports = set()
+    for _, row in flights_df_filtered.iterrows():
+        dep_airport = row['departure_airport']
+        arr_airport = row['arrival_airport']
+        if pd.notna(dep_airport):
+            unique_airports.add(dep_airport)
+        if pd.notna(arr_airport):
+            unique_airports.add(arr_airport)
+    
+    # Add airport nodes to graph
+    airport_count = 0
+    for airport in unique_airports:
+        country = airport_countries_lookup.get(airport, None)
+        G.add_node(airport, country=country, node_type='airport')
+        airport_count += 1
+    
+    print(f"Added {airport_count} airport nodes from flights_df")
     
     # 2. Add train/bus station nodes from routes_df.csv
     print("Loading train/bus stations...")
@@ -101,28 +128,31 @@ def build_graph():
     
     print(f"Added {len(station_countries)} station nodes")
     
-    # 3. Add flight edges from flights_df.csv
+    # 3. Add flight edges from flights_df.csv (using filtered dataframe)
     print("Loading flight edges...")
-    flights_df = pd.read_csv('../data/final_data/flights_df.csv')
-    
-    # Filter flights for 2026-01-21 and 2026-01-22
-    flights_df['departure_scheduled'] = pd.to_datetime(flights_df['departure_scheduled'], errors='coerce')
-    flights_df = flights_df[
-        (flights_df['departure_scheduled'].dt.date == pd.Timestamp('2026-01-21').date()) |
-        (flights_df['departure_scheduled'].dt.date == pd.Timestamp('2026-01-22').date())
-    ]
     
     # Group by route and collect all time pairs
     flight_edges = defaultdict(list)
-    for _, row in flights_df.iterrows():
+    for _, row in flights_df_filtered.iterrows():
         dep_airport = row['departure_airport']
         arr_airport = row['arrival_airport']
         dep_time_utc = row['departure_scheduled_absolute_utc']
         arr_time_utc = row['arrival_scheduled_absolute_utc']
+        departure_date = row['departure_scheduled']
         
         if pd.notna(dep_airport) and pd.notna(arr_airport) and pd.notna(dep_time_utc) and pd.notna(arr_time_utc):
             route_key = (dep_airport, arr_airport)
-            flight_edges[route_key].append((int(dep_time_utc), int(arr_time_utc)))
+            dep_time = int(dep_time_utc)
+            arr_time = int(arr_time_utc)
+            
+            # If flight is on 2026-01-22, add 1440 minutes (24 hours) to both times
+            if pd.notna(departure_date):
+                # departure_date is already a datetime from the earlier conversion
+                if departure_date.date() == pd.Timestamp('2026-01-22').date():
+                    dep_time += 1440
+                    arr_time += 1440
+            
+            flight_edges[route_key].append((dep_time, arr_time))
     
     # Add edges to graph (one edge per unique route with all time pairs as attribute)
     for (dep_airport, arr_airport), time_pairs in flight_edges.items():
@@ -159,11 +189,17 @@ def build_graph():
                     train_edges[route_key].append((int(arr_time1), int(dep_time2)))
     
     # Add edges to graph (one edge per unique route with all time pairs as attribute)
+    # For train routes, duplicate all time pairs by adding 1440 minutes (24 hours) to each
     for (station1, station2), time_pairs in train_edges.items():
         if station1 in G.nodes() and station2 in G.nodes():
+            # Duplicate time pairs by adding 1440 minutes to each
+            duplicated_time_pairs = time_pairs.copy()
+            for dep_time, arr_time in time_pairs:
+                duplicated_time_pairs.append((dep_time + 1440, arr_time + 1440))
+            
             G.add_edge(station1, station2,
                       edge_type='train',
-                      time_pairs=time_pairs)
+                      time_pairs=duplicated_time_pairs)
     
     print(f"Added {len(train_edges)} train route edges")
     
@@ -213,7 +249,7 @@ if __name__ == "__main__":
     graph = build_graph()
     
     # Save the graph using pickle
-    with open('../data/final_data/transportation_graph.gpickle', 'wb') as f:
+    with open('../graph/transportation_graph.gpickle', 'wb') as f:
         pickle.dump(graph, f)
     print("Graph saved as transportation_graph.gpickle")
     
