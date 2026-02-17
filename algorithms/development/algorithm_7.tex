@@ -1,0 +1,147 @@
+\documentclass{article}
+
+% ============================================================================
+% Packages
+% ============================================================================
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{algorithm} 
+\usepackage{caption} 
+\usepackage{tikz}
+
+% WE USE ALGPSEUDOCODEX INSTEAD OF ALGPSEUDOCODE
+% 'noEnd=true' hides "end if", "end for" to match the style of your image (Baum et al.)
+% 'indLines=true' draws the vertical lines automatically
+\usepackage[noEnd=true, indLines=true]{algpseudocodex}
+
+% ============================================================================
+% Configuration & Custom Commands
+% ============================================================================
+
+% 1. Customize the Vertical Lines (make them black and thin like the image)
+\tikzset{algpxIndentLine/.style={draw=black, very thin}}
+
+% 2. Custom Inputs/Outputs with Line Jump
+% Input commands are not defined, so use \algnewcommand
+\algnewcommand\algorithmicinput{\textbf{Input:}}
+\algnewcommand\Input{\item[\algorithmicinput]\mbox{}\par} 
+% Output commands are already defined, so use \algrenewcommand
+\algrenewcommand\algorithmicoutput{\textbf{Output:}}
+\algrenewcommand\Output{\item[\algorithmicoutput]\mbox{}\par}
+
+% 3. Keywords - ensure proper spacing
+\algnewcommand\And{\ \textbf{and}\ }
+\algnewcommand\Or{\ \textbf{or}\ }
+
+% 4. Comments styled with //
+% We redefine the comment symbol to be //
+\algrenewcommand\algorithmiccomment[1]{\hfill // #1}
+\newcommand{\CommentLine}[1]{
+    \State // \textit{#1}
+}
+
+% ============================================================================
+% The Document
+% ============================================================================
+\begin{document}
+\pagestyle{empty}
+\allowdisplaybreaks[1] 
+\setcounter{page}{1}
+
+% ============================================================================
+% Algorithm 7
+% ============================================================================
+
+\setcounter{algorithm}{6}
+\begin{center}
+    % Top Rule
+    \hrule height 0.8pt
+    \vspace{0.3em}
+    % Caption
+    \captionof{algorithm}{Greedy-stochastic rollout probe}
+    \label{alg:greedy_stochastic_rollout_probe}
+    \vspace{0.2em}
+    % Middle Rule
+    \hrule height 0.5pt
+\end{center}
+
+\begin{algorithmic}[1] % [1] enables line numbering
+    
+    % INPUT
+    \Input
+    \begin{itemize}
+        \item $L_{\text{start}}$. The starting label $(v, t, C, \text{pred}, \text{start\_time})$
+        \item $E_s$. Set of scheduled edges $(v, u, \text{dep}, \text{arr})$
+        \item $E_t$. Set of transfer edges $(v, w, \Delta)$
+        \item $\text{country}(v)$. Country associated with node $v$
+    \end{itemize}
+
+    % OUTPUT
+    \Output
+    \begin{itemize}
+        \item $L_{\text{final}}$. The final label reached when the 24-hour clock expires
+    \end{itemize}
+    \vspace{0.5em}
+
+    % INITIALIZATION
+    \State $L \leftarrow L_{\text{start}}$
+
+    \vspace{0.5em}
+    \CommentLine{Repeat until no more valid moves within 24 hours}
+    \Repeat
+        \State $ValidSteps \leftarrow \emptyset$
+
+        \vspace{0.5em}
+        \CommentLine{Collect valid scheduled edges}
+        \ForAll{$(L.\text{node}, u, \text{dep}, \text{arr}) \in E_s$}
+            \If{$\text{dep} \ge L.t \And \text{arr} - L.\text{start\_time} \le 1440$}
+                \State $ValidSteps \leftarrow ValidSteps \cup \{(u, \text{arr}, \text{country}(u))\}$
+            \EndIf
+        \EndFor
+
+        \vspace{0.5em}
+        \CommentLine{Collect valid transfer edges}
+        \ForAll{$(L.\text{node}, w, \Delta) \in E_t$}
+            \State $t_{\text{new}} \leftarrow L.t + \Delta$
+            \If{$t_{\text{new}} - L.\text{start\_time} \le 1440$}
+                \State $ValidSteps \leftarrow ValidSteps \cup \{(w, t_{\text{new}}, \text{country}(w))\}$
+            \EndIf
+        \EndFor
+
+        \vspace{0.5em}
+        \If{$ValidSteps = \emptyset$}
+            \State \textbf{break} \Comment{No more moves possible within 24 hours}
+        \EndIf
+
+        \vspace{0.5em}
+        \CommentLine{Assign greedy-stochastic weights to each valid step}
+        \ForAll{step $s = (u, t_{\text{new}}, c_{\text{new}}) \in ValidSteps$}
+            \State $\Delta t \leftarrow \max(1, t_{\text{new}} - L.t)$ \Comment{Total wait + travel time}
+            \If{$c_{\text{new}} \notin L.C$}
+                \State $s.\text{weight} \leftarrow 10000 / \Delta t$ \Comment{Huge bias for unvisited countries}
+            \Else
+                \State $s.\text{weight} \leftarrow 10 / \Delta t$ \Comment{Low bias for transit/re-entry}
+            \EndIf
+        \EndFor
+
+        \vspace{0.5em}
+        \CommentLine{Pick one step randomly with probability proportional to its weight}
+        \State $s_{\text{chosen}} \leftarrow \text{WeightedRandomChoice}(ValidSteps)$
+
+        \State $C' \leftarrow L.C \cup \{s_{\text{chosen}}.c_{\text{new}}\}$
+        \State $L \leftarrow (s_{\text{chosen}}.u, s_{\text{chosen}}.t_{\text{new}}, C', \text{pred}=L, \text{start\_time}=L.\text{start\_time})$
+
+    \Until{$\text{false}$}
+
+    \State \Return $L$
+
+\end{algorithmic}
+
+% Bottom Rule
+\hrule height 0.8pt
+
+\vspace{1.5em}
+
+\end{document}
+

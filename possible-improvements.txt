@@ -1,0 +1,42 @@
+1. The "Fragment Stitching" Approach (Macro-Routing)
+This directly implements your idea of geographic splitting, but adapts it for scheduled transport.
+
+Instead of searching for a 24-hour route, search for 6-hour "bursts", and then treat those bursts as the new edges in a massive, simplified graph.
+
+Phase 1 (The Chunker): Run your fast, naive algorithm from every starting node, but cap the time limit at exactly 6 or 8 hours. Save every Pareto-optimal path that visits at least 4 countries.
+
+Phase 2 (The Graph of Paths): You now have a database of "Macro-Edges" (e.g., Path A: London -> Paris -> Brussels -> Amsterdam. Start: 08:00, End: 13:45).
+
+Phase 3 (The Stitcher): Run a new, incredibly lightweight algorithm that just tries to connect these Macro-Edges. It looks for Path A ending in Amsterdam at 13:45, and checks if there is a Path B starting in Amsterdam (or a nearby connected airport) anytime between 14:00 and 16:00.
+
+Why it works: You bypass the state-space explosion entirely. By the time you are stitching, you are connecting 3 or 4 massive puzzle pieces instead of 40 individual train rides.
+
+2. Deep Dive "Rollouts" (Monte Carlo Strategy)
+The Priority Queue is inherently conservative; it pushes a massive wall of states forward minute by minute. We need the algorithm to "shoot forward" to the 24-hour mark rapidly.
+
+The Idea: Borrow from Monte Carlo Tree Search (used by AI in chess/Go). Keep your current queue, but every 1,000 iterations, take the top label and run a Randomized Greedy Rollout.
+
+How: From the current label, randomly (but semi-greedily) select connecting trains/flights without putting them in the queue, just jumping from node to node until the 24-hour clock expires.
+
+Why it works: It acts as a radar. The algorithm might be stuck at hour 6 in Germany, but a quick random rollout shoots forward and discovers that this specific path easily reaches 14 countries. You save that record, update the global record variable (which instantly prunes millions of queue states), and keep going.
+
+3. The "Hub-and-Spoke" Backbone Constraint
+Right now, your algorithm treats a local train from Vienna to Bratislava with the exact same strategic weight as a flight from Madrid to Berlin.
+
+The Idea: Split your transports into two lists: Local Transports (trains, buses, connections) and Long Jumps (flights).
+
+The Constraint: Force the algorithm to structure the day as: [Cluster 1] -> Long Jump -> [Cluster 2] -> Long Jump -> [Cluster 3].
+
+Implementation: Add a rule in your edge expansion: You cannot take a flight unless you have visited at least 3 countries in your current local cluster. And conversely, you can only take a maximum of 2 or 3 flights in the entire 24 hours.
+
+Why it works: A 14-country record practically requires clearing out a dense area (like the Balkans or Benelux), flying to another dense area, and clearing it out. By legally forbidding the algorithm from taking random, one-off flights that ruin the schedule, you prune the worst "time-wasters" immediately.
+
+
+In option 2: The rollout is not purely random; it is heavily biased (Greedy-Stochastic).
+Instead of picking any random edge, the rollout uses the Minimum Transit Time (MTT) and your scoring function to weight the dice.
+
+If you are in Vienna, and you have a train to Bratislava (new country, takes 1 hour) and a train to Salzburg (same country, takes 3 hours), the algorithm doesn't flip a 50/50 coin. It gives the Bratislava train a 95% probability of being picked, and the Salzburg train a 5% probability.
+
+The Math of Speed: Your Priority Queue evaluates states breadth-first based on score. It takes hours to push 50,000 states from Hour 8 to Hour 24. A greedy rollout requires zero queue management, zero pareto-dominance checks, and zero memory allocation. It takes about 0.0001 seconds to shoot to the 24-hour mark.
+
+The Law of Large Numbers: Even if a greedy-biased rollout only has a 1-in-5,000 chance of finding a 13-country route, you can run 10,000 rollouts in one single second. By spending just 1 second every 1,000 iterations shooting probes to the end of the day, you have a massive statistical chance of stumbling onto a good bound, which instantly kills the millions of useless states in your main queue.
