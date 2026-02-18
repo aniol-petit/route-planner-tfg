@@ -142,6 +142,8 @@
 \hrule height 0.8pt
 
 \vspace{1.5em}
+From previous algorithms execution, we observed a quick raise to 11-12 countries, but then the algorithm would quickly get stuck. This is most likely because too solutions are very similar, can't get discarded because of the soft relaxed conditions and UB pruning, and we keep expanding many labels that don't result useful but don't have a way to discard. 
 
+This concept wants to help us deal with it the following way: every 1000 iterations, we will pause the queue, pick the current label and run a "randomized" greedy rollout to see if we can find a better solution. Since it does 0 heavy math, it reaches the 24-hour mark in a matter of milliseconds, and if we get lucky and find a better solution, we can update the global record and prune the queue massively. Likely this won't be enough to consider the algorithm as finalized, because it is unlikely that making greedy jumps we find a better solution. However, it will certainly not decrease current performance as these rollouts take almost 0 time, and in the best case we can save a huge amount of time. 
 \end{document}
 

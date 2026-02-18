@@ -50,17 +50,17 @@
 \setcounter{page}{1}
 
 % ============================================================================
-% Algorithm 8
+% Algorithm 9
 % ============================================================================
 
-\setcounter{algorithm}{7}
+\setcounter{algorithm}{8}
 \begin{center}
     % Top Rule
     \hrule height 0.8pt
     \vspace{0.3em}
     % Caption
-    \captionof{algorithm}{Label-setting algorithm with time-budgeted UB and Monte-Carlo rollouts}
-    \label{alg:label_setting_time_budgeted_ub_monte_carlo_rollouts}
+    \captionof{algorithm}{Label-setting with Global Hard Floor, Time-Budgeted UB, and Monte-Carlo Rollouts}
+    \label{alg:label_setting_global_hard_floor_time_budgeted_ub_monte_carlo_rollouts}
     \vspace{0.2em}
     % Middle Rule
     \hrule height 0.5pt
@@ -78,8 +78,9 @@
         \item $R(v,b)$. Precomputed reachable country sets
         \item $MTT(c)$. Precomputed minimum transit times for each country
         \item $\text{bucket}(t)$. Time bucket mapping function
-        \item $\text{record}$. Current record to beat (e.g., 13)
+        \item $\text{record}$. Current record to beat (e.g., 13). Static.
         \item $\text{rollout\_freq}$. Number of iterations between rollouts (e.g., 1000)
+        \item $\text{GlobalMinTime}$. Minimum realistic time to visit a country (e.g., 30 mins)
     \end{itemize}
 
     % OUTPUT
@@ -92,7 +93,7 @@
     % INITIALIZATION
     \State Initialize $\text{Labels}(v) \leftarrow \emptyset$ for all $v \in V$
     \State Initialize priority queue $Q \leftarrow \emptyset$ \Comment{ordered by decreasing score}
-    \State Initialize $\text{best\_label} \leftarrow \text{null}$
+    \State Initialize best label $\leftarrow \text{null}$
     \State $\text{iters} \leftarrow 0$ \Comment{Iteration counter for rollouts}
 
     \vspace{0.5em}
@@ -112,23 +113,34 @@
         \State extract $L=(v,t,C,\text{pred},\text{start\_time})$ with maximum score from $Q$
 
         \vspace{0.5em}
-        \CommentLine{--- NEW: MONTE CARLO ROLLOUT TRIGGER ---}
+        \CommentLine{--- GLOBAL HARD FLOOR PRUNING ---}
+        \State $\text{needed} \leftarrow (\text{record} + 1) - |C|$
+        \State $\text{remaining\_time} \leftarrow 1440 - (t - \text{start\_time})$
+        \CommentLine{If we need countries but lack the physical time (e.g., < 30 mins per country), kill it.}
+        \If{$\text{needed} > 0 \land \text{remaining\_time} < (\text{needed} \times \text{GlobalMinTime})$}
+            \State \textbf{continue}
+        \EndIf
+        \CommentLine{---------------------------------}
+
+        \vspace{0.5em}
+        \CommentLine{--- MONTE CARLO ROLLOUT TRIGGER ---}
         \State $\text{iters} \leftarrow \text{iters} + 1$
         \If{$\text{iters} \bmod \text{rollout\_freq} = 0$}
+            \CommentLine{Unconditional rollout for any label that survived Hard Floor}
             \State $L_{\text{rollout}} \leftarrow \text{Algorithm 7}(L,E_s,E_t,\text{country})$
-            \If{$\text{best\_label} = \text{null} \lor |L_{\text{rollout}}.C| > |\text{best\_label}.C|$}
-                \State $\text{best\_label} \leftarrow L_{\text{rollout}}$
-                \If{$|\text{best\_label}.C| > \text{record}$}
-                    \State \textbf{break} \Comment{early stopping: rollout found a record-breaking path}
-                \EndIf
+            \If{best label $= \text{null} \lor |L_{\text{rollout}}.C| > |\text{best label}.C|$}
+                \State best label $\leftarrow L_{\text{rollout}}$
             \EndIf
-\vspace{0.5em}
-        \CommentLine{----------------------------------------}
+            \CommentLine{Early stopping if rollout beats the static record}
+            \If{$|\text{best label}.C| > \text{record}$}
+                \State \textbf{break}
+            \EndIf
         \EndIf
+        \CommentLine{----------------------------------}
 
         \vspace{0.5em}
         \CommentLine{Enforce 24-hour journey limit (1440 absolute minutes)}
-        \If{$t - \text{start\_time} > 1440$}
+        \If{$\text{remaining\_time} < 0$}
             \State \textbf{continue}
         \EndIf
 
@@ -139,7 +151,6 @@
         \State Sort $U$ as a sequence $(c_1, c_2, \ldots, c_k)$ such that $MTT(c_1) \le MTT(c_2) \le \ldots \le MTT(c_k)$
         \State $\text{time\_spent} \leftarrow 0$
         \State $\text{UB} \leftarrow 0$
-        \State $\text{remaining\_time} \leftarrow 1440 - (t - \text{start\_time})$
         \For{$i = 1$ to $|U|$}
             \State $\text{time\_spent} \leftarrow \text{time\_spent} + MTT(c_i)$
             \If{$\text{time\_spent} \le \text{remaining\_time}$}
@@ -150,18 +161,20 @@
         \EndFor
 
         \vspace{0.5em}
-        \CommentLine{Record-based pruning}
+        \CommentLine{Record-based pruning (Using static record)}
         \If{$|C| + \text{UB} \le \text{record}$}
             \State \textbf{continue}
         \EndIf
 
         \vspace{0.5em}
         \CommentLine{Update best label from normal queue expansion}
-        \If{$\text{best\_label} = \text{null} \lor |C| > |\text{best\_label}.C|$}
-            \State $\text{best\_label} \leftarrow L$
-            \If{$|C| > \text{record}$}
-                \State \textbf{break} \Comment{early stopping: record beaten}
-            \EndIf
+        \If{best label $= \text{null} \lor |C| > |\text{best label}.C|$}
+            \State best label $\leftarrow L$
+        \EndIf
+
+        \CommentLine{Early stopping if normal expansion beats the static record}
+        \If{$|C| > \text{record}$}
+            \State \textbf{break}
         \EndIf
 
         \vspace{0.5em}
@@ -217,7 +230,7 @@
     \vspace{0.5em}
     \CommentLine{Reconstruct path}
     \State $P \leftarrow$ empty sequence
-    \State $L \leftarrow \text{best\_label}$
+    \State $L \leftarrow$ best label
     \While{$L \neq \text{null}$}
         \State prepend $L$ to $P$
         \State $L \leftarrow L.\text{pred}$
@@ -230,8 +243,10 @@
 \hrule height 0.8pt
 
 \vspace{1.5em}
-In Algorithm 8 we incorporate the Monte-Carlo rollouts (see Algorithm 7) in our label-setting algorithm to try and accelerate convergence and pruning of unpromising solutions.
+After running Algorithm 8 and debugging, we observed an important issue: most of labels that were object of the rollouts were very close to the time-line end, with a very low country count. For example: [ROLLOUT] iters=316,000 | pre t=1373 | pre |C|=7 | post |C|=7.
 
-It is the continuation of the Algorithm 6, incorporating the 3 "helper" algorithms we developed so far: Algorithm 3 (reachibility sets), Algorithm 5 (MTT) and Algorithm 7 (Monte-Carlo rollouts).
+This led to the idea of adding a global hard floor pruning mechanism. This uses a minimum realistic time per country (set arbitrarily and, of course, optimistically to avoid missing complicated but feasible routes) to aggressively prune labels that cannot possibly reach the record even with optimal remaining paths. Additionally, the rollout trigger is optimized to only execute when there is a comfortable time buffer, and the record is dynamically updated during search to enable immediate pruning of the queue.
+
+Hence, this is a very similar algorithm to Algorithm 8, but with the addition of the global hard floor pruning mechanism which we hope can drastically reduce the labels that stay in the queue and are expanded, hoping for a faster convergence.
 \end{document}
 
