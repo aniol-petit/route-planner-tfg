@@ -1,0 +1,179 @@
+\documentclass{article}
+
+% ============================================================================
+% Packages
+% ============================================================================
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{algorithm} 
+\usepackage{caption} 
+\usepackage{tikz}
+
+% WE USE ALGPSEUDOCODEX INSTEAD OF ALGPSEUDOCODE
+% 'noEnd=true' hides "end if", "end for" to match the style of your image (Baum et al.)
+% 'indLines=true' draws the vertical lines automatically
+\usepackage[noEnd=true, indLines=true]{algpseudocodex}
+
+% ============================================================================
+% Configuration & Custom Commands
+% ============================================================================
+
+% 1. Customize the Vertical Lines (make them black and thin like the image)
+\tikzset{algpxIndentLine/.style={draw=black, very thin}}
+
+% 2. Custom Inputs/Outputs with Line Jump
+% Input commands are not defined, so use \algnewcommand
+\algnewcommand\algorithmicinput{\textbf{Input:}}
+\algnewcommand\Input{\item[\algorithmicinput]\mbox{}\par} 
+% Output commands are already defined, so use \algrenewcommand
+\algrenewcommand\algorithmicoutput{\textbf{Output:}}
+\algrenewcommand\Output{\item[\algorithmicoutput]\mbox{}\par}
+
+% 3. Keywords - ensure proper spacing
+\algnewcommand\And{\ \textbf{and}\ }
+\algnewcommand\Or{\ \textbf{or}\ }
+
+% 4. Comments styled with //
+% We redefine the comment symbol to be //
+\algrenewcommand\algorithmiccomment[1]{\hfill // #1}
+\newcommand{\CommentLine}[1]{
+    \State // \textit{#1}
+}
+
+% ============================================================================
+% The Document
+% ============================================================================
+\begin{document}
+\pagestyle{empty}
+\allowdisplaybreaks[1] 
+\setcounter{page}{1}
+
+% ============================================================================
+% Algorithm 12
+% ============================================================================
+
+\setcounter{algorithm}{11}
+\begin{center}
+    % Top Rule
+    \hrule height 0.8pt
+    \vspace{0.3em}
+    % Caption
+    \captionof{algorithm}{Bi-directional Stitcher}
+    \label{alg:bidirectional_stitcher}
+    \vspace{0.2em}
+    % Middle Rule
+    \hrule height 0.5pt
+\end{center}
+
+\begin{algorithmic}[1] % [1] enables line numbering
+    
+    % INPUT
+    \Input
+    \begin{itemize}
+        \item $V$. Set of nodes
+        \item $\text{Labels}_F$. Map of Pareto-optimal forward labels from Algorithm 10
+        \item $\text{Labels}_B$. Map of Pareto-optimal backward labels from Algorithm 11
+        \item $\text{Record}$. The global static record to beat (e.g., 13)
+        \item $\text{MinWait}$. Minimum connection time required at a station (e.g., 5 or 10 mins)
+    \end{itemize}
+
+    % OUTPUT
+    \Output
+    \begin{itemize}
+        \item $P_{\text{best}}$. The reconstructed sequence of labels representing the best route, or $\text{null}$ if no route beats the record.
+    \end{itemize}
+    \vspace{0.5em} 
+
+    % INITIALIZATION
+    \State $\text{best\_route} \leftarrow \text{null}$
+    \State $\text{best\_countries} \leftarrow \emptyset$
+    \State $\text{best\_duration} \leftarrow \infty$
+
+    \vspace{0.5em}
+    \CommentLine{1. Scan the intersection of nodes}
+    \ForAll{$v \in V$}
+        \If{$\text{Labels}_F(v) = \emptyset \lor \text{Labels}_B(v) = \emptyset$}
+            \State \textbf{continue} \Comment{Node was not reached by both halves}
+        \EndIf
+
+        \vspace{0.5em}
+        \CommentLine{2. Iterate through all combinations of forward and backward labels at node 'v'}
+        \ForAll{$L_f \in \text{Labels}_F(v)$}
+            \ForAll{$L_b \in \text{Labels}_B(v)$}
+
+                \vspace{0.5em}
+                \CommentLine{--- CHECK A: TIME CONTINUITY ---}
+                \CommentLine{Does the forward path arrive in time to catch the backward path's departure?}
+                \State $\text{wait\_time} \leftarrow L_b.t - L_f.t$
+                \If{$\text{wait\_time} < \text{MinWait}$}
+                    \State \textbf{continue}
+                \EndIf
+
+                \vspace{0.5em}
+                \CommentLine{--- CHECK B: 24-HOUR CONSTRAINT ---}
+                \CommentLine{Is the total combined elapsed time strictly within 24 hours?}
+                \State $\text{total\_duration} \leftarrow L_b.\text{end\_time} - L_f.\text{start\_time}$
+                \If{$\text{total\_duration} > 1440$}
+                    \State \textbf{continue}
+                \EndIf
+
+                \vspace{0.5em}
+                \CommentLine{--- CHECK C: GEOGRAPHIC UNION ---}
+                \CommentLine{Merge the two sets of countries (this naturally deduplicates visited countries)}
+                \State $C_{\text{combined}} \leftarrow L_f.C \cup L_b.C$
+
+                \vspace{0.5em}
+                \CommentLine{--- EVALUATE AND UPDATE ---}
+                \CommentLine{We strictly want to beat the record. If it ties the current best, we can tie-break by duration.}
+                \If{$|C_{\text{combined}}| > \text{Record} \lor (|C_{\text{combined}}| = \text{Record} \land \text{total\_duration} < \text{best\_duration})$}
+                    \State $\text{Record} \leftarrow |C_{\text{combined}}|$ \Comment{Dynamically raise the bar for the rest of the loop}
+                    \State $\text{best\_countries} \leftarrow C_{\text{combined}}$
+                    \State $\text{best\_duration} \leftarrow \text{total\_duration}$
+
+                    \vspace{0.5em}
+                    \CommentLine{3. Reconstruct the stitched path}
+                    \State $\text{best\_route} \leftarrow \text{ReconstructStitchedPath}(L_f, L_b)$
+                \EndIf
+            \EndFor
+        \EndFor
+    \EndFor
+
+    \State \Return $\text{best\_route}$
+
+    \vspace{1.5em}
+    \CommentLine{Auxiliary Function: ReconstructStitchedPath($L_f$, $L_b$)}
+    \Statex
+    \State $P_{\text{forward}} \leftarrow$ empty sequence
+    \State $\text{curr} \leftarrow L_f$
+    \CommentLine{Trace forward path backwards to the start}
+    \While{$\text{curr} \neq \text{null}$}
+        \State prepend $\text{curr}$ to $P_{\text{forward}}$
+        \State $\text{curr} \leftarrow \text{curr}.\text{pred}$
+    \EndWhile
+
+    \vspace{0.5em}
+    \State $P_{\text{backward}} \leftarrow$ empty sequence
+    \CommentLine{Note: We skip the first node of $L_b$ to avoid duplicating the meeting station 'v'}
+    \State $\text{curr} \leftarrow L_b.\text{succ}$
+    \CommentLine{Trace backward path forwards to the destination}
+    \While{$\text{curr} \neq \text{null}$}
+        \State append $\text{curr}$ to $P_{\text{backward}}$
+        \State $\text{curr} \leftarrow \text{curr}.\text{succ}$
+    \EndWhile
+
+    \State \Return $P_{\text{forward}}$ concatenated with $P_{\text{backward}}$
+
+\end{algorithmic}
+
+% Bottom Rule
+\hrule height 0.8pt
+
+\vspace{1.5em}
+Running Algorithm 9 and debugging, we saw that the rollouts weren't really helping, mainly because when reaching the night, the graph was much more sparse and the rollouts were not able to find good solutions. This is why we decided to split the algorithm in two, one running forward in time until half of the day, and one running backward in time until half of the day. This way we can ensure that we have a good coverage of the graph and we can find good solutions.
+
+Both algorithms run 2 hours further than the middle of the day, giving us a 4 hour overlap to avoid missing some critical edges and hence a possible solution. The idea is to run in parallel the "same" algorithm for the two time frames, which should be faster since we run them at the same time and each of them is quite shorter, and then use the algorithm defined in this file (Algorithm 12) as a stitcher to find the best solution.
+
+Storing the solutions in Algorithms 10 and 11 as a dictionary of routes ending at each specific node allows us to quickly find the best solution by simply iterating through the overlapping nodes and checking the best combination of forward and backward routes, making the stitching faster. 
+
+\end{document}

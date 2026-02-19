@@ -1,0 +1,222 @@
+\documentclass{article}
+
+% ============================================================================
+% Packages
+% ============================================================================
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{algorithm} 
+\usepackage{caption} 
+\usepackage{tikz}
+
+% WE USE ALGPSEUDOCODEX INSTEAD OF ALGPSEUDOCODE
+% 'noEnd=true' hides "end if", "end for" to match the style of your image (Baum et al.)
+% 'indLines=true' draws the vertical lines automatically
+\usepackage[noEnd=true, indLines=true]{algpseudocodex}
+
+% ============================================================================
+% Configuration & Custom Commands
+% ============================================================================
+
+% 1. Customize the Vertical Lines (make them black and thin like the image)
+\tikzset{algpxIndentLine/.style={draw=black, very thin}}
+
+% 2. Custom Inputs/Outputs with Line Jump
+% Input commands are not defined, so use \algnewcommand
+\algnewcommand\algorithmicinput{\textbf{Input:}}
+\algnewcommand\Input{\item[\algorithmicinput]\mbox{}\par} 
+% Output commands are already defined, so use \algrenewcommand
+\algrenewcommand\algorithmicoutput{\textbf{Output:}}
+\algrenewcommand\Output{\item[\algorithmicoutput]\mbox{}\par}
+
+% 3. Keywords - ensure proper spacing
+\algnewcommand\And{\ \textbf{and}\ }
+\algnewcommand\Or{\ \textbf{or}\ }
+
+% 4. Comments styled with //
+% We redefine the comment symbol to be //
+\algrenewcommand\algorithmiccomment[1]{\hfill // #1}
+\newcommand{\CommentLine}[1]{
+    \State // \textit{#1}
+}
+
+% ============================================================================
+% The Document
+% ============================================================================
+\begin{document}
+\pagestyle{empty}
+\allowdisplaybreaks[1] 
+\setcounter{page}{1}
+
+% ============================================================================
+% Algorithm 10
+% ============================================================================
+
+\setcounter{algorithm}{9}
+\begin{center}
+    % Top Rule
+    \hrule height 0.8pt
+    \vspace{0.3em}
+    % Caption
+    \captionof{algorithm}{Bounded Forward Half-Search}
+    \label{alg:bounded_forward_half_search}
+    \vspace{0.2em}
+    % Middle Rule
+    \hrule height 0.5pt
+\end{center}
+
+\begin{algorithmic}[1] % [1] enables line numbering
+    
+    % INPUT
+    \Input
+    \begin{itemize}
+        \item $V$. Set of nodes
+        \item $E_s$. Set of scheduled edges $(v,u,\text{dep},\text{arr})$
+        \item $E_t$. Set of transfer edges $(v,w,\Delta)$
+        \item $\text{country}(v)$. Country associated with node $v$
+        \item $R(v,b)$. Precomputed reachable country sets (from Algorithm 3)
+        \item $MTT(c)$. Precomputed minimum transit times (from Algorithm 5)
+        \item $\text{bucket}(t)$. Time bucket mapping function
+        \item $\text{MaxDuration}$. Maximum allowed elapsed time for the half-search (e.g., 840 mins / 14 hours)
+        \item $\text{MinCountries}$. Minimum unique countries required to save the path (e.g., 6)
+        \item $\text{GlobalMinTime}$. Minimum realistic time to visit a country (e.g., 25 mins)
+    \end{itemize}
+
+    % OUTPUT
+    \Output
+    \begin{itemize}
+        \item $\text{Labels}_F$. Map of nodes to a set of Pareto-optimal forward labels
+    \end{itemize}
+    \vspace{0.5em} 
+
+    % INITIALIZATION
+    \State Initialize $\text{Labels}_F(v) \leftarrow \emptyset$ for all $v \in V$
+    \State Initialize priority queue $Q \leftarrow \emptyset$ \Comment{ordered by decreasing score}
+
+    \vspace{0.5em}
+    \CommentLine{Initialize labels at departures}
+    \ForAll{$v \in V$}
+        \ForAll{scheduled edges $(v,u,\text{dep},\text{arr}) \in E_s$}
+            \State $L \leftarrow (\text{node}=u, t=\text{arr}, C=\{\text{country}(u)\}, \text{pred}=\text{null}, \text{start\_time}=\text{dep})$
+            \State $\text{Labels}_F(u) \leftarrow \text{Labels}_F(u) \cup \{L\}$
+            \State compute $\text{score}(L) \leftarrow (|L.C| \times 10000) - L.t$
+            \State $Q \leftarrow Q \cup \{L\}$
+        \EndFor
+    \EndFor
+
+    \vspace{0.5em}
+    \CommentLine{Main loop}
+    \While{$Q \neq \emptyset$}
+        \State extract $L=(v,t,C,\text{pred},\text{start\_time})$ with maximum score from $Q$
+
+        \State $\text{elapsed} \leftarrow t - \text{start\_time}$
+        \State $\text{remaining\_half\_time} \leftarrow \text{MaxDuration} - \text{elapsed}$
+
+        \vspace{0.5em}
+        \CommentLine{--- 1. GLOBAL HARD FLOOR PRUNING (Half-Search Variant) ---}
+        \State $\text{needed} \leftarrow \text{MinCountries} - |C|$
+        \CommentLine{If the path physically cannot even reach the minimum required countries in the allowed 14 hours, kill it.}
+        \If{$\text{needed} > 0 \land \text{remaining\_half\_time} < (\text{needed} \times \text{GlobalMinTime})$}
+            \State \textbf{continue}
+        \EndIf
+
+        \vspace{0.5em}
+        \CommentLine{--- 2. TIME-BUDGETED UB PRUNING (Half-Search Variant) ---}
+        \If{$\text{needed} > 0$}
+            \State $b \leftarrow \text{bucket}(t)$
+            \State $U \leftarrow R(v,b) \setminus C$
+            \State Sort $U$ as a sequence $(c_1, c_2, \ldots, c_k)$ such that $MTT(c_1) \le MTT(c_2) \le \ldots \le MTT(c_k)$
+
+            \State $\text{time\_spent} \leftarrow 0$
+            \State $\text{UB} \leftarrow 0$
+            \For{$i = 1$ to $|U|$}
+                \State $\text{time\_spent} \leftarrow \text{time\_spent} + MTT(c_i)$
+                \If{$\text{time\_spent} \le \text{remaining\_half\_time}$}
+                    \State $\text{UB} \leftarrow \text{UB} + 1$
+                \Else
+                    \State \textbf{break}
+                \EndIf
+            \EndFor
+
+            \CommentLine{If current countries + theoretically reachable countries < minimum acceptable, kill it.}
+            \If{$|C| + \text{UB} < \text{MinCountries}$}
+                \State \textbf{continue}
+            \EndIf
+        \EndIf
+
+        \vspace{0.5em}
+        \CommentLine{--- 3. EXTEND VIA SCHEDULED EDGES ---}
+        \ForAll{$(v,u,\text{dep},\text{arr})\in E_s$}
+            \If{$\text{dep} \ge t$}
+                \State $\text{new\_elapsed} \leftarrow \text{arr} - \text{start\_time}$
+                \CommentLine{Enforce the 14-hour cut-off limit}
+                \If{$\text{new\_elapsed} \le \text{MaxDuration}$}
+                    \State $C' \leftarrow C \cup \{\text{country}(u)\}$
+                    \State $L' \leftarrow (u,\text{arr},C',\text{pred}=L,\text{start\_time}=\text{start\_time})$
+
+                    \Statex % Empty line for better readability of the multiline condition
+                    \CommentLine{Strict Pareto Dominance}
+                    \If{$\nexists L''\in\text{Labels}_F(u)$ such that \par
+                        \hskip\algorithmicindent $(L''.t \le \text{arr} \land L''.C \supseteq C' \land 
+                        (L''.t < \text{arr} \lor L''.C \neq C'))$}
+                        
+                        \State remove all $L''\in\text{Labels}_F(u)$ such that \par
+                        \hskip\algorithmicindent $(\text{arr} \le L''.t \land C' \supseteq L''.C \land 
+                        (\text{arr} < L''.t \lor C' \neq L''.C))$
+                        \State $\text{Labels}_F(u) \leftarrow \text{Labels}_F(u) \cup \{L'\}$
+                        \State compute $\text{score}(L')$
+                        \State $Q \leftarrow Q \cup \{L'\}$
+                    \EndIf
+                \EndIf
+            \EndIf
+        \EndFor
+
+        \vspace{0.5em}
+        \CommentLine{--- 4. EXTEND VIA TRANSFERS ---}
+        \ForAll{$(v,w,\Delta)\in E_t$}
+            \State $t_{\text{new}} \leftarrow t + \Delta$
+            \State $\text{new\_elapsed} \leftarrow t_{\text{new}} - \text{start\_time}$
+            \If{$\text{new\_elapsed} \le \text{MaxDuration}$}
+                \State $L' \leftarrow (w,t_{\text{new}},C,\text{pred}=L,\text{start\_time}=\text{start\_time})$
+
+                \Statex % Empty line
+                \CommentLine{Strict Pareto Dominance}
+                \If{$\nexists L''\in\text{Labels}_F(w)$ such that \par
+                    \hskip\algorithmicindent $(L''.t \le t_{\text{new}} \land L''.C \supseteq C \land 
+                    (L''.t < t_{\text{new}} \lor L''.C \neq C))$}
+                    
+                    \State remove all $L''\in\text{Labels}_F(w)$ such that \par
+                    \hskip\algorithmicindent $(t_{\text{new}} \le L''.t \land C \supseteq L''.C \land 
+                    (t_{\text{new}} < L''.t \lor C \neq L''.C))$
+                    \State $\text{Labels}_F(w) \leftarrow \text{Labels}_F(w) \cup \{L'\}$
+                    \State compute $\text{score}(L')$
+                    \State $Q \leftarrow Q \cup \{L'\}$
+                \EndIf
+            \EndIf
+        \EndFor
+    \EndWhile
+
+    \vspace{0.5em}
+    \CommentLine{--- 5. CLEANUP ---}
+    \CommentLine{Purge any stored labels that survived Pareto dominance but failed to hit the final country threshold.}
+    \ForAll{$v \in V$}
+        \ForAll{$L \in \text{Labels}_F(v)$}
+            \If{$|L.C| < \text{MinCountries}$}
+                \State remove $L$ from $\text{Labels}_F(v)$
+            \EndIf
+        \EndFor
+    \EndFor
+
+    \State \Return $\text{Labels}_F$
+
+\end{algorithmic}
+
+% Bottom Rule
+\hrule height 0.8pt
+
+\vspace{1.5em}
+Algorithm 10 is a very similar algorithm to Algorithm 9, but in this case we run it only half way to the end of the day (rationale for that explained in Algorithm 12). Since we are doing only until half of the day, in this case we don't do any rollouts (since those run until EOD). Besides, we do not trigger early stopping, because of the record, we expand the entire queue (which we expect to be shorter in this case and hence more feasible). 
+
+In the output we keep a dictionnary of routes ending at each specific node, each route containing at least MinCountries.
+\end{document}

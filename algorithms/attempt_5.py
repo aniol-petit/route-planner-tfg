@@ -70,49 +70,117 @@ def weighted_random_choice(steps):
     return steps[-1]
 
 
-def greedy_stochastic_rollout(Lstart, Es, Et, country_map):
+def greedy_stochastic_rollout(Lstart, Es, Et, country_map, debug=False):
     """
-    Algorithm 7: Greedy-stochastic rollout probe
-    Input:
-      - Lstart: Label(node=v, t, C, pred, start_time)
-      - Es: dict[v] -> list of (u, dep, arr)
-      - Et: dict[v] -> list of (w, delta)
-      - country_map: dict[node] -> country string
-    Output:
-      - Lfinal: final Label reached when no more moves are possible within 24 hours
+    Algorithm 7: Smart-Greedy Rollout Probe with Tabu List
     """
     L = Lstart
+    
+    # Track all visited nodes in this rollout to act as Tabu list
+    rollout_visited_nodes = {L.node}
+    
+    step_count = 0
+    curr_country = country_map.get(L.node, "Unknown") or "Unknown"
+    
+    if debug:
+        print(f"\n{'='*80}")
+        print(f"[ROLLOUT DEBUG] Starting rollout from node={L.node}, country={curr_country}, time={L.t}")
+        print(f"[ROLLOUT DEBUG] Initial visited countries: {sorted(L.C)}")
+        print(f"{'='*80}")
+    
     while True:
-        valid_steps = []
-
+        step_count += 1
+        # Maps a node 'u' to the earliest arrival time 'tnew' and departure 'dep'
+        BestNodeArrivals = {}
+        
+        # 1. Collect ONLY the earliest arrival for each neighboring node
+        # Removed prev_node checks to allow triangle loop prevention via Tabu list
         for u, dep, arr in Es.get(L.node, []):
             if dep >= L.t and (arr - L.start_time) <= 1440:
-                cnew = country_map.get(u, "Unknown") or "Unknown"
-                valid_steps.append((u, arr, cnew))
-
+                if u not in BestNodeArrivals or arr < BestNodeArrivals[u][1]:
+                    BestNodeArrivals[u] = (dep, arr, country_map.get(u, "Unknown") or "Unknown")
+        
         for w, delta in Et.get(L.node, []):
             tnew = L.t + delta
             if (tnew - L.start_time) <= 1440:
-                cnew = country_map.get(w, "Unknown") or "Unknown"
-                valid_steps.append((w, tnew, cnew))
-
-        if not valid_steps:
-            break
-
-        weighted_steps = []
-        for u, tnew, cnew in valid_steps:
-            dt = max(1, tnew - L.t)
+                if w not in BestNodeArrivals or tnew < BestNodeArrivals[w][1]:
+                    BestNodeArrivals[w] = (tnew, tnew, country_map.get(w, "Unknown") or "Unknown")
+        
+        if not BestNodeArrivals:
+            if debug:
+                print(f"[ROLLOUT DEBUG] Step {step_count}: No valid moves left. Ending rollout.")
+            break  # No valid forward moves left
+        
+        # 2. Assign heavily biased weights
+        ValidSteps = []
+        curr_country = country_map.get(L.node, "Unknown") or "Unknown"
+        time_left = 1440 - (L.t - L.start_time)
+        
+        for u in BestNodeArrivals:
+            dep, arr, cnew = BestNodeArrivals[u]
+            dt = max(1, arr - L.t)  # Total time consumed by this step
+            
+            # --- THE NEW MATH ---
             if cnew not in L.C:
-                weight = 10000.0 / dt
+                # UNVISITED COUNTRY: Absolute highest priority.
+                base_weight = 100000.0
+            elif cnew != curr_country:
+                # TRANSIT VIA OTHER COUNTRY: Crucial for escaping geographical traps.
+                base_weight = 1000.0
             else:
-                weight = 10.0 / dt
-            weighted_steps.append((u, tnew, cnew, weight))
-
-        chosen_u, chosen_tnew, chosen_cnew, _ = weighted_random_choice(weighted_steps)
+                # DOMESTIC TRANSIT: Just used to get to hubs.
+                base_weight = 1.0
+                
+            # Strictly linear: weight = base_weight / dt (removed dt * dt squaring)
+            weight = base_weight / dt
+            
+            # THE TABU PENALTY: Prevent wandering in local loops
+            if u in rollout_visited_nodes:
+                weight *= 0.0001
+            # --------------------
+            
+            ValidSteps.append((u, arr, cnew, weight))
+        
+        # 3. Roll the weighted dice
+        if not ValidSteps:
+            if debug:
+                print(f"[ROLLOUT DEBUG] Step {step_count}: No valid steps after weighting. Ending rollout.")
+            break
+        
+        # Debug tracing: Show top 3 weighted choices
+        if debug:
+            sorted_steps = sorted(ValidSteps, key=lambda x: x[3], reverse=True)
+            top3 = sorted_steps[:3]
+            print(f"\n[ROLLOUT DEBUG] Step {step_count}: Current node={L.node}, country={curr_country}, time_left={time_left:.1f} mins")
+            print(f"[ROLLOUT DEBUG] Top 3 weighted choices:")
+            for idx, (dest, arr_time, dest_country, wgt) in enumerate(top3, 1):
+                category = "[NEW COUNTRY]" if dest_country not in L.C else \
+                          "[TRANSIT]" if dest_country != curr_country else \
+                          "[DOMESTIC]" + (" (TABU)" if dest in rollout_visited_nodes else "")
+                print(f"  {idx}. dest={dest}, arr_time={arr_time}, weight={wgt:.2f}, country={dest_country} {category}")
+            
+        chosen_u, chosen_tnew, chosen_cnew, _ = weighted_random_choice(ValidSteps)
+        
+        if debug:
+            chosen_category = "[NEW COUNTRY]" if chosen_cnew not in L.C else \
+                             "[TRANSIT]" if chosen_cnew != curr_country else \
+                             "[DOMESTIC]" + (" (TABU)" if chosen_u in rollout_visited_nodes else "")
+            print(f"[ROLLOUT DEBUG] → Chosen: dest={chosen_u}, arr_time={chosen_tnew}, country={chosen_cnew} {chosen_category}")
+        
+        # 4. Update State
         C_prime = set(L.C)
         C_prime.add(chosen_cnew)
+        
+        rollout_visited_nodes.add(chosen_u)  # Add to Tabu list
         L = Label(node=chosen_u, t=chosen_tnew, C=C_prime, pred=L, start_time=L.start_time)
-
+    
+    if debug:
+        print(f"\n{'='*80}")
+        print(f"[ROLLOUT DEBUG] Rollout complete after {step_count} steps")
+        print(f"[ROLLOUT DEBUG] Final node={L.node}, countries visited={len(L.C)}, time elapsed={L.t - L.start_time:.1f} mins")
+        print(f"[ROLLOUT DEBUG] Final countries: {sorted(L.C)}")
+        print(f"{'='*80}\n")
+    
     return L
 
 
@@ -198,12 +266,15 @@ def label_setting_algorithm_with_global_hard_floor(
 
         # --- MONTE CARLO ROLLOUT TRIGGER ---
         iters += 1
-        if rollout_freq and (tracker.processed_count % rollout_freq == 0):
-            Lrollout = greedy_stochastic_rollout(L, Es, Et, country_map)
-            print(
-                f"[ROLLOUT] Iters: {tracker.processed_count:,} | pre t={t} "
-                f"| pre |C|={len(C)} | post |C|={len(Lrollout.C)}"
-            )
+        if rollout_freq and (iters % rollout_freq == 0):
+            # Trigger detailed trace log only on every 10th rollout
+            do_debug = (iters % (rollout_freq * 10) == 0)
+            Lrollout = greedy_stochastic_rollout(L, Es, Et, country_map, debug=do_debug)
+            if not do_debug:
+                print(
+                    f"[ROLLOUT] Iters: {tracker.processed_count:,} | pre t={t} "
+                    f"| pre |C|={len(C)} | post |C|={len(Lrollout.C)}"
+                )
             if best_label is None or len(Lrollout.C) > len(best_label.C):
                 best_label = Lrollout
                 print(

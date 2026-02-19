@@ -1,0 +1,55 @@
+Algorithmic Framework for the Record Guiness Problem
+Routing Optimization Overview
+
+Core Algorithmic Strategy
+
+Because the search space for a 24-hour multi-modal European transit graph is subject to massive combinatorial explosion, standard shortest-path algorithms fail to converge.
+
+The core engine is a Multi-Objective Label-Setting Algorithm (a time-dependent extension of Dijkstra's/A* algorithm), augmented with aggressive Branch-and-Bound pruning and Monte-Carlo Tree Search (MCTS) elements. It searches the graph by propagating "Labels" L = (v, t, C) through valid edges, evaluating states dynamically.
+
+State Management and Dominance
+
+To control the exponential growth of states, the algorithm relies on strict Pareto Dominance at the node level. Let L1 and L2 be two labels arriving at node v. L1 strictly dominates L2 if it arrives earlier or at the same time (t1 <= t2) and its set of visited countries is a superset of the other (C1 superset of C2). Dominated labels are permanently discarded, drastically reducing redundant path exploration.
+
+Precomputed Heuristics
+
+The algorithm relies on two critical offline precomputations to evaluate the future potential of any state in O(1) or O(N log N) time:
+
+Relaxed Reachability (R(v, b)):
+A backward-propagation algorithm divides the 24-hour window into discrete time buckets b. It calculates the exact topological set of countries reachable from any node v at time b. This serves as an absolute topological upper bound. Note that reachable do not mean doable, it ignores edge times and schedules, just countries you can get to.
+
+Minimum Transit Time (MTT(c)):
+An algorithm scans all E_s and E_t to find the absolute global minimum time required to cross a border into country c. This acts as the fundamental time cost for prize-collecting.
+
+Aggressive Pruning (Branch and Bound)
+
+When a label is popped from the Priority Queue, it must survive two highly restrictive bounds before it is allowed to expand.
+
+5.1 The Global Hard Floor
+
+A physical lower bound on transit. If the number of unvisited countries needed to break the record is k, and the globally defined minimum physical time to enter any country is tau_min, the path is instantly killed if the remaining time T_rem < k * tau_min.
+
+5.2 Time-Budgeted Upper Bound (UB)
+
+For states that survive the hard floor, the algorithm applies a localized, knapsack-like bounding function.
+
+Given a label at node v with remaining time T_rem:
+
+Retrieve the set of unvisited, topologically reachable countries
+U = R(v, b) minus C.
+
+Sort U by the precomputed entry costs, MTT(c).
+
+Greedily sum these costs until the sum exceeds T_rem.
+
+The number of countries successfully budgeted constitutes the upper bound UB. If |C| + UB <= Record, the branch is mathematically proven to be sub-optimal and is permanently pruned.
+
+Stochastic Acceleration (Monte-Carlo Rollouts)
+
+Because Priority Queues explore breadth-first relative to their scoring function, high-potential paths often stagnate early in the day. To counter this, the algorithm utilizes a Greedy-Stochastic Rollout Probe.
+
+Periodically (for example, every 1,000 iterations), the algorithm pauses queue expansion and launches a zero-overhead simulated probe from the current state to the 24-hour mark.
+
+The probe selects next steps stochastically, but heavily weights the distribution toward unvisited countries, with probability proportional to 1 divided by (delta t squared).
+
+If a rollout stumbles into a full valid path that breaks the global target record, it immediately triggers Early Stopping. Alternatively, by dynamically discovering high-quality bounds early in the search, these rollouts retroactively increase the pruning severity for the rest of the queue, triggering massive cascading state deletions and forcing rapid algorithmic convergence.

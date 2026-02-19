@@ -1,0 +1,220 @@
+\documentclass{article}
+
+% ============================================================================
+% Packages
+% ============================================================================
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{algorithm} 
+\usepackage{caption} 
+\usepackage{tikz}
+
+% WE USE ALGPSEUDOCODEX INSTEAD OF ALGPSEUDOCODE
+% 'noEnd=true' hides "end if", "end for" to match the style of your image (Baum et al.)
+% 'indLines=true' draws the vertical lines automatically
+\usepackage[noEnd=true, indLines=true]{algpseudocodex}
+
+% ============================================================================
+% Configuration & Custom Commands
+% ============================================================================
+
+% 1. Customize the Vertical Lines (make them black and thin like the image)
+\tikzset{algpxIndentLine/.style={draw=black, very thin}}
+
+% 2. Custom Inputs/Outputs with Line Jump
+% Input commands are not defined, so use \algnewcommand
+\algnewcommand\algorithmicinput{\textbf{Input:}}
+\algnewcommand\Input{\item[\algorithmicinput]\mbox{}\par} 
+% Output commands are already defined, so use \algrenewcommand
+\algrenewcommand\algorithmicoutput{\textbf{Output:}}
+\algrenewcommand\Output{\item[\algorithmicoutput]\mbox{}\par}
+
+% 3. Keywords - ensure proper spacing
+\algnewcommand\And{\ \textbf{and}\ }
+\algnewcommand\Or{\ \textbf{or}\ }
+
+% 4. Comments styled with //
+% We redefine the comment symbol to be //
+\algrenewcommand\algorithmiccomment[1]{\hfill // #1}
+\newcommand{\CommentLine}[1]{
+    \State // \textit{#1}
+}
+
+% ============================================================================
+% The Document
+% ============================================================================
+\begin{document}
+\pagestyle{empty}
+\allowdisplaybreaks[1] 
+\setcounter{page}{1}
+
+% ============================================================================
+% Algorithm 11
+% ============================================================================
+
+\setcounter{algorithm}{10}
+\begin{center}
+    % Top Rule
+    \hrule height 0.8pt
+    \vspace{0.3em}
+    % Caption
+    \captionof{algorithm}{Bounded Backward Half-Search}
+    \label{alg:bounded_backward_half_search}
+    \vspace{0.2em}
+    % Middle Rule
+    \hrule height 0.5pt
+\end{center}
+
+\begin{algorithmic}[1] % [1] enables line numbering
+    
+    % INPUT
+    \Input
+    \begin{itemize}
+        \item $V$. Set of nodes
+        \item $E_{s,\text{in}}(v)$. Set of scheduled INBOUND edges to $v$: $(w,v,\text{dep},\text{arr})$
+        \item $E_{t,\text{in}}(v)$. Set of INBOUND transfer edges to $v$: $(w,v,\Delta)$
+        \item $\text{country}(v)$. Country associated with node $v$
+        \item $R_{\text{back}}(v,b)$. Precomputed reverse reachable country sets
+        \item $MTT(c)$. Precomputed minimum transit times
+        \item $\text{bucket}(t)$. Time bucket mapping function
+        \item $\text{MaxDuration}$. Maximum allowed elapsed time for the half-search (e.g., 840 mins)
+        \item $\text{MinCountries}$. Minimum unique countries required to save the path (e.g., 6)
+        \item $\text{GlobalMinTime}$. Minimum realistic time to visit a country (e.g., 25 mins)
+    \end{itemize}
+
+    % OUTPUT
+    \Output
+    \begin{itemize}
+        \item $\text{Labels}_B$. Map of nodes to a set of Pareto-optimal backward labels
+    \end{itemize}
+    \vspace{0.5em} 
+
+    % INITIALIZATION
+    \State Initialize $\text{Labels}_B(v) \leftarrow \emptyset$ for all $v \in V$
+    \State Initialize priority queue $Q \leftarrow \emptyset$ \Comment{ordered by decreasing score}
+
+    \vspace{0.5em}
+    \CommentLine{Initialize labels at arrivals (End of the journey)}
+    \ForAll{$v \in V$}
+        \ForAll{scheduled edges $(w,v,\text{dep},\text{arr}) \in E_{s,\text{in}}(v)$}
+            \CommentLine{We initialize the state sitting at the arrival node 'v', having just finished our journey}
+            \State $L \leftarrow (\text{node}=v, t=\text{arr}, C=\{\text{country}(v)\}, \text{succ}=\text{null}, \text{end\_time}=\text{arr})$
+            \State $\text{Labels}_B(v) \leftarrow \text{Labels}_B(v) \cup \{L\}$
+            \CommentLine{Score favors paths with MORE countries and LATER departure times (less elapsed time)}
+            \State compute $\text{score}(L) \leftarrow (|L.C| \times 10000) + L.t$
+            \State $Q \leftarrow Q \cup \{L\}$
+        \EndFor
+    \EndFor
+
+    \vspace{0.5em}
+    \CommentLine{Main loop}
+    \While{$Q \neq \emptyset$}
+        \State extract $L=(v,t,C,\text{succ},\text{end\_time})$ with maximum score from $Q$
+
+        \State $\text{elapsed} \leftarrow \text{end\_time} - t$
+        \State $\text{remaining\_half\_time} \leftarrow \text{MaxDuration} - \text{elapsed}$
+
+        \vspace{0.5em}
+        \CommentLine{--- 1. GLOBAL HARD FLOOR PRUNING (Backward Variant) ---}
+        \State $\text{needed} \leftarrow \text{MinCountries} - |C|$
+        \If{$\text{needed} > 0 \land \text{remaining\_half\_time} < (\text{needed} \times \text{GlobalMinTime})$}
+            \State \textbf{continue}
+        \EndIf
+
+        \vspace{0.5em}
+        \CommentLine{--- 2. TIME-BUDGETED UB PRUNING (Backward Variant) ---}
+        \If{$\text{needed} > 0$}
+            \State $b \leftarrow \text{bucket}(t)$
+            \State $U \leftarrow R_{\text{back}}(v,b) \setminus C$
+            \State Sort $U$ as a sequence $(c_1, c_2, \ldots, c_k)$ such that $MTT(c_1) \le MTT(c_2) \le \ldots \le MTT(c_k)$
+
+            \State $\text{time\_spent} \leftarrow 0$
+            \State $\text{UB} \leftarrow 0$
+            \For{$i = 1$ to $|U|$}
+                \State $\text{time\_spent} \leftarrow \text{time\_spent} + MTT(c_i)$
+                \If{$\text{time\_spent} \le \text{remaining\_half\_time}$}
+                    \State $\text{UB} \leftarrow \text{UB} + 1$
+                \Else
+                    \State \textbf{break}
+                \EndIf
+            \EndFor
+
+            \If{$|C| + \text{UB} < \text{MinCountries}$}
+                \State \textbf{continue}
+            \EndIf
+        \EndIf
+
+        \vspace{0.5em}
+        \CommentLine{--- 3. EXTEND BACKWARD VIA SCHEDULED EDGES ---}
+        \CommentLine{We look for trains that ARRIVED at our current node BEFORE our current time 't'}
+        \ForAll{$(w,v,\text{dep},\text{arr})\in E_{s,\text{in}}(v)$}
+            \If{$\text{arr} \le t$}
+                \State $\text{new\_elapsed} \leftarrow \text{end\_time} - \text{dep}$
+                \If{$\text{new\_elapsed} \le \text{MaxDuration}$}
+                    \State $C' \leftarrow C \cup \{\text{country}(w)\}$
+                    \CommentLine{The new state is sitting at node 'w' at time 'dep'}
+                    \State $L' \leftarrow (w,\text{dep},C',\text{succ}=L,\text{end\_time}=\text{end\_time})$
+
+                    \Statex % Empty line for better readability of the multiline condition
+                    \CommentLine{STRICT BACKWARD PARETO DOMINANCE: t must be >= to be better}
+                    \If{$\nexists L''\in\text{Labels}_B(w)$ such that \par
+                        \hskip\algorithmicindent $(L''.t \ge \text{dep} \land L''.C \supseteq C' \land 
+                        (L''.t > \text{dep} \lor L''.C \neq C'))$}
+                        
+                        \State remove all $L''\in\text{Labels}_B(w)$ such that \par
+                        \hskip\algorithmicindent $(\text{dep} \ge L''.t \land C' \supseteq L''.C \land 
+                        (\text{dep} > L''.t \lor C' \neq L''.C))$
+                        \State $\text{Labels}_B(w) \leftarrow \text{Labels}_B(w) \cup \{L'\}$
+                        \State compute $\text{score}(L')$
+                        \State $Q \leftarrow Q \cup \{L'\}$
+                    \EndIf
+                \EndIf
+            \EndIf
+        \EndFor
+
+        \vspace{0.5em}
+        \CommentLine{--- 4. EXTEND BACKWARD VIA TRANSFERS ---}
+        \ForAll{$(w,v,\Delta)\in E_{t,\text{in}}(v)$}
+            \State $t_{\text{new}} \leftarrow t - \Delta$ \Comment{Subtract walking time to find when we needed to start walking}
+            \State $\text{new\_elapsed} \leftarrow \text{end\_time} - t_{\text{new}}$
+            \If{$\text{new\_elapsed} \le \text{MaxDuration}$}
+                \State $L' \leftarrow (w,t_{\text{new}},C,\text{succ}=L,\text{end\_time}=\text{end\_time})$
+
+                \Statex % Empty line
+                \CommentLine{Strict Backward Pareto Dominance}
+                \If{$\nexists L''\in\text{Labels}_B(w)$ such that \par
+                    \hskip\algorithmicindent $(L''.t \ge t_{\text{new}} \land L''.C \supseteq C \land 
+                    (L''.t > t_{\text{new}} \lor L''.C \neq C))$}
+                    
+                    \State remove all $L''\in\text{Labels}_B(w)$ such that \par
+                    \hskip\algorithmicindent $(t_{\text{new}} \ge L''.t \land C \supseteq L''.C \land 
+                    (t_{\text{new}} > L''.t \lor C \neq L''.C))$
+                    \State $\text{Labels}_B(w) \leftarrow \text{Labels}_B(w) \cup \{L'\}$
+                    \State compute $\text{score}(L')$
+                    \State $Q \leftarrow Q \cup \{L'\}$
+                \EndIf
+            \EndIf
+        \EndFor
+    \EndWhile
+
+    \vspace{0.5em}
+    \CommentLine{--- 5. CLEANUP ---}
+    \ForAll{$v \in V$}
+        \ForAll{$L \in \text{Labels}_B(v)$}
+            \If{$|L.C| < \text{MinCountries}$}
+                \State remove $L$ from $\text{Labels}_B(v)$
+            \EndIf
+        \EndFor
+    \EndFor
+
+    \State \Return $\text{Labels}_B$
+
+\end{algorithmic}
+
+% Bottom Rule
+\hrule height 0.8pt
+
+\vspace{1.5em}
+Algorithm 11 is essentially the same as Algorithm 10, but it runs backwards in time. The main difference is that we had to change the maths of the graph (check for incoming edges instead of outgoing, modify pareto dominance rules, etc.). Other than that, the logic is the same.
+\end{document}

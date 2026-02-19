@@ -59,8 +59,8 @@
     \hrule height 0.8pt
     \vspace{0.3em}
     % Caption
-    \captionof{algorithm}{Greedy-stochastic rollout probe}
-    \label{alg:greedy_stochastic_rollout_probe}
+    \captionof{algorithm}{Smart-Greedy Rollout Probe with Tabu List}
+    \label{alg:smart_greedy_rollout_probe}
     \vspace{0.2em}
     % Middle Rule
     \hrule height 0.5pt
@@ -86,51 +86,75 @@
 
     % INITIALIZATION
     \State $L \leftarrow L_{\text{start}}$
+    \State $\text{RolloutVisitedNodes} \leftarrow \{L.\text{node}\}$ \Comment{Tabu list to prevent all local loops}
 
     \vspace{0.5em}
     \CommentLine{Repeat until no more valid moves within 24 hours}
     \Repeat
-        \State $ValidSteps \leftarrow \emptyset$
+        \State $BestNodeArrivals \leftarrow$ Empty Map \Comment{Maps a node 'u' to the earliest arrival time 'tnew' and departure 'dep'}
 
         \vspace{0.5em}
-        \CommentLine{Collect valid scheduled edges}
+        \CommentLine{1. Collect ONLY the earliest arrival for each neighboring node}
         \ForAll{$(L.\text{node}, u, \text{dep}, \text{arr}) \in E_s$}
             \If{$\text{dep} \ge L.t \And \text{arr} - L.\text{start\_time} \le 1440$}
-                \State $ValidSteps \leftarrow ValidSteps \cup \{(u, \text{arr}, \text{country}(u))\}$
+                \If{$u \notin BestNodeArrivals \Or \text{arr} < BestNodeArrivals[u].\text{arr}$}
+                    \State $BestNodeArrivals[u] \leftarrow (\text{dep}, \text{arr}, \text{country}(u))$
+                \EndIf
             \EndIf
         \EndFor
 
-        \vspace{0.5em}
-        \CommentLine{Collect valid transfer edges}
         \ForAll{$(L.\text{node}, w, \Delta) \in E_t$}
             \State $t_{\text{new}} \leftarrow L.t + \Delta$
             \If{$t_{\text{new}} - L.\text{start\_time} \le 1440$}
-                \State $ValidSteps \leftarrow ValidSteps \cup \{(w, t_{\text{new}}, \text{country}(w))\}$
+                \If{$w \notin BestNodeArrivals \Or t_{\text{new}} < BestNodeArrivals[w].\text{arr}$}
+                    \State \Comment{For transfers, dep and arr are both tnew}
+                    \State $BestNodeArrivals[w] \leftarrow (t_{\text{new}}, t_{\text{new}}, \text{country}(w))$
+                \EndIf
             \EndIf
         \EndFor
 
         \vspace{0.5em}
-        \If{$ValidSteps = \emptyset$}
-            \State \textbf{break} \Comment{No more moves possible within 24 hours}
+        \If{$BestNodeArrivals$ is empty}
+            \State \textbf{break} \Comment{No valid forward moves left}
         \EndIf
 
         \vspace{0.5em}
-        \CommentLine{Assign greedy-stochastic weights to each valid step}
-        \ForAll{step $s = (u, t_{\text{new}}, c_{\text{new}}) \in ValidSteps$}
-            \State $\Delta t \leftarrow \max(1, t_{\text{new}} - L.t)$ \Comment{Total wait + travel time}
+        \CommentLine{2. Assign heavily biased weights to the deduplicated list}
+        \State $ValidSteps \leftarrow \emptyset$
+        \State $\text{curr\_country} \leftarrow \text{country}(L.\text{node})$
+
+        \ForAll{$u \in BestNodeArrivals$}
+            \State $(\text{dep}, \text{arr}, c_{\text{new}}) \leftarrow BestNodeArrivals[u]$
+            \State $\Delta t \leftarrow \max(1, \text{arr} - L.t)$ \Comment{Total time consumed by this step}
+
             \If{$c_{\text{new}} \notin L.C$}
-                \State $s.\text{weight} \leftarrow 10000 / \Delta t$ \Comment{Huge bias for unvisited countries}
+                \State \Comment{UNVISITED COUNTRY: Absolute highest priority.}
+                \State $\text{base\_weight} \leftarrow 100,000$
+            \ElsIf{$c_{\text{new}} \neq \text{curr\_country}$}
+                \State \Comment{TRANSIT VIA OTHER COUNTRY: Crucial for escaping geographical traps.}
+                \State $\text{base\_weight} \leftarrow 1,000$
             \Else
-                \State $s.\text{weight} \leftarrow 10 / \Delta t$ \Comment{Low bias for transit/re-entry}
+                \State \Comment{DOMESTIC TRANSIT: Just used to get to hubs.}
+                \State $\text{base\_weight} \leftarrow 1$
             \EndIf
+            \State $\text{weight} \leftarrow \text{base\_weight} / \Delta t$ \Comment{Linear time penalty}
+            \State \Comment{THE TABU PENALTY: Prevent wandering in local loops}
+            \If{$u \in \text{RolloutVisitedNodes}$}
+                \State $\text{weight} \leftarrow \text{weight} \times 0.0001$
+            \EndIf
+
+            \State $ValidSteps \leftarrow ValidSteps \cup \{(u, \text{arr}, c_{\text{new}}, \text{weight})\}$
         \EndFor
 
         \vspace{0.5em}
-        \CommentLine{Pick one step randomly with probability proportional to its weight}
+        \CommentLine{3. Roll the weighted dice}
         \State $s_{\text{chosen}} \leftarrow \text{WeightedRandomChoice}(ValidSteps)$
 
+        \vspace{0.5em}
+        \CommentLine{4. Update State}
         \State $C' \leftarrow L.C \cup \{s_{\text{chosen}}.c_{\text{new}}\}$
-        \State $L \leftarrow (s_{\text{chosen}}.u, s_{\text{chosen}}.t_{\text{new}}, C', \text{pred}=L, \text{start\_time}=L.\text{start\_time})$
+        \State $\text{RolloutVisitedNodes} \leftarrow \text{RolloutVisitedNodes} \cup \{s_{\text{chosen}}.u\}$
+        \State $L \leftarrow (s_{\text{chosen}}.u, s_{\text{chosen}}.\text{arr}, C', \text{pred}=L, \text{start\_time}=L.\text{start\_time})$
 
     \Until{$\text{false}$}
 
@@ -145,5 +169,15 @@
 From previous algorithms execution, we observed a quick raise to 11-12 countries, but then the algorithm would quickly get stuck. This is most likely because too solutions are very similar, can't get discarded because of the soft relaxed conditions and UB pruning, and we keep expanding many labels that don't result useful but don't have a way to discard. 
 
 This concept wants to help us deal with it the following way: every 1000 iterations, we will pause the queue, pick the current label and run a "randomized" greedy rollout to see if we can find a better solution. Since it does 0 heavy math, it reaches the 24-hour mark in a matter of milliseconds, and if we get lucky and find a better solution, we can update the global record and prune the queue massively. Likely this won't be enough to consider the algorithm as finalized, because it is unlikely that making greedy jumps we find a better solution. However, it will certainly not decrease current performance as these rollouts take almost 0 time, and in the best case we can save a huge amount of time. 
+
+To avoid making a random rollout, which would yield in most cases no improvement in countries or a very low one (it could easily jump to many stations within the same country, specially if it’s in one with many stations), we apply some rules to try and get a smarter approach. These are:
+\begin{itemize}
+    \item Instead of looking at all departing edges from that node, look at the faster edge to every neighboring
+node. This kills volume.
+    \item We give a heavy weight to transports that lead us to visit a new, unvisited country, so the rollout
+    prioritizes these new routes
+    \item We forbid the rollout to take an edge back to any of the nodes it has visited in the current rollout.
+\end{itemize}
+
 \end{document}
 
