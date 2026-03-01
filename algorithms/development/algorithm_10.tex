@@ -98,7 +98,7 @@
     \CommentLine{Initialize labels at departures}
     \ForAll{$v \in V$}
         \ForAll{scheduled edges $(v,u,\text{dep},\text{arr}) \in E_s$}
-            \State $L \leftarrow (\text{node}=u, t=\text{arr}, C=\{\text{country}(u)\}, \text{pred}=\text{null}, \text{start\_time}=\text{dep})$
+            \State $L \leftarrow (\text{node}=u, t=\text{arr}, C=\{\text{country}(u)\}, \text{pred}=\text{null}, \text{start\_time}=\text{arr})$
             \State $\text{Labels}_F(u) \leftarrow \text{Labels}_F(u) \cup \{L\}$
             \State compute $\text{score}(L) \leftarrow (|L.C| \times 10000) - L.t$
             \State $Q \leftarrow Q \cup \{L\}$

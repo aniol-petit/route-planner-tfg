@@ -2,6 +2,7 @@ import argparse
 import pickle
 import heapq
 import time
+import os
 from common import prepare_bidirectional_data, compute_backward_reachability, compute_mtt, BackwardLabel, ProgressTracker
 
 def backward_half_search(V, Es_in, Et_in, country_map, R_back_func, MTT, MaxDur=840, MinC=5, GlobalMin=25):
@@ -18,7 +19,7 @@ def backward_half_search(V, Es_in, Et_in, country_map, R_back_func, MTT, MaxDur=
             heapq.heappush(Q, L)
 
     tracker = ProgressTracker("BWD", 10000)
-    max_c_seen = 0 # NEW: Track best countries seen
+    max_c_seen = 0 
     
     while Q:
         L = heapq.heappop(Q)
@@ -26,6 +27,13 @@ def backward_half_search(V, Es_in, Et_in, country_map, R_back_func, MTT, MaxDur=
         
         max_c_seen = max(max_c_seen, len(C))
         tracker.update(len(Q), sum(len(lst) for lst in Labels_B.values()), max_c_seen)
+
+        # --- LIVE CHECKPOINTING ---
+        if tracker.processed_count % 50000 == 0:
+            with open("temp_bwd.pkl", "wb") as f:
+                pickle.dump(Labels_B, f)
+            os.replace("temp_bwd.pkl", "live_labels_backward.pkl")
+        # --------------------------
 
         elapsed = end_time - t
         rem_half = MaxDur - elapsed
@@ -68,7 +76,7 @@ def backward_half_search(V, Es_in, Et_in, country_map, R_back_func, MTT, MaxDur=
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("--graph", type=str, default="../graph/transportation_graph.gpickle")
+    parser.add_argument("--graph", type=str, default="../../graph/transportation_graph.gpickle")
     parser.add_argument("--max-dur", type=int, default=840)
     parser.add_argument("--min-countries", type=int, default=6)
     args = parser.parse_args()
@@ -78,13 +86,14 @@ if __name__ == "__main__":
     V, _, _, Es_in, Et_in, cmap = prepare_bidirectional_data(G)
     
     R_back = compute_backward_reachability(V, Es_in, Et_in, cmap)
-    MTT = compute_mtt(V, Es_in, Et_in, cmap) # Approximation fine here
+    MTT = compute_mtt(V, Es_in, Et_in, cmap)
     def R_back_func(v, b): return R_back.get(v, {}).get(b, {cmap.get(v, "Unknown")} - {"Unknown", None})
 
     t0 = time.time()
     Labels_B = backward_half_search(V, Es_in, Et_in, cmap, R_back_func, MTT, args.max_dur, args.min_countries)
     
-    # Save output
-    with open("labels_backward.pkl", "wb") as f:
-        pickle.dump(Labels_B, f)
+    # Final save and "Done" flag
+    with open("temp_bwd.pkl", "wb") as f: pickle.dump(Labels_B, f)
+    os.replace("temp_bwd.pkl", "live_labels_backward.pkl")
+    with open("bwd_done.flag", "w") as f: f.write("done")
     print(f"[BWD] Complete. File saved in {time.time() - t0:.2f}s.")
