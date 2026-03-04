@@ -2,3 +2,4 @@
 .env
 flight_data/
 *.synctex.gz
+live_checkpoint.json
