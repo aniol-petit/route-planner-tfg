@@ -401,6 +401,142 @@ def render_edge_section(edges_df: pd.DataFrame, top_n: int) -> None:
     st.dataframe(top_df, use_container_width=True, hide_index=True)
 
 
+def _build_long_tail_dataframe(stations_df: pd.DataFrame) -> pd.DataFrame:
+    """
+    Build a rank-annotated dataframe of all stations that appear in the
+    checkpoint, sorted by frequency descending.
+    """
+    if stations_df.empty:
+        return stations_df.copy()
+
+    df = stations_df.copy()
+    df = df.sort_values("Count", ascending=False).reset_index(drop=True)
+    df["Rank"] = df.index + 1
+    # Keep useful columns in a predictable order
+    cols = ["Rank", "Station", "Count"]
+    for extra in ["Cumulative Count", "Cumulative %"]:
+        if extra in df.columns:
+            cols.append(extra)
+    df = df[cols]
+    return df
+
+
+def render_long_tail_section(stations_df: pd.DataFrame) -> None:
+    st.markdown("### Long-Tail & Cutoff Analysis")
+
+    if stations_df.empty:
+        st.info("No station data available for long-tail analysis.")
+        return
+
+    long_tail_df = _build_long_tail_dataframe(stations_df)
+
+    if long_tail_df.empty:
+        st.info("No station data available for long-tail analysis.")
+        return
+
+    max_count = int(long_tail_df["Count"].max())
+    if max_count <= 0:
+        st.info("All stations have zero recorded appearances; long-tail analysis is not meaningful.")
+        return
+
+    st.markdown(
+        "This section explores the **poor-performing stations** and helps you pick a "
+        "cutoff based on a minimum required number of appearances."
+    )
+
+    baseline = TOTAL_BASELINE_STATIONS
+
+    col_thresh, col_metrics = st.columns([1, 2])
+    with col_thresh:
+        threshold = st.slider(
+            "Minimum required appearances (X)",
+            min_value=1,
+            max_value=max_count,
+            value=min(2, max_count),
+            step=1,
+            help="Stations with fewer than X recorded appearances are considered poor performers.",
+        )
+
+    # Compute cutoff rank (first rank where frequency drops below X)
+    below_mask = long_tail_df["Count"] < threshold
+    if below_mask.any():
+        first_below_rank = int(long_tail_df.loc[below_mask, "Rank"].min())
+        cutoff_rank_text = (
+            f"Stations with fewer than **{threshold}** appearances start at **Rank {first_below_rank}**."
+        )
+    else:
+        first_below_rank = None
+        cutoff_rank_text = (
+            f"No stations fall below **{threshold}** appearances in the observed elite routes "
+            f"(all {len(long_tail_df)} observed stations meet or exceed this threshold)."
+        )
+
+    # How many stations remain if we keep only those with >= X appearances?
+    kept_df = long_tail_df[long_tail_df["Count"] >= threshold]
+    kept_stations = int(len(kept_df))
+
+    if baseline > 0:
+        eliminated_pct = max(0.0, (1.0 - kept_stations / baseline) * 100.0)
+    else:
+        eliminated_pct = 0.0
+
+    with col_metrics:
+        st.markdown(
+            cutoff_rank_text
+            + "<br/>"
+            + (
+                f"Keeping only stations with **≥ {threshold}** appearances leaves a graph of "
+                f"**{kept_stations} stations**, eliminating approximately "
+                f"**{eliminated_pct:0.1f}%** of the original {baseline}-node graph."
+            ),
+            unsafe_allow_html=True,
+        )
+
+    # Long-tail chart: Rank vs Frequency
+    st.markdown("#### Long-Tail Frequency Curve")
+
+    fig_lt = px.line(
+        long_tail_df,
+        x="Rank",
+        y="Count",
+        title="Station Frequency vs. Rank (Long Tail)",
+    )
+    fig_lt.update_traces(line=dict(color="#00d4ff"))
+
+    # Horizontal reference line at the chosen cutoff X
+    fig_lt.add_hline(
+        y=threshold,
+        line_dash="dash",
+        line_color="#ff4b4b",
+        annotation_text=f"Threshold = {threshold}",
+        annotation_position="top left",
+    )
+
+    fig_lt.update_layout(
+        template="plotly_dark",
+        plot_bgcolor="rgba(0,0,0,0)",
+        paper_bgcolor="rgba(0,0,0,0)",
+        margin=dict(l=20, r=20, t=60, b=40),
+        xaxis_title="Rank (1 = most frequent)",
+        yaxis_title="Frequency (appearances)",
+    )
+
+    st.plotly_chart(fig_lt, use_container_width=True)
+
+    # Full station table for manual inspection
+    st.markdown("#### Full Station Frequency Table")
+    st.markdown(
+        "Search and scroll to inspect stations all the way down to the poorest performers."
+    )
+
+    display_df = long_tail_df.rename(columns={"Count": "Frequency"})
+    st.dataframe(
+        display_df[["Rank", "Station", "Frequency"]],
+        use_container_width=True,
+        hide_index=True,
+    )
+
+
 def _required_items_for_coverage(df: pd.DataFrame, coverage: float) -> int:
     """
     Helper to compute how many rows (stations/edges) are needed
@@ -484,7 +620,7 @@ def main() -> None:
     inject_custom_css()
 
     base_dir = Path(__file__).parent
-    checkpoint_path = base_dir / "scripts" / "aon_graph_exploration" / "results" / "live_checkpoint.json"
+    checkpoint_path = base_dir / "results" / "live_checkpoint.json"
 
     try:
         routes = load_routes_from_checkpoint(checkpoint_path)
@@ -519,6 +655,9 @@ def main() -> None:
         render_station_section(stations_df, top_n_stations)
     with col_right:
         render_edge_section(edges_df, top_n_edges)
+
+    # Long-tail analysis below the main Pareto view
+    render_long_tail_section(stations_df)
 
 
 if __name__ == "__main__":

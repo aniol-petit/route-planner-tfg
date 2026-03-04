@@ -2,4 +2,4 @@
 .env
 flight_data/
 *.synctex.gz
-live_checkpoint.json
+scripts/aon_graph_exploration/results/live_checkpoint.json

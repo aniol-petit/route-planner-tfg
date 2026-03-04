@@ -140,8 +140,8 @@ def main():
     # Set up paths
     script_dir = Path(__file__).parent
     graph_dir = script_dir.parent / 'graph'
-    input_graph_path = graph_dir / 'transportation_graph.gpickle'
-    output_graph_path = graph_dir / 'aon_pruned_graph.gpickle'
+    input_graph_path = graph_dir / 'transportation_graph_freq100.gpickle'
+    output_graph_path = graph_dir / 'aon_pruned_graph_freq100.gpickle'
     
     # Check if input graph exists
     if not input_graph_path.exists():
