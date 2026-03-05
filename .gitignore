@@ -1,5 +1,7 @@
 # Environment variables
 .env
-flight_data/
+data/
+graph/
 *.synctex.gz
-scripts/aon_graph_exploration/results/live_checkpoint.json
+scripts/aon_graph_exploration/results/*
+scripts/aon_graph_exploration/logs/*
