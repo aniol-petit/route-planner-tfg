@@ -16,6 +16,12 @@ import scoring_engine
 
 TOTAL_BASELINE_STATIONS = 899
 
+# Default pagination sizes
+ROUTE_EXPLORER_INITIAL = 20
+ROUTE_EXPLORER_STEP = 20
+ROUTE_RANKING_INITIAL = 10
+ROUTE_RANKING_STEP = 10
+
 
 # ----------------------------
 # Shared helpers
@@ -984,14 +990,18 @@ def render_route_ranking(raw_data: Dict) -> None:
     )
 
     st.markdown("### Route Details")
-    max_details = st.slider(
-        "Number of top routes to show with full details",
-        min_value=1,
-        max_value=min(50, len(pretty_df)),
-        value=min(10, len(pretty_df)),
-    )
 
-    detailed_df = filtered_df.head(max_details)
+    # Start by showing the top 10 routes, allow loading more via a button.
+    details_key = "route_ranking_details_count"
+    if details_key not in st.session_state:
+        st.session_state[details_key] = ROUTE_RANKING_INITIAL
+    current_count = st.session_state[details_key]
+    current_count = max(1, min(current_count, len(filtered_df)))
+    st.session_state[details_key] = current_count
+
+    st.write(f"Showing detailed view for top {current_count} of {len(filtered_df)} ranked routes.")
+
+    detailed_df = filtered_df.head(current_count)
 
     for _, row in detailed_df.iterrows():
         route_idx = int(row["route_idx"])
@@ -1015,6 +1025,14 @@ def render_route_ranking(raw_data: Dict) -> None:
                 st.markdown("**Countries visited:** " + ", ".join(countries))
             if bottleneck_info:
                 st.markdown(f"**Bottleneck:** {bottleneck_info}")
+
+    # "Load more" button to reveal additional ranked routes, until exhausted.
+    if current_count < len(filtered_df):
+        if st.button("Load more ranked routes", key="route_ranking_load_more"):
+            st.session_state[details_key] = min(
+                current_count + ROUTE_RANKING_STEP,
+                len(filtered_df),
+            )
 
 
 def render_route_explorer(raw_data: Dict) -> None:
@@ -1119,14 +1137,26 @@ def render_route_explorer(raw_data: Dict) -> None:
         st.info("No routes match the selected filters.")
         return
 
-    max_display = st.slider(
-        "Number of routes to display",
-        min_value=1,
-        max_value=min(200, len(filtered)),
-        value=min(20, len(filtered)),
-    )
+    # Paginate explorer results: start at 20 and allow loading more
+    explorer_filters_key = "route_explorer_filters"
+    explorer_count_key = "route_explorer_display_count"
 
-    st.write(f"Showing {min(max_display, len(filtered))} of {len(filtered)} matching routes.")
+    current_filters = {
+        "country_filter": country_filter,
+        "start_filter": start_filter,
+    }
+    previous_filters = st.session_state.get(explorer_filters_key)
+
+    # Reset pagination when filters change
+    if previous_filters != current_filters:
+        st.session_state[explorer_filters_key] = current_filters
+        st.session_state[explorer_count_key] = ROUTE_EXPLORER_INITIAL
+
+    max_display = st.session_state.get(explorer_count_key, ROUTE_EXPLORER_INITIAL)
+    max_display = max(1, min(max_display, len(filtered)))
+    st.session_state[explorer_count_key] = max_display
+
+    st.write(f"Showing {max_display} of {len(filtered)} matching routes.")
 
     for idx, route_info in enumerate(filtered[:max_display], start=1):
         with st.expander(
@@ -1137,6 +1167,14 @@ def render_route_explorer(raw_data: Dict) -> None:
             render_beautiful_route(seg_df)
 
             st.markdown("**Countries visited:** " + ", ".join(route_info["countries"]))
+
+    # "Load more" button to show additional routes until all are visible.
+    if max_display < len(filtered):
+        if st.button("Load more routes", key="route_explorer_load_more"):
+            st.session_state[explorer_count_key] = min(
+                max_display + ROUTE_EXPLORER_STEP,
+                len(filtered),
+            )
 
 
 # ----------------------------
