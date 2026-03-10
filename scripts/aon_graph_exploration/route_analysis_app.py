@@ -14,6 +14,8 @@ import plotly.graph_objects as go
 import scoring_engine
 
 
+PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent
+
 TOTAL_BASELINE_STATIONS = 899
 
 # Default pagination sizes
@@ -60,7 +62,7 @@ def load_schedule_lookup() -> dict:
     
     # 1. Parse Flights
     try:
-        flights = pd.read_csv('../../data/final_data/flights_df.csv')
+        flights = pd.read_csv(PROJECT_ROOT / "data" / "final_data" / "flights_df.csv")
         for _, row in flights.iterrows():
             orig = str(row['departure_airport']).strip()
             dest = str(row['arrival_airport']).strip()
@@ -73,12 +75,7 @@ def load_schedule_lookup() -> dict:
             dep_hhmm = dep_m.group(1) if dep_m else dep_raw[:5]
             arr_hhmm = arr_m.group(1) if arr_m else arr_raw[:5]
             
-            # Modulo 1440 handles the Day 1 / Day 2 offset
-            if pd.notna(row.get('departure_scheduled_absolute')) and pd.notna(row.get('arrival_scheduled_absolute')):
-                d_abs = int(float(row['departure_scheduled_absolute'])) % 1440
-                a_abs = int(float(row['arrival_scheduled_absolute'])) % 1440
-                lookup[(orig, dest, d_abs, a_abs)] = (dep_hhmm, arr_hhmm)
-                
+            # STRICTLY use UTC absolute minutes to avoid dictionary collisions
             if pd.notna(row.get('departure_scheduled_absolute_utc')) and pd.notna(row.get('arrival_scheduled_absolute_utc')):
                 d_utc = int(float(row['departure_scheduled_absolute_utc'])) % 1440
                 a_utc = int(float(row['arrival_scheduled_absolute_utc'])) % 1440
@@ -88,15 +85,13 @@ def load_schedule_lookup() -> dict:
 
     # 2. Parse Trains
     try:
-        routes = pd.read_csv('../../data/final_data/routes_df.csv')
+        routes = pd.read_csv(PROJECT_ROOT / "data" / "final_data" / "routes_df.csv")
         for _, row in routes.iterrows():
             if pd.isna(row.get('legs_filtered')): continue
             try:
                 legs_str = json.loads(row['legs_filtered']) if isinstance(row['legs_filtered'], str) else ast.literal_eval(row['legs_filtered'])
                 
-                legs_abs, legs_utc = None, None
-                if pd.notna(row.get('legs_filtered_absolute')):
-                    legs_abs = json.loads(row['legs_filtered_absolute']) if isinstance(row['legs_filtered_absolute'], str) else ast.literal_eval(row['legs_filtered_absolute'])
+                legs_utc = None
                 if pd.notna(row.get('legs_filtered_absolute_utc')):
                     legs_utc = json.loads(row['legs_filtered_absolute_utc']) if isinstance(row['legs_filtered_absolute_utc'], str) else ast.literal_eval(row['legs_filtered_absolute_utc'])
                     
@@ -106,11 +101,6 @@ def load_schedule_lookup() -> dict:
                     dep_hhmm = legs_str[i][1][1]
                     arr_hhmm = legs_str[i+1][1][0]
                     
-                    if legs_abs and i+1 < len(legs_abs):
-                        d_abs = int(float(legs_abs[i][1][1])) % 1440
-                        a_abs = int(float(legs_abs[i+1][1][0])) % 1440
-                        lookup[(orig, dest, d_abs, a_abs)] = (dep_hhmm, arr_hhmm)
-                        
                     if legs_utc and i+1 < len(legs_utc):
                         d_utc = int(float(legs_utc[i][1][1])) % 1440
                         a_utc = int(float(legs_utc[i+1][1][0])) % 1440

@@ -1,9 +1,12 @@
+from pathlib import Path
 import networkx as nx
 import pickle
 import sys
 
 # Increase recursion depth for deep 24-hour paths
 sys.setrecursionlimit(5000)
+
+PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent
 
 def estimate_search_space(aon_path):
     print("Loading AoN graph...")
@@ -56,5 +59,5 @@ def estimate_search_space(aon_path):
     print("="*80)
 
 if __name__ == "__main__":
-    AON = "../../graph/aon_pruned_graph.gpickle"
+    AON = PROJECT_ROOT / "graph" / "aon_pruned_graph.gpickle"
     estimate_search_space(AON)

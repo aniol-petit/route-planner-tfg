@@ -6,8 +6,11 @@ Analyze the live_checkpoint.json file to break down routes by number of countrie
 import json
 import re
 from collections import defaultdict
+from pathlib import Path
 from typing import Dict, List, Set, Any
 
+
+PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent
 
 def extract_country(location: str) -> str:
     """Extract country name from location string.
@@ -60,10 +63,10 @@ def format_route(route: List[Dict[str, Any]], route_num: int) -> str:
 
 def main():
     """Main analysis function."""
-    checkpoint_file = "./results/live_checkpoint.json"
+    checkpoint_file = Path(__file__).resolve().parent / "results" / "live_checkpoint.json"
     
     print(f"Loading checkpoint file: {checkpoint_file}")
-    with open(checkpoint_file, 'r', encoding='utf-8') as f:
+    with checkpoint_file.open('r', encoding='utf-8') as f:
         data = json.load(f)
     
     print(f"\n=== Checkpoint Summary ===")

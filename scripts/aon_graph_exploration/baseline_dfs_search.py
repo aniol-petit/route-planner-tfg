@@ -36,8 +36,8 @@ def init_worker(graph_dict, country_map, mtt):
 # CONFIGURATION
 # ============================================================================
 
-SCRIPT_DIR = Path(__file__).parent
-PROJECT_ROOT = SCRIPT_DIR.parent.parent
+PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent
+SCRIPT_DIR = Path(__file__).resolve().parent
 GRAPH_DIR = PROJECT_ROOT / "graph"
 AON_GRAPH_PATH = GRAPH_DIR / "aon_pruned_graph.gpickle"
 TRANSPORT_GRAPH_PATH = GRAPH_DIR / "transportation_graph.gpickle"

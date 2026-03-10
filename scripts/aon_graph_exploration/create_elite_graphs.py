@@ -7,6 +7,9 @@ from typing import Dict, Iterable, List, Tuple
 import networkx as nx
 
 
+PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent
+
+
 def extract_station_code(station_label: str) -> str:
     """
     Extract the 3-letter station code from strings like:
@@ -95,8 +98,8 @@ def summarize_graph(name: str, graph: nx.Graph) -> Tuple[int, int]:
 
 def main() -> None:
     base_dir = Path(__file__).resolve().parent
-    project_root = base_dir.parent.parent
-
+    project_root = PROJECT_ROOT
+    
     checkpoint_path = base_dir / "results" / "live_checkpoint.json"
     graph_dir = project_root / "graph"
     original_graph_path = graph_dir / "transportation_graph.gpickle"
