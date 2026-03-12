@@ -5,3 +5,4 @@ graph/
 *.synctex.gz
 scripts/aon_graph_exploration/results/*
 scripts/aon_graph_exploration/logs/*
+scripts/aon_graph_exploration/results_distributed/*
