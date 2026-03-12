@@ -16,9 +16,13 @@ echo "Starting Sparse Matrix DP Solver"
 echo "Job ID: $SLURM_JOB_ID"
 echo "====================================================="
 
-SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+# IMPORTANT:
+# Some clusters run jobs from a SLURM spool directory and only stage the submit script there.
+# Always jump back to the directory where `sbatch` was invoked so repo-relative paths work.
+cd "${SLURM_SUBMIT_DIR:-$PWD}"
+echo "Running from: $(pwd)"
 
 # Run the matrix solver
-python "${SCRIPT_DIR}/matrix_dp_solver.py"
+python "matrix_dp_solver.py"
 
 echo "Matrix Solver completed successfully."

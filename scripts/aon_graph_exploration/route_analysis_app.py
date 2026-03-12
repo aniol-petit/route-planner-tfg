@@ -6,6 +6,7 @@ from pathlib import Path
 from typing import Dict, Iterable, List, Optional, Tuple
 
 import pandas as pd
+import duckdb
 import plotly.express as px
 import streamlit as st
 from plotly.subplots import make_subplots
@@ -15,6 +16,7 @@ import scoring_engine
 
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent
+PARQUET_PATH = str(PROJECT_ROOT / "scripts" / "aon_graph_exploration" / "results" / "master_elite_routes.parquet")
 
 TOTAL_BASELINE_STATIONS = 899
 
@@ -111,6 +113,56 @@ def load_schedule_lookup() -> dict:
         print(f"Error parsing trains: {e}")
 
     return lookup
+
+
+@st.cache_data
+def prepare_parquet_page(where_clause: str, limit: int, offset: int) -> pd.DataFrame:
+    query = f"SELECT * FROM '{PARQUET_PATH}' WHERE {where_clause} LIMIT {limit} OFFSET {offset}"
+    return duckdb.query(query).df()
+
+
+@st.cache_data
+def load_parquet_filtered(where_clause: str) -> pd.DataFrame:
+    """
+    Load the full set of routes matching the current filters from the Parquet file.
+
+    This is used to feed the UI-level pagination and downstream analyses, so the
+    app always knows the true filtered population instead of just a small page.
+    """
+    query = f"SELECT * FROM '{PARQUET_PATH}' WHERE {where_clause}"
+    return duckdb.query(query).df()
+
+
+@st.cache_data
+def parquet_route_metrics(where_clause: str) -> Tuple[int, int]:
+    total_routes = duckdb.query(
+        f"SELECT COUNT(*) FROM '{PARQUET_PATH}' WHERE {where_clause}"
+    ).fetchone()[0]
+    max_countries = duckdb.query(
+        f"SELECT MAX(total_countries) FROM '{PARQUET_PATH}' WHERE {where_clause}"
+    ).fetchone()[0]
+    return int(total_routes or 0), int(max_countries or 0)
+
+
+@st.cache_data
+def get_parquet_metadata(parquet_path: str) -> Dict:
+    """
+    Return global stats and the full list of unique starting origins from the Parquet file.
+    """
+    global_stats = duckdb.query(
+        f"SELECT COUNT(*), MAX(total_countries) FROM '{parquet_path}'"
+    ).fetchone()
+
+    origins_df = duckdb.query(
+        f"SELECT DISTINCT start_node FROM '{parquet_path}' ORDER BY start_node"
+    ).df()
+    unique_origins = origins_df["start_node"].tolist()
+
+    return {
+        "global_total_routes": global_stats[0] if global_stats else 0,
+        "global_max_countries": global_stats[1] if global_stats else 0,
+        "unique_origins": unique_origins,
+    }
 
 def build_route_dataframe(route_segments: list, lookup: dict) -> pd.DataFrame:
     rows = []
@@ -830,6 +882,112 @@ def render_pruning_section(stations_df: pd.DataFrame, total_unique_stations: int
     )
 
 
+def render_elite_analysis(
+    data_source: str,
+    loaded_routes_data: Optional[Dict],
+    where_clause: Optional[str],
+    total_matching_routes: Optional[int],
+) -> None:
+    if data_source == "Live Checkpoints (JSON)":
+        if not loaded_routes_data:
+            st.info("No routes found in the selected checkpoint.")
+            return
+
+        routes = extract_routes_from_data(loaded_routes_data)
+        if not routes:
+            st.info("No routes found in the selected checkpoint.")
+            return
+
+        station_counter, edge_counter = compute_frequencies(routes)
+        stations_df = build_station_dataframe(station_counter)
+        edges_df = build_edge_dataframe(edge_counter)
+
+        total_unique_stations = len(station_counter)
+        total_unique_edges = len(edge_counter)
+
+        render_header(total_unique_stations, total_unique_edges)
+        render_pruning_section(stations_df, total_unique_stations)
+
+        default_top_stations = min(50, len(stations_df) if not stations_df.empty else 50)
+        default_top_edges = min(100, len(edges_df) if not edges_df.empty else 100)
+
+        top_n_stations, top_n_edges = render_filters(
+            default_top_stations=default_top_stations or 50,
+            default_top_edges=default_top_edges or 100,
+        )
+
+        col_left, col_right = st.columns([2, 1])
+        with col_left:
+            render_station_section(stations_df, top_n_stations)
+        with col_right:
+            render_edge_section(edges_df, top_n_edges)
+
+        render_long_tail_section(stations_df)
+        return
+
+    # Parquet-backed safe sampling for elite analysis
+    if not where_clause:
+        st.warning("No filters are defined for the Parquet-backed elite analysis.")
+        return
+
+    st.info(
+        "Note: Frequency analysis is based on a sample of the top 10,000 "
+        "filtered routes for performance."
+    )
+
+    sample_df = duckdb.query(
+        f"SELECT * FROM '{PARQUET_PATH}' WHERE {where_clause} LIMIT 10000"
+    ).df()
+
+    if sample_df.empty:
+        st.info("No routes available in the sampled subset for elite analysis.")
+        return
+
+    sampled_routes: List[List[Dict]] = []
+    for _, row in sample_df.iterrows():
+        route_raw = row.get("route_sequence_json")
+        if isinstance(route_raw, str):
+            try:
+                route = json.loads(route_raw)
+            except json.JSONDecodeError:
+                continue
+        else:
+            route = route_raw
+
+        if isinstance(route, list) and route:
+            sampled_routes.append(route)
+
+    if not sampled_routes:
+        st.info("No valid routes could be parsed from the sampled subset.")
+        return
+
+    station_counter, edge_counter = compute_frequencies(sampled_routes)
+    stations_df = build_station_dataframe(station_counter)
+    edges_df = build_edge_dataframe(edge_counter)
+
+    total_unique_stations = len(station_counter)
+    total_unique_edges = len(edge_counter)
+
+    render_header(total_unique_stations, total_unique_edges)
+    render_pruning_section(stations_df, total_unique_stations)
+
+    default_top_stations = min(50, len(stations_df) if not stations_df.empty else 50)
+    default_top_edges = min(100, len(edges_df) if not edges_df.empty else 100)
+
+    top_n_stations, top_n_edges = render_filters(
+        default_top_stations=default_top_stations or 50,
+        default_top_edges=default_top_edges or 100,
+    )
+
+    col_left, col_right = st.columns([2, 1])
+    with col_left:
+        render_station_section(stations_df, top_n_stations)
+    with col_right:
+        render_edge_section(edges_df, top_n_edges)
+
+    render_long_tail_section(stations_df)
+
+
 # ----------------------------
 # Route Explorer (HTML visualizer ported to Streamlit)
 # ----------------------------
@@ -890,7 +1048,12 @@ def _build_route_path(route: Iterable[Dict]) -> str:
     return " -> ".join(deduped)
 
 
-def render_route_ranking(raw_data: Dict) -> None:
+def render_route_ranking(
+    data_source: str,
+    loaded_routes_data: Optional[Dict],
+    where_clause: Optional[str],
+    total_matching_routes: Optional[int],
+) -> None:
     st.markdown(
         "<div class='elite-title'>📊 Route Ranking & Scoring</div>"
         "<div class='elite-subtitle'>Rank routes by robustness of transfers using the Route Quality Index (RQI)</div>",
@@ -899,36 +1062,197 @@ def render_route_ranking(raw_data: Dict) -> None:
 
     lookup = load_schedule_lookup()
 
-    routes = extract_routes_from_data(raw_data)
-    if not routes:
-        st.info("No routes found in the selected checkpoint.")
+    if data_source == "Live Checkpoints (JSON)":
+        if not loaded_routes_data:
+            st.info("No routes found in the selected checkpoint.")
+            return
+
+        routes = extract_routes_from_data(loaded_routes_data)
+        if not routes:
+            st.info("No routes found in the selected checkpoint.")
+            return
+
+        ranked_rows: List[Dict] = []
+        route_meta: List[Dict] = []
+
+        for idx, route in enumerate(routes):
+            score_result = scoring_engine.score_route(route)
+            rqi = score_result.get("RQI")
+            bottleneck = score_result.get("bottleneck") or {}
+
+            countries = _get_unique_countries_from_route(route)
+            country_count = len(countries)
+
+            route_path = _build_route_path(route)
+            bottleneck_label = bottleneck.get("label") or ""
+
+            ranked_rows.append(
+                {
+                    "route_idx": idx,
+                    "RQI Score": rqi,
+                    "Country Count": country_count,
+                    "Bottleneck Info": bottleneck_label,
+                    "Route Path": route_path,
+                }
+            )
+
+            route_meta.append(
+                {
+                    "route": route,
+                    "countries": countries,
+                    "country_count": country_count,
+                    "segments": len(route),
+                    "score_result": score_result,
+                }
+            )
+
+        df = pd.DataFrame(ranked_rows)
+
+        if df.empty or df["RQI Score"].isna().all():
+            st.info("Unable to compute RQI scores for the available routes (missing timing data).")
+            return
+
+        df = df.sort_values("RQI Score", ascending=False, na_position="last").reset_index(drop=True)
+        df.insert(0, "Rank", df.index + 1)
+
+        hide_miracles = st.checkbox(
+            "Hide Miracle Routes (RQI < 0)",
+            value=True,
+            help="When checked, routes with negative RQI (heavily penalized connections) are hidden.",
+        )
+
+        if hide_miracles:
+            filtered_df = df[(df["RQI Score"].notna()) & (df["RQI Score"] >= 0)]
+        else:
+            filtered_df = df[df["RQI Score"].notna()]
+
+        if filtered_df.empty:
+            st.info("No routes remain after applying the current filters.")
+            return
+
+        display_df = filtered_df[
+            ["Rank", "RQI Score", "Country Count", "Bottleneck Info", "Route Path", "route_idx"]
+        ].copy()
+
+        display_df["RQI Score"] = display_df["RQI Score"].astype(float)
+
+        # Keep route_idx for lookup but don't show it in the main table.
+        pretty_df = display_df.drop(columns=["route_idx"])
+
+        st.markdown("### Ranked Routes")
+        st.dataframe(
+            pretty_df.style.format({"RQI Score": "{:.1f}"}),
+            use_container_width=True,
+            hide_index=True,
+        )
+
+        st.markdown("### Route Details")
+
+        # Start by showing the top 10 routes, allow loading more via a button.
+        details_key = "route_ranking_details_count"
+        if details_key not in st.session_state:
+            st.session_state[details_key] = ROUTE_RANKING_INITIAL
+        current_count = st.session_state[details_key]
+        current_count = max(1, min(current_count, len(filtered_df)))
+        st.session_state[details_key] = current_count
+
+        st.write(f"Showing detailed view for top {current_count} of {len(filtered_df)} ranked routes.")
+
+        detailed_df = filtered_df.head(current_count)
+
+        for _, row in detailed_df.iterrows():
+            route_idx = int(row["route_idx"])
+            meta = route_meta[route_idx]
+            route = meta["route"]
+            countries = meta["countries"]
+            segments_count = meta["segments"]
+            rqi_value = row["RQI Score"]
+            bottleneck_info = row["Bottleneck Info"]
+
+            header = (
+                f"Rank {int(row['Rank'])} · RQI {rqi_value:.1f} · "
+                f"{meta['country_count']} countries · {segments_count} segments"
+            )
+
+            with st.expander(header):
+                seg_df = build_route_dataframe(route, lookup)
+                render_beautiful_route(seg_df)
+
+                if countries:
+                    st.markdown("**Countries visited:** " + ", ".join(countries))
+                if bottleneck_info:
+                    st.markdown(f"**Bottleneck:** {bottleneck_info}")
+
+        # "Load more" button to reveal additional ranked routes, until exhausted.
+        if current_count < len(filtered_df):
+            if st.button("Load more ranked routes", key="route_ranking_load_more"):
+                st.session_state[details_key] = min(
+                    current_count + ROUTE_RANKING_STEP,
+                    len(filtered_df),
+                )
+        return
+
+    # Parquet-backed RQI ranking with DuckDB-native pagination
+    if not where_clause:
+        st.warning("No filters are defined for the Parquet-backed ranking.")
+        return
+
+    total = int(total_matching_routes or 0)
+    if total == 0:
+        st.info("No routes found in the master elite database for the selected filters.")
+        return
+
+    page_size = ROUTE_RANKING_STEP
+    page_state_key = "parquet_route_ranking_page"
+    if page_state_key not in st.session_state:
+        st.session_state[page_state_key] = 0
+    current_page = st.session_state[page_state_key]
+    max_page = max(0, (total - 1) // page_size)
+    current_page = max(0, min(current_page, max_page))
+    st.session_state[page_state_key] = current_page
+
+    offset = current_page * page_size
+
+    query = (
+        f"SELECT * FROM '{PARQUET_PATH}' "
+        f"WHERE {where_clause} "
+        f"ORDER BY rqi_score DESC, total_countries DESC "
+        f"LIMIT {page_size} OFFSET {offset}"
+    )
+    page_df = duckdb.query(query).df()
+
+    if page_df.empty:
+        st.info("No routes available for the current ranking page.")
         return
 
     ranked_rows: List[Dict] = []
-    route_meta: List[Dict] = []
+    routes_for_page: List[Dict] = []
 
-    for idx, route in enumerate(routes):
-        score_result = scoring_engine.score_route(route)
-        rqi = score_result.get("RQI")
-        bottleneck = score_result.get("bottleneck") or {}
+    for _, row in page_df.iterrows():
+        route_raw = row.get("route_sequence_json")
+        if isinstance(route_raw, str):
+            try:
+                route = json.loads(route_raw)
+            except json.JSONDecodeError:
+                continue
+        else:
+            route = route_raw
+
+        if not isinstance(route, list) or not route:
+            continue
 
         countries = _get_unique_countries_from_route(route)
         country_count = len(countries)
 
+        score_result = scoring_engine.score_route(route)
+        bottleneck = score_result.get("bottleneck") or {}
+
         route_path = _build_route_path(route)
         bottleneck_label = bottleneck.get("label") or ""
 
-        ranked_rows.append(
-            {
-                "route_idx": idx,
-                "RQI Score": rqi,
-                "Country Count": country_count,
-                "Bottleneck Info": bottleneck_label,
-                "Route Path": route_path,
-            }
-        )
+        rqi = float(row.get("rqi_score", -999.0))
 
-        route_meta.append(
+        routes_for_page.append(
             {
                 "route": route,
                 "countries": countries,
@@ -938,19 +1262,33 @@ def render_route_ranking(raw_data: Dict) -> None:
             }
         )
 
-    df = pd.DataFrame(ranked_rows)
+        ranked_rows.append(
+            {
+                "route_idx": len(routes_for_page) - 1,
+                "RQI Score": rqi,
+                "Country Count": country_count,
+                "Bottleneck Info": bottleneck_label,
+                "Route Path": route_path,
+            }
+        )
 
-    if df.empty or df["RQI Score"].isna().all():
-        st.info("Unable to compute RQI scores for the available routes (missing timing data).")
+    if not ranked_rows:
+        st.info("No valid routes could be scored on this page.")
         return
 
-    df = df.sort_values("RQI Score", ascending=False, na_position="last").reset_index(drop=True)
-    df.insert(0, "Rank", df.index + 1)
+    df = pd.DataFrame(ranked_rows)
+    if df.empty or df["RQI Score"].isna().all():
+        st.info("Unable to compute RQI scores for the current page (missing timing data).")
+        return
+
+    global_rank_start = offset + 1
+    df.insert(0, "Rank", range(global_rank_start, global_rank_start + len(df)))
 
     hide_miracles = st.checkbox(
         "Hide Miracle Routes (RQI < 0)",
         value=True,
         help="When checked, routes with negative RQI (heavily penalized connections) are hidden.",
+        key="parquet_hide_miracles",
     )
 
     if hide_miracles:
@@ -959,7 +1297,7 @@ def render_route_ranking(raw_data: Dict) -> None:
         filtered_df = df[df["RQI Score"].notna()]
 
     if filtered_df.empty:
-        st.info("No routes remain after applying the current filters.")
+        st.info("No routes remain after applying the current filters to this page.")
         return
 
     display_df = filtered_df[
@@ -967,44 +1305,35 @@ def render_route_ranking(raw_data: Dict) -> None:
     ].copy()
 
     display_df["RQI Score"] = display_df["RQI Score"].astype(float)
-
-    # Keep route_idx for lookup but don't show it in the main table.
-    route_idx_series = display_df["route_idx"].copy()
     pretty_df = display_df.drop(columns=["route_idx"])
 
-    st.markdown("### Ranked Routes")
+    st.markdown(
+        f"Showing page {current_page + 1} of {max_page + 1} "
+        f"({len(filtered_df)} ranked routes on this page, {total:,} total matching routes)."
+    )
+
+    st.markdown("### Ranked Routes (Current Page)")
     st.dataframe(
         pretty_df.style.format({"RQI Score": "{:.1f}"}),
         use_container_width=True,
         hide_index=True,
     )
 
-    st.markdown("### Route Details")
-
-    # Start by showing the top 10 routes, allow loading more via a button.
-    details_key = "route_ranking_details_count"
-    if details_key not in st.session_state:
-        st.session_state[details_key] = ROUTE_RANKING_INITIAL
-    current_count = st.session_state[details_key]
-    current_count = max(1, min(current_count, len(filtered_df)))
-    st.session_state[details_key] = current_count
-
-    st.write(f"Showing detailed view for top {current_count} of {len(filtered_df)} ranked routes.")
-
-    detailed_df = filtered_df.head(current_count)
-
-    for _, row in detailed_df.iterrows():
+    st.markdown("### Route Details (Current Page)")
+    for _, row in filtered_df.iterrows():
         route_idx = int(row["route_idx"])
-        meta = route_meta[route_idx]
-        route = meta["route"]
-        countries = meta["countries"]
-        segments_count = meta["segments"]
+        if route_idx < 0 or route_idx >= len(routes_for_page):
+            continue
+        route_meta = routes_for_page[route_idx]
+        route = route_meta["route"]
+        countries = route_meta["countries"]
+        segments_count = route_meta["segments"]
         rqi_value = row["RQI Score"]
         bottleneck_info = row["Bottleneck Info"]
 
         header = (
             f"Rank {int(row['Rank'])} · RQI {rqi_value:.1f} · "
-            f"{meta['country_count']} countries · {segments_count} segments"
+            f"{route_meta['country_count']} countries · {segments_count} segments"
         )
 
         with st.expander(header):
@@ -1016,16 +1345,21 @@ def render_route_ranking(raw_data: Dict) -> None:
             if bottleneck_info:
                 st.markdown(f"**Bottleneck:** {bottleneck_info}")
 
-    # "Load more" button to reveal additional ranked routes, until exhausted.
-    if current_count < len(filtered_df):
-        if st.button("Load more ranked routes", key="route_ranking_load_more"):
-            st.session_state[details_key] = min(
-                current_count + ROUTE_RANKING_STEP,
-                len(filtered_df),
-            )
+    col_prev, col_next = st.columns(2)
+    with col_prev:
+        if st.button("Previous page", disabled=current_page == 0, key="parquet_ranking_prev"):
+            st.session_state[page_state_key] = max(0, current_page - 1)
+    with col_next:
+        if st.button("Next page", disabled=current_page >= max_page, key="parquet_ranking_next"):
+            st.session_state[page_state_key] = min(max_page, current_page + 1)
 
 
-def render_route_explorer(raw_data: Dict) -> None:
+def render_route_explorer(
+    data_source: str,
+    loaded_routes_data: Optional[Dict],
+    where_clause: Optional[str],
+    total_matching_routes: Optional[int],
+) -> None:
     st.markdown(
         "<div class='elite-title'>🚀 Route Planner Explorer</div>"
         "<div class='elite-subtitle'>Browse the best routes and filter by countries visited and starting node</div>",
@@ -1035,48 +1369,169 @@ def render_route_explorer(raw_data: Dict) -> None:
     # Deterministic schedule lookup for display times
     lookup = load_schedule_lookup()
 
-    routes_by_score = raw_data.get("routes", {}) or {}
-    all_routes: List[Dict] = []
-    country_counts = set()
-    start_nodes = set()
+    if data_source == "Live Checkpoints (JSON)":
+        if not loaded_routes_data:
+            st.info("No routes found in the selected checkpoint.")
+            return
 
-    for _score, routes in routes_by_score.items():
-        if not isinstance(routes, Iterable):
-            continue
-        for route in routes:
-            if route and isinstance(route, Iterable):
-                countries = _get_unique_countries_from_route(route)
-                start_node = route[0].get("origin", "") if route else ""
-                country_count = len(countries)
-                if country_count:
-                    country_counts.add(country_count)
-                if start_node:
-                    start_nodes.add(start_node)
-                all_routes.append(
-                    {
-                        "route": route,
-                        "country_count": country_count,
-                        "countries": countries,
-                        "start_node": start_node,
-                        "segments": len(route),
-                    }
+        routes_by_score = loaded_routes_data.get("routes", {}) or {}
+        all_routes: List[Dict] = []
+        country_counts = set()
+        start_nodes = set()
+
+        for _score, routes in routes_by_score.items():
+            if not isinstance(routes, Iterable):
+                continue
+            for route in routes:
+                if route and isinstance(route, Iterable):
+                    countries = _get_unique_countries_from_route(route)
+                    start_node = route[0].get("origin", "") if route else ""
+                    country_count = len(countries)
+                    if country_count:
+                        country_counts.add(country_count)
+                    if start_node:
+                        start_nodes.add(start_node)
+                    all_routes.append(
+                        {
+                            "route": route,
+                            "country_count": country_count,
+                            "countries": countries,
+                            "start_node": start_node,
+                            "segments": len(route),
+                        }
+                    )
+
+        if not all_routes:
+            st.info("No routes found in the selected checkpoint.")
+            return
+
+        all_routes.sort(key=lambda r: (-r["country_count"], -r["segments"]))
+
+        nodes_explored = loaded_routes_data.get("nodes_explored")
+        max_countries = max(r["country_count"] for r in all_routes)
+
+        # Blue stats boxes for clear, high-contrast display
+        total_routes_text = f"{len(all_routes):,}"
+        max_countries_text = f"{max_countries}"
+        nodes_explored_text = (
+            f"{int(nodes_explored):,}" if isinstance(nodes_explored, (int, float)) else "N/A"
+        )
+
+        st.markdown(
+            f"""
+            <div class="elite-stats-card">
+              <div class="elite-stats-row">
+                <div class="elite-stat-item">
+                  <div class="elite-stat-value">{total_routes_text}</div>
+                  <div class="elite-stat-label">Total Routes</div>
+                </div>
+                <div class="elite-stat-item">
+                  <div class="elite-stat-value">{max_countries_text}</div>
+                  <div class="elite-stat-label">Max Countries in a Route</div>
+                </div>
+                <div class="elite-stat-item">
+                  <div class="elite-stat-value">{nodes_explored_text}</div>
+                  <div class="elite-stat-label">Nodes Explored</div>
+                </div>
+              </div>
+            </div>
+            """,
+            unsafe_allow_html=True,
+        )
+
+        st.markdown("---")
+
+        country_options = sorted(country_counts, reverse=True)
+        country_filter = st.selectbox(
+            "Filter by number of countries",
+            options=["All"] + [str(c) for c in country_options],
+            index=0,
+        )
+
+        start_node_options = sorted(start_nodes)
+        start_filter = st.selectbox(
+            "Filter by starting node",
+            options=["All"] + start_node_options,
+            index=0,
+        )
+
+        filtered = all_routes
+        if country_filter != "All":
+            target = int(country_filter)
+            filtered = [r for r in filtered if r["country_count"] == target]
+        if start_filter != "All":
+            filtered = [r for r in filtered if r["start_node"] == start_filter]
+
+        if not filtered:
+            st.info("No routes match the selected filters.")
+            return
+
+        # Paginate explorer results: start at 20 and allow loading more
+        explorer_filters_key = "route_explorer_filters"
+        explorer_count_key = "route_explorer_display_count"
+
+        current_filters = {
+            "country_filter": country_filter,
+            "start_filter": start_filter,
+        }
+        previous_filters = st.session_state.get(explorer_filters_key)
+
+        # Reset pagination when filters change
+        if previous_filters != current_filters:
+            st.session_state[explorer_filters_key] = current_filters
+            st.session_state[explorer_count_key] = ROUTE_EXPLORER_INITIAL
+
+        max_display = st.session_state.get(explorer_count_key, ROUTE_EXPLORER_INITIAL)
+        max_display = max(1, min(max_display, len(filtered)))
+        st.session_state[explorer_count_key] = max_display
+
+        st.write(f"Showing {max_display} of {len(filtered)} matching routes.")
+
+        for idx, route_info in enumerate(filtered[:max_display], start=1):
+            with st.expander(
+                f"Route #{idx} · {route_info['country_count']} countries · {route_info['segments']} segments"
+            ):
+                segments = route_info["route"]
+                seg_df = build_route_dataframe(segments, lookup)
+                render_beautiful_route(seg_df)
+
+                st.markdown("**Countries visited:** " + ", ".join(route_info["countries"]))
+
+        # "Load more" button to show additional routes until all are visible.
+        if max_display < len(filtered):
+            if st.button("Load more routes", key="route_explorer_load_more"):
+                st.session_state[explorer_count_key] = min(
+                    max_display + ROUTE_EXPLORER_STEP,
+                    len(filtered),
                 )
-
-    if not all_routes:
-        st.info("No routes found in the selected checkpoint.")
         return
 
-    all_routes.sort(key=lambda r: (-r["country_count"], -r["segments"]))
+    # Parquet-backed lazy page rendering
+    if not where_clause:
+        st.warning("No filters are defined for the Parquet-backed explorer.")
+        return
 
-    nodes_explored = raw_data.get("nodes_explored")
-    max_countries = max(r["country_count"] for r in all_routes)
+    total = int(total_matching_routes or 0)
+    if total == 0:
+        st.info("No routes found in the master elite database for the selected filters.")
+        return
 
-    # Blue stats boxes for clear, high-contrast display
-    total_routes_text = f"{len(all_routes):,}"
+    page_size = ROUTE_EXPLORER_STEP
+    page_state_key = "parquet_route_explorer_page"
+    if page_state_key not in st.session_state:
+        st.session_state[page_state_key] = 0
+    current_page = st.session_state[page_state_key]
+    max_page = max(0, (total - 1) // page_size)
+    current_page = max(0, min(current_page, max_page))
+    st.session_state[page_state_key] = current_page
+
+    offset = current_page * page_size
+
+    # Stats: use total_matching_routes and cached parquet_route_metrics for max_countries
+    _, max_countries = parquet_route_metrics(where_clause)
+    total_routes_text = f"{total:,}"
     max_countries_text = f"{max_countries}"
-    nodes_explored_text = (
-        f"{int(nodes_explored):,}" if isinstance(nodes_explored, (int, float)) else "N/A"
-    )
+    nodes_explored_text = "N/A"
 
     st.markdown(
         f"""
@@ -1084,7 +1539,7 @@ def render_route_explorer(raw_data: Dict) -> None:
           <div class="elite-stats-row">
             <div class="elite-stat-item">
               <div class="elite-stat-value">{total_routes_text}</div>
-              <div class="elite-stat-label">Total Routes</div>
+              <div class="elite-stat-label">Total Routes (Filtered)</div>
             </div>
             <div class="elite-stat-item">
               <div class="elite-stat-value">{max_countries_text}</div>
@@ -1102,55 +1557,59 @@ def render_route_explorer(raw_data: Dict) -> None:
 
     st.markdown("---")
 
-    country_options = sorted(country_counts, reverse=True)
-    country_filter = st.selectbox(
-        "Filter by number of countries",
-        options=["All"] + [str(c) for c in country_options],
-        index=0,
+    query = (
+        f"SELECT * FROM '{PARQUET_PATH}' "
+        f"WHERE {where_clause} "
+        f"ORDER BY total_countries DESC "
+        f"LIMIT {page_size} OFFSET {offset}"
     )
+    page_df = duckdb.query(query).df()
 
-    start_node_options = sorted(start_nodes)
-    start_filter = st.selectbox(
-        "Filter by starting node",
-        options=["All"] + start_node_options,
-        index=0,
-    )
-
-    filtered = all_routes
-    if country_filter != "All":
-        target = int(country_filter)
-        filtered = [r for r in filtered if r["country_count"] == target]
-    if start_filter != "All":
-        filtered = [r for r in filtered if r["start_node"] == start_filter]
-
-    if not filtered:
-        st.info("No routes match the selected filters.")
+    if page_df.empty:
+        st.info("No routes available for the current explorer page.")
         return
 
-    # Paginate explorer results: start at 20 and allow loading more
-    explorer_filters_key = "route_explorer_filters"
-    explorer_count_key = "route_explorer_display_count"
+    routes_for_page: List[Dict] = []
 
-    current_filters = {
-        "country_filter": country_filter,
-        "start_filter": start_filter,
-    }
-    previous_filters = st.session_state.get(explorer_filters_key)
+    for _, row in page_df.iterrows():
+        route_raw = row.get("route_sequence_json")
+        if isinstance(route_raw, str):
+            try:
+                route = json.loads(route_raw)
+            except json.JSONDecodeError:
+                continue
+        else:
+            route = route_raw
 
-    # Reset pagination when filters change
-    if previous_filters != current_filters:
-        st.session_state[explorer_filters_key] = current_filters
-        st.session_state[explorer_count_key] = ROUTE_EXPLORER_INITIAL
+        if not isinstance(route, list) or not route:
+            continue
 
-    max_display = st.session_state.get(explorer_count_key, ROUTE_EXPLORER_INITIAL)
-    max_display = max(1, min(max_display, len(filtered)))
-    st.session_state[explorer_count_key] = max_display
+        countries = _get_unique_countries_from_route(route)
+        country_count = len(countries)
+        start_node = route[0].get("origin", "") if route else ""
 
-    st.write(f"Showing {max_display} of {len(filtered)} matching routes.")
+        routes_for_page.append(
+            {
+                "route": route,
+                "country_count": country_count,
+                "countries": countries,
+                "start_node": start_node,
+                "segments": len(route),
+            }
+        )
 
-    for idx, route_info in enumerate(filtered[:max_display], start=1):
+    if not routes_for_page:
+        st.info("No valid routes could be parsed on this page.")
+        return
+
+    st.write(
+        f"Showing page {current_page + 1} of {max_page + 1} "
+        f"({len(routes_for_page)} routes on this page, {total:,} total matching routes)."
+    )
+
+    for idx, route_info in enumerate(routes_for_page, start=1):
         with st.expander(
-            f"Route #{idx} · {route_info['country_count']} countries · {route_info['segments']} segments"
+            f"Route (page) #{idx} · {route_info['country_count']} countries · {route_info['segments']} segments"
         ):
             segments = route_info["route"]
             seg_df = build_route_dataframe(segments, lookup)
@@ -1158,13 +1617,13 @@ def render_route_explorer(raw_data: Dict) -> None:
 
             st.markdown("**Countries visited:** " + ", ".join(route_info["countries"]))
 
-    # "Load more" button to show additional routes until all are visible.
-    if max_display < len(filtered):
-        if st.button("Load more routes", key="route_explorer_load_more"):
-            st.session_state[explorer_count_key] = min(
-                max_display + ROUTE_EXPLORER_STEP,
-                len(filtered),
-            )
+    col_prev, col_next = st.columns(2)
+    with col_prev:
+        if st.button("Previous page", disabled=current_page == 0, key="parquet_explorer_prev"):
+            st.session_state[page_state_key] = max(0, current_page - 1)
+    with col_next:
+        if st.button("Next page", disabled=current_page >= max_page, key="parquet_explorer_next"):
+            st.session_state[page_state_key] = min(max_page, current_page + 1)
 
 
 # ----------------------------
@@ -1179,60 +1638,104 @@ def main() -> None:
     )
     inject_custom_css()
 
-    base_dir = Path(__file__).parent
-    results_dir = base_dir / "results"
-
-    st.sidebar.markdown("### Checkpoint source")
-
-    available_files = sorted(results_dir.glob("*.json")) if results_dir.exists() else []
-    source_mode = st.sidebar.radio(
-        "Select source",
-        options=["From results/ folder", "Upload JSON file"],
-        index=0 if available_files else 1,
+    data_source = st.sidebar.radio(
+        "Select Data Source",
+        options=["Live Checkpoints (JSON)", "Master Elite Database (Parquet)"],
+        index=0,
     )
 
-    raw_data: Optional[Dict] = None
+    loaded_routes_data: Optional[Dict] = None
     current_label: str = ""
+    where_clause: Optional[str] = None
+    total_matching_routes: Optional[int] = None
 
-    if source_mode == "From results/ folder":
-        if not available_files:
-            st.sidebar.info("No JSON files found in results/. Please upload a file instead.")
+    if data_source == "Live Checkpoints (JSON)":
+        base_dir = Path(__file__).parent
+        results_dir = base_dir / "results"
+
+        st.sidebar.markdown("### Checkpoint source")
+
+        available_files = sorted(results_dir.glob("*.json")) if results_dir.exists() else []
+        source_mode = st.sidebar.radio(
+            "Select source",
+            options=["From results/ folder", "Upload JSON file"],
+            index=0 if available_files else 1,
+        )
+
+        raw_data: Optional[Dict] = None
+
+        if source_mode == "From results/ folder":
+            if not available_files:
+                st.sidebar.info("No JSON files found in results/. Please upload a file instead.")
+            else:
+                labels = [p.name for p in available_files]
+                selected_label = st.sidebar.selectbox("Checkpoint file", labels, index=0)
+                checkpoint_path = available_files[labels.index(selected_label)]
+                current_label = checkpoint_path.name
+                try:
+                    with checkpoint_path.open("r", encoding="utf-8") as f:
+                        raw_data = json.load(f)
+                except FileNotFoundError as e:
+                    st.error(str(e))
+                    st.stop()
+                except json.JSONDecodeError:
+                    st.error(f"Failed to parse JSON from {checkpoint_path}.")
+                    st.stop()
         else:
-            labels = [p.name for p in available_files]
-            selected_label = st.sidebar.selectbox("Checkpoint file", labels, index=0)
-            checkpoint_path = available_files[labels.index(selected_label)]
-            current_label = checkpoint_path.name
-            try:
-                with checkpoint_path.open("r", encoding="utf-8") as f:
-                    raw_data = json.load(f)
-            except FileNotFoundError as e:
-                st.error(str(e))
-                st.stop()
-            except json.JSONDecodeError:
-                st.error(f"Failed to parse JSON from {checkpoint_path}.")
-                st.stop()
-    else:
-        uploaded = st.sidebar.file_uploader("Upload checkpoint JSON", type=["json"])
-        if uploaded is not None:
-            current_label = uploaded.name
-            try:
-                file_bytes = uploaded.read()
-                raw_data = json.loads(file_bytes.decode("utf-8"))
-            except json.JSONDecodeError:
-                st.error("Failed to parse uploaded JSON file.")
-                st.stop()
+            uploaded = st.sidebar.file_uploader("Upload checkpoint JSON", type=["json"])
+            if uploaded is not None:
+                current_label = uploaded.name
+                try:
+                    file_bytes = uploaded.read()
+                    raw_data = json.loads(file_bytes.decode("utf-8"))
+                except json.JSONDecodeError:
+                    st.error("Failed to parse uploaded JSON file.")
+                    st.stop()
 
-    if raw_data is None:
-        st.warning("Please select or upload a checkpoint JSON file to begin.")
-        st.stop()
+        if raw_data is None:
+            st.warning("Please select or upload a checkpoint JSON file to begin.")
+            st.stop()
 
-    routes = extract_routes_from_data(raw_data)
-    station_counter, edge_counter = compute_frequencies(routes)
-    stations_df = build_station_dataframe(station_counter)
-    edges_df = build_edge_dataframe(edge_counter)
+        loaded_routes_data = raw_data
 
-    total_unique_stations = len(station_counter)
-    total_unique_edges = len(edge_counter)
+    elif data_source == "Master Elite Database (Parquet)":
+        # Build WHERE clause based on global metadata-driven dropdown filters
+        metadata = get_parquet_metadata(PARQUET_PATH)
+
+        origin_filter = st.sidebar.selectbox(
+            "Filter by starting node",
+            options=["All"] + metadata.get("unique_origins", []),
+        )
+
+        country_options = list(range(metadata.get("global_max_countries", 0), 13, -1))
+        country_filter = st.sidebar.selectbox(
+            "Filter by number of countries",
+            options=["All"] + [str(c) for c in country_options],
+        )
+
+        where_clauses = []
+        if country_filter != "All":
+            where_clauses.append(f"total_countries = {int(country_filter)}")
+        if origin_filter != "All":
+            safe_origin = origin_filter.replace("'", "''")
+            where_clauses.append(f"start_node = '{safe_origin}'")
+
+        if where_clauses:
+            where_clause = " AND ".join(where_clauses)
+        else:
+            where_clause = "1=1"
+
+        total_matching_routes, max_countries = parquet_route_metrics(where_clause)
+        if total_matching_routes == 0:
+            st.warning("No routes found in the master elite database for the selected filters.")
+            st.stop()
+
+        # Do not eagerly materialize routes; rely on lazy DuckDB-backed queries per view.
+        loaded_routes_data = None
+        current_label = (
+            f"Master Elite Database (Parquet) · {total_matching_routes:,} routes, "
+            f"max {max_countries} countries"
+        )
 
     page = st.sidebar.radio(
         "View",
@@ -1240,31 +1743,15 @@ def main() -> None:
         index=0,
     )
 
-    st.sidebar.markdown(f"**Active checkpoint:** `{current_label}`")
+    if current_label:
+        st.sidebar.markdown(f"**Active checkpoint:** `{current_label}`")
 
     if page == "Route Explorer":
-        render_route_explorer(raw_data)
+        render_route_explorer(data_source, loaded_routes_data, where_clause, total_matching_routes)
     elif page == "Elite Analysis":
-        render_header(total_unique_stations, total_unique_edges)
-        render_pruning_section(stations_df, total_unique_stations)
-
-        default_top_stations = min(50, len(stations_df) if not stations_df.empty else 50)
-        default_top_edges = min(100, len(edges_df) if not edges_df.empty else 100)
-
-        top_n_stations, top_n_edges = render_filters(
-            default_top_stations=default_top_stations or 50,
-            default_top_edges=default_top_edges or 100,
-        )
-
-        col_left, col_right = st.columns([2, 1])
-        with col_left:
-            render_station_section(stations_df, top_n_stations)
-        with col_right:
-            render_edge_section(edges_df, top_n_edges)
-
-        render_long_tail_section(stations_df)
+        render_elite_analysis(data_source, loaded_routes_data, where_clause, total_matching_routes)
     else:
-        render_route_ranking(raw_data)
+        render_route_ranking(data_source, loaded_routes_data, where_clause, total_matching_routes)
 
 
 if __name__ == "__main__":

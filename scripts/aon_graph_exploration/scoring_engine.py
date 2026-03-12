@@ -2,6 +2,8 @@ import math
 import re
 from pathlib import Path
 from typing import Any, Dict, Iterable, List, Optional
+import pickle
+from functools import lru_cache
 
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent
@@ -14,6 +16,23 @@ WARRIOR_MINIMUMS: Dict[str, int] = {
     "R->R": 5,
 }
 
+@lru_cache(maxsize=1)
+def load_transfer_durations() -> Dict[str, Dict[str, int]]:
+    graph_path = PROJECT_ROOT / "graph" / "transportation_graph.gpickle"
+    transfer_edges: Dict[str, Dict[str, int]] = {}
+    try:
+        with open(graph_path, "rb") as f:
+            G = pickle.load(f)
+        for u, v, key, data in G.edges(keys=True, data=True):
+            if data.get("edge_type") == "connection":
+                conn_time = data.get("connection_time")
+                if conn_time is not None:
+                    if u not in transfer_edges:
+                        transfer_edges[u] = {}
+                    transfer_edges[u][v] = int(conn_time)
+    except Exception as e:
+        print(f"Warning: Could not load transfer edges for scoring: {e}")
+    return transfer_edges
 
 def extract_station_code(station_label: str) -> str:
     """
@@ -68,6 +87,8 @@ def _compute_transfer_scores(route: Iterable[Dict]) -> List[Dict[str, Any]]:
     segments = list(route)
     transfer_scores: List[Dict[str, Any]] = []
 
+    transfer_times = load_transfer_durations()
+
     for i in range(len(segments) - 1):
         arrival_seg = segments[i]
         departure_seg = segments[i + 1]
@@ -97,7 +118,15 @@ def _compute_transfer_scores(route: Iterable[Dict]) -> List[Dict[str, Any]]:
         if from_mod == "R" and to_mod == "R" and from_code and from_code == to_code:
             warrior_min = 0
 
-        margin = raw_buffer - warrior_min
+        transit_time = 0
+        if from_label != to_label:
+            # Try to find the exact transit time from the graph
+            transit_time = transfer_times.get(from_label, {}).get(to_label, 0)
+            # If it's a station change but we have no data, apply a heavy default penalty
+            if transit_time == 0:
+                transit_time = 60
+
+        margin = raw_buffer - transit_time - warrior_min
 
         if margin >= 0:
             score = 100.0 * (1.0 - math.exp(-0.05 * margin))
