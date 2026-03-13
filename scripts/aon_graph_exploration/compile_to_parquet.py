@@ -1,5 +1,7 @@
 import json
 import hashlib
+import copy
+import pickle
 from pathlib import Path
 
 import pandas as pd
@@ -25,6 +27,87 @@ def build_schema() -> pa.schema:
             pa.field("rqi_score", pa.float64()),
         ]
     )
+
+
+def load_train_schedules():
+    graph_path = PROJECT_ROOT / "graph" / "transportation_graph.gpickle"
+    train_schedules = {}
+    try:
+        with open(graph_path, "rb") as f:
+            G = pickle.load(f)
+        for u, v, key, data in G.edges(keys=True, data=True):
+            if data.get("edge_type") == "train":
+                u_code = scoring_engine.extract_station_code(u)
+                v_code = scoring_engine.extract_station_code(v)
+                if (u_code, v_code) not in train_schedules:
+                    train_schedules[(u_code, v_code)] = []
+                for dep, arr in data.get("time_pairs", []):
+                    train_schedules[(u_code, v_code)].append((int(dep), int(arr)))
+    except Exception as e:  # pragma: no cover - best-effort loader
+        print(f"Warning: Could not load train schedules: {e}")
+    return train_schedules
+
+
+def optimize_and_score_route(route_sequence, train_schedules, transfer_times):
+    current_route = copy.deepcopy(route_sequence)
+
+    # First, get the baseline score
+    best_score_result = scoring_engine.score_route(current_route)
+    best_rqi = best_score_result.get("RQI", -999.0)
+    if best_rqi is None:
+        best_rqi = -999.0
+
+    # Iterate through segments to find trains we can slide
+    for i in range(1, len(current_route) - 1):
+        raw_u = current_route[i].get("origin", "")
+        raw_v = current_route[i].get("dest", "")
+        u = scoring_engine.extract_station_code(raw_u)
+        v = scoring_engine.extract_station_code(raw_v)
+
+        # If it's a train route we have schedules for
+        if (u, v) in train_schedules:
+            # Constrained by PREVIOUS arrival
+            prev_v = scoring_engine.extract_station_code(
+                current_route[i - 1].get("dest", "")
+            )
+            transit_in = (
+                transfer_times.get(prev_v, {}).get(u, 60) if prev_v != u else 0
+            )
+            min_dep = int(current_route[i - 1].get("arr_time")) + transit_in
+
+            # Constrained by NEXT departure
+            next_u = scoring_engine.extract_station_code(
+                current_route[i + 1].get("origin", "")
+            )
+            transit_out = (
+                transfer_times.get(v, {}).get(next_u, 60) if v != next_u else 0
+            )
+            max_arr = int(current_route[i + 1].get("dep_time")) - transit_out
+
+            # Find valid trains
+            valid_trains = [
+                t
+                for t in train_schedules[(u, v)]
+                if t[0] >= min_dep and t[1] <= max_arr
+            ]
+
+            # Test valid trains to find the highest RQI
+            for train_dep, train_arr in valid_trains:
+                test_route = copy.deepcopy(current_route)
+                test_route[i]["dep_time"] = train_dep
+                test_route[i]["arr_time"] = train_arr
+
+                test_score_result = scoring_engine.score_route(test_route)
+                test_rqi = test_score_result.get("RQI", -999.0)
+                if test_rqi is None:
+                    test_rqi = -999.0
+
+                if test_rqi > best_rqi:
+                    best_rqi = test_rqi
+                    best_score_result = test_score_result
+                    current_route = test_route
+
+    return current_route, best_score_result, best_rqi
 
 
 def route_to_record(route, length_key: int) -> dict:
@@ -102,7 +185,12 @@ def compile_to_parquet() -> None:
     batch_records = []
     batch_size = 50_000
 
-    with pq.ParquetWriter(str(output_path), schema=schema, compression="snappy") as writer:
+    train_schedules = load_train_schedules()
+    transfer_times = scoring_engine.load_transfer_durations()
+
+    with pq.ParquetWriter(
+        str(output_path), schema=schema, compression="snappy"
+    ) as writer:
         for json_file in tqdm.tqdm(json_files, desc="Processing checkpoint files"):
             total_files_processed += 1
             with json_file.open("r", encoding="utf-8") as f:
@@ -129,13 +217,13 @@ def compile_to_parquet() -> None:
 
                     seen_route_hashes.add(route_hash)
 
-                    # Compute RQI score for this route.
-                    route_sequence = route
-                    score_result = scoring_engine.score_route(route_sequence)
-                    rqi = float(score_result.get("RQI", -999.0))
+                    optimized_route, score_result, rqi = optimize_and_score_route(
+                        route, train_schedules, transfer_times
+                    )
 
                     record = route_to_record(route, length_key)
-                    record["rqi_score"] = rqi
+                    record["rqi_score"] = float(rqi)
+                    record["route_sequence_json"] = json.dumps(optimized_route)
                     batch_records.append(record)
                     total_unique_routes_written += 1
 

@@ -1115,6 +1115,11 @@ def render_route_ranking(
         df = df.sort_values("RQI Score", ascending=False, na_position="last").reset_index(drop=True)
         df.insert(0, "Rank", df.index + 1)
 
+        any_station_filter = st.text_input(
+            "Must Include Stations (comma-separated)",
+            value="",
+        ).strip()
+
         hide_miracles = st.checkbox(
             "Hide Miracle Routes (RQI < 0)",
             value=True,
@@ -1125,6 +1130,14 @@ def render_route_ranking(
             filtered_df = df[(df["RQI Score"].notna()) & (df["RQI Score"] >= 0)]
         else:
             filtered_df = df[df["RQI Score"].notna()]
+
+        if any_station_filter:
+            stations_to_find = [s.strip().lower() for s in any_station_filter.split(",") if s.strip()]
+            filtered_df = filtered_df[
+                filtered_df["Route Path"].apply(
+                    lambda path: all(s in str(path).lower() for s in stations_to_find)
+                )
+            ]
 
         if filtered_df.empty:
             st.info("No routes remain after applying the current filters.")
@@ -1441,19 +1454,26 @@ def render_route_explorer(
 
         st.markdown("---")
 
-        country_options = sorted(country_counts, reverse=True)
-        country_filter = st.selectbox(
-            "Filter by number of countries",
-            options=["All"] + [str(c) for c in country_options],
-            index=0,
-        )
-
-        start_node_options = sorted(start_nodes)
-        start_filter = st.selectbox(
-            "Filter by starting node",
-            options=["All"] + start_node_options,
-            index=0,
-        )
+        col_f1, col_f2, col_f3 = st.columns(3)
+        with col_f1:
+            country_options = sorted(country_counts, reverse=True)
+            country_filter = st.selectbox(
+                "Filter by number of countries",
+                options=["All"] + [str(c) for c in country_options],
+                index=0,
+            )
+        with col_f2:
+            start_node_options = sorted(start_nodes)
+            start_filter = st.selectbox(
+                "Filter by starting node",
+                options=["All"] + start_node_options,
+                index=0,
+            )
+        with col_f3:
+            any_station_filter = st.text_input(
+                "Must Include Stations (comma-separated, e.g., VIE, WAW)",
+                value="",
+            ).strip()
 
         filtered = all_routes
         if country_filter != "All":
@@ -1461,6 +1481,13 @@ def render_route_explorer(
             filtered = [r for r in filtered if r["country_count"] == target]
         if start_filter != "All":
             filtered = [r for r in filtered if r["start_node"] == start_filter]
+        if any_station_filter:
+            stations_to_find = [s.strip().lower() for s in any_station_filter.split(",") if s.strip()]
+            filtered = [
+                r
+                for r in filtered 
+                if all(s in str(r["route"]).lower() for s in stations_to_find)
+            ]
 
         if not filtered:
             st.info("No routes match the selected filters.")
@@ -1713,12 +1740,23 @@ def main() -> None:
             options=["All"] + [str(c) for c in country_options],
         )
 
+        any_station_filter = st.sidebar.text_input(
+            "Must Include Stations (comma-separated, e.g., VIE, WAW)",
+            value="",
+        ).strip()
+
         where_clauses = []
         if country_filter != "All":
             where_clauses.append(f"total_countries = {int(country_filter)}")
         if origin_filter != "All":
             safe_origin = origin_filter.replace("'", "''")
             where_clauses.append(f"start_node = '{safe_origin}'")
+        if any_station_filter:
+            stations_to_find = [s.strip() for s in any_station_filter.split(",") if s.strip()]
+            for s in stations_to_find:
+                safe_station = s.replace("'", "''")
+                # Because route_sequence_json is a string in the DB, we can use a fast ILIKE query (case-insensitive)
+                where_clauses.append(f"route_sequence_json ILIKE '%{safe_station}%'")
 
         if where_clauses:
             where_clause = " AND ".join(where_clauses)
