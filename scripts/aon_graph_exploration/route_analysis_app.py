@@ -16,7 +16,7 @@ import scoring_engine
 
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent
-PARQUET_PATH = str(PROJECT_ROOT / "scripts" / "aon_graph_exploration" / "results" / "master_elite_routes.parquet")
+PARQUET_PATH = str(PROJECT_ROOT / "scripts" / "aon_graph_exploration" / "results" / "master_elite_routes_full.parquet")
 
 TOTAL_BASELINE_STATIONS = 899
 
