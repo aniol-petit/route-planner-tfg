@@ -6,7 +6,7 @@
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=2
-#SBATCH --mem=32G
+#SBATCH --mem=64G
 #SBATCH --time=48:00:00
 
 # Load your python environment if necessary (uncomment and modify if needed)
@@ -23,6 +23,6 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 export SLURM_CPUS_PER_TASK=2
 
 # Unleash the worker on its specific slice of the graph
-python "${SCRIPT_DIR}/distributed_dfs_search.py" --job_idx "$SLURM_ARRAY_TASK_ID" --total_jobs 100
+python "${SCRIPT_DIR}/distributed_dfs_search_heuristic.py" --job_idx "$SLURM_ARRAY_TASK_ID" --total_jobs 100
 
 echo "Worker $SLURM_ARRAY_TASK_ID completed successfully."

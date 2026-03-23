@@ -157,10 +157,18 @@ def get_starting_nodes(aon_graph):
 
 
 def graph_to_dict(aon_graph):
-    """Convert NetworkX graph to dictionary for pickling in multiprocessing."""
+    """Convert NetworkX graph to dictionary and pre-sort for optimal DFS exploration."""
     graph_dict = {}
     for node in aon_graph.nodes():
-        graph_dict[node] = list(aon_graph.successors(node))
+        successors = list(aon_graph.successors(node))
+        
+        # HEURISTIC SORTING: Rig the DFS to explore the best layovers first!
+        # Ideal flight/train layover is roughly 90 minutes.
+        # We sort descending so the best options (closest to 90) are at the END of the list,
+        # meaning the DFS stack.pop() will explore them FIRST.
+        successors.sort(key=lambda succ: abs((succ[2] - node[3]) - 90), reverse=True)
+        
+        graph_dict[node] = successors
     return graph_dict
 
 
@@ -311,12 +319,15 @@ def explore_start_node(args):
             if succ_country not in visited_countries:
                 future_visited = visited_countries | frozenset([succ_country])
 
-            # STATE DOMINANCE PRUNING (local to this worker)
+            # STATE DOMINANCE PRUNING (Strict & Fast)
             state_key = (successor, future_visited)
-            if succ_arr >= local_visited_states.get(state_key, float("inf")):
+            best_known_arr = local_visited_states.get(state_key, float("inf"))
+
+            # Strictly prune if we've already reached this state at an earlier or equal time
+            if succ_arr >= best_known_arr:
                 pruned_count += 1
                 continue
-            # Update the best known arrival time for this state
+
             local_visited_states[state_key] = succ_arr
 
             ub = calculate_upper_bound(
@@ -369,7 +380,7 @@ def save_checkpoint(
     Save a checkpoint of current progress to an append-only JSONL file.
     Only saves paths with score >= 14 or score == current_global_max.
     """
-    output_dir = SCRIPT_DIR / "results_distributed_full"
+    output_dir = SCRIPT_DIR / "results_distributed_full_heuristic"
     output_dir.mkdir(exist_ok=True)
     checkpoint_file = output_dir / f"routes_part_{job_idx}.jsonl"
 
@@ -605,7 +616,7 @@ def main():
     print("=" * 80)
 
     # Save results
-    output_dir = SCRIPT_DIR / "results_distributed_full"
+    output_dir = SCRIPT_DIR / "results_distributed_full_heuristic"
     output_dir.mkdir(exist_ok=True)
 
     output_file = output_dir / f"final_results_part_{args.job_idx}.pickle"
