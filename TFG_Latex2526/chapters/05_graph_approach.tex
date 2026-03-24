@@ -1,0 +1,27 @@
+\chapter{Algorithmic Approach II: Graph-Based DFS Exploration}
+\label{chap:graph_approach}
+
+\section{The Activity-on-Node (AoN) Transformation}
+\label{sec:aon_transformation}
+% Reimagining the problem: flights/trains become nodes, and layovers become edges.
+
+\section{Baseline DFS and the Reduced Graph}
+\label{sec:baseline_dfs}
+% Proving the concept using the 'freq100' reduced graph to extract the first valid golden routes.
+
+\section{Scaling to the Full Graph (Distributed DFS)}
+\label{sec:scaling_distributed}
+% Architecture of the SLURM array distribution.
+% Tackling Out-Of-Memory (OOM) failures and migrating to fault-tolerant append-only (.jsonl) structures.
+
+\section{Optimizing the Search Space}
+\label{sec:optimizing_search_space}
+
+\subsection{State Dominance and the Pruning Bug}
+\label{subsec:state_dominance}
+% Explain the "First-Come, First-Served" state dominance paradox that deleted good routes.
+
+\subsection{Heuristic Pre-Sort and RQI}
+\label{subsec:heuristic_presort}
+% Rigging the algorithm to evaluate ideal (~90 min) layovers first.
+% Briefly introduce the Route Quality Index (RQI) as the metric defining these ideal layovers.

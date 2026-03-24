@@ -1,0 +1,30 @@
+\chapter{Data Acquisition and Processing Pipeline}
+\label{chap:data_pipeline}
+% This is the heavy engineering chapter highlighting the 80% of the work that was data prep!
+
+\section{Sourcing Transit Data}
+\label{sec:sourcing_data}
+
+\subsection{Flight APIs}
+\label{subsec:flight_apis}
+% Discuss extraction, pagination, and API limitations.
+
+\subsection{Train Data}
+\label{subsec:train_data}
+% Discuss scraping methodologies, rate limits, and handling unstructured HTML/JSON.
+
+\section{Data Cleaning and Normalization}
+\label{sec:cleaning_normalization}
+% Standardizing timezones.
+% Converting everything to absolute minute-of-day.
+% Resolving missing or malformed data.
+
+\section{Spatial Mapping and Filtering}
+\label{sec:spatial_mapping}
+% Coordinate mapping (translating lat/lon to actual stations).
+% Filtering algorithms to remove redundant or useless stops.
+% Country assignment and boundary resolution.
+
+\section{Transfer Durations}
+\label{sec:transfer_durations}
+% How you calculated realistic human layover/walking times between specific transit hubs.

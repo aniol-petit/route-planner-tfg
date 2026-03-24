@@ -19,6 +19,8 @@
   outer=2.5cm
 }
 
+% No first-line indent on new paragraphs (blank line in source starts a normal \par).
+\setlength{\parindent}{0pt}
 
 %PER A INCLOURE GRÀFICS I EL LOGO DE LA UPF
 \usepackage{graphicx,psfrag}
@@ -104,30 +106,6 @@
 
 \maketitle
 
-%Delete this in final version.
-
-
-
-
-[Tingueu en compte:
-
-\begin{itemize}
-	\item[(i)] Si deixeu pàgines blanques al cos del treball (índex fins la conclusió) feu servir \verb+\cleardoublepage+, llavors la pàgina no serà numerada i no comptarà en el còmput total de pàgines. 
-	 \item[(ii)] No modifiqueu lespai entre línies, ni els marges ni el tipus de lletra.
-	 \item[(iii)] Per a aquesta secció principal (cos del treball), la restricció del límit de pàgines és de 30 pàgines + 5$\%$ de marge.
-	 \item[(iv)]  La pàgina del final de capítol la podeu comptar com a mitja pàgina si no arriba a la meitat.
-	 \item[(v)] Podeu afegir un annex d'informació de suport a l?apèndix per incloure totes les dades/informació que necessiteu mostrar. El apèndix no té un límit de pàgines. Si tens informació a l?apèndix, has de fer referència en el text principal a la informació continguda en l?apèndix seguint aquest exemple:\\
-	 
-	 document principal:\\``La taxa de natalitat als països europeus està disminuint molt ràpidament (vegeu Apèndix~\ref{app:1}). Això vol dir que tot i que la gent viu més temps (figura~\ref{fig:logoapp}), amb el temps la mida de la població disminuirà''.
-	 
-	
-	 
-	 Repasseu com fer servir l'ordre +\label{}+ de Latex per a aquest propòsit.
-	 \item[(v)]  Les referències s'inclouen a la secció de bibliografia i s'exclouen de la limitació del nombre de pàgines. 
-\end{itemize}
-]
-
-
 \cleardoublepage
 
 
@@ -140,9 +118,11 @@
 %%%%%% Final de dedicatòria
 
 
-%%%%%% Agraïments; si no es vol posar, comenteu fins a final de agraïments
+%%%%%% Agraïments; keep this in Catalan
+\selectlanguage{catalan}
 \noindent {\Large \sffamily Agraïments} \newline
-\noindent 
+\noindent dsds
+\selectlanguage{english}
 \cleardoublepage
 
 %%%%%% Final dels agraïments
@@ -150,52 +130,27 @@
 %ABSTRACT EN DOS IDIOMES. COM A MÍNIM CATALÀ. SI L'ALTRE ÉS EN CASTELLA CANVIEU EL QUE POSA ABSTRACT
 \selectlanguage{english}
 \section*{\Large \sffamily Abstract}
-This is the abstract of the thesis in English.  Please, use less
-than 150 words.This is the abstract of the thesis in English.  Please, use less
-than 150 words.This is the abstract of the thesis in English.  Please, use less
-than 150 words.This is the abstract of the thesis in English.  Please, use less
-than 150 words.This is the abstract of the thesis in English.  Please, use less
-than 150 words.This is the abstract of the thesis in English.  Please, use less
-than 150 words.This is the abstract of the thesis in English.  Please, use less
-than 150 words.This is the abstract of the thesis in English.  Please, use less
-than 150 words.
+[Insert Abstract here]
 
 \selectlanguage{catalan}
 \vspace*{\fill}
-\section*{\Large \sffamily  Resum}
-Vet aquí el resum de la tesi en català.  Si us plau, utilitzeu
-menys de 150 paraules. Vet aquí el resum de la tesi en català.  Si us plau, utilitzeu
-menys de 150 paraules.Vet aquí el resum de la tesi en català.  Si us plau, utilitzeu
-menys de 150 paraules.Vet aquí el resum de la tesi en català.  Si us plau, utilitzeu
-menys de 150 paraules.Vet aquí el resum de la tesi en català.  Si us plau, utilitzeu
-menys de 150 paraules.Vet aquí el resum de la tesi en català.  Si us plau, utilitzeu
-menys de 150 paraules.Vet aquí el resum de la tesi en català.  Si us plau, utilitzeu
-menys de 150 paraules.Vet aquí el resum de la tesi en català.  Si us plau, utilitzeu
-menys de 150 paraules.Vet aquí el resum de la tesi en català.  Si us plau, utilitzeu
-menys de 150 paraules.
+\section*{\Large \sffamily  Abstract (Catalan)}
+[Insert Abstract here]
 \vspace*{\fill}
 
 \selectlanguage{spanish}
 \vspace*{\fill}
-\section*{\Large \sffamily  Resumen}
-He aquí el resumen de la tesis en castellano. Por favor, utilice
-menos de 150 palabras. He aquí el resumen de la tesis en castellano. Por favor, utilice
-menos de 150 palabras.He aquí el resumen de la tesis en castellano. Por favor, utilice
-menos de 150 palabras.He aquí el resumen de la tesis en castellano. Por favor, utilice
-menos de 150 palabras.He aquí el resumen de la tesis en castellano. Por favor, utilice
-menos de 150 palabras.He aquí el resumen de la tesis en castellano. Por favor, utilice
-menos de 150 palabras.He aquí el resumen de la tesis en castellano. Por favor, utilice
-menos de 150 palabras.He aquí el resumen de la tesis en castellano. Por favor, utilice
-menos de 150 palabras.
+\section*{\Large \sffamily  Abstract (Spanish)}
+[Insert Abstract here]
 \vspace*{\fill}
 
-\selectlanguage{catalan}
+\selectlanguage{english}
 
 \cleardoublepage
 %FIN DE ABSTRACTE
 
-%PREFACI. 
-{\bf Prefaci}
+%PREFACE
+{\bf Preface}
 
 \cleardoublepage
 %FINAL DE PREFACI
@@ -208,150 +163,25 @@ menos de 150 palabras.
 \listoffigures
 
 %Fa que aparegui al sumari
-\addcontentsline{toc}{chapter}{Índex de figures}
+\addcontentsline{toc}{chapter}{List of Figures}
 
 
 %INDEX DE TAULES; NOMÉS ES POSA SI HI HA TAULES
 \listoftables
 %Fa que aparegui al sumari
-\addcontentsline{toc}{chapter}{Índex de taules}
+\addcontentsline{toc}{chapter}{List of Tables}
 
 %COMENÇA EL TEXT
 \mainmatter
-\chapter*{Introducció}
-
-Aquesta és una plantilla o estil provisional per a ser usada per a presentar treballs de final de grau a la UPF en format A4. És una lleugera modificació de l'estil de tesi doctoral UPF. 
-
-S'ha intentat simplificar-la al màxim per tal que els usuaris experimentats puguin adaptar fàcilment els seus propis estils i que els usuaris menys avesats a treballar amb estils puguin usar-la fàcilment. 
-
-Consta de
-\begin{description}
-\item[El fitxer tesi-upf.cls] És una modificació de l'estil {\tt book} amb les següents particularitats
-  \begin{enumerate}
-  \item Es redissenya la portada (en la instrucció \verb+\maketitle+)
-
-  \item Els títols dels capítols s'escriuen en majúscula.
-
-  \item Es redefineix {\tt cleardoublepage} perquè les pàgines en blanc no vagin numerades.
-  \end{enumerate}
-\item[El fitxer tfg-upf.cls] és una modificació de l'estil \texttt{tesi-upf.cls} on la portada ha estat redissenyada. La classe no s'ha modificat, però al fitxer principal del document (\texttt{.tex}) s’han ajustat els marges del cos del treball mitjançant el paquet \texttt{geometry} perquè coincideixin amb els de la plantilla en Word (aprox.\ 2,5\,cm) i s’ha desactivat el paquet \texttt{crop}. També s’ha fixat la mida de lletra base en 11\,pt per obtenir una densitat de text similar a la de Word, mantenint intacta la portada i la resta d’elements definits a la classe.
-
-Aquests ajustos permeten homogeneïtzar el format entre Word i \LaTeX{}, de manera que el límit de 30 pàgines sigui coherent i comparable per a tots els estudiants.
-
-
-
-\item[El preàmbul] Conté diferents instruccions
-  \begin{enumerate}
-  \item La combinació dels paquets {\tt geometry} i {\tt crop} permet emmarcar el que serà la pàgina final que després es retallarà a mida {\tt A4}. Abans de portar-ho a tallar es convenient eliminar les marques, comentant les corresponents comandes, a no ser que a la impremta ens ho demanin.
-
-  \item En cas que la tesi estigui en català, es redefineix el títol de ``Índex'' per ``Sumari''.
-
-  \item S'usa el paquet {\tt times} per usar aquest tipus de lletra.
-
-  \item S'indica \verb+\pagestyle{plain}+ perquè no apareguin els headings.
-
-  \item  A les comandes {\tt title}, {\tt subtitle}, {\tt author}, {\tt thyear},{\tt department}, {\tt supervisor} s'han de posar els valors adequats. \LaTeX generarà la portada a partir d'ells.
-  \end{enumerate}
-
-\item[paquets] Per la comoditat de l'usuari s'incorporen els paquets {\tt crop} i {\tt geometry}. 
-
-\item[Bibliografia] Per comprovar el funcionament s'incorpora una petita base de dades bibliogràfica, de nom \verb+tesi_upf_bib.bib+
-
-
-\item[Taules] S'incorpora un \verb+figure+ i un \verb+tabular+ per a comprovar el funcionament dels índexs.
-
-\end{description}
-
-
-\section*{L'Índex}
-
-És aconsellable usar l'índex amb entrades com la següent, que fa referència a l'inventor de \LaTeX:  \verb+\index{Lamport}+ \index{Lamport}. Aquesta comanda juntament amb
-\begin{enumerate}
-\item Les comandes \verb+\usepackage{makeidx} \makeindex+ en el preàmbul del document i \verb+\printindex+ en el lloc on volem que apareguin les referències fan que es generi l'índex de matèries. Per generar-lo efectivament cal usar el programa \verb+makeindex+ (es fa de manera diferent segons la distribució i l'editor que usem).
-\end{enumerate}
-
-\section*{La bibliografia}
-Pes poder usar eficientment les referències bibliogràfiques, és convenient usar el programa BibTeX. Per fer-ho 
-\begin{enumerate}
-\item Escrivim en el preàmbul \verb+\bibliographystyle{plain}+ on en comptes de \verb+plain+ pot ser algun dels estils habituals, com per exemple \verb+vancouver+\ldots Per comoditat s'inclou també l'estil \verb+vancouver+.
-
-\item En el lloc del document on volem que aparegui la llista de referències escrivim \verb+ \bibliography{tesi_upf_bib}+ (o el nostre fitxer de referències.
-
-\item Podem usar ara expressions com 
-\begin{verbatim} 
-com es menciona en \cite[p. 56]{sartre1984ser}
-\end{verbatim}
- i després de executar \LaTeX un parell de cops i el programa BibTeX (depenent de la distribució i l'editor) veurem com es generen les cites (quedarà ``com es menciona en \cite[p. 56]{sartre1984ser}'') i les referències al final del document (o on sigui que aparegui \verb+bibliography+).
-
-
-\item Una de les maneres de general el fitxer .bib és usar \verb+Mendeley+.
-
-\end{enumerate}
-
-
-
-
-\chapter{El primer capítol}
-Exemple del primer capítol usant alguna secció i subsecció.\footnote{Exemple de nota a peu} Observeu que es poden tenir els capítols en fitxers separats i usar \verb+\input{}+.
-
-
-\section{Una secció}
-Concretament la primera, que conté una taula
-
-\begin{table}[h]
-  \centering
-  \begin{tabular}{|l|l|}
-   \hline
-    0 & 0 \\ \hline
-    0 & 0 \\ \hline    
-  \end{tabular}
-  \caption{Prova de taula}
-
-\end{table}
-
-\subsection{Una subsecció}
-La primera subsecció de la primera secció.
-
-\section{Una altra secció}
-que serà la segona... 
-
-Incorpora una figura amb el logo de la UPF (Figura \ref{fig:logo}) {perquè surti a l'índex de figures. 
-\begin{figure}[h]
-  \centering
-  \includegraphics[scale=0.5]{logo_upf.png}
-    \caption{Exemple de gràfic}
-    \label{fig:logo}
-\end{figure}
-
-
-\chapter{El segon capítol}
-
-Lorem ipsum dicam tation maiorum vel ea, an nam minimum pertinax vituperatoribus, mea no illud tibique nostrum. Odio aperiri dolorem in sit, utinam labore adipiscing cu vel. Nam porro choro cu, nam virtute maluisset voluptatum in, per te vero iuvaret praesent. Eos ut volumus pertinacia interesset, tota debitis abhorreant mei et, clita electram pri at. Ea fabulas admodum theophrastus sea, id nostro omnium periculis sed. Vim id nulla aliquando. Id mel habeo nostrud mandamus, laudem legimus fastidii quo ea, ut iriure utamur quo.
-
-Cu sit nobis omnesque scripserit, nec albucius perfecto salutatus ex. Novum debet propriae vis cu, sed ea suscipit accusata, nam minim salutandi voluptatum ut. Quaerendum definitiones est ut, no quo postea prompta scaevola. Nec at choro soleat causae, per ut docendi denique, discere veritus no sed. Ei sed sale delicatissimi mediocritatem, eligendi deterruisset ut mei, ignota offendit ocurreret at mel. Numquam blandit gubergren an pro, mei cu quot dolore recteque. Suscipit aliquyam principes eam ut, id error dicit perpetua qui.
-
-Eam mentitum noluisse instructior cu, ad scripta nonummy aliquyam eos. Augue possit gloriatur mel an, mea et dolorum suavitate assueverit. At ius dolores persecuti moderatius, id qui justo tantas dissentiet. Integre invenire imperdiet ut mea, harum alienum officiis te nam, integre qualisque conceptam in vis. Viderer consetetur vim id, sumo tempor complectitur vim an. His te aeterno tamquam integre, nec agam aliquando repudiandae id, te fabellas verterem sea.
-
-Per dicit veniam delicata ut, dicunt corpora mei eu. His no alienum accusata accommodare, eu nam clita audire invidunt. Mutat debitis mediocrem duo te, ex vis prima labore inermis. Usu eu dictas possim vocent. Suas meliore ancillae ad eum, eam ei cibo viderer similique.
-
-Usu ne apeirian deserunt expetendis, sed in iisque abhorreant definiebas, quo nulla inermis appareat cu. Ei nam possim docendi pertinax, ut duis veritus detracto pri. Animal percipit ius ne, ne iisque quaeque philosophia pro, ut sed nobis nullam adolescens. Persius principes omittantur per an. Mel quot nostrud labores at, ad vis latine persius petentium. Cum partiendo neglegentur mediocritatem ut, per simul aliquando tincidunt no, falli nominavi molestiae ex nam.
-
-Saperet inciderint in vim, vis quod civibus accusata in. Et ullum facilisi accommodare nec, decore utroque definitionem an vel, id duo kasd facer latine. Ea sumo ullamcorper per, ex pro nobis efficiendi concludaturque, vix eu verear luptatum ocurreret. Ocurreret intellegat te eum, ius ea cibo epicurei dignissim. Diam elit quaeque cum ut. Est dicat summo prodesset te, no vel harum saepe sensibus, et ignota altera doming qui.
-
-Sit altera regione feugiat in, vim ad augue mediocritatem, duo reque choro theophrastus ea. Ipsum apeirian voluptatum duo no, nam ut ornatus accumsan percipitur, est no posse suscipiantur vituperatoribus. Errem legendos partiendo est cu, est clita signiferumque cu. Ea nulla scripta signiferumque eam, sea vidit dolores officiis ei, nibh saepe in nam. Ad vim justo dolor reprimique, eum ad labitur dissentias scriptorem, cu tempor mentitum assentior eum. Id vis mucius percipit invidunt.
-
-Vel at ullum intellegam constituam, mea dicta affert perpetua ea. Eripuit blandit iracundia nec ea, tale timeam molestie cum te. Cum ei kasd mazim, per ei delenit ullamcorper, ad sale vocibus temporibus usu. An nonummy oporteat phaedrum sed, eu unum deserunt incorrupte mei. His an possim delicata, ei accumsan constituam mea. Ei viris constituam pro, cu inimicus argumentum duo.
-
-Cu regione veritus persequeris vis, tation nusquam percipit in pri, vis no labitur deseruisse. Ius in reque fierent. Quo et erant recusabo honestatis. Iusto accusam liberavisse ex mei, ut cum nobis primis accommodare, viderer vocibus assueverit ut nec. Id odio oporteat instructior pri. Nam sint illud vituperatoribus no, zzril ubique dissentias id nec.
-
-Cu est legimus reformidans. Nam cibo mucius dolores ad, prima posse similique vix te. Mea at nemore mandamus assueverit, sit viris option scaevola cu. At omnis decore nostro pro, aliquyam explicari salutatus ei mea, sea no falli incorrupte. Graeco bonorum lobortis ut sed, ut pro discere legimus, an sea volumus consetetur.
-
-Cu regione veritus persequeris vis, tation nusquam percipit in pri, vis no labitur deseruisse. Ius in reque fierent. Quo et erant recusabo honestatis. Iusto accusam liberavisse ex mei, ut cum nobis primis accommodare, viderer vocibus assueverit ut nec. Id odio oporteat instructior pri. Nam sint illud vituperatoribus no, zzril ubique dissentias id nec.
-
-Cu est legimus reformidans. Nam cibo mucius dolores ad, prima posse similique vix te. Mea at nemore mandamus assueverit, sit viris option scaevola cu. At omnis decore nostro pro, aliquyam explicari salutatus ei mea, sea no falli incorrupte. Graeco bonorum lobortis ut sed, ut pro discere legimus, an sea volumus consetetur.
-
-
-Cu est legimus reformidans. Nam cibo mucius dolores ad, prima posse similiqu.
+%=======================================================================
+% MAIN TEXT
+%=======================================================================
+\input{chapters/01_introduction.tex}
+\input{chapters/02_preliminaries.tex}
+\input{chapters/03_data_pipeline.tex}
+\input{chapters/04_label_setting_approach.tex}
+\input{chapters/05_graph_approach.tex}
+\input{chapters/06_results_conclusions.tex}
 
 
 \bibliography{exemple_bibtex}
@@ -367,17 +197,9 @@ Cu est legimus reformidans. Nam cibo mucius dolores ad, prima posse similiqu.
 \appendix
 
 %PODEU POSAR EL NOM QUE US SEMBLI ADIENT
-\chapter{Material de Suport} 
+\chapter{Supporting Material} 
 \label{app:1}
-[Seguiu una estructura lògica que coincideixi amb la secció del cos principal. No hi ha límit de pàgines.]
-
-Aquí teniu una figura que no havíem inclòs al capítol 1 per manca d'espai. \\
-\begin{figure}[h]
-	\centering
-	\includegraphics[scale=0.5]{logo_upf.png}
-	\caption{Exemple de gràfic}
-	\label{fig:logoapp}
-\end{figure}
+[Additional tables and data will go here]
 
 
 
@@ -394,4 +216,4 @@ Aquí teniu una figura que no havíem inclòs al capítol 1 per manca d'espai. \
 %Situació de l'Índex
 \printindex{authors}{Author index}
 %Cal eliminar les comandes \usepakage{makeidx} \makeindex \printindex
-%cal exacutar des de la línia de comandes makeindex authors
+%cal exacutar des de la línia de comandes makeindex author
