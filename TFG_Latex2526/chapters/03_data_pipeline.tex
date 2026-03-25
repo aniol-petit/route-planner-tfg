@@ -4,27 +4,87 @@
 
 \section{Sourcing Transit Data}
 \label{sec:sourcing_data}
+The foundational step of this optimization problem was acquiring a comprehensive, time-accurate dataset of scheduled public transportation. The Guinness World Record guidelines mandate the use of scheduled public transport. Therefore, the data pipeline required a fusion of short-haul flight networks and high-speed rail schedules.
+
+\noindent The geographic scope of the dataset was strictly and intentionally limited to the European continent. Europe is the only logical theater for this specific record due to its unparalleled density of sovereign states coupled with highly developed, cross-border transit infrastructure. However, extracting continental-scale transit data presents a significant financial barrier. Commercial aggregators typically charge per query, which is prohibitively expensive when building a dense, multi-country matrix. Consequently, a primary constraint of this project was to secure massive data volumes while strictly minimizing or eliminating acquisition costs. This budget constraint fundamentally dictated the technological approach for both flight and train data and imposed some challenges for acquiring high quality data.
 
 \subsection{Flight APIs}
 \label{subsec:flight_apis}
-% Discuss extraction, pagination, and API limitations.
+While the airline industry is highly standardized, access to global distribution systems (such as Amadeus or Sabre) requires expensive commercial licensing. To bypass these costs, the flight dataset was sourced using the AviationEdge API.
+
+This platform offered a generous 1 month trial period charged at \$7 that enabled access to most of the endpoints, among those the \textit{flightsHistory} endpoint used to acquire the flight data. To efficiently target the API without exhausting query limits on irrelevant locations, an online global dataset of airports was acquired and programmatically filtered to isolate only active commercial airports within European borders. The resulting list of IATA (International Air Transport Association) codes served as the exact querying parameters.
+
+By iterating through these European IATA codes and a specific 48-hour target date, the pipeline sent automated HTTP requests to extract all scheduled departures. The 48-hour window is required to ensure that routes starting at any point on day 1 have a full 24-hour window ahead of them to complete the record.
 
 \subsection{Train Data}
 \label{subsec:train_data}
-% Discuss scraping methodologies, rate limits, and handling unstructured HTML/JSON.
+Acquiring European rail data proved significantly more complex. Unlike aviation, the European rail network is heavily fragmented across dozens of national operators (e.g., SNCF, DB, Renfe, Trenitalia). There is no centralized, free REST API that aggregates all European train schedules; and master datasets are extremely expensive (often approaching five figures).
+
+Because purchasing access to a unified commercial rail database was out of budget, the pipeline relied on programmatic web scraping. The target was a centralized rail search engine acting as a routing aggregator for a large portion of cross-border connections, namely the \textit{Deutsche Bahn (DB) portal}.
+
+Using the web scraping methodologies outlined in Chapter 2, a custom batch scraper was engineered to extract this data. Because modern transit portals heavily throttle automated requests, the script utilized \textit{undetected-chromedriver} running in a headless Selenium environment to bypass bot-detection mechanisms. To guide the scraping process without blindly querying thousands of unviable city combinations, the pipeline leveraged an online compilation of major European rail corridors. The extraction algorithm systematically iterated through this predetermined list, simulating user queries between the station pairs in both forward and reverse directions. To ensure exhaustive daily coverage without triggering UI blocks, the scraper incrementally advanced the search time based on the last extracted departure, systematically sweeping the entire 24-hour window. Because scraping at this scale is computationally heavy and highly vulnerable to IP bans, the pipeline extracted exactly one standard weekday of train data. The algorithm operated under the safe assumption of schedule continuity, duplicating this 24-hour block to construct the necessary 48-hour window required for the record attempt.
+
+The script then parsed the resulting unstructured HTML pages, isolated the Document Object Model (DOM) elements containing the departure, arrival, and transfer times, and serialized the extracted text into clean, incremental CSV records. This brute-force data engineering approach bypassed the lack of a unified API, successfully capturing the ground-level connectivity required for the routing algorithm.
 
 \section{Data Cleaning and Normalization}
 \label{sec:cleaning_normalization}
-% Standardizing timezones.
-% Converting everything to absolute minute-of-day.
-% Resolving missing or malformed data.
+With the raw flight and train schedules acquired, the data existed in highly disparate, semi-structured formats across thousands of CSV and JSON files. To safely process and mutate this data at scale, a local SQLite database was instantiated as an intermediate staging environment. This approach enabled structured SQL queries to filter, group, and reconcile the massive datasets before exporting the finalized, clean records back to CSV format for the graph construction algorithm.
+
+\subsection{Entity Resolution and Standardization}
+\label{subsec:entity_resolution_standardization}
+A major challenge of aggregating multi-source European transit data is the lack of standardized naming conventions. A single physical location might appear under multiple aliases (e.g., ``M\"unchen Hbf'', ``Munich Central'', or ``M\"unchen Hauptbahnhof''). If left uncorrected, the routing graph would treat these as distinct, disconnected nodes, destroying viable transfer opportunities.
+
+To resolve this, a programmatic string normalization pipeline was implemented. This pipeline converted text to lowercase, stripped punctuation, removed generic tokens (e.g., ``station'', ``gare'', ``stn''), and applied a hardcoded dictionary mapping to forcefully unify critical European hubs and border crossings under a single canonical name.
+
+Additionally, although the flight API returned comprehensive historical delay metrics, these were ultimately stripped from the final dataset. Incorporating unpredictable historical delays into a time-expanded routing graph exponentially increases complexity without guaranteeing future accuracy. Consequently, the dataset was strictly normalized to rely solely on scheduled departure and arrival times to maintain a deterministic model.
+
+\subsection{The Midnight Rollover Problem and Absolute Minutes}
+\label{subsec:midnight_rollover_absolute_minutes}
+To allow mathematical evaluation of layover times, all chronological data had to be converted into a continuous timeline. The target metric was \textit{Absolute Minutes}, representing the elapsed time from $t=0$ (midnight on the first day of the 48-hour routing window).
+
+While flight data included explicit date strings, making absolute conversion straightforward, the scraped train data only provided localized \textit{HH:MM} strings for intermediate stops. This introduced the \textit{Midnight Rollover} problem: the data did not explicitly state when a train's journey crossed into the next calendar day.
+
+To solve this, a chronological tracking algorithm was applied to the sequence of stops. By storing the absolute departure time of a route's origin, the algorithm deduced day boundaries by checking whether a subsequent stop's minute-value was numerically lower than the previous stop's value. If an arrival time was lower than its preceding departure time, $1440$ minutes (24 hours) were automatically added to the timestamp, carrying the route into the next day. The algorithm also imputed missing values; if an arrival time was missing from the scraped HTML, it safely duplicated the departure time, ensuring no \texttt{NULL} values broke the final graph.
+
+\subsection{UTC Synchronization}
+\label{subsec:utc_synchronization}
+Because the European continent spans multiple time zones (from UTC+0 in Portugal to UTC+2 in Finland), local transit times could not be directly compared. For example, a train departing Spain (UTC+1) at 10:00 and arriving in Portugal (UTC+0) at 09:30 would create a negative time-travel paradox if plotted in local time on a graph.
+
+To ensure strict chronological consistency, every absolute minute timestamp was mapped to a universal UTC+0 baseline. This required building a comprehensive lookup table linking station locations to their respective timezone offsets. Since generic country-code matching is flawed for outermost regions, specific airport and station overrides were manually coded. For example, while mainland Spain is UTC+1, the Canary Islands were explicitly hardcoded to UTC+0. Similarly, vast countries like Russia required specific regional mapping. By subtracting these precise local offsets, the entire 48-hour European transit dataset was synchronized onto a single mathematically viable timeline.
+
+Finally, a strict validation pass was executed across the normalized dataset. Any transit record where the absolute UTC arrival time was numerically lower than the absolute UTC departure time was permanently dropped, effectively filtering out upstream API scheduling errors and corrupted data points.
 
 \section{Spatial Mapping and Filtering}
 \label{sec:spatial_mapping}
-% Coordinate mapping (translating lat/lon to actual stations).
-% Filtering algorithms to remove redundant or useless stops.
-% Country assignment and boundary resolution.
+To evaluate a Guinness World Record attempt based on the number of countries visited, the routing algorithm must inherently ``know'' the geographical location and sovereign territory of every single node in the network. Furthermore, a raw European transit graph contains tens of thousands of minor stops (e.g., suburban commuter stations or rural villages) that drastically bloat the search space without offering viable international transfer opportunities. Consequently, a rigorous spatial mapping and filtering pipeline was engineered to reduce the graph to its most mathematically relevant hubs while ensuring 100\% geographical accuracy.
 
-\section{Transfer Durations}
-\label{sec:transfer_durations}
-% How you calculated realistic human layover/walking times between specific transit hubs.
+\subsection{Country Assignment and Border Resolution}
+\label{subsec:country_assignment_border_resolution}
+While international flights explicitly land in known countries, domestic and cross-border train schedules scraped from the DB portal do not consistently label the country of intermediate stops. To dynamically resolve this, a multi-strategy geographical detection algorithm was implemented.
+
+The algorithm evaluated each scraped station name through a descending hierarchy of spatial heuristics:
+
+\begin{itemize}
+  \item \textbf{Regex code extraction:} Extracting explicit country codes often hidden in parentheses within the raw text (e.g., parsing (CH) as Switzerland or (NL) as the Netherlands).
+  \item \textbf{Language pattern recognition:} Utilizing linguistic markers to confidently infer sovereign territory (e.g., the presence of ``hl.n.'' for Czech main stations, ``Glowny'' for Poland, or `` b.Wien'' for Austrian suburbs).
+  \item \textbf{GeoNames cross-referencing:} Querying a localized subset of the GeoNames database to map normalized station strings to the most populous European city matching that name.
+\end{itemize}
+
+Despite these programmatic layers, complex border stations frequently generated false positives (e.g., ``Gen\`eve'' being administratively in Switzerland despite a French linguistic profile, or border towns like Domodossola). To guarantee absolute integrity for record evaluation, an exhaustive list of manual topological corrections was hardcoded into the pipeline to forcefully overwrite erroneous geographical assignments at critical border crossings.
+
+\subsection{Station Filtering and Hub Identification}
+\label{subsec:station_filtering_hub_identification}
+With countries successfully assigned, the sheer volume of total nodes remained computationally intractable. A scoring heuristic was developed to prune the network while safely preserving the core international skeleton. Every station was evaluated based on keyword presence (e.g., rewarding ``Hauptbahnhof'' or ``Central'', penalizing ``Village'' or ``Halt'') and its topological frequency across all scraped routes.
+
+The filtering logic dictated that the first and last stops of any train were always preserved, alongside at least one high-scoring hub per traversed country. This successfully stripped away thousands of irrelevant intermediate stops without breaking the physical continuity of the routes.
+
+To further isolate the absolute most critical transit hubs among the roughly 40 targeted countries, the pipeline leveraged Large Language Models (LLMs). By feeding national station lists into an advanced LLM, the model was instructed to intelligently identify only the most viable international transfer hubs for each specific country, keeping the final graph dense with high-value opportunities.
+
+\subsection{Intra-Country Transfers and Geocoding Validation}
+\label{subsec:intra_country_transfers_geocoding_validation}
+The final geographical challenge was enabling realistic human transfers between different stations within the same city (e.g., moving from a flight arriving at Paris CDG to a train departing from Paris Gare du Nord). Establishing a physical connection between two nodes requires highly precise geospatial coordinates and transit times.
+
+Because commercial geocoding and routing APIs (such as the \textit{Google Maps Distance Matrix API}) incur significant financial costs at scale, an innovative, multi-agent AI approach was designed. An LLM was prompted to evaluate the filtered hubs and identify which intra-city stations were actually worth connecting. A strict constraint was applied: any transfer requiring excessive transit time (e.g., 4 hours) was automatically discarded, as such a delay would mathematically destroy a 24-hour record attempt.
+
+This process generated a highly focused list of 236 viable transfer connections, alongside AI-estimated coordinates and durations. Because LLMs are prone to geospatial hallucinations, a secondary LLM was deployed specifically to audit the first model's output. However, to eliminate any margin of error and ensure maximum academic rigor, a manual validation protocol was executed. Every single one of the 236 critical transfers was manually queried in the Google Maps UI to extract the exact walking or local-transit durations. This painstaking manual verification completely eliminated API costs while yielding a 100\% accurate, human-viable transfer matrix for the final routing algorithm.
+
