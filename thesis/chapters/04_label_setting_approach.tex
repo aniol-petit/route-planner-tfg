@@ -1,0 +1,70 @@
+\chapter{Algorithmic Approach I: Label Setting and Bounding Foundations}
+\label{chap:label_setting_approach}
+
+\section{The Time-Dependent Transportation Graph}
+\label{sec:time_dependent_graph}
+
+With a fully normalized, UTC-synchronized dataset of European transit schedules, the next step was constructing the mathematical environment for the routing algorithm. A standard static spatial graph $G = (V, E)$ is fundamentally inadequate for modeling scheduled public transportation, as an edge implies continuous availability.
+
+To rigorously test different modeling paradigms, the first architectural approach evaluates the network as a time-dependent multi-graph. In this Activity-on-Edge (AoE) architecture, the vertices remain purely spatial, while the dimension of time is encoded directly into the attributes of the edges. This approach was deliberately chosen to maintain a highly compact memory footprint, avoiding the node explosion inherent to fully time-expanded models.
+
+The graph was instantiated using the NetworkX library with the following structural rules:
+
+\begin{itemize}
+    \item \textbf{Spatial Nodes ($V$):} A single vertex was created for each unique physical location. Nodes were tagged with specific attributes: their sovereign country (critical for the objective function) and their infrastructure type (airport or station).
+    \item \textbf{Temporal Transit Edges ($E$):} Flights and trains were modeled as directed edges between origin and destination nodes. Because multiple trains or flights travel between the same two cities throughout the day, these edges stored dynamic temporal attributes. Instead of a single static weight, each edge contained an array of valid $(departure\_time, arrival\_time)$ pairs, formatted in absolute UTC minutes. To account for the 48-hour Guinness World Record window, train schedules (which operate on daily cycles) were programmatically duplicated, adding $1440$ minutes to populate the second day of the graph.
+    \item \textbf{Static Transfer Edges:} The manually validated intra-city connections (e.g., traversing from a city's airport to its central rail station) were integrated as standard, bidirectional static edges. Unlike transit edges, transfer edges were assigned a fixed scalar weight representing the human connection time in minutes, as they can be traversed at any point during the day.
+\end{itemize}
+
+By compressing schedules into arrays on spatial edges, this AoE architecture successfully avoided node redundancy. However, this time-dependent structure shifts the chronological burden entirely onto the search algorithm, which must dynamically iterate through edge arrays to find valid connections based on its arrival time at any given node. This compact graph serves as the baseline environment to test the exact optimization methods detailed in the following sections.
+
+\section{Algorithm Evolution: From Baseline to Bounding}
+\label{sec:algorithm_evolution}
+
+\noindent
+Because the Guinness World Record challenge is fundamentally a multi-objective optimization problem (maximizing unique countries visited while minimizing time within a strict 24-hour limit) a standard shortest-path algorithm like Dijkstra's cannot be used. Instead, the search must be modeled using Dynamic Programming (DP) via a label-setting algorithm (see Algorithm 1 in Appendix X).
+
+In this paradigm, as the algorithm traverses the time-dependent multi-graph, it assigns a state label $L$ to each node. A label is defined by the tuple $L = (v, t, C, start\_time)$, tracking the current node $v$, the current absolute minute $t$, the set of unique countries visited $C$, and the time the journey began.
+
+To prevent the search space from expanding infinitely, the algorithm relies on Pareto dominance. At any given node, a new label $L'$ is strictly dominated by an existing label $L''$ if the existing path arrived earlier or at the same time ($L''.t \leq L'.t$) while having visited a superset or equal set of countries ($L''.C \supseteq L'.C$), with at least one condition being strictly better. Dominated labels are instantly discarded.
+
+However, implementing this baseline algorithm revealed a fatal flaw: the Pareto dominance conditions were too relaxed. Across a network spanning roughly 40 countries, the combinatorial permutations of visited country sets $C$ caused an explosion of non-dominated labels, rendering the baseline approach computationally unfeasible. This initiated a rigorous, iterative evolution of the algorithm, where advanced mathematical pruning techniques were progressively introduced to control the state space.
+
+\subsection{Reachability and Upper Bound (UB) Pruning}
+\label{subsec:baseline_label_setting}
+
+The first major architectural change was introducing predictive pruning (see Algorithm 2 in Appendix X). Before expanding a label, the algorithm calculated an optimistic Upper Bound ($UB$) of the maximum remaining countries that could theoretically be reached from the current node $v$ within the remaining time.
+
+By precomputing reachable country sets $R(v, b)$ for specific time buckets $b$, the algorithm could determine the best-case geographic scenario for a given path. If the current countries visited $|C|$ plus the theoretical $UB$ was strictly less than the current global record, the path was mathematically dead and immediately pruned (see Algorithm 4 in Appendix X).
+
+\subsection{Time-Budgeted UB and Minimum Transit Time (MTT)}
+\label{subsec:ub_pruning}
+
+While standard $UB$ pruning successfully removed hopeless paths, it was overly optimistic. It assumed that if 10 countries were reachable from a node, all 10 could be visited, completely ignoring the physical time required to travel between them.
+
+To tighten this bound, the concept of Minimum Transit Time (MTT) was introduced. The $MTT$ represents the absolute shortest physical time required to enter, traverse, and exit a specific country's transit network. For instance, even under perfect schedule conditions, traveling across Switzerland or Germany requires a mathematically provable minimum number of minutes. The algorithm precomputed this $MTT$ for every country in the dataset.
+
+When calculating the $UB$, the algorithm sorted all unvisited, reachable countries from the fastest $MTT$ to the slowest (see Algorithm 6 in Appendix X). It then sequentially added these minimum transit times to a \texttt{time\_spent} counter. The moment the accumulated \texttt{time\_spent} exceeded the actual hours remaining in the 24-hour journey, the algorithm stopped incrementing the $UB$. This ``Time-Budgeted UB'' drastically accelerated convergence: it accurately pruned paths that possessed theoretical geographic connectivity but lacked the physical time budget required to actually execute the transits.
+
+\subsection{Global Hard Floors and Smart-Greedy Rollouts}
+\label{subsec:mtt_heuristic}
+
+Despite the tightened bounds, execution logs revealed that the algorithm was still wasting computational resources expanding labels near the end of the 24-hour timeline that had only accumulated a small number of countries. To aggressively counter this, a Global Hard Floor was introduced (see Algorithm 9 in Appendix X). By establishing a GlobalMinTime (an optimistic estimate of the absolute minimum realistic time to visit any single country, e.g., 25 minutes), the algorithm calculated the bare minimum physical time required to bridge the gap between $|C|$ and the target record. If this required time exceeded the remaining clock, the label was instantly killed.
+
+Simultaneously, the search queue was transitioned to a priority queue, scored to prioritize paths with high country counts and strong Upper Bounds. To capitalize on this, a Monte-Carlo rollout mechanism was injected (see Algorithm 8 in Appendix X). Every 1,000 iterations, the algorithm paused standard expansion and launched a rapid, randomized ``smart-greedy'' probe deep into the graph (see Algorithm 7 in Appendix X). Using heavily biased weights to favor unvisited countries and a Tabu list to prevent local loops, these rollouts operated in milliseconds. If a rollout successfully reached the end of the day and beat the current global record, the new record was dynamically adopted, triggering a massive, immediate pruning wave across the entire priority queue.
+
+\subsection{The Bi-directional Search Pivot}
+\label{subsec:bidirectional_search_pivot}
+
+The final algorithmic evolution within this paradigm was born from observing the failure points of the Monte-Carlo rollouts. Debugging revealed that rollouts were highly ineffective when they reached the night hours; physical train schedules became incredibly sparse, trapping the greedy probes in geographic dead-ends.
+
+To bypass this nocturnal sparsity, the monolithic 24-hour search was torn in half. The architecture was rewritten as a bi-directional search: one algorithm ran forward in time from the start of the day (see Algorithm 10 in Appendix X), while an identical algorithm ran backward in time from the end of the day (see Algorithm 11 in Appendix X). Both halves executed for 14 hours, creating a 4-hour overlap in the middle of the day.
+
+Finally, a dedicated ``stitcher'' algorithm evaluated the intersection of these two sets (see Algorithm 12 in Appendix X). By iterating through overlapping nodes and validating time continuity and geographic unions, the stitcher could reconstruct a globally optimal 24-hour path. This parallel, bi-directional approach effectively bypassed the sparse night-time bottlenecks and maximized graph coverage during the dense daytime schedules.
+
+\section{The Dimensionality Collapse}
+\label{sec:dimensionality_collapse}
+% The climax of this chapter: why this mathematically perfect approach failed.
+% Discuss the combinatorial explosion of the Pareto frontiers, memory exhaustion, and why exact optimization is intractable on a dense 50-country network.
+% The critical analysis of why the exact approach failed.
+% Discuss the explosion of the Pareto frontier, memory constraints, and the "Curse of Dimensionality".
