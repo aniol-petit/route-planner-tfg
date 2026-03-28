@@ -3,25 +3,193 @@
 
 \section{The Activity-on-Node (AoN) Transformation}
 \label{sec:aon_transformation}
-% Reimagining the problem: flights/trains become nodes, and layovers become edges.
 
-\section{Baseline DFS and the Reduced Graph}
+As established in the preliminary definitions, a central objective of this research is to evaluate and contrast two fundamental graph paradigms for time-dependent routing. Having quantified the computational limits of the memory-efficient Activity-on-Edge (AoE) architecture in Chapter 4, the analysis now shifts to the second structural candidate: the Activity-on-Node (AoN) framework. The AoE model prioritized a compact spatial topology, which inherently forced the search algorithm to dynamically calculate temporal validity at every node. To systematically test the inverse trade-off, the European transportation network was mathematically reconstructed as an Activity-on-Node Directed Acyclic Graph (DAG) (see Appendix X). This structural pivot deliberately transfers the chronological burden away from the search algorithm and embeds it entirely into the static topology of the graph, prioritizing algorithmic traversal speed over memory footprint.
+
+\subsection{Structural Inversion: Events as Nodes}
+\label{subsec:aon_events_as_nodes}
+
+In the AoN paradigm, physical locations no longer exist as nodes. Instead, every single scheduled transport event (a specific flight or train) is instantiated as an independent vertex. A node in this graph is defined by the rigid tuple $v = (\text{Origin}, \text{Destination}, \text{Departure\_Time}, \text{Arrival\_Time})$. For example, a flight leaving Barcelona at 10:00 and arriving in Rome at 12:00 represents one single, immutable node in the graph. By unpacking the temporal arrays from the original 8,456 spatial edges, the AoN transformation generated exactly 49,982 distinct event nodes (see Appendix~X).
+
+Consequently, the edges in the AoN graph no longer represent physical travel. Instead, directed edges represent valid transfer opportunities between two events. A directed edge from event node $A$ to event node $B$ is drawn if and only if:
+\begin{itemize}
+    \item Event $A$'s destination matches Event $B$'s origin (or they are connected via a valid intra-city transfer).
+    \item Event $A$'s arrival time strictly precedes Event $B$'s departure time, fully accounting for minimum physical transfer durations (e.g., $\mathrm{Arrival}_A + \mathrm{Transfer\_Time} \leq \mathrm{Departure}_B$).
+\end{itemize}
+
+\subsection{Trade-offs and the Directed Acyclic Guarantee}
+\label{subsec:aon_tradeoffs_dag}
+
+This structural inversion offered a massive computational advantage: the search space became entirely static. Because every edge in the AoN graph guarantees chronological validity, a Depth-First Search (DFS) algorithm can traverse the network blindly. It never has to pause to calculate if a connection is mathematically legal; if an edge exists, the transfer is guaranteed to be valid. Furthermore, because time strictly moves forward, the resulting graph is a Directed Acyclic Graph (DAG). It is physically impossible to traverse a loop, which naturally prevents infinite cycles without requiring complex Tabu lists.
+
+However, this advantage comes with a severe structural trade-off: an exponential explosion in edge density. In a densely connected continental network, a single train arriving at a major hub like Frankfurt might theoretically connect to hundreds of subsequent departing trains. If every valid transfer opportunity is explicitly drawn as an edge, the branching factor of the DAG becomes completely unmanageable for a DFS traversal.
+
+\subsection{Earliest Arrival Pruning}
+\label{subsec:earliest_arrival_pruning}
+
+To tame this exponential branching factor, a highly aggressive, domain-specific heuristic was engineered during the graph construction phase: Earliest Arrival Pruning (see Appendix~X).
+
+When evaluating all valid subsequent events (node $B$ candidates) from a given arrival event (node $A$), the transformation algorithm grouped the candidates by their final destination. Rather than drawing edges to all valid subsequent trains heading to a specific city, the algorithm only drew a single edge to the train that offered the absolute earliest arrival time at that destination.
+
+Mathematically, if Event $A$ arrives in Munich at 14:00, and there are three valid subsequent trains to Vienna departing at 14:30, 15:00, and 16:00, creating edges to all three is redundant for a time-minimization objective. The 14:30 train dominates the others. By rigidly enforcing this pruning rule, tens of thousands of redundant temporal edges were mathematically severed before the search even began. Validation scripts confirmed this heuristic successfully reduced the total edge volume by over 75\%, transforming an impossibly dense theoretical web into a streamlined, highly traversable DAG containing approximately 1.5 million strictly optimal transfer edges (see Appendix~X).
+
+\section{Baseline DFS Execution on the Full Graph}
 \label{sec:baseline_dfs}
-% Proving the concept using the 'freq100' reduced graph to extract the first valid golden routes.
 
-\section{Scaling to the Full Graph (Distributed DFS)}
-\label{sec:scaling_distributed}
-% Architecture of the SLURM array distribution.
-% Tackling Out-Of-Memory (OOM) failures and migrating to fault-tolerant append-only (.jsonl) structures.
+With the European transit network successfully transformed into an Activity-on-Node (AoN) Directed Acyclic Graph (DAG) and stripped of redundant temporal edges, the search space was structurally primed for a pure Depth-First Search (DFS). Unlike the Dynamic Programming approach evaluated in Chapter~\ref{chap:label_setting_approach}, which required maintaining continuously expanding Pareto frontiers in memory at every node, a DFS on a DAG only requires maintaining the current path stack. This exceptionally low memory footprint eradicated the previous state-space memory bottlenecks, allowing the algorithm to trace individual routes to completion with virtually zero memory overhead.
 
-\section{Optimizing the Search Space}
-\label{sec:optimizing_search_space}
+\subsection{Core Search Mechanics and Bounding}
+\label{subsec:core_search_bounding}
 
-\subsection{State Dominance and the Pruning Bug}
-\label{subsec:state_dominance}
-% Explain the "First-Come, First-Served" state dominance paradox that deleted good routes.
+At its conceptual core, the DFS algorithm is highly intuitive: it selects a valid starting node (e.g., a specific flight departing at 08:00) and exhaustively explores every possible sequence of connecting transports. The algorithm ``walks'' down a continuous path of flights and trains, accumulating countries along the way, until the 24-hour time limit expires. Once a path hits the deadline, the algorithm evaluates the total number of unique countries visited. If the total beats or ties the current global record, the route is saved. The algorithm then takes a step back (backtracks) to the previous station and tries the next available connecting branch, systematically exploring every single branch of the tree.
 
-\subsection{Heuristic Pre-Sort and RQI}
-\label{subsec:heuristic_presort}
-% Rigging the algorithm to evaluate ideal (~90 min) layovers first.
-% Briefly introduce the Route Quality Index (RQI) as the metric defining these ideal layovers.
+However, even on a highly pruned AoN graph, a pure brute-force traversal of a continental network would take centuries to execute. To control the exponential branching factor, the algorithm took direct advantage of the mathematical bounding techniques developed in Chapter~\ref{chap:label_setting_approach}. The Minimum Travel Time (MTT) and Upper Bound ($UB$) logic were seamlessly ported into the DFS as a Branch and Bound (B\&B) mechanism. At every step of the traversal, the algorithm calculated the time remaining before the 24-hour deadline, divided it by the MTT of the current country, and added this theoretical maximum to the current country count. If this optimistic Upper Bound could not mathematically beat the highest global record found thus far, the algorithm immediately abandoned that path and backtracked, saving millions of useless computational cycles.
+
+\subsection{High-Performance Multiprocessing Architecture}
+\label{subsec:hpc_multiprocessing}
+
+Because a DFS evaluates independent branches, the search is an ``embarrassingly parallel'' problem. The architecture capitalized on this by gathering all valid starting nodes in the graph, defined as any transit event arriving early enough to allow a full 24-hour window, and distributing them across a pool of independent worker processes. Each worker was assigned a specific starting node and made solely responsible for exhaustively traversing all possible paths originating from that event.
+
+To execute this at scale, the algorithm was deployed to a High-Performance Computing (HPC) cluster using the SLURM workload manager, allocating a single, highly powerful compute node equipped with 68 physical CPU cores and 64~GB of RAM.
+
+Parallelizing a massive graph search in Python, however, introduces severe serialization and Inter-Process Communication (IPC) overheads. To prevent these systems-level bottlenecks from crippling the search speed, two critical engineering optimizations were implemented:
+\begin{itemize}
+    \item \textbf{Zero-Serialization Memory Sharing:} Passing a 1.5 million-edge graph to 68 individual worker processes via standard Python multiprocessing would crash the system due to memory duplication overhead. Instead, the architecture utilized an initialization function (\texttt{init\_worker}). This allowed the global graph dictionary, country mappings, and MTT data to be loaded natively into each worker's local memory space upon instantiation, completely bypassing continuous serialization.
+    \item \textbf{Lazy Synchronization:} To allow all 68 workers to globally prune branches, they needed to share a single \texttt{shared\_global\_max} variable representing the current highest country record. Forcing 68 cores to constantly acquire a multiprocessing lock to read this variable would cause massive IPC contention. To solve this, a ``lazy sync'' architecture was designed: each worker maintained a local copy of the global maximum and only paid the IPC penalty to synchronize with the shared manager once every 10,000 nodes explored, or when a new record was actively discovered.
+\end{itemize}
+
+\subsection{Live Checkpointing and the 48-Hour Bottleneck}
+\label{subsec:checkpointing_48h}
+
+To safeguard against cluster node failures or strict execution time limits, a fault-tolerant live-checkpointing system was integrated. As the 68 cores independently plunged into the graph, any path that successfully accumulated 14 or more countries, or tied the global maximum, was instantly serialized and appended to a \texttt{live\_checkpoint.json} file. This ensured that valuable, highly optimized candidate routes were continuously preserved to disk during execution without waiting for the entire algorithm to finish.
+
+The algorithm was submitted to the cluster with a maximum wall-clock execution limit of 48~hours. Over the course of the run, the HPC node operated at maximum capacity, exploring billions of nodes and aggressively pruning unpromising branches.
+
+However, when the 48-hour hard limit was reached and the cluster terminated the job, the execution logs revealed a humbling reality. Despite the extreme memory efficiency of the AoN DFS, the strict Branch and Bound pruning inherited from Chapter~\ref{chap:label_setting_approach}, and the deployment of 68 parallel cores, the algorithm had evaluated barely $1\%$ of the total starting nodes in the graph. While the AoN transformation had successfully solved the memory collapse of the previous paradigm, the unconstrained branching factor of the full, unfiltered continental network still presented an insurmountable time complexity barrier for exhaustive evaluation.
+
+\section{Graph Reduction and Targeted Executions}
+\label{sec:graph_reduction_targeted}
+
+Although the 48-hour baseline DFS execution only evaluated $1\%$ of the starting nodes in the full AoN graph, the live-checkpointing architecture yielded an extraordinary dataset. When the execution was terminated, the checkpoint file contained over 100,000 highly optimized, record-breaking candidate routes. This sheer volume of successful paths, extracted from such a tiny fraction of the search space, suggested a critical topological hypothesis: while the algorithm was suffocating under the combinatorial weight of the full continental network, the actual winning routes were likely relying on the exact same core infrastructure.
+
+To empirically test this hypothesis, a custom analytical dashboard was developed to parse the 100,000+ routes generated by the baseline run. The dashboard performed a rigorous Pareto analysis (frequency vs.\ cumulative percentage) on station and edge usage. The visual and statistical outputs conclusively confirmed the hypothesis: a small, elite subset of major international hubs and high-speed corridors was handling the vast majority of the routing traffic. Conversely, the dashboard's ``long-tail'' analysis revealed thousands of regional stations that appeared in almost zero winning permutations. The baseline algorithm had been spending the bulk of its 48-hour execution window exhaustively calculating transfers between minor suburban towns that possessed no mathematical viability for a continental speed record.
+
+\subsection{Data-Driven Graph Reduction}
+\label{subsec:data_driven_graph_reduction}
+
+Armed with this empirical evidence, the focus shifted from an exhaustive continental search to a targeted, high-density graph reduction. Rather than arbitrarily guessing which cities were important, the reduction was strictly data-driven. A pipeline was engineered to ingest the live checkpoint data, calculate the exact appearance frequency of every station across the 100,000 winning routes, and dynamically sever the low-value regional branches.
+
+Using the original spatial graph as a baseline, two specific reduced subgraphs were generated:
+\begin{itemize}
+    \item \textbf{The \texttt{freq100} graph (conservative):} A subgraph retaining only stations that appeared more than 100 times in the elite checkpoint routes.
+    \item \textbf{The \texttt{freq1000} graph (aggressive):} A highly concentrated subgraph retaining only the absolute most critical arterial stations, requiring more than 1,000 appearances in the elite routes.
+\end{itemize}
+
+This programmatic pruning successfully stripped away the dense, localized noise, leaving only the high-speed, cross-border infrastructure that possessed proven viability. These reduced spatial graphs were then transformed into new, significantly lighter AoN DAGs.
+
+\subsection{Full Convergence on Reduced Graphs}
+\label{subsec:full_convergence_reduced}
+
+The identical 68-core DFS algorithm was subsequently deployed on these reduced AoN graphs. By mathematically severing the low-value regional branches, the algorithm was forced to strictly traverse the high-speed arterial core. The reduction in the branching factor yielded breathtaking computational improvements.
+
+Whereas the full graph had timed out after 48~hours while exploring just $1\%$ of the space, the algorithm running on the aggressively pruned \texttt{freq1000} graph reached absolute completion, exhaustively evaluating 100\% of all possible starting nodes and paths, in just 30~minutes. The conservatively pruned \texttt{freq100} graph, which retained a wider geographic net, successfully ran to absolute completion in exactly 3~hours.
+
+By intelligently leveraging the partial outputs of a failed brute-force attempt, the pipeline successfully bypassed the combinatorial explosion. The DFS was finally able to evaluate the entirety of the relevant temporal network, guaranteeing the extraction of the absolute mathematical global optimums for the Guinness World Record attempt.
+
+\section{Distributed DFS Execution}
+\label{sec:distributed_dfs}
+
+Following the baseline DFS execution, logs indicated that the algorithm had evaluated only $1\%$ of the valid starting nodes before hitting the 48-hour wall-clock limit. However, the nature of the Activity-on-Node (AoN) graph presented an opportunity: because each starting node represents an independent search tree, the problem is embarrassingly parallel. The mathematical deduction was straightforward: if a single compute node could evaluate $1\%$ of the search space in 48~hours, distributing the workload across 100 compute nodes should theoretically allow for the exhaustive evaluation of the entire graph within the same 48-hour window.
+
+To execute this, the architecture was upgraded from a single-node multiprocessing script to a fully distributed SLURM Job Array.
+
+\subsection{Horizontal Scaling and Job Array Distribution}
+\label{subsec:job_array_distribution}
+
+The starting nodes were extracted, sorted deterministically, and partitioned across 100 independent array tasks. Rather than slicing the nodes into contiguous blocks, a round-robin distribution was implemented using modulo arithmetic (\texttt{index \% total\_jobs == job\_idx}). This ensured that dense, high-traffic periods (e.g., morning rush hours) and sparse periods were evenly distributed across all 100 workers, preventing individual nodes from being disproportionately bottlenecked by heavy temporal branches.
+
+To further optimize the local traversal within each worker, a State Dominance Memoization technique was introduced. Each worker maintained a local hash map of previously visited states, defined by the tuple $(\text{current\_node}, \text{visited\_countries})$. If a worker arrived at a state it had already reached via an earlier or identical arrival time, the branch was instantly pruned.
+
+\subsection{OOM Hurdles and Distributed Checkpointing}
+\label{subsec:oom_distributed_checkpointing}
+
+Deploying 100 parallel jobs, each running multiple worker processes and maintaining local memoization dictionaries, placed an immense strain on the cluster's memory infrastructure. Early deployments of the distributed array encountered severe Out-Of-Memory (OOM) errors, as the \texttt{local\_visited\_states} dictionaries ballooned in RAM. To stabilize the array, the memory allocation per task had to be significantly increased (up to 64~GB per node) and the core count per task carefully balanced to ensure workers did not cannibalize shared memory.
+
+Additionally, having 100 independent jobs concurrently attempting to write to a single, shared JSON checkpoint file would have caused catastrophic I/O contention and file corruption. Instead, the checkpointing architecture was decentralized. Each job array task was assigned a unique, append-only JSONL (JSON Lines) file. As workers discovered routes visiting 14 or more countries, the paths were serialized as individual JSON objects and safely appended to their respective files, eliminating all locking contention.
+
+\subsection{Route Deduplication and Parquet Compilation}
+\label{subsec:dedup_parquet}
+
+Once the 100-node array completed its execution, the output consisted of 100 disparate JSONL files containing hundreds of thousands of candidate routes. Because the European transit network contains multiple converging paths, different starting nodes frequently converged onto the exact same optimal sequence of subsequent trains, resulting in massive data duplication across the array.
+
+To synthesize this fragmented output, a dedicated compilation pipeline was engineered. The compiler ingested every JSONL file and generated a deterministic MD5 hash for each route based on its sequence of stations. This hashing mechanism successfully identified and dropped millions of redundant duplicate routes.
+
+Finally, the deduplicated elite routes were flattened into a tabular structure and exported as a highly compressed \texttt{.parquet} file. This transition from nested JSON to columnar Parquet drastically reduced the dataset's footprint and unlocked the ability to perform high-speed analytical queries. The resulting database contained the definitive ``master list'' of elite 14+ country routes, setting the stage for the data-driven analysis and graph reduction that followed.
+
+\section{Route Quality and Algorithmic Blind Spots}
+\label{sec:route_quality_blind_spots}
+
+The distributed DFS successfully generated millions of candidate routes visiting 14 or more countries. However, raw mathematical validity does not perfectly align with human feasibility. Because the algorithm was strictly parameterized to maximize country count within 24~hours, it ruthlessly exploited the mathematical limits of the graph. For example, the algorithm frequently selected ``impossible'' transfers, such as an itinerary arriving at a major airport and boarding a subsequent international flight departing just two minutes later. While mathematically valid within the strict confines of the AoN DAG, such a transfer is physically impossible for a human runner needing to traverse terminals, pass security, or manage gate closures.
+
+
+\subsection{The Route Quality Index (RQI)}
+\label{subsec:route_quality_index}
+
+To bridge the gap between mathematical optimality and physical reality, all candidate routes were subjected to a post-execution evaluation using a custom Route Quality Index (RQI). The RQI dynamically scores the physical robustness of a route by evaluating the feasibility of every individual transfer, accounting for specific transportation modalities (airport ``A'' vs.\ rail/bus ``R'').
+
+For each transfer, the engine calculates the available safety margin. The \texttt{raw\_buffer} is the time between arrival and the next departure. From this, the algorithm subtracts the physical intra-city \texttt{transit\_time} (pulled from the graph, or defaulting to 60~minutes if moving between different unmapped stations) and a modality-specific \texttt{warrior\_minimum}. These minimums reflect the absolute fastest human transit times: 20~minutes for A$\to$A and A$\to$R, 25~minutes for R$\to$A (accounting for airport security), and 5~minutes for R$\to$R (0~minutes if staying at the exact same rail station).
+
+The effective safety margin is defined as
+\begin{equation}
+\text{Margin} = \text{Raw Buffer} - \text{Transit Time} - \text{Warrior Minimum}.
+\end{equation}
+Each transfer receives a piecewise quality score $q$ based on this margin:
+\begin{itemize}
+    \item \textbf{Non-negative margin ($\text{Margin} \geq 0$):} Scored on an asymptotic exponential curve capped at 100:
+    \begin{equation}
+    q = 100 \bigl(1 - e^{-0.05 \cdot \text{Margin}}\bigr).
+    \end{equation}
+    A 30-minute safety buffer yields an excellent score ($\approx 77$), while anything above 90~minutes approaches 100.
+    \item \textbf{Negative margin ($\text{Margin} < 0$):} Heavily penalized with a linear multiplier:
+    \begin{equation}
+    q = \text{Margin} \times 1000.
+    \end{equation}
+    A ``miracle'' connection missing the minimum by just 5~minutes receives a score of $-5000$.
+\end{itemize}
+
+Finally, because a single missed connection ruins the entire 24-hour attempt, the total RQI is calculated using a weighted formula that aggressively penalizes the route's weakest link (the bottleneck):
+\begin{equation}
+\text{RQI} = 0.7\, q_{\text{bottleneck}} + 0.3\, q_{\text{average}}.
+\end{equation}
+By applying this formula, the dashboard successfully filtered out physically absurd routes, allowing the generated itineraries to be ranked strictly by their real-world viability.
+
+\subsection{The Missing Routes Paradox}
+\label{subsec:missing_routes_paradox}
+
+During the cross-evaluation of the RQI-ranked routes, a significant mathematical anomaly was discovered. When comparing the output of the conservatively pruned \texttt{freq100} graph against the output of the massive 100-node distributed array running on the full graph, several highly optimized, high-RQI routes present in the \texttt{freq100} dataset were entirely missing from the distributed dataset.
+
+Logically, this should be impossible. The \texttt{freq100} graph is a strict subset of the full graph; therefore, any route found in the subset must mathematically exist in the superset. Since the distributed array was designed to exhaustively explore the full graph without missing any nodes, it should have theoretically captured every single route found by the \texttt{freq100} run, plus thousands more.
+
+The investigation into this paradox revealed a critical blind spot in the interaction between the State Dominance Memoization pruning and the chronological structure of the full graph. In the distributed worker script, a state was defined as $(\text{current\_node}, \text{visited\_countries})$. If the worker reached this state at an arrival time equal to or later than a previously recorded instance, the branch was heavily pruned to save computational time.
+
+However, because the algorithm was blindly iterating through the full graph's massive branching factor, it frequently reached these states via mathematically ``fast'' but physically absurd connections (e.g., 2-minute airport transfers). The worker would record this impossibly fast arrival time as the ``best known state.'' Later, when the DFS naturally evaluated the more realistic, human-viable path (e.g., a path with a safe 90-minute layover), the algorithm would see that the arrival time was slower than the previously recorded ``miracle'' route. Consequently, the memoization logic ruthlessly pruned the realistic route, preserving only the physically impossible path.
+
+\subsection{Heuristic Re-Engineering and Stack Sorting}
+\label{subsec:heuristic_re_engineering}
+
+The root cause of the Missing Routes Paradox lay in the State Dominance pruning logic. The distributed workers tracked the best arrival time for any given state, \texttt{local\_visited\_states[(node, visited\_countries)] = best\_known\_arrival}. Because the DFS explored branches blindly, it often stumbled upon physically impossible 2-minute transfers first. It would record this absurdly early arrival time as the benchmark. Later, when the DFS evaluated a realistic 90-minute transfer reaching the exact same state, the arrival time was naturally later, triggering the strict pruning condition (\texttt{succ\_arr >= best\_known\_arr}) and permanently deleting the viable route.
+
+To counteract this, the search logic required a fundamental re-engineering to force the DFS to explore realistic layovers before miracle layovers. To achieve this without altering the integrity of the exhaustive search, a Heuristic Sorting mechanism was injected directly into the graph dictionary initialization.
+
+During graph construction, the algorithm evaluated all valid successors for a given node. The ideal human layover was defined as 90~minutes. The successors were sorted in descending order (\texttt{reverse=True}) using an absolute-difference key:
+\begin{equation}
+\text{Sort Key} = \bigl|(\mathrm{Departure}_{\text{next}} - \mathrm{Arrival}_{\text{current}}) - 90\bigr|.
+\end{equation}
+Because the DFS relies on a stack data structure, it operates on a Last-In, First-Out (LIFO) basis. This ordering had a direct mechanical effect:
+\begin{itemize}
+    \item \textbf{Miracle and excessive transfers:} Layovers with extreme deviations from 90~minutes (e.g., a 2-minute transfer yielding a key of 88) were placed at the very front of the successor list, pushing them to the bottom of the DFS stack.
+    \item \textbf{Optimal transfers:} Layovers close to 90~minutes (key near $0$) were placed at the very end of the successor list, so they sat at the top of the DFS stack.
+\end{itemize}
+When the worker process called \texttt{stack.pop()}, it immediately extracted and explored the highly viable, $\sim$90-minute layovers first. This heuristic ordering forced the DFS to discover high-RQI routes early, setting realistic benchmark arrival times in the memoization dictionary and helping high-quality itineraries survive pruning.
+
+\textbf{Aquesta ultima part esta corrent (el cluster em te bloquejant espero fins 1 d'abril, reescriure quan tingui resultats)}

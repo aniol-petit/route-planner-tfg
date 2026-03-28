@@ -11,7 +11,7 @@ To rigorously test different modeling paradigms, the first architectural approac
 The graph was instantiated using the NetworkX library with the following structural rules:
 
 \begin{itemize}
-    \item \textbf{Spatial Nodes ($V$):} A single vertex was created for each unique physical location. Nodes were tagged with specific attributes: their sovereign country (critical for the objective function) and their infrastructure type (airport or station).
+    \item \textbf{Spatial Nodes ($V$):} A single vertex was created for each unique physical location. Nodes were tagged with specific attributes: their sovereign country (critical for the objective function) and their infrastructure type (airport or station). 
     \item \textbf{Temporal Transit Edges ($E$):} Flights and trains were modeled as directed edges between origin and destination nodes. Because multiple trains or flights travel between the same two cities throughout the day, these edges stored dynamic temporal attributes. Instead of a single static weight, each edge contained an array of valid $(departure\_time, arrival\_time)$ pairs, formatted in absolute UTC minutes. To account for the 48-hour Guinness World Record window, train schedules (which operate on daily cycles) were programmatically duplicated, adding $1440$ minutes to populate the second day of the graph.
     \item \textbf{Static Transfer Edges:} The manually validated intra-city connections (e.g., traversing from a city's airport to its central rail station) were integrated as standard, bidirectional static edges. Unlike transit edges, transfer edges were assigned a fixed scalar weight representing the human connection time in minutes, as they can be traversed at any point during the day.
 \end{itemize}
