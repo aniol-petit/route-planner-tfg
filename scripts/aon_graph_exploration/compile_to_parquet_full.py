@@ -162,10 +162,10 @@ def build_route_hash(route) -> str:
 
 def compile_to_parquet() -> None:
     script_dir = PROJECT_ROOT / "scripts" / "aon_graph_exploration"
-    input_dir = script_dir / "results_distributed_full"
+    input_dir = script_dir / "results_distributed_full_heuristic"
     output_dir = script_dir / "results"
     output_dir.mkdir(parents=True, exist_ok=True)
-    output_path = output_dir / "master_elite_routes_full.parquet"
+    output_path = output_dir / "master_elite_routes_full_heuristic.parquet"
 
     json_files = sorted(input_dir.glob("routes_part_*.jsonl"))
     if not json_files:

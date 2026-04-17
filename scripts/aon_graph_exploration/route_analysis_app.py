@@ -16,7 +16,7 @@ import scoring_engine
 
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent
-PARQUET_PATH = str(PROJECT_ROOT / "scripts" / "aon_graph_exploration" / "results" / "master_elite_routes_full.parquet")
+PARQUET_PATH = str(PROJECT_ROOT / "scripts" / "aon_graph_exploration" / "results" / "master_elite_routes_full_heuristic.parquet")
 
 TOTAL_BASELINE_STATIONS = 899
 
@@ -1021,6 +1021,24 @@ def _format_time(minutes: int) -> str:
     return f"{h:02d}:{m:02d}"
 
 
+def _parse_hhmm_to_minutes(value: str) -> Optional[int]:
+    """
+    Parse a time string in HH:MM format into minutes since midnight.
+    Returns None for invalid inputs.
+    """
+    if not value:
+        return None
+
+    raw = value.strip()
+    match = re.fullmatch(r"([01]?\d|2[0-3]):([0-5]\d)", raw)
+    if not match:
+        return None
+
+    hours = int(match.group(1))
+    mins = int(match.group(2))
+    return hours * 60 + mins
+
+
 def _build_route_path(route: Iterable[Dict]) -> str:
     """
     Build a compact path string like "VIE -> BRU -> CDG" from a route.
@@ -1391,6 +1409,7 @@ def render_route_explorer(
         all_routes: List[Dict] = []
         country_counts = set()
         start_nodes = set()
+        start_times = set()
 
         for _score, routes in routes_by_score.items():
             if not isinstance(routes, Iterable):
@@ -1399,17 +1418,31 @@ def render_route_explorer(
                 if route and isinstance(route, Iterable):
                     countries = _get_unique_countries_from_route(route)
                     start_node = route[0].get("origin", "") if route else ""
+                    start_dep = route[0].get("dep_time") if route else None
+                    start_time_mins: Optional[int] = None
+                    start_time_label = ""
+                    if start_dep is not None:
+                        try:
+                            start_time_mins = int(start_dep) % 1440
+                            start_time_label = _format_time(start_time_mins)
+                        except (TypeError, ValueError):
+                            start_time_mins = None
+                            start_time_label = ""
                     country_count = len(countries)
                     if country_count:
                         country_counts.add(country_count)
                     if start_node:
                         start_nodes.add(start_node)
+                    if start_time_label:
+                        start_times.add(start_time_label)
                     all_routes.append(
                         {
                             "route": route,
                             "country_count": country_count,
                             "countries": countries,
                             "start_node": start_node,
+                            "start_time_mins": start_time_mins,
+                            "start_time_label": start_time_label,
                             "segments": len(route),
                         }
                     )
@@ -1454,7 +1487,7 @@ def render_route_explorer(
 
         st.markdown("---")
 
-        col_f1, col_f2, col_f3 = st.columns(3)
+        col_f1, col_f2, col_f3, col_f4 = st.columns(4)
         with col_f1:
             country_options = sorted(country_counts, reverse=True)
             country_filter = st.selectbox(
@@ -1470,6 +1503,13 @@ def render_route_explorer(
                 index=0,
             )
         with col_f3:
+            start_time_options = sorted(start_times)
+            start_time_filter = st.selectbox(
+                "Filter by starting time",
+                options=["All"] + start_time_options,
+                index=0,
+            )
+        with col_f4:
             any_station_filter = st.text_input(
                 "Must Include Stations (comma-separated, e.g., VIE, WAW)",
                 value="",
@@ -1481,6 +1521,8 @@ def render_route_explorer(
             filtered = [r for r in filtered if r["country_count"] == target]
         if start_filter != "All":
             filtered = [r for r in filtered if r["start_node"] == start_filter]
+        if start_time_filter != "All":
+            filtered = [r for r in filtered if r["start_time_label"] == start_time_filter]
         if any_station_filter:
             stations_to_find = [s.strip().lower() for s in any_station_filter.split(",") if s.strip()]
             filtered = [
@@ -1500,6 +1542,7 @@ def render_route_explorer(
         current_filters = {
             "country_filter": country_filter,
             "start_filter": start_filter,
+            "start_time_filter": start_time_filter,
         }
         previous_filters = st.session_state.get(explorer_filters_key)
 
@@ -1734,6 +1777,15 @@ def main() -> None:
             options=["All"] + metadata.get("unique_origins", []),
         )
 
+        start_time_filter_raw = st.sidebar.text_input(
+            "Filter by starting time (HH:MM, 24h)",
+            value="",
+            help="Example: 07:30. Applied to the first segment departure time.",
+        ).strip()
+        start_time_filter_mins = _parse_hhmm_to_minutes(start_time_filter_raw)
+        if start_time_filter_raw and start_time_filter_mins is None:
+            st.sidebar.warning("Invalid start time format. Use HH:MM (24h), e.g. 07:30.")
+
         country_options = list(range(metadata.get("global_max_countries", 0), 13, -1))
         country_filter = st.sidebar.selectbox(
             "Filter by number of countries",
@@ -1751,6 +1803,11 @@ def main() -> None:
         if origin_filter != "All":
             safe_origin = origin_filter.replace("'", "''")
             where_clauses.append(f"start_node = '{safe_origin}'")
+        if start_time_filter_mins is not None:
+            where_clauses.append(
+                "TRY_CAST(json_extract_string(route_sequence_json, '$[0].dep_time') AS BIGINT) % 1440 "
+                f"= {start_time_filter_mins}"
+            )
         if any_station_filter:
             stations_to_find = [s.strip() for s in any_station_filter.split(",") if s.strip()]
             for s in stations_to_find:
