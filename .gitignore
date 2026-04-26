@@ -7,3 +7,4 @@ scripts/aon_graph_exploration/results/*
 scripts/aon_graph_exploration/logs/*
 scripts/aon_graph_exploration/results_distributed/*
 scripts/aon_graph_exploration/results_distributed_full/*
+scripts/aon_graph_exploration/results_distributed_full_heuristic/*
