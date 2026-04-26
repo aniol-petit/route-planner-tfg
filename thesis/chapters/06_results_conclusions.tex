@@ -45,6 +45,8 @@ Distributed (Heuristic) & $100\%$ (Full) & 1,914,802 & 2,652 & 90,135 & 1,822,01
 
 As demonstrated in Table~\ref{tab:comparative_search_executions}, the raw topology of the European network mathematically permits sequences visiting up to 16 countries. However, algorithmically valid paths do not inherently guarantee physical execution. When the Route Quality Index (RQI) was applied to assess real-world human viability, evaluating transfer margins, minimum transit times, and modality constraints, every 15- and 16-country route yielded heavily negative scores. These paths relied on overlapping schedules and physically impossible transfers, proving them to be topological artifacts rather than executable itineraries.
 
+\medskip
+
 When strictly filtering the final 1.9 million routes for positive viability ($\mathrm{RQI} > 0$), the absolute feasible mathematical ceiling of the European transit network contracted definitively to 14 countries. Extracting these realistic paths required the full computational weight of the heuristic distributed array, which successfully isolated exactly four routing sequences capable of achieving this feasible global optimum.
 
 \section{Analysis of Results: The Gap Between Topology and Feasibility}
@@ -57,6 +59,8 @@ The empirical data presented in Table~\ref{tab:comparative_search_executions} ca
 
 A direct comparison between the two reduced subgraph executions isolates the impact of network density on algorithmic yield. The \texttt{freq100} graph, being a larger superset containing thousands of additional secondary transit stations, mathematically generated a substantially higher volume of elite routes than the highly constrained \texttt{freq1000} graph (186,933 routes versus 116,457).
 
+\medskip
+
 However, the application of the RQI reveals a strict Pareto distribution regarding physical feasibility. Despite the \texttt{freq100} execution evaluating exponentially more combinations, it yielded the exact same number of physically viable routes (3 routes with $\mathrm{RQI} > 0$) as the smaller \texttt{freq1000} graph. This explicitly demonstrates that the feasible, record-breaking capabilities of the European network are entirely reliant on a small fraction of elite arterial hubs. Injecting secondary regional stations into the search space drastically inflates computational time complexity and topological bloat, but contributes absolutely zero value to the physical optimization of the route.
 
 \subsection{The B\&B ``Bullying'' Phenomenon (Standard Distributed Execution)}
@@ -64,9 +68,15 @@ However, the application of the RQI reveals a strict Pareto distribution regardi
 
 The most striking result in Table~\ref{tab:comparative_search_executions} is the output of the Standard Distributed search. Operating without constraints, it fully parsed the continent, yielding an overwhelming 2,901,144 elite routes. Yet, the physical viability of this dataset was zero.
 
+\medskip
+
 This failure exposes a critical flaw in applying standard Branch and Bound (B\&B) logic to real-world logistics. Because the standard search evaluated chronological connections indiscriminately, it readily utilized physically impossible transfers, such as 1-minute layovers between separate transport networks. These impossible connections allowed the algorithm to artificially pack a massive number of transit legs into the 24-hour window, quickly discovering mathematically valid 15- and 16-country paths early in its execution.
 
+\medskip
+
 Once these anomalies were discovered, the B\&B \texttt{global\_max} variable was immediately raised to 15 or 16. From that moment forward, the algorithm's bounding logic became ruthlessly efficient but practically destructive. Whenever the search evaluated a highly realistic, human-viable path (which typically necessitates 90-minute safety buffers), the B\&B upper-bound calculation correctly determined that the path's maximum potential was capped at 14 countries. Because 14 is strictly less than the inflated \texttt{global\_max} of 15 or 16, the algorithm pruned the branch. High-quality, perfect-RQI 14-country routes were systematically ``bullied'' out of the search space and deleted precisely because they adhered to the slower pace of physical reality.
+
+\medskip
 
 Furthermore, the bloated yield of 2.9 million routes was a direct consequence of these impossible transfers. A path built on 1-minute layovers can squeeze upwards of 30 distinct transport legs into a 24-hour window. This immense depth dramatically increases the graph's branching factor, resulting in an explosion of combinatorial permutations that represent mathematical noise rather than genuine travel alternatives.
 
@@ -75,7 +85,11 @@ Furthermore, the bloated yield of 2.9 million routes was a direct consequence of
 
 The transition to the Distributed Heuristic execution resolves the B\&B bullying phenomenon and explains the final, definitive numbers of the study.
 
+\medskip
+
 By restructuring the search to prioritize layovers closest to a 90-minute ideal, the algorithm fundamentally altered the timeline of discovery. It successfully mapped and logged the highly realistic 14-country routes before it eventually uncovered the 15- and 16-country mathematical anomalies. Because the realistic routes were secured prior to the \texttt{global\_max} being artificially inflated, they survived the execution. This temporal manipulation directly accounts for the successful extraction of the four optimal, human-viable routing sequences ($\mathrm{RQI} > 0$) out of the entire continental graph.
+
+\medskip
 
 Equally significant is the reduction in total volume, dropping from 2.9 million to 1,914,802 elite routes. Unlike the standard search, the heuristic prioritization forced the algorithm to actively burn the 24-hour clock on realistic waiting periods. A path incorporating multiple 90-minute layovers consumes the available 24 hours in far fewer total transit legs. This reduced depth naturally bounded the combinatorial branching factor, preemptively suppressing the explosion of useless permutations and resulting in a cleaner, vastly more concentrated final dataset.
 
@@ -91,9 +105,15 @@ A primary objective of this research was to conduct a comparative evaluation of 
 
 The AoE approach was initially selected for its exceptional memory efficiency. By representing transit stations as static vertices and compressing dynamic schedules into temporal arrays on the edges, the model successfully mapped the entire European transit network without triggering Out-Of-Memory (OOM) errors.
 
+\medskip
+
 However, this spatial compression shifted the entire burden of chronological calculation directly onto the search algorithm. Executing Dynamic Programming (DP) via a Label-Setting algorithm required maintaining Pareto dominance frontiers at every spatial node. The Guinness World Record constraint, minimizing time while maximizing distinct sovereign visits, created a scenario where vast numbers of paths were mathematically incomparable. A path that collected 8 countries by 14:00 could not mathematically dominate a path that collected 9 countries by 16:00.
 
+\medskip
+
 Consequently, the non-dominated label sets at major transit hubs grew exponentially. The algorithm hit a catastrophic computational ``time wall,'' spending the majority of its CPU cycles executing comparative loops just to establish dominance for newly generated labels.
+
+\medskip
 
 Crucially, this architecture inherently resisted distributed scaling. Because Label-Setting algorithms rely on constantly evaluating and updating shared global state (the dynamic Pareto frontiers), attempting to deploy this approach across a High-Performance Computing (HPC) cluster would have triggered massive Inter-Process Communication (IPC) latency. The synchronization overhead required to lock and update frontiers across parallel workers would have neutralized any multi-core processing gains. Thus, the AoE approach was theoretically memory-efficient, but practically execution-locked to a single thread, fundamentally failing to map the search space.
 
@@ -118,7 +138,11 @@ Ultimately, the comparative study concludes that for multi-objective, time-const
 
 The primary objective of this thesis, to construct a comprehensive mathematical model of the European transit network and computationally extract the optimal routing sequence for the Guinness World Record, has been successfully accomplished. By transforming disparate transit schedules into a strictly chronological Activity-on-Node (AoN) Directed Acyclic Graph, and deploying a heuristic-driven distributed Branch and Bound (B\&B) search array, the theoretical bounds of the continent's infrastructure were definitively mapped.
 
+\medskip
+
 The most profound conclusion of this research lies in the staggering disparity between theoretical graph topology and human physical feasibility. The algorithm successfully generated nearly two million unique, mathematically valid itineraries capable of visiting 14, 15, or even 16 sovereign countries within 24 hours. However, the application of the Route Quality Index (RQI) revealed that the vast majority of these topological pathways relied on overlapping schedules and impossible physical transfer margins.
+
+\medskip
 
 Out of 1.9 million mathematically elite paths, only exactly four distinct routing sequences survived with a positive, human-viable safety margin. This extreme rarity underscores the immense difficulty of the underlying problem. It proves that raw graph routing, when divorced from the harsh realities of physical human logistics, yields data that is mathematically accurate but practically useless. By systematically filtering out these mathematical anomalies, this research conclusively establishes that the absolute, physically feasible human ceiling for this endeavor is 14 countries.
 
@@ -127,6 +151,8 @@ Out of 1.9 million mathematically elite paths, only exactly four distinct routin
 
 While the heuristic distributed search successfully extracted the feasible global optimum, the interaction between the B\&B pruning logic and the RQI presents a clear avenue for algorithmic optimization. As analyzed in Section~\ref{sec:analysis_results_gap_topology_feasibility}, the aggressive nature of the B\&B bounding function frequently pruned highly realistic, perfect-RQI 14-country routes because they were mathematically incapable of matching the physically impossible 15-country mathematical anomalies discovered earlier in the execution.
 
+\medskip
+
 A primary direction for future algorithmic work is the implementation of a Layered Capping Search. By intentionally capping the \texttt{global\_max} bounding variable at the known human limit (14 countries), the algorithm would be forced to disable its aggressive upper-bound pruning for any branch capable of reaching that tier. This would effectively convert the algorithm from a pure maximum-hunting search into an exhaustive enumerator for the 14-country space. While this would drastically increase the computational time required to evaluate that specific layer, it would guarantee the discovery and preservation of every single high-RQI, human-viable route that was previously ``bullied'' out of the search space by impossible 15-country trajectories.
 
 \subsection{Multi-Objective Attributes and Stochastic Modeling}
@@ -134,12 +160,16 @@ A primary direction for future algorithmic work is the implementation of a Layer
 
 Beyond graph traversal mechanics, the routing engine possesses the foundational architecture to support complex multi-objective optimization. The current Route Quality Index evaluates feasibility purely as a function of temporal transit margins. Future iterations of this engine could integrate additional dimensions, optimizing routes for minimal carbon footprint ($\mathrm{CO_2}$ emissions per passenger kilometer), dynamic ticket pricing, or stochastic delay modeling.
 
+\medskip
+
 Moving from a deterministic graph, where transit operates strictly on scheduled times, to a probabilistic graph would allow the algorithm to calculate the statistical likelihood of a route's success. However, while theoretically sound, integrating these dimensions requires access to highly restricted, fragmented, and often proprietary commercial datasets (such as historical airline delay APIs and dynamic rail pricing endpoints). Consequently, these enhancements were deliberately deferred to future work due to the inherent time constraints and data-access limitations of this academic scope, rather than algorithmic inability.
 
 \subsection{Broader Applications: A Pan-European Multi-Modal Engine}
 \label{subsec:broader_applications_pan_european_engine}
 
 While the specific algorithm developed for this thesis targets a highly niche Guinness World Record application, the underlying architecture holds immense broader value. The most significant achievement of this research is the data engineering pipeline itself: the successful parsing, UTC-synchronization, and topological normalization of disparate terrestrial feeds and aviation data into a singular, cohesive Directed Acyclic Graph.
+
+\medskip
 
 This unified data pipeline forms the core technological foundation required to build a comprehensive, consumer-facing multi-modal routing engine, effectively a ``Google Maps'' for integrated European transit. While commercial flight aggregators and standalone rail planners are ubiquitous, cross-modal engines capable of seamlessly bridging aviation and complex regional rail networks remain a profound industry challenge. The architecture developed herein proves that such an integration is topologically possible and computationally navigable, opening the door for future deployment via a Graphical User Interface (GUI) or commercial API.
 
