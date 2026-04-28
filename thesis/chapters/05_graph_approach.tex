@@ -123,7 +123,7 @@ By intelligently leveraging the partial outputs of a failed brute-force attempt,
 \section{Distributed DFS Execution}
 \label{sec:distributed_dfs}
 
-Following the baseline DFS execution, logs indicated that the algorithm had evaluated only $1\%$ of the valid starting nodes before hitting the 48-hour wall-clock limit. However, the nature of the Activity-on-Node (AoN) graph presented an opportunity: because each starting node represents an independent search tree, the problem is embarrassingly parallel. The mathematical deduction was straightforward: if a single compute node could evaluate $1\%$ of the search space in 48~hours, distributing the workload across 100 compute nodes should theoretically allow for the exhaustive evaluation of the entire graph within the same 48-hour window.
+Following the baseline DFS execution, logs indicated that the algorithm had evaluated only $1\%$ of the valid starting nodes before hitting the 48-hour wall-clock limit. However, the nature of the Activity-on-Node (AoN) graph presented an opportunity: because each starting node represents an independent search tree, the problem can be inherently parallelized. The mathematical deduction was straightforward: if a single compute node could evaluate $1\%$ of the search space in 48~hours, distributing the workload across 100 compute nodes should theoretically allow for the exhaustive evaluation of the entire graph within the same 48-hour window.
 
 \medskip
 

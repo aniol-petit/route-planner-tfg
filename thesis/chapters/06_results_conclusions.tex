@@ -21,7 +21,7 @@ To conquer the state-space explosion inherent in the Activity-on-Node (AoN) grap
 \subsection{Comparative Yield and the Global Optimum}
 \label{subsec:comparative_yield_global_optimum}
 
-The outputs of these five executions were individually deduplicated and compiled into columnar Parquet databases for quantitative comparison. The metric for success was the discovery of ``Elite Routes,'' defined as any sequence successfully visiting 14 or more sovereign countries within the 24-hour window.
+The outputs of these five executions were individually deduplicated and compiled into columnar Parquet databases for quantitative comparison. At this point in the pipeline, the numbers were staggering: nearly three million candidate routes, generated across hundreds of CPU-hours on a 100-node HPC cluster, each one mathematically verified to visit 14 or more sovereign countries within a single 24-hour window. The question was no longer whether the algorithm had found the optimal route. The question was how many of these millions of paths a human being could actually board. The metric for success was the discovery of ``Elite Routes,'' defined as any sequence successfully visiting 14 or more sovereign countries within the 24-hour window. The answer is in Table 6.1.
 
 \begin{table}[h]
 \centering
@@ -140,11 +140,19 @@ The primary objective of this thesis, to construct a comprehensive mathematical 
 
 \medskip
 
-The most profound conclusion of this research lies in the staggering disparity between theoretical graph topology and human physical feasibility. The algorithm successfully generated nearly two million unique, mathematically valid itineraries capable of visiting 14, 15, or even 16 sovereign countries within 24 hours. However, the application of the Route Quality Index (RQI) revealed that the vast majority of these topological pathways relied on overlapping schedules and impossible physical transfer margins.
+The most profound conclusion of this research lies in the staggering disparity between theoretical graph topology and human physical feasibility. The algorithm successfully generated nearly two million unique, mathematically valid itineraries capable of visiting 14, 15, or even 16 sovereign countries within 24 hours. However, the application of the Route Quality Index (RQI) revealed that the vast majority of these topological pathways relied on overlapping schedules and impossible physical transfer margins. The filter was brutal.
 
 \medskip
 
-Out of 1.9 million mathematically elite paths, only exactly four distinct routing sequences survived with a positive, human-viable safety margin. This extreme rarity underscores the immense difficulty of the underlying problem. It proves that raw graph routing, when divorced from the harsh realities of physical human logistics, yields data that is mathematically accurate but practically useless. By systematically filtering out these mathematical anomalies, this research conclusively establishes that the absolute, physically feasible human ceiling for this endeavor is 14 countries.
+And then, the search was over. After weeks of computation, architectural pivots, a failed paradigm, a 100-node cluster, and nearly two million candidate itineraries, four routes remained.
+
+\medskip
+
+Four.
+
+\medskip
+
+Out of 1,914,802 mathematically elite paths, exactly four distinct routing sequences survived the Route Quality Index with a positive, human-viable safety margin. Every other path in that dataset, including the ones visiting 15 and 16 countries, asked the human attempting it to be in two places at once, to board a plane two minutes after landing, or to teleport between terminals. The topology of the European transit network is extraordinarily dense. The margin for a human being to actually exploit it is extraordinarily thin. This research conclusively establishes that the absolute, physically feasible ceiling for this endeavor is 14 countries, and that achieving it requires following one of exactly four sequences. And it also proves that raw graph routing, when divorced from the harsh realities of physical human logistics, yields data that is mathematically accurate but practically useless.
 
 \subsection{Algorithmic Enhancements: The Layered Capping Search}
 \label{subsec:algorithmic_enhancements_layered_capping}
