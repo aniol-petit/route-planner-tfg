@@ -19,6 +19,9 @@
   outer=2.5cm
 }
 
+% Keep explicit page breaks but avoid inserted blank verso pages in twoside.
+\let\cleardoublepage\clearpage
+
 % No first-line indent on new paragraphs (blank line in source starts a normal \par).
 \setlength{\parindent}{0pt}
 
@@ -110,7 +113,7 @@
 
 %%%%%% Dedicatòria; si no es vol posar, comenteu fins a final de dedicatòria
 %
-\noindent \textit{Do or do not, there is no try - Master Yoda} 
+\noindent \textit{Never tell me the odds - Han Solo} 
 
 \cleardoublepage
 
@@ -129,18 +132,57 @@
 %ABSTRACT EN DOS IDIOMES. COM A MÍNIM CATALÀ. SI L'ALTRE ÉS EN CASTELLA CANVIEU EL QUE POSA ABSTRACT
 \selectlanguage{catalan}
 \section*{\Large \sffamily Resum}
-[Resum aquí]
+El continent europeu, amb la seva densitat incomparable d'estats sobirans i una infraestructura de transport transfronterer profundament integrada, presenta un entorn únic per a l'optimització combinatòria. Aquesta tesi aborda un problema d'encaminament multiobjectiu amb fortes restriccions i un objectiu concret: determinar computacionalment la seqüència òptima global de connexions de transport públic programat per batre el Rècord Mundial Guinness de més països visitats en un període estricte de 24 hores.
+
+\medskip
+
+Resoldre aquest problema va requerir construir des de zero un conjunt de dades temporal i geogràficament precís dels vols europeus i les connexions d'alta velocitat ferroviària. Atès que cap API pública unificada cobreix tota la xarxa continental, es va dissenyar una pipeline d'adquisició pròpia combinant consultes REST API i extracció automatitzada de dades de portals ferroviaris. Les dades resultants van ser sotmeses a una normalització rigorosa, resolent inconsistències en la nomenclatura d'estacions de 40 països, reconstruint línies temporals absolutes a partir d'horaris locals i sincronitzant tots els registres a una referència UTC unificada, abans de ser assemblades en un graf matemàtic.
+
+\medskip
+
+Es van implementar i comparar directament dos paradigmes de modelització de grafs fonamentalment diferents. El primer, un model temporal Activity-on-Edge (AoE), mantenia una petjada de memòria compacta però imposava una càrrega computacional insostenible sobre l'algorisme de cerca per etiquetes, que col·lapsava sota fronteres de Pareto en creixement exponencial i resultava resistent a la paral·lelització distribuïda. El segon, un graf dirigit acíclic Activity-on-Node (AoN), transformava cada esdeveniment de trànsit individual en un vèrtex del graf, permetent distribuir una cerca en profunditat integrada amb poda Branch-and-Bound en un clúster de computació d'alt rendiment de 100 nodes.
+
+\medskip
+
+Tot i generar prop de dos milions d'itineraris candidats matemàticament vàlids que visitaven 14 o més països, l'aplicació d'un Índex de Qualitat de Ruta personalitzat (que avaluava els marges de transbordament, els mínims específics per modalitat i les restriccions de viabilitat física) va revelar que la gran majoria d'aquests camins depenien de connexions físicament impossibles. De 1.914.802 rutes candidates d'elit, exactament quatre van sobreviure com a seqüències viables per a un ésser humà. Aquesta recerca estableix de manera concloent que el límit físicament factible per a aquest intent de Rècord Guinness és de 14 països, assolible mitjançant una de quatre seqüències específiques, i demostra que la topologia de grafs en brut, sense restriccions de viabilitat física, és matemàticament rica però pràcticament enganyosa.
 
 \selectlanguage{catalan}
 \vspace*{\fill}
 \section*{\Large \sffamily  Abstract}
-[Abstract here]
+
+The European continent, with its unparalleled density of sovereign states and deeply integrated cross-border transit infrastructure, presents a unique environment for combinatorial optimization. This thesis addresses a highly constrained, multi-objective routing problem with a concrete real-world objective: computationally determining the globally optimal sequence of scheduled public transport connections to break the Guinness World Record for the most countries visited within a strict 24-hour window.
+
+\medskip
+
+Solving this problem required constructing a comprehensive, time-accurate dataset of European flights and high-speed rail connections from scratch. Because no unified public API covers the full continental network, a custom acquisition pipeline was engineered combining REST API queries and programmatic web scraping of rail aggregators. The resulting data underwent rigorous normalization, resolving station naming inconsistencies across 40 countries, reconstructing absolute timelines from locally-clocked schedules, and synchronizing all timestamps to a unified UTC reference, before being assembled into a mathematical graph.
+
+\medskip
+
+Two fundamentally different graph paradigms were implemented and directly compared. The first, an Activity-on-Edge (AoE) time-dependent model, maintained a compact memory footprint but imposed an unsustainable computational burden on its Label-Setting search algorithm, which collapsed under exponentially growing Pareto frontiers and proved resistant to distributed parallelization. The second, an Activity-on-Node (AoN) Directed Acyclic Graph, transformed every individual transit event into a graph vertex, enabling a Depth-First Search integrated with Branch-and-Bound pruning to be distributed across a 100-node High-Performance Computing cluster.
+
+\medskip
+
+Despite generating nearly two million mathematically valid candidate itineraries visiting 14 or more countries, the application of a custom Route Quality Index (evaluating transfer margins, modality-specific minimums, and physical feasibility constraints) revealed that the overwhelming majority of these paths relied on physically impossible connections. Out of 1,914,802 elite candidate routes, exactly four survived as human-viable sequences. This research conclusively establishes that the physically feasible ceiling for this Guinness World Record attempt is 14 countries, achievable via one of four specific routing sequences, and demonstrates that raw graph topology, absent physical feasibility constraints, is mathematically rich but practically misleading.
+
 \vspace*{\fill}
 
 \selectlanguage{spanish}
 \vspace*{\fill}
 \section*{\Large \sffamily Resumen}
-[Resumen aquí]
+El continente europeo, con su densidad incomparable de estados soberanos y una infraestructura de transporte transfronterizo profundamente integrada, presenta un entorno único para la optimización combinatoria. Esta tesis aborda un problema de enrutamiento multiobjetivo con fuertes restricciones y un objetivo concreto: determinar computacionalmente la secuencia óptima global de conexiones de transporte público programado para batir el Récord Mundial Guinness de más países visitados en un período estricto de 24 horas.
+
+\medskip
+
+Resolver este problema requirió construir desde cero un conjunto de datos temporal y geográficamente preciso de los vuelos europeos y las conexiones de alta velocidad ferroviaria. Dado que ninguna API pública unificada cubre toda la red continental, se diseñó una pipeline de adquisición propia combinando consultas REST API y extracción automatizada de datos de portales ferroviarios. Los datos resultantes fueron sometidos a una normalización rigurosa, resolviendo inconsistencias en la nomenclatura de estaciones de 40 países, reconstruyendo líneas temporales absolutas a partir de horarios locales y sincronizando todos los registros a una referencia UTC unificada, antes de ser ensamblados en un grafo matemático.
+
+\medskip
+
+Se implementaron y compararon directamente dos paradigmas de modelización de grafos fundamentalmente diferentes. El primero, un modelo temporal Activity-on-Edge (AoE), mantenía una huella de memoria compacta pero imponía una carga computacional insostenible sobre el algoritmo de búsqueda por etiquetas, que colapsaba bajo fronteras de Pareto en crecimiento exponencial y resultaba resistente a la paralelización distribuida. El segundo, un grafo dirigido acíclico Activity-on-Node (AoN), transformaba cada evento de tránsito individual en un vértice del grafo, permitiendo distribuir una búsqueda en profundidad integrada con poda Branch-and-Bound en un clúster de computación de alto rendimiento de 100 nodos.
+
+\medskip
+
+A pesar de generar casi dos millones de itinerarios candidatos matemáticamente válidos que visitaban 14 o más países, la aplicación de un Índice de Calidad de Ruta personalizado (que evaluaba los márgenes de transbordo, los mínimos específicos por modalidad y las restricciones de viabilidad física) reveló que la gran mayoría de estos caminos dependían de conexiones físicamente imposibles. De 1.914.802 rutas candidatas de élite, exactamente cuatro sobrevivieron como secuencias viables para un ser humano. Esta investigación establece de manera concluyente que el límite físicamente factible para este intento de Récord Guinness es de 14 países, alcanzable mediante una de cuatro secuencias específicas, y demuestra que la topología de grafos en bruto, sin restricciones de viabilidad física, es matemáticamente rica pero prácticamente engañosa.
+
 \vspace*{\fill}
 
 \selectlanguage{english}
@@ -149,7 +191,35 @@
 %FIN DE ABSTRACTE
 
 %PREFACE
-{\bf Preface}
+\section*{\Large \sffamily Preface}
+
+Some of the best ideas arrive in the least convenient places.
+
+\medskip
+
+It was the summer before my final year, somewhere on a beach in Sardinia, when Jan and I were keeping a football in the air with our heads. The kind of pointless, competitive thing you do when you have too much sun and too little agenda. At some point, mid-rally, he asked the question that tends to derail afternoons: what do you think the Guinness World Record is for this?
+
+\medskip
+
+We didn't beat it. We weren't even close (who the f**k stays +20 minutes doing that?). But we did what we always do, which is start talking, and the conversation drifted (as conversations between us tend to) toward bigger, stranger records. That was when he mentioned this one. Most countries visited by scheduled public transport in 24 hours. He had known about it for a while, apparently. Something about it had stuck with him: the image of a single person threading themselves through the geography of an entire continent in a single day, boarding trains and planes with surgical precision, crossing borders that most people only see on maps.
+
+\medskip
+
+I thought it was extraordinary. Not just as a physical challenge, but as a problem. Because underneath the adventure of it, the airports, the sprint connections and the border crossings, there was something that looked, to me, unmistakably like mathematics. A network. A clock. An objective function. And somewhere inside a combinatorial space too large to search by hand, a single optimal sequence waiting to be found.
+
+\medskip
+
+I had to choose my thesis topic within the week.
+
+\medskip
+
+The decision took about ten minutes.
+
+\medskip
+
+What followed was several months of building something that, to my knowledge, has never existed before: a unified, mathematically rigorous model of the European multi-modal transit network, engineered specifically to answer one question. Not approximately. Not heuristically. Exactly. Which sequence of scheduled flights and trains, departing on a real day, crossing real borders, with real transfer times that a real human being can actually execute, visits the most countries in 24 hours?
+This thesis is the answer to that question. It is also, I hope, a demonstration that the right framing transforms an adventure into a science, and that sometimes the most interesting research problems arrive not from a reading list, but from a beach in Sardinia, a couple of beers and a friend who refuses to let a good question go unanswered.
+
 
 \cleardoublepage
 %FINAL DE PREFACI
