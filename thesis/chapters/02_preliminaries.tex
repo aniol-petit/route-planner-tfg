@@ -34,24 +34,24 @@ Time is explicitly discretized and baked directly into the topology of the graph
 
 \medskip
 
-Because our problem operates within a strict 24-hour window using discrete, fixed transit schedules, modeling time efficiently is the central architectural challenge. To systematically evaluate the optimal data structure for this Guinness World Record routing problem, this thesis intentionally implements and compares both paradigms: a memory-efficient time-dependent multi-graph (detailed in Chapter 4) and a structurally unrolled time-expanded network (detailed in Chapter 5).
+Because our problem operates within a strict 24-hour window using discrete, fixed transit schedules, modeling time efficiently is the central architectural challenge. To systematically evaluate the optimal data structure for this Guinness World Record routing problem, this thesis intentionally implements and compares both paradigms: a memory-efficient time-dependent multi-graph (detailed in Chapter 4) and a structurally unrolled time-expanded network (detailed in Chapter 5)\cite{pyrga2007efficient}.
 
 \subsection{Activity-on-Edge (AoE) vs.\ Activity-on-Node (AoN)}
 \label{subsec:aoe_aon}
 
-Within time-expanded models, the data can be structured in two distinct ways:
+Beyond the choice of how to handle chronological time, transportation graphs must also dictate where the transit data physically resides within the topology. This relies on two distinct structural paradigms:
 
 \medskip
 
 \textbf{Activity-on-Edge (AoE).}
-The traditional approach where vertices represent physical locations at specific times, and edges represent the actual transport activities (a train moving between locations) or waiting periods at a station.
+The traditional approach where vertices represent physical locations, and edges represent the actual transport activities (e.g., a train moving between two cities) or waiting periods. The temporal data is stored as attributes on the edges.
 
 \textbf{Activity-on-Node (AoN).}
-An inverted approach where the vertices themselves represent the specific transport activities (a flight with fixed departure and arrival times), and the edges represent the valid layovers or transfer opportunities connecting them.
+An inverted approach where the vertices themselves represent the specific transport activities (e.g., a flight with a fixed departure and arrival time), and the directed edges represent the valid layovers or transfer opportunities connecting them.
 
 \medskip
 
-Understanding the distinction between AoE and AoN is critical, as the choice of paradigm radically alters the branching factor, memory footprint, and traversability of the search space. A core objective of this research is to contrast these two paradigms. Chapter 4 evaluates an AoE time-dependent structure, while Chapter 5 introduces a structural pivot to an AoN framework, allowing for a direct comparative analysis of their computational viability on a continental scale.
+Understanding the distinction between AoE and AoN is critical, as the choice of paradigm radically alters the branching factor, memory footprint, and traversability of the search space. A core objective of this research is to contrast these two frameworks directly. Chapter 4 evaluates a Time-Dependent AoE structure, while Chapter 5 introduces a structural pivot to a Time-Expanded AoN framework, allowing for a comparative analysis of their computational viability on a continental scale.
 
 \section{Search and Optimization Algorithms}
 \label{sec:search_algorithms}

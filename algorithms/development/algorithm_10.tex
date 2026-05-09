@@ -214,9 +214,4 @@
 
 % Bottom Rule
 \hrule height 0.8pt
-
-\vspace{1.5em}
-Algorithm 10 is a very similar algorithm to Algorithm 9, but in this case we run it only half way to the end of the day (rationale for that explained in Algorithm 12). Since we are doing only until half of the day, in this case we don't do any rollouts (since those run until EOD). Besides, we do not trigger early stopping, because of the record, we expand the entire queue (which we expect to be shorter in this case and hence more feasible). 
-
-In the output we keep a dictionnary of routes ending at each specific node, each route containing at least MinCountries.
 \end{document}

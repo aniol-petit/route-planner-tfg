@@ -4,12 +4,12 @@
 \section{The Activity-on-Node (AoN) Transformation}
 \label{sec:aon_transformation}
 
-As established in the preliminary definitions, a central objective of this research is to evaluate and contrast two fundamental graph paradigms for time-dependent routing. Having quantified the computational limits of the memory-efficient Activity-on-Edge (AoE) architecture in Chapter 4, the analysis now shifts to the second structural candidate: the Activity-on-Node (AoN) framework. The AoE model prioritized a compact spatial topology, which inherently forced the search algorithm to dynamically calculate temporal validity at every node. To systematically test the inverse trade-off, the European transportation network was mathematically reconstructed as an Activity-on-Node Directed Acyclic Graph (DAG) (see Appendix X). This structural pivot deliberately transfers the chronological burden away from the search algorithm and embeds it entirely into the static topology of the graph, prioritizing algorithmic traversal speed over memory footprint.
+As established in the preliminary definitions, a central objective of this research is to evaluate and contrast two fundamental graph paradigms for time-dependent routing. Having quantified the computational limits of the memory-efficient Activity-on-Edge (AoE) architecture in Chapter 4, the analysis now shifts to the second structural candidate: the Activity-on-Node (AoN) framework. The AoE model prioritized a compact spatial topology, which inherently forced the search algorithm to dynamically calculate temporal validity at every node. To systematically test the inverse trade-off, the European transportation network was mathematically reconstructed as an Activity-on-Node Directed Acyclic Graph (DAG). This structural pivot deliberately transfers the chronological burden away from the search algorithm and embeds it entirely into the static topology of the graph, prioritizing algorithmic traversal speed over memory footprint.
 
 \subsection{Structural Inversion: Events as Nodes}
 \label{subsec:aon_events_as_nodes}
 
-In the AoN paradigm, physical locations no longer exist as nodes. Instead, every single scheduled transport event (a specific flight or train) is instantiated as an independent vertex. A node in this graph is defined by the rigid tuple $v = (\text{Origin}, \text{Destination}, \text{Departure\_Time}, \text{Arrival\_Time})$. For example, a flight leaving Barcelona at 10:00 and arriving in Rome at 12:00 represents one single, immutable node in the graph. By unpacking the temporal arrays from the original 8,456 spatial edges, the AoN transformation generated exactly 49,982 distinct event nodes (see Appendix~X).
+In the AoN paradigm, physical locations no longer exist as nodes. Instead, every single scheduled transport event (a specific flight or train) is instantiated as an independent vertex. A node in this graph is defined by the rigid tuple $v = (\text{Origin}, \text{Destination}, \text{Departure\_Time}, \text{Arrival\_Time})$. For example, a flight leaving Barcelona at 10:00 and arriving in Rome at 12:00 represents one single, immutable node in the graph. By unpacking the temporal arrays from the original 8,456 spatial edges, the AoN transformation generated exactly 49,982 distinct event nodes.
 
 \medskip
 
@@ -31,7 +31,7 @@ However, this advantage comes with a severe structural trade-off: an exponential
 \subsection{Earliest Arrival Pruning}
 \label{subsec:earliest_arrival_pruning}
 
-To tame this exponential branching factor, a highly aggressive, domain-specific heuristic was engineered during the graph construction phase: Earliest Arrival Pruning (see Appendix~X).
+To tame this exponential branching factor, a highly aggressive, domain-specific heuristic was engineered during the graph construction phase: Earliest Arrival Pruning.
 
 \medskip
 
@@ -39,7 +39,7 @@ When evaluating all valid subsequent events (node $B$ candidates) from a given a
 
 \medskip
 
-Mathematically, if Event $A$ arrives in Munich at 14:00, and there are three valid subsequent trains to Vienna departing at 14:30, 15:00, and 16:00, creating edges to all three is redundant for a time-minimization objective. The 14:30 train dominates the others. By rigidly enforcing this pruning rule, tens of thousands of redundant temporal edges were mathematically severed before the search even began. Validation scripts confirmed this heuristic successfully reduced the total edge volume by over 75\%, transforming an impossibly dense theoretical web into a streamlined, highly traversable DAG containing approximately 1.5 million strictly optimal transfer edges (see Appendix~X).
+Mathematically, if Event $A$ arrives in Munich at 14:00, and there are three valid subsequent trains to Vienna departing at 14:30, 15:00, and 16:00, creating edges to all three is redundant for a time-minimization objective. The 14:30 train dominates the others. By rigidly enforcing this pruning rule, tens of thousands of redundant temporal edges were mathematically severed before the search even began. Validation scripts confirmed this heuristic successfully reduced the total edge volume by over 75\%, transforming an impossibly dense theoretical web into a streamlined, highly traversable DAG containing approximately 1.5 million strictly optimal transfer edges.
 
 \section{Baseline DFS Execution on the Full Graph}
 \label{sec:baseline_dfs}
@@ -127,7 +127,7 @@ Following the baseline DFS execution, logs indicated that the algorithm had eval
 
 \medskip
 
-To execute this, the architecture was upgraded from a single-node multiprocessing script to a fully distributed SLURM Job Array.
+To execute this, the architecture was upgraded from a single-node multiprocessing script to a fully distributed SLURM Job Array\cite{csuc_hpc}.
 
 \subsection{Horizontal Scaling and Job Array Distribution}
 \label{subsec:job_array_distribution}
@@ -154,7 +154,7 @@ Once the 100-node array completed its execution, the output consisted of 100 dis
 
 \medskip
 
-To synthesize this fragmented output, a dedicated compilation pipeline was engineered. The compiler ingested every JSONL file and generated a deterministic MD5 hash for each route based on its sequence of stations. This hashing mechanism successfully identified and dropped millions of redundant duplicate routes.
+To synthesize this fragmented output, a dedicated compilation pipeline was engineered. The compiler ingested every JSONL file and generated a deterministic MD5 hash for each route based on its sequence of specific transit events. This hashing mechanism successfully identified and dropped millions of redundant duplicate routes.
 
 \medskip
 

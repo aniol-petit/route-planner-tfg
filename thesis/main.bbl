@@ -1,0 +1,57 @@
+\begin{thebibliography}{10}
+
+\bibitem{pyrga2007efficient}
+Pyrga E, Schulz F, Wagner D, Zaroliagis C.
+\newblock Efficient models for timetable information in public transportation
+  systems.
+\newblock Journal of Experimental Algorithmics (JEA). 2007;12:Article 2.4.
+\newblock
+  \url{https://www.ceid.upatras.gr/webpages/faculty/zaro/pub/jou/J27-PSWZ-ACM-JEA-Vol12-N2.4-2008.pdf}.
+
+\bibitem{aviationedge}
+{Aviation Edge}. Aviation Edge API Documentation;.
+\newblock \url{https://aviation-edge.com/developers/}.
+
+\bibitem{ourairports}
+{OurAirports}. OurAirports Data;.
+\newblock \url{https://ourairports.com/data/}.
+
+\bibitem{deutschebahn}
+{Deutsche Bahn AG}. Deutsche Bahn - International Bookings;.
+\newblock \url{https://int.bahn.de/en/}.
+
+\bibitem{showmethejourney}
+{Show Me The Journey}. The International Rail Routes of Europe;.
+\newblock
+  \url{https://showmethejourney.com/travel-info-and-tips/the-international-rail-routes-of-europe/}.
+
+\bibitem{kaggle_train_stations}
+{Martin, Heads or Tails}. Train Stations in Europe. Kaggle; 2020.
+\newblock
+  \url{https://www.kaggle.com/datasets/headsortails/train-stations-in-europe}.
+
+\bibitem{geonames}
+{GeoNames}. GeoNames Geographical Database;.
+\newblock \url{https://download.geonames.org/export/dump/}.
+
+\bibitem{gemini2023}
+{Google DeepMind}.
+\newblock Gemini: a family of highly capable multimodal models.
+\newblock arXiv preprint arXiv:231211805.
+  2023;\url{https://arxiv.org/pdf/2312.11805}.
+
+\bibitem{hagberg2008exploring}
+Hagberg A, Swart P, S~Chult D.
+\newblock Exploring network structure, dynamics, and function using NetworkX.
+\newblock In: Proceedings of the 7th Python in Science Conference; 2008. p.
+  11--15.
+\newblock
+  \url{https://scispace.com/pdf/exploring-network-structure-dynamics-and-function-using-2isdfk9y1h.pdf}.
+
+\bibitem{csuc_hpc}
+{Consorci de Serveis Universitaris de Catalunya (CSUC)}. Guia del docent per a
+  l'{\'u}s de Pirineus;.
+\newblock
+  \url{https://confluence.csuc.cat/spaces/HPCKB/pages/392298538/Guia+del+docent+per+a+l%27us+de+Pirineus}.
+
+\end{thebibliography}

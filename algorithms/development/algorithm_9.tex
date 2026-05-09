@@ -241,12 +241,4 @@
 
 % Bottom Rule
 \hrule height 0.8pt
-
-\vspace{1.5em}
-After running Algorithm 8 and debugging, we observed an important issue: most of labels that were object of the rollouts were very close to the time-line end, with a very low country count. For example: [ROLLOUT] iters=316,000 | pre t=1373 | pre |C|=7 | post |C|=7.
-
-This led to the idea of adding a global hard floor pruning mechanism. This uses a minimum realistic time per country (set arbitrarily and, of course, optimistically to avoid missing complicated but feasible routes) to aggressively prune labels that cannot possibly reach the record even with optimal remaining paths. Additionally, the rollout trigger is optimized to only execute when there is a comfortable time buffer, and the record is dynamically updated during search to enable immediate pruning of the queue.
-
-Hence, this is a very similar algorithm to Algorithm 8, but with the addition of the global hard floor pruning mechanism which we hope can drastically reduce the labels that stay in the queue and are expanded, hoping for a faster convergence.
 \end{document}
-

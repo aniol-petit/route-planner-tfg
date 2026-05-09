@@ -113,12 +113,4 @@
 
 % Bottom Rule
 \hrule height 0.8pt
-
-\vspace{1.5em}
-In Algorithm 5 we add a precomputation step that calculates the minimum transit times for each country. Basically, we are trying to determine for each country, the minimum time it takes to enter and then exit the country. This can be seen as the "cost" of visiting a country. 
-
-This will be helpful to make the UB pruning more strict, since as it was so far, it was considering that maybe we could reach 20 countries in 5 hours. This way, we will force that the countries must be visited in the remaining time considering their assigned MTT. 
-
-Using the minimal time ensures we are not loosing optimality, since you need at least that amount of time or more to visit the country, so we are not pruning any solutions that are actually valid.
-
 \end{document}

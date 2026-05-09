@@ -168,12 +168,4 @@
 
 % Bottom Rule
 \hrule height 0.8pt
-
-\vspace{1.5em}
-Running Algorithm 9 and debugging, we saw that the rollouts weren't really helping, mainly because when reaching the night, the graph was much more sparse and the rollouts were not able to find good solutions. This is why we decided to split the algorithm in two, one running forward in time until half of the day, and one running backward in time until half of the day. This way we can ensure that we have a good coverage of the graph and we can find good solutions.
-
-Both algorithms run 2 hours further than the middle of the day, giving us a 4 hour overlap to avoid missing some critical edges and hence a possible solution. The idea is to run in parallel the "same" algorithm for the two time frames, which should be faster since we run them at the same time and each of them is quite shorter, and then use the algorithm defined in this file (Algorithm 12) as a stitcher to find the best solution.
-
-Storing the solutions in Algorithms 10 and 11 as a dictionary of routes ending at each specific node allows us to quickly find the best solution by simply iterating through the overlapping nodes and checking the best combination of forward and backward routes, making the stitching faster. 
-
 \end{document}

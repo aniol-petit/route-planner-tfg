@@ -27,6 +27,7 @@
 
 %PER A INCLOURE GRÀFICS I EL LOGO DE LA UPF
 \usepackage{graphicx,psfrag}
+\usepackage{pdfpages}
 
 %FONTS TIMES O GARAMOND, 
 \usepackage{times}
@@ -47,9 +48,6 @@
 %PER A L'ÍNDEX DE MATÈRIES
 \usepackage{makeidx}
 \makeindex
-
-%ESTIL DE BIBLIOGRAFIA
-\bibliographystyle{apalike}
 
 %APPENDIX
 \usepackage{appendix}
@@ -81,9 +79,16 @@
 % --- GRAPHICS PATH ---
 \graphicspath{{figures/}}
 
-% CRUCIAL: hyperref must be the last package loaded.
-% colorlinks=true makes it clickable, linkcolor=black keeps it looking professional.
-\usepackage[colorlinks=true, linkcolor=black, citecolor=black, urlcolor=blue]{hyperref}
+% CRUCIAL: hyperref must be among the last packages loaded (after xcolor).
+\usepackage{xcolor}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=false,
+    urlbordercolor=cyan,
+    linkbordercolor=cyan,
+    citebordercolor=cyan,
+    pdfborder={0 0 1}
+}
 
 %AQUEST DOCUMENT ÉS EN CATALÀ
 \selectlanguage{catalan}
@@ -97,7 +102,7 @@
 \title{Chasing Borders: Computational Optimization of the European Multi-Modal Transit Network for a Guinness World Record Routing Sequence}
 \author{Aniol Petit Cabarrocas}
 \thyear{Curs 2025 - 2026}
-\supervisor{Jordi Taixés i Ventosa}
+\supervisor{Director:Jordi Taixés i Ventosa}
 \grau{Mathematical Engineering in Data Science}
 
 
@@ -123,7 +128,23 @@
 %%%%%% Agraïments; keep this in Catalan
 \selectlanguage{catalan}
 \noindent {\Large \sffamily Agraïments} \newline
-\noindent dsds
+\noindent Tot i que el meu nom és el que presideix aquest treball, res del que llegireu a continuació existiria de la forma que ho fa sense l'ajuda i participació d'una sèrie de persones i institucions molt importants.
+
+\medskip
+
+En primer lloc, vull agrair al CSUC per oferir el cluster i els serveis de computació gratuitament, i en especial a l'Iván Jiménez per ajudar-me a aconseguir més hores de computació després d'haver esgotat les que se m'havien assignat inicialment. Sense tot això no tindria ni una de les més de dos milions de rutes que he acabat trobant.
+
+\medskip
+
+També vull agrair als que hi han estat en el dia a dia, però també als que eren més lluny i s'han assegurat que la distància no fos un impediment per a res. Mama, Papa, Clara, Núria, Avi, Jana, Aniol, Pol. Gràcies per escoltar-me divagar, queixar-me, celebrar i per compartir aquest camí amb mi. Ha estat tot molt més fàcil i divertit amb vosaltres.
+
+\medskip
+
+Jan, em semblava injust incloure't a la llista d'abans considerant que aquest treball ni tan sols existiria sense tu i la teva percepció de la realitat brutalment alterada. Gràcies per ajudar-me a trobar la inspiració per fer aquest treball, però també per recordar-me sempre que estem aquí per fer coses extraordinàries, a no conformar-me i a sempre anar a per més. Full gas we're never done!
+
+\medskip
+
+I finalment, l'agraiment més especial és per tu, Jordi. El temps m'ha donat la raó amb la tria de tutor que vaig fer. M'has ajudat a pensar més enllà, a  posar el fre i pensar abans de llençar-me a executar, a considerar opcions que ni se m'havien passat pel cap. En definitiva, m'has ajudat a fer el treball millor, i a la vegada a fer-me millor com a persona i com a professional. Qualsevol cosa que escrigui aquí es quedarà curta, per tant, simplement diré que mil gràcies. 
 \selectlanguage{english}
 \cleardoublepage
 
@@ -132,58 +153,28 @@
 %ABSTRACT EN DOS IDIOMES. COM A MÍNIM CATALÀ. SI L'ALTRE ÉS EN CASTELLA CANVIEU EL QUE POSA ABSTRACT
 \selectlanguage{catalan}
 \section*{\Large \sffamily Resum}
-El continent europeu, amb la seva densitat incomparable d'estats sobirans i una infraestructura de transport transfronterer profundament integrada, presenta un entorn únic per a l'optimització combinatòria. Aquesta tesi aborda un problema d'encaminament multiobjectiu amb fortes restriccions i un objectiu concret: determinar computacionalment la seqüència òptima global de connexions de transport públic programat per batre el Rècord Mundial Guinness de més països visitats en un període estricte de 24 hores.
+Aquesta tesi aborda un problema d'optimització combinatòria amb un objectiu concret: determinar computacionalment la seqüència òptima de connexions de transport públic programat per batre el Rècord Mundial Guinness de més països visitats en un període estricte de 24 hores.
 
-\medskip
+Per establir una base sòlida, la tesi construeix des de zero un conjunt de dades precís dels vols europeus i les connexions d'alta velocitat ferroviària, normalitzant inconsistències en la nomenclatura d'estacions de 40 països i sincronitzant tots els horaris a una referència UTC unificada. Es implementen i comparen dos paradigmes de grafs fonamentalment diferents: un model temporal Activity-on-Edge i un graf dirigit acíclic Activity-on-Node, aquest últim permetent distribuir una cerca en profunditat amb poda Branch-and-Bound en un clúster de computació d'alt rendiment de 100 nodes.
 
-Resoldre aquest problema va requerir construir des de zero un conjunt de dades temporal i geogràficament precís dels vols europeus i les connexions d'alta velocitat ferroviària. Atès que cap API pública unificada cobreix tota la xarxa continental, es va dissenyar una pipeline d'adquisició pròpia combinant consultes REST API i extracció automatitzada de dades de portals ferroviaris. Les dades resultants van ser sotmeses a una normalització rigorosa, resolent inconsistències en la nomenclatura d'estacions de 40 països, reconstruint línies temporals absolutes a partir d'horaris locals i sincronitzant tots els registres a una referència UTC unificada, abans de ser assemblades en un graf matemàtic.
-
-\medskip
-
-Es van implementar i comparar directament dos paradigmes de modelització de grafs fonamentalment diferents. El primer, un model temporal Activity-on-Edge (AoE), mantenia una petjada de memòria compacta però imposava una càrrega computacional insostenible sobre l'algorisme de cerca per etiquetes, que col·lapsava sota fronteres de Pareto en creixement exponencial i resultava resistent a la paral·lelització distribuïda. El segon, un graf dirigit acíclic Activity-on-Node (AoN), transformava cada esdeveniment de trànsit individual en un vèrtex del graf, permetent distribuir una cerca en profunditat integrada amb poda Branch-and-Bound en un clúster de computació d'alt rendiment de 100 nodes.
-
-\medskip
-
-Tot i generar prop de dos milions d'itineraris candidats matemàticament vàlids que visitaven 14 o més països, l'aplicació d'un Índex de Qualitat de Ruta personalitzat (que avaluava els marges de transbordament, els mínims específics per modalitat i les restriccions de viabilitat física) va revelar que la gran majoria d'aquests camins depenien de connexions físicament impossibles. De 1.914.802 rutes candidates d'elit, exactament quatre van sobreviure com a seqüències viables per a un ésser humà. Aquesta recerca estableix de manera concloent que el límit físicament factible per a aquest intent de Rècord Guinness és de 14 països, assolible mitjançant una de quatre seqüències específiques, i demostra que la topologia de grafs en brut, sense restriccions de viabilitat física, és matemàticament rica però pràcticament enganyosa.
+Tot i generar prop de dos milions d'itineraris candidats matemàticament vàlids, l'aplicació d'un Índex de Qualitat de Ruta personalitzat revela que la gran majoria depenen de connexions físicament impossibles. De 1.914.802 rutes candidates d'elit, exactament quatre sobreviuen com a seqüències viables per a un ésser humà. Els resultats estableixen que el límit físicament factible per a aquest intent de rècord és de 14 països, assolible mitjançant una de quatre seqüències específiques.
 
 \selectlanguage{catalan}
-\vspace*{\fill}
 \section*{\Large \sffamily  Abstract}
 
-The European continent, with its unparalleled density of sovereign states and deeply integrated cross-border transit infrastructure, presents a unique environment for combinatorial optimization. This thesis addresses a highly constrained, multi-objective routing problem with a concrete real-world objective: computationally determining the globally optimal sequence of scheduled public transport connections to break the Guinness World Record for the most countries visited within a strict 24-hour window.
+This thesis addresses a combinatorial optimization problem with a concrete real-world objective: computationally determining the optimal sequence of scheduled public transport connections to break the Guinness World Record for the most countries visited within a strict 24-hour window.
 
-\medskip
+To build a solid foundation, the thesis constructs a time-accurate dataset of European flights and high-speed rail connections from scratch, normalizing station naming inconsistencies across 40 countries and synchronizing all schedules to a unified UTC reference. Two fundamentally different graph paradigms are implemented and compared: an Activity-on-Edge time-dependent model and an Activity-on-Node Directed Acyclic Graph, the latter enabling a Depth-First Search with Branch-and-Bound pruning to be distributed across a 100-node High-Performance Computing cluster.
 
-Solving this problem required constructing a comprehensive, time-accurate dataset of European flights and high-speed rail connections from scratch. Because no unified public API covers the full continental network, a custom acquisition pipeline was engineered combining REST API queries and programmatic web scraping of rail aggregators. The resulting data underwent rigorous normalization, resolving station naming inconsistencies across 40 countries, reconstructing absolute timelines from locally-clocked schedules, and synchronizing all timestamps to a unified UTC reference, before being assembled into a mathematical graph.
-
-\medskip
-
-Two fundamentally different graph paradigms were implemented and directly compared. The first, an Activity-on-Edge (AoE) time-dependent model, maintained a compact memory footprint but imposed an unsustainable computational burden on its Label-Setting search algorithm, which collapsed under exponentially growing Pareto frontiers and proved resistant to distributed parallelization. The second, an Activity-on-Node (AoN) Directed Acyclic Graph, transformed every individual transit event into a graph vertex, enabling a Depth-First Search integrated with Branch-and-Bound pruning to be distributed across a 100-node High-Performance Computing cluster.
-
-\medskip
-
-Despite generating nearly two million mathematically valid candidate itineraries visiting 14 or more countries, the application of a custom Route Quality Index (evaluating transfer margins, modality-specific minimums, and physical feasibility constraints) revealed that the overwhelming majority of these paths relied on physically impossible connections. Out of 1,914,802 elite candidate routes, exactly four survived as human-viable sequences. This research conclusively establishes that the physically feasible ceiling for this Guinness World Record attempt is 14 countries, achievable via one of four specific routing sequences, and demonstrates that raw graph topology, absent physical feasibility constraints, is mathematically rich but practically misleading.
-
-\vspace*{\fill}
+Despite generating nearly two million mathematically valid candidate itineraries, the application of a custom Route Quality Index reveals that the overwhelming majority rely on physically impossible connections. Out of 1,914,802 elite candidate routes, exactly four survive as human-viable sequences. The results establish that the physically feasible ceiling for this record attempt is 14 countries, achievable via one of four specific routing sequences.
 
 \selectlanguage{spanish}
-\vspace*{\fill}
 \section*{\Large \sffamily Resumen}
-El continente europeo, con su densidad incomparable de estados soberanos y una infraestructura de transporte transfronterizo profundamente integrada, presenta un entorno único para la optimización combinatoria. Esta tesis aborda un problema de enrutamiento multiobjetivo con fuertes restricciones y un objetivo concreto: determinar computacionalmente la secuencia óptima global de conexiones de transporte público programado para batir el Récord Mundial Guinness de más países visitados en un período estricto de 24 horas.
+Esta tesis aborda un problema de optimización combinatoria con un objetivo concreto: determinar computacionalmente la secuencia óptima de conexiones de transporte público programado para batir el Récord Mundial Guinness de más países visitados en un período estricto de 24 horas.
 
-\medskip
+Para establecer una base sólida, la tesis construye desde cero un conjunto de datos preciso de los vuelos europeos y las conexiones de alta velocidad ferroviaria, resolviendo inconsistencias en la nomenclatura de estaciones de 40 países y sincronizando todos los horarios a una referencia UTC unificada. Se implementan y comparan dos paradigmas de grafos fundamentalmente diferentes: un modelo temporal Activity-on-Edge y un grafo dirigido acíclico Activity-on-Node, este último permitiendo distribuir una búsqueda en profundidad con poda Branch-and-Bound en un clúster de computación de alto rendimiento de 100 nodos.
 
-Resolver este problema requirió construir desde cero un conjunto de datos temporal y geográficamente preciso de los vuelos europeos y las conexiones de alta velocidad ferroviaria. Dado que ninguna API pública unificada cubre toda la red continental, se diseñó una pipeline de adquisición propia combinando consultas REST API y extracción automatizada de datos de portales ferroviarios. Los datos resultantes fueron sometidos a una normalización rigurosa, resolviendo inconsistencias en la nomenclatura de estaciones de 40 países, reconstruyendo líneas temporales absolutas a partir de horarios locales y sincronizando todos los registros a una referencia UTC unificada, antes de ser ensamblados en un grafo matemático.
-
-\medskip
-
-Se implementaron y compararon directamente dos paradigmas de modelización de grafos fundamentalmente diferentes. El primero, un modelo temporal Activity-on-Edge (AoE), mantenía una huella de memoria compacta pero imponía una carga computacional insostenible sobre el algoritmo de búsqueda por etiquetas, que colapsaba bajo fronteras de Pareto en crecimiento exponencial y resultaba resistente a la paralelización distribuida. El segundo, un grafo dirigido acíclico Activity-on-Node (AoN), transformaba cada evento de tránsito individual en un vértice del grafo, permitiendo distribuir una búsqueda en profundidad integrada con poda Branch-and-Bound en un clúster de computación de alto rendimiento de 100 nodos.
-
-\medskip
-
-A pesar de generar casi dos millones de itinerarios candidatos matemáticamente válidos que visitaban 14 o más países, la aplicación de un Índice de Calidad de Ruta personalizado (que evaluaba los márgenes de transbordo, los mínimos específicos por modalidad y las restricciones de viabilidad física) reveló que la gran mayoría de estos caminos dependían de conexiones físicamente imposibles. De 1.914.802 rutas candidatas de élite, exactamente cuatro sobrevivieron como secuencias viables para un ser humano. Esta investigación establece de manera concluyente que el límite físicamente factible para este intento de Récord Guinness es de 14 países, alcanzable mediante una de cuatro secuencias específicas, y demuestra que la topología de grafos en bruto, sin restricciones de viabilidad física, es matemáticamente rica pero prácticamente engañosa.
-
-\vspace*{\fill}
+A pesar de generar casi dos millones de itinerarios candidatos matemáticamente válidos, la aplicación de un Índice de Calidad de Ruta personalizado revela que la gran mayoría dependen de conexiones físicamente imposibles. De 1.914.802 rutas candidatas de élite, exactamente cuatro sobreviven como secuencias viables para un ser humano. Los resultados establecen que el límite físicamente factible para este intento de récord es de 14 países, alcanzable mediante una de cuatro secuencias específicas.
 
 \selectlanguage{english}
 
@@ -253,22 +244,12 @@ This thesis is the answer to that question. It is also, I hope, a demonstration 
 \input{chapters/06_results_conclusions.tex}
 
 
-\bibliography{exemple_bibtex}
-%Cal documentar les fonts bibliogràfiques utilitzades amb format APA.
-
-%https://guiesbibtic.upf.edu/models-citacio/APA
-
-%La Biblioteca de la UPF ofereix el gestor de bibliografies Mendeley, que us permet crear la vostra base de dades personal de referències bibliogràfiques en línia, importar referències automàticament des de diferents recursos d'informació, extreure llistes i generar bibliografies en diferents estils de citació, i incorporar les citacions i llistes de bibliografia als vostres documents de text
-
-
-
 \clearpage
-\appendix
-
-%PODEU POSAR EL NOM QUE US SEMBLI ADIENT
-\chapter{Supporting Material} 
-\label{app:1}
-[Additional tables and data will go here]
+\addcontentsline{toc}{chapter}{References}
+\bibliographystyle{vancouver}
+\bibliography{references}
+\clearpage
+\input{chapters/appendices.tex}
 
 
 

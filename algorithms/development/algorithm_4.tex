@@ -199,14 +199,4 @@ $Score(L) = |C| + (1 - \tau)UB$; where $\tau = \frac{t - \text{start\_time}}{24:
 
 % Bottom Rule
 \hrule height 0.8pt
-
-\vspace{1.5em}
-In Algorithm 4 we make a change that targets one of the main issues in Algorithm 2: the explosion of labels, which are rarely pruned due to the very relaxed conditions of dominance. 
-
-As seen in the notes, we now prioritize labels based on a scoring function that takes into account the number of countries visited, the Upper Bound of reachable countries from each node at a specific time (bucket) and the time of the label. This way we hope to expand more promising nodes first.
-
-This is combined with an early stopping condition that breaks the loop as soon as we beat the record.Expanding promising labels earlier, combined with the early stopping, should result in a faster algorithm.
-
-We also add a pruning condition such that labels where the sum of current number of countries and upper bound of reachable countries is less than the record are discarded. This also saves us time, since we don't care about solutions that are guaranteed to be worse than the record.
-
 \end{document}

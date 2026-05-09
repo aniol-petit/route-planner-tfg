@@ -12,11 +12,11 @@ The foundational step of this optimization problem was acquiring a comprehensive
 
 \subsection{Flight APIs}
 \label{subsec:flight_apis}
-While the airline industry is highly standardized, access to global distribution systems (such as Amadeus or Sabre) requires expensive commercial licensing. To bypass these costs, the flight dataset was sourced using the AviationEdge API.
+While the airline industry is highly standardized, access to global distribution systems (such as Amadeus or Sabre) requires expensive commercial licensing. To bypass these costs, the flight dataset was sourced using the AviationEdge API\cite{aviationedge}.
 
 \medskip
 
-This platform offered a generous 1 month trial period charged at \$7 that enabled access to most of the endpoints, among those the \textit{flightsHistory} endpoint used to acquire the flight data. To efficiently target the API without exhausting query limits on irrelevant locations, an online global dataset of airports was acquired and programmatically filtered to isolate only active commercial airports within European borders. The resulting list of IATA (International Air Transport Association) codes served as the exact querying parameters.
+This platform offered a generous 1 month trial period charged at \$7 that enabled access to most of the endpoints, among those the \textit{flightsHistory} endpoint used to acquire the flight data. To efficiently target the API without exhausting query limits on irrelevant locations, an online global dataset of airports\cite{ourairports} was acquired and programmatically filtered to isolate only active commercial airports within European borders. The resulting list of IATA (International Air Transport Association) codes served as the exact querying parameters.
 
 \medskip
 
@@ -28,7 +28,7 @@ Acquiring European rail data proved substantially more difficult than acquiring 
 
 \medskip
 
-As a result, the rail pipeline relied on programmatic extraction from the \textit{Deutsche Bahn (DB) portal}, which serves as a practical aggregator for a large share of international European rail connections. Because the DB interface is implemented as a modern Single-Page Application (SPA), data retrieval required browser-level automation rather than simple HTTP scraping.
+As a result, the rail pipeline relied on programmatic extraction from the \textit{Deutsche Bahn (DB) portal}\cite{deutschebahn}, which serves as a practical aggregator for a large share of international European rail connections. Because the DB interface is implemented as a modern Single-Page Application (SPA), data retrieval required browser-level automation rather than simple HTTP scraping.
 
 \medskip
 
@@ -47,7 +47,7 @@ Na\"ive pagination via ``Later Connections'' frequently triggered asynchronous D
 \medskip
 
 \noindent\textbf{Bi-directional corridor extraction and checkpointing.}
-To constrain the immense scale of the European rail network and prevent the scraper from blindly querying thousands of unviable, low-speed rural combinations, the extraction was strictly limited to a predefined compilation of major international rail corridors sourced from train focused sites from the internet. This curated list of high-speed routes (e.g., London to Paris, Munich to Budapest) was hardcoded into the pipeline to serve as the exact boundaries of the dataset. The extraction algorithm iterated through this specific list, parsed the strings containing interconnected stops, isolated the terminal origin and destination nodes, and executed the incremental scraper in both forward and reverse directions.
+To constrain the immense scale of the European rail network and prevent the scraper from blindly querying thousands of unviable, low-speed rural combinations, the extraction was strictly limited to a predefined compilation of major international rail corridors\cite{showmethejourney} sourced from train focused sites from the internet. This curated list of high-speed routes (e.g., London to Paris, Munich to Budapest) was hardcoded into the pipeline to serve as the exact boundaries of the dataset. The extraction algorithm iterated through this specific list, parsed the strings containing interconnected stops, isolated the terminal origin and destination nodes, and executed the incremental scraper in both forward and reverse directions.
 
 \medskip
 
@@ -149,7 +149,7 @@ To evaluate a Guinness World Record attempt based on the number of countries vis
 
 \subsection{Country Assignment and Border Resolution}
 \label{subsec:country_assignment_border_resolution}
-While international flights explicitly land in known countries, domestic and cross-border train schedules scraped from the DB portal do not consistently label the country of intermediate stops. To dynamically resolve this, a multi-strategy geographical detection algorithm was implemented.
+While international flights explicitly land in known countries, domestic and cross-border train schedules scraped from the DB portal do not consistently label the country of intermediate stops. To dynamically resolve this, a multi-strategy geographical detection algorithm was implemented\cite{kaggle_train_stations}.
 
 \medskip
 
@@ -158,7 +158,7 @@ The algorithm evaluated each scraped station name through a descending hierarchy
 \begin{itemize}
   \item \textbf{Regex code extraction:} Extracting explicit country codes often hidden in parentheses within the raw text (e.g., parsing (CH) as Switzerland or (NL) as the Netherlands).
   \item \textbf{Language pattern recognition:} Utilizing linguistic markers to confidently infer sovereign territory (e.g., the presence of ``hl.n.'' for Czech main stations, ``Glowny'' for Poland, or `` b.Wien'' for Austrian suburbs).
-  \item \textbf{GeoNames cross-referencing:} Querying a localized subset of the GeoNames database to map normalized station strings to the most populous European city matching that name.
+  \item \textbf{GeoNames cross-referencing:} Querying a localized subset of the GeoNames database\cite{geonames} to map normalized station strings to the most populous European city matching that name.
 \end{itemize}
 
 Despite these programmatic layers, complex border stations frequently generated false positives (e.g., ``Gen\`eve'' being administratively in Switzerland despite a French linguistic profile, or border towns like Domodossola). To guarantee absolute integrity for record evaluation, an exhaustive list of manual topological corrections was hardcoded into the pipeline to forcefully overwrite erroneous geographical assignments at critical border crossings.
@@ -175,7 +175,7 @@ The first pruning layer used a deterministic station-scoring heuristic. Each nod
 \medskip
 
 \noindent\textbf{LLM-assisted hub extraction.}
-Although heuristic pruning removed most low-value nodes, identifying the most strategic international hubs across roughly 40 countries required additional geographic context. The pipeline therefore integrated Gemini 2.5 Pro as a constrained classifier rather than a routing engine. National station lists were provided after heuristic filtering, and the model was prompted to return only internationally valuable hubs (e.g., cross-border high-speed access and strong air--rail interconnectivity). Outputs were constrained to structured JSON for direct downstream use. This hybrid stage combined deterministic topological filtering with LLM-based geographic prioritization, yielding a compact graph concentrated around high-value transfer hubs.
+Although heuristic pruning removed most low-value nodes, identifying the most strategic international hubs across roughly 40 countries required additional geographic context. The pipeline therefore integrated Gemini 2.5 Pro as a constrained classifier rather than a routing engine.\cite{gemini2023} National station lists were provided after heuristic filtering, and the model was prompted to return only internationally valuable hubs (e.g., cross-border high-speed access and strong air--rail interconnectivity). Outputs were constrained to structured JSON for direct downstream use. This hybrid stage combined deterministic topological filtering with LLM-based geographic prioritization, yielding a compact graph concentrated around high-value transfer hubs.
 
 \subsection{Intra-City Transfers and Multi-Agent Geocoding Validation}
 \label{subsec:intra_country_transfers_geocoding_validation}
@@ -184,7 +184,7 @@ The final spatial challenge was the one that no algorithm could solve on its own
 \medskip
 
 \noindent\textbf{Multi-agent LLM architecture.}
-Directly estimating transfer feasibility through commercial geocoding APIs at continental scale was cost-prohibitive. To bypass this constraint, a two-agent Gemini Pro workflow was implemented:
+Directly estimating transfer feasibility through commercial geocoding APIs at continental scale was cost-prohibitive. To bypass this constraint, a two-agent workflow was implemented:
 
 \begin{itemize}
   \item \textbf{Generator agent:} evaluated hub pairs within the same country, proposed plausible intra-city connections, and estimated transit durations (local transit plus walking). A hard cutoff removed proposals with $\tau_{transfer} > 240$ minutes.

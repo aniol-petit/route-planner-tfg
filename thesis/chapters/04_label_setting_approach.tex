@@ -12,7 +12,7 @@ To rigorously test different modeling paradigms, the first architectural approac
 
 \medskip
 
-The graph was instantiated using the NetworkX library with the following structural rules:
+The graph was instantiated using the NetworkX library\cite{hagberg2008exploring} with the following structural rules:
 
 \begin{itemize}
     \item \textbf{Spatial Nodes ($V$):} A single vertex was created for each unique physical location. Nodes were tagged with specific attributes: their sovereign country (critical for the objective function) and their infrastructure type (airport or station). 
@@ -26,7 +26,7 @@ By compressing schedules into arrays on spatial edges, this AoE architecture suc
 \label{sec:algorithm_evolution}
 
 \noindent
-Because the Guinness World Record challenge is fundamentally a multi-objective optimization problem (maximizing unique countries visited while minimizing time within a strict 24-hour limit) a standard shortest-path algorithm like Dijkstra's cannot be used. Instead, the search must be modeled using Dynamic Programming (DP) via a Label-Setting algorithm (see Algorithm 1 in Appendix X).
+Because the Guinness World Record challenge is fundamentally a multi-objective optimization problem (maximizing unique countries visited while minimizing time within a strict 24-hour limit) a standard shortest-path algorithm like Dijkstra's cannot be used. Instead, the search must be modeled using Dynamic Programming (DP) via a Label-Setting algorithm (see Algorithm 1 in Appendix B).
 
 \medskip
 
@@ -43,11 +43,11 @@ However, implementing this baseline algorithm revealed a fatal flaw: the Pareto 
 \subsection{Reachability and Upper Bound (UB) Pruning}
 \label{subsec:baseline_label_setting}
 
-The first major architectural change was introducing predictive pruning (see Algorithm 2 in Appendix X). Before expanding a label, the algorithm calculated an optimistic Upper Bound ($UB$) of the maximum new countries that could theoretically be reached from the current node $v$ within the remaining time.
+The first major architectural change was introducing predictive pruning (see Algorithm 2 in Appendix B). Before expanding a label, the algorithm calculated an optimistic Upper Bound ($UB$) of the maximum new countries that could theoretically be reached from the current node $v$ within the remaining time.
 
 \medskip
 
-To make this computationally tractable without running a full sub-search at every node, time was discretized into fixed intervals, or ``buckets'' $b$. For any given node $v$ and time bucket $b$, a precomputation step generated $R(v, b)$, the absolute set of all sovereign countries reachable from that location before the 24-hour clock expired. The theoretical Upper Bound was then calculated as the cardinality of the set difference between the reachable countries and the already visited countries: $UB = |R(v, b) \setminus C|$.
+To make this computationally tractable without running a full sub-search at every node, time was discretized into fixed intervals, or ``buckets'' $b$. For any given node $v$ and time bucket $b$, a precomputation step (detailed in Algorithm 3, Appendix B) generated $R(v, b)$, the absolute set of all sovereign countries reachable from that location before the 24-hour clock expired. The theoretical Upper Bound was then calculated as the cardinality of the set difference between the reachable countries and the already visited countries: $UB = |R(v, b) \setminus C|$.
 
 \medskip
 
@@ -60,24 +60,24 @@ While standard $UB$ pruning successfully removed hopeless paths, it was overly o
 
 \medskip
 
-To tighten this bound, the concept of Minimum Transit Time (MTT) was introduced. The $MTT$ represents the absolute shortest physical time required to enter, traverse, and exit a specific country's transit network. For instance, even under perfect schedule conditions, traveling across Switzerland or Germany requires a mathematically provable minimum number of minutes. The algorithm precomputed this $MTT$ for every country in the dataset.
+To tighten this bound, the concept of Minimum Transit Time (MTT) was introduced. The $MTT$ represents the absolute shortest physical time required to enter, traverse, and exit a specific country's transit network. For instance, even under perfect schedule conditions, traveling across Switzerland or Germany requires a mathematically provable minimum number of minutes. The algorithm precomputed this $MTT$ for every country in the dataset prior to the main search execution (see Algorithm 5 in Appendix B).
 
 \medskip
 
-When calculating the $UB$, the algorithm sorted all unvisited, reachable countries from the fastest $MTT$ to the slowest (see Algorithm 6 in Appendix X). It then sequentially added these minimum transit times to a \texttt{time\_spent} counter. The moment the accumulated \texttt{time\_spent} exceeded the actual hours remaining in the 24-hour journey, the algorithm stopped incrementing the $UB$. This ``Time-Budgeted UB'' drastically accelerated convergence: it accurately pruned paths that possessed theoretical geographic connectivity but lacked the physical time budget required to actually execute the transits.
+When calculating the $UB$, the algorithm sorted all unvisited, reachable countries from the fastest $MTT$ to the slowest (see Algorithm 6 in Appendix B). It then sequentially added these minimum transit times to a \texttt{time\_spent} counter. The moment the accumulated \texttt{time\_spent} exceeded the actual hours remaining in the 24-hour journey, the algorithm stopped incrementing the $UB$. This ``Time-Budgeted UB'' drastically accelerated convergence: it accurately pruned paths that possessed theoretical geographic connectivity but lacked the physical time budget required to actually execute the transits.
 
 \subsection{Priority Scoring, Hard Floors, and Rollouts}
 \label{subsec:priority_scoring_hard_floors_rollouts}
 
-To further optimize the search, the standard queue was replaced with a Priority Queue. Rather than expanding blindly, labels were ranked using a custom scoring formula. The formula was designed to prioritize deep, fast routes. For example, a core heuristic evaluated $Score(L) = |C| \times 10000 - t$, effectively forcing the algorithm to aggressively expand labels with the highest country count, while using an earlier absolute time $t$ as the mathematical tie-breaker to favor faster connections (see Algorithm 4 in Appendix X).
+To further optimize the search, the standard queue was replaced with a Priority Queue. Rather than expanding blindly, labels were ranked using a custom scoring formula. The formula was designed to prioritize deep, fast routes. For example, a core heuristic evaluated $Score(L) = |C| \times 10000 - t$, effectively forcing the algorithm to aggressively expand labels with the highest country count, while using an earlier absolute time $t$ as the mathematical tie-breaker to favor faster connections (see Algorithm 4 in Appendix B).
 
 \medskip
 
-Despite prioritized expansion, execution logs revealed the algorithm still wasted resources expanding labels near the end of the timeline that had only accumulated a few countries. To counter this, a Global Hard Floor was introduced (see Algorithm 9 in Appendix X). By establishing a GlobalMinTime (the minimum realistic time to visit any single country), the algorithm calculated the physical time required to bridge the gap between $|C|$ and the target record. If this required time exceeded the remaining clock, the label was killed. Crucially, all arbitrary parameters for these heuristics (such as setting the GlobalMinTime to just 25 minutes) were deliberately defined to be overly optimistic. The architectural philosophy was to tolerate redundant computational overhead rather than risk pruning a mathematically viable, record-breaking route.
+Despite prioritized expansion, execution logs revealed the algorithm still wasted resources expanding labels near the end of the timeline that had only accumulated a few countries. To counter this, a Global Hard Floor was introduced (see Algorithm 9 in Appendix B). By establishing a GlobalMinTime (the minimum realistic time to visit any single country), the algorithm calculated the physical time required to bridge the gap between $|C|$ and the target record. If this required time exceeded the remaining clock, the label was killed. Crucially, all arbitrary parameters for these heuristics (such as setting the GlobalMinTime to just 25 minutes) were deliberately defined to be overly optimistic. The architectural philosophy was to tolerate redundant computational overhead rather than risk pruning a mathematically viable, record-breaking route.
 
 \medskip
 
-To capitalize on the Priority Queue, a Monte-Carlo Rollout mechanism was injected (see Algorithm 8 in Appendix X). Every 1,000 iterations, the algorithm paused standard expansion and launched a rapid, randomized ``smart-greedy'' probe deep into the graph (see Algorithm 7 in Appendix X). Using heavily biased weights to favor unvisited countries and a Tabu list to prevent local loops, these rollouts operated in milliseconds. If a rollout successfully reached the end of the day and beat the current global record, the new record was dynamically adopted, triggering a massive, immediate pruning wave across the entire Priority Queue.
+To capitalize on the Priority Queue, a Monte-Carlo Rollout mechanism was injected (see Algorithm 8 in Appendix B). Every 1,000 iterations, the algorithm paused standard expansion and launched a rapid, randomized ``smart-greedy'' probe deep into the graph (see Algorithm 7 in Appendix B). Using heavily biased weights to favor unvisited countries and a Tabu list to prevent local loops, these rollouts operated in milliseconds. If a rollout successfully reached the end of the day and beat the current global record, the new record was dynamically adopted, triggering a massive, immediate pruning wave across the entire Priority Queue.
 
 \subsection{The Bi-directional Search Pivot}
 \label{subsec:bidirectional_search_pivot}
@@ -86,11 +86,11 @@ The final algorithmic evolution within this paradigm was born from observing the
 
 \medskip
 
-To bypass this nocturnal sparsity, the monolithic 24-hour search was torn in half. The architecture was rewritten as a Bi-directional Search: one algorithm ran forward in time from the start of the day, while an identical algorithm ran backward in time from the end of the day (see Algorithms 10 and 11 in Appendix X). Both halves executed for 14 hours, creating a 4-hour overlap in the middle of the day.
+To bypass this nocturnal sparsity, the monolithic 24-hour search was torn in half. The architecture was rewritten as a Bi-directional Search: one algorithm ran forward in time from the start of the day, while an identical algorithm ran backward in time from the end of the day (see Algorithms 10 and 11 in Appendix B). Both halves executed for 14 hours, creating a 4-hour overlap in the middle of the day.
 
 \medskip
 
-Finally, a dedicated ``Stitcher'' algorithm evaluated the intersection of these two sets (see Algorithm 12 in Appendix X). By iterating through overlapping nodes and validating time continuity and geographic unions ($C_{forward} \cup C_{backward}$), the stitcher could reconstruct a globally optimal 24-hour path. This parallel, bi-directional approach effectively bypassed the sparse night-time bottlenecks and maximized graph coverage during the dense daytime schedules.
+Finally, a dedicated ``Stitcher'' algorithm evaluated the intersection of these two sets (see Algorithm 12 in Appendix B). By iterating through overlapping nodes and validating time continuity and geographic unions ($C_{forward} \cup C_{backward}$), the stitcher could reconstruct a globally optimal 24-hour path. This parallel, bi-directional approach effectively bypassed the sparse night-time bottlenecks and maximized graph coverage during the dense daytime schedules.
 
 \section{The Dimensionality Collapse}
 \label{sec:dimensionality_collapse}
