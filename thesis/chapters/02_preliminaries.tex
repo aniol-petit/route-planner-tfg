@@ -19,6 +19,49 @@ Each edge carries a cost, typically represented by a weight function $w(u, v)$. 
 
 A path in this graph is a sequence of vertices where each adjacent pair is connected by a valid edge. The goal of a routing algorithm is to find a specific path that maximizes or minimizes a certain objective function (e.g., minimizing total weight or maximizing the number of unique vertices visited).
 
+\begin{figure}[htbp]
+  \centering
+  \begin{minipage}[t]{0.46\textwidth}
+    \centering
+    \begin{tikzpicture}[
+        node/.style={circle, draw, inner sep=1.5pt, minimum size=5.5mm, font=\small},
+        edge/.style={thick}
+      ]
+      \node[node] (u) at (0,0) {$u$};
+      \node[node] (v) at (1.35,1.05) {$v$};
+      \node[node] (w) at (2.7,0) {$w$};
+      \node[node] (x) at (1.35,-1.05) {$x$};
+      \draw[edge] (u) -- (v);
+      \draw[edge] (v) -- (w);
+      \draw[edge] (w) -- (x);
+      \draw[edge] (x) -- (u);
+      \draw[edge] (u) -- (w);
+    \end{tikzpicture}
+    \par\medskip
+    {\small\textbf{(a)}~$G=(V,E)$ with $V=\{u,v,w,x,\ldots\}$ and $E=\{(u,v),(v,w),\ldots\}$.}
+  \end{minipage}\hfill
+  \begin{minipage}[t]{0.50\textwidth}
+    \centering
+    \begin{tikzpicture}[
+        node/.style={circle, draw, inner sep=1.5pt, minimum size=5.5mm, font=\small},
+        edge/.style={-{Stealth[length=2mm]}, thick},
+        lbl/.style={font=\scriptsize, fill=white, inner sep=0.5pt}
+      ]
+      \node[node] (u) at (0,0) {$u$};
+      \node[node] (v) at (2.0,0) {$v$};
+      \node[node] (w) at (4.0,0) {$w$};
+      \draw[edge] (u) -- node[lbl, above] {$95$} (v);
+      \draw[edge] (v) -- node[lbl, above] {$40$} (w);
+      \node[font=\scriptsize, align=center] at (2.0,-0.85) {$e=(u,v),\; e=(v,w)$};
+      \node[font=\scriptsize] at (2.0,-1.35) {path: $u \to v \to w$};
+    \end{tikzpicture}
+    \par\medskip
+    {\small\textbf{(b)}~$w(u,v)=95$, $w(v,w)=40$ (minutes); a routing algorithm searches for a path in $G$.}
+  \end{minipage}
+  \caption{Panel~(a) shows the abstract structure $G=(V,E)$; panel~(b) shows directed edges $e=(u,v)$ whose labels denote travel time in minutes, i.e.\ $w(u,v)=95$ and $w(v,w)=40$.}
+  \label{fig:graph_foundations}
+\end{figure}
+
 \subsection{Time-Dependent vs.\ Time-Expanded Networks}
 \label{subsec:time_expanded}
 
@@ -34,7 +77,7 @@ Time is explicitly discretized and baked directly into the topology of the graph
 
 \medskip
 
-Because our problem operates within a strict 24-hour window using discrete, fixed transit schedules, modeling time efficiently is the central architectural challenge. To systematically evaluate the optimal data structure for this Guinness World Record routing problem, this thesis intentionally implements and compares both paradigms: a memory-efficient time-dependent multi-graph (detailed in Chapter 4) and a structurally unrolled time-expanded network (detailed in Chapter 5)\cite{pyrga2007efficient}.
+Because our problem operates within a strict 24-hour window using discrete, fixed transit schedules, modeling time efficiently is the central architectural challenge. To systematically evaluate the optimal data structure for this Guinness World Record routing problem, this thesis intentionally implements and compares both paradigms: a memory-efficient time-dependent multi-graph (detailed in Chapter 4) and a structurally unrolled time-expanded network (detailed in Chapter 5). Similar comparisons have been made in the literature, see \cite{pyrga2007efficient}.
 
 \subsection{Activity-on-Edge (AoE) vs.\ Activity-on-Node (AoN)}
 \label{subsec:aoe_aon}
@@ -61,16 +104,16 @@ When graph networks become too large for brute-force enumeration, exact and heur
 \subsection{Dynamic Programming and Label Setting}
 \label{subsec:dp_label_setting}
 
-Dynamic Programming (DP) is a mathematical optimization method that solves complex problems by breaking them down into simpler, overlapping subproblems. In the context of graph routing, DP is often implemented via Label Setting algorithms. As the algorithm traverses the graph, it assigns ``labels'' to each node, where a label represents the accumulated cost or state of a specific path reaching that node.
+Dynamic Programming is a mathematical optimization method that solves complex problems by breaking them down into simpler, overlapping subproblems. In the context of graph routing, DP is often implemented via Label Setting algorithms. As the algorithm traverses the graph, it assigns ``labels'' to each node, where a label represents the accumulated cost or state of a specific path reaching that node.
 
-In multi-objective optimization problems---where multiple conflicting criteria must be optimized simultaneously (e.g., minimizing time while maximizing profit)---a single optimal path cannot always be determined dynamically. Instead, the algorithm must maintain a Pareto Frontier at each node. The frontier is a set containing all non-dominated labels. A label $L_1$ mathematically ``dominates'' $L_2$ if it is equal or superior in all evaluated objectives, and strictly superior in at least one. Dominated labels are permanently discarded, while the non-dominated set is kept to spawn future branches.
+In multi-objective optimization problems, where multiple conflicting criteria must be optimized simultaneously (e.g., minimizing time while maximizing profit), a single optimal path cannot always be determined dynamically. Instead, the algorithm must maintain a Pareto Frontier at each node. The frontier is a set containing all non-dominated labels. A label $L_1$ mathematically ``dominates'' $L_2$ if it is equal or superior in all evaluated objectives, and strictly superior in at least one. Dominated labels are permanently discarded, while the non-dominated set is kept to spawn future branches.
 
 \subsection{Depth-First Search (DFS) and Branch-and-Bound}
 \label{subsec:dfs_bnb}
 
-Depth-First Search (DFS) is a fundamental graph traversal algorithm that explores as far down a single branch of a tree as possible before backtracking. Because DFS only requires storing the nodes along the current active path, its memory complexity grows linearly with the depth of the search tree rather than exponentially with its breadth, making it highly memory-efficient.
+DFS is a fundamental graph traversal algorithm that explores as far down a single branch of a tree as possible before backtracking. Because DFS only requires storing the nodes along the current active path, its memory complexity grows linearly with the depth of the search tree rather than exponentially with its breadth, making it highly memory-efficient.
 
-To optimize DFS for finding absolute maximums or minimums, it is often paired with Branch-and-Bound (BnB), a paradigm for discrete and combinatorial optimization.
+To optimize DFS for finding absolute maximums or minimums, it is often paired with Branch-and-Bound, a paradigm for discrete and combinatorial optimization.
 
 \medskip
 
@@ -87,7 +130,7 @@ If the calculated bound of a branch is worse than the best solution already foun
 \section{Distributed Computing}
 \label{sec:distributed_computing}
 
-When a computational problem's scale exceeds the memory or processing capacity of a single machine, distributed computing methodologies are employed to divide the task across a High-Performance Computing (HPC) cluster. An HPC cluster is a network of independent computers (nodes) that function as a single system. Access to these resources is governed by a workload manager or job scheduler, such as SLURM (Simple Linux Utility for Resource Management). The scheduler allocates specific hardware constraints, such as CPU cores and maximum RAM, and queues tasks to ensure that execution does not exceed physical memory limits, which would otherwise trigger immediate task termination.
+When a computational problem's scale exceeds the memory or processing capacity of a single machine, distributed computing methodologies are employed to divide the task across an HPC cluster. An HPC cluster is a network of independent computers (nodes) that function as a single system. Access to these resources is governed by a workload manager or job scheduler, such as SLURM (Simple Linux Utility for Resource Management). The scheduler allocates specific hardware constraints, such as CPU cores and maximum RAM, and queues tasks to ensure that execution does not exceed physical memory limits, which would otherwise trigger immediate task termination.
 
 \medskip
 
@@ -95,7 +138,7 @@ To efficiently search massive combinatorial state spaces, algorithms frequently 
 
 \medskip
 
-Within those individual tasks, intra-node multiprocessing is often utilized to fully saturate the assigned CPU cores. However, launching multiple concurrent processes can lead to severe memory duplication, which is fatal for memory-intensive graph traversals. To mitigate this, concurrent architectures employ Inter-Process Communication (IPC) and shared memory. By utilizing thread-safe locks and shared variables, multiple worker processes can safely read global data structures and update shared states, such as a global incumbent bound, without triggering race conditions or redundant memory allocation.
+Within those individual tasks, intra-node multiprocessing is often utilized to fully saturate the assigned CPU cores. However, launching multiple concurrent processes can lead to severe memory duplication, which is fatal for memory-intensive graph traversals. To mitigate this, concurrent architectures employ IPC and shared memory. By utilizing thread-safe locks and shared variables, multiple worker processes can safely read global data structures and update shared states, such as a global incumbent bound, without triggering race conditions or redundant memory allocation.
 
 \section{Data Acquisition Concepts}
 \label{sec:data_acquisition_concepts}

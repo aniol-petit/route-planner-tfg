@@ -4,12 +4,12 @@
 \section{The Activity-on-Node (AoN) Transformation}
 \label{sec:aon_transformation}
 
-As established in the preliminary definitions, a central objective of this research is to evaluate and contrast two fundamental graph paradigms for time-dependent routing. Having quantified the computational limits of the memory-efficient Activity-on-Edge (AoE) architecture in Chapter 4, the analysis now shifts to the second structural candidate: the Activity-on-Node (AoN) framework. The AoE model prioritized a compact spatial topology, which inherently forced the search algorithm to dynamically calculate temporal validity at every node. To systematically test the inverse trade-off, the European transportation network was mathematically reconstructed as an Activity-on-Node Directed Acyclic Graph (DAG). This approach encodes temporal constraints in the graph structure rather than in the search algorithm, prioritizing algorithmic traversal speed over memory footprint.
+As established in the preliminary definitions, a central objective of this research is to evaluate and contrast two fundamental graph paradigms for time-dependent routing. Having quantified the computational limits of the memory-efficient AoE architecture in Chapter 4, the analysis now shifts to the second structural candidate: the AoN framework. The AoE model prioritized a compact spatial topology, which inherently forced the search algorithm to dynamically calculate temporal validity at every node. To systematically test the inverse trade-off, the European transportation network was mathematically reconstructed as an AoN DAG. This approach encodes temporal constraints in the graph structure rather than in the search algorithm, prioritizing algorithmic traversal speed over memory footprint.
 
 \subsection{Structural Inversion: Events as Nodes}
 \label{subsec:aon_events_as_nodes}
 
-In the AoN paradigm, physical locations no longer exist as nodes. Instead, every single scheduled transport event (a specific flight or train) is instantiated as an independent vertex. A node in this graph is defined by the rigid tuple $v = (\text{Origin}, \text{Destination}, \text{Departure\_Time}, \text{Arrival\_Time})$. For example, a flight leaving Barcelona at 10:00 and arriving in Rome at 12:00 represents one single, immutable node in the graph. By converting the temporal arrays stored on 8,456 spatial edges into individual nodes, the AoN transformation produced exactly 49,982 event nodes.
+In the AoN paradigm, physical locations no longer exist as nodes. Instead, every single scheduled transport event (a specific flight or train) is instantiated as an independent vertex. A node in this graph is defined by the rigid tuple $v = ({Origin}, {Destination}, {Departure\_Time}, {Arrival\_Time})$. For example, a flight leaving Barcelona at 10:00 and arriving in Rome at 12:00 represents one single, immutable node in the graph. By converting the temporal arrays stored on 8,456 spatial edges into individual nodes, the AoN transformation produced exactly 49,982 event nodes.
 
 \medskip
 
@@ -22,7 +22,7 @@ Consequently, the edges in the AoN graph no longer represent physical travel. In
 \subsection{Trade-offs and the Directed Acyclic Guarantee}
 \label{subsec:aon_tradeoffs_dag}
 
-This inversion offered a key computational advantage: the search space became static. Because every edge in the AoN graph guarantees chronological validity, a Depth-First Search (DFS) algorithm can traverse the network blindly. It does not need to verify temporal feasibility at each step; the existence of an edge guarantees a valid transfer. Furthermore, because time strictly moves forward, the resulting graph is a Directed Acyclic Graph (DAG). It is physically impossible to traverse a loop, which naturally prevents infinite cycles without requiring complex Tabu lists.
+This inversion offered a key computational advantage: the search space became static. Because every edge in the AoN graph guarantees chronological validity, a DFS algorithm can traverse the network blindly. It does not need to verify temporal feasibility at each step; the existence of an edge guarantees a valid transfer. Furthermore, because time strictly moves forward, the resulting graph is a DAG. It is physically impossible to traverse a loop, which naturally prevents infinite cycles without requiring complex Tabu lists.
 
 \medskip
 
@@ -44,7 +44,7 @@ Mathematically, if Event $A$ arrives in Munich at 14:00, and there are three val
 \section{Baseline DFS Execution on the Full Graph}
 \label{sec:baseline_dfs}
 
-With the European transit network successfully transformed into an Activity-on-Node (AoN) Directed Acyclic Graph (DAG) and stripped of redundant temporal edges, the search space was structurally primed for a pure Depth-First Search (DFS). Unlike the Dynamic Programming approach evaluated in Chapter~\ref{chap:label_setting_approach}, which required maintaining continuously expanding Pareto frontiers in memory at every node, a DFS on a DAG only requires maintaining the current path stack. This exceptionally low memory footprint resolved the previous state-space memory bottlenecks, allowing the algorithm to trace to trace routes with minimal memory overhead.
+With the European transit network successfully transformed into an AoN DAG and stripped of redundant temporal edges, the search space was structurally primed for a pure DFS. Unlike the Dynamic Programming approach evaluated in Chapter~\ref{chap:label_setting_approach}, which required maintaining continuously expanding Pareto frontiers in memory at every node, a DFS on a DAG only requires maintaining the current path stack. This exceptionally low memory footprint resolved the previous state-space memory bottlenecks, allowing the algorithm to trace to trace routes with minimal memory overhead.
 
 \subsection{Core Search Mechanics and Bounding}
 \label{subsec:core_search_bounding}
@@ -53,7 +53,7 @@ At its conceptual core, the DFS algorithm is highly intuitive: it selects a vali
 
 \medskip
 
-However, even on a highly pruned AoN graph, a pure brute-force traversal of a continental network would take centuries to execute. To control the exponential branching factor, the algorithm incorporated the mathematical bounding techniques developed in Chapter~\ref{chap:label_setting_approach}. The Minimum Travel Time (MTT) and Upper Bound ($UB$) logic were seamlessly ported into the DFS as a Branch and Bound (B\&B) mechanism. At every step of the traversal, the algorithm calculated the time remaining before the 24-hour deadline, divided it by the MTT of the current country, and added this theoretical maximum to the current country count. If this optimistic Upper Bound could not mathematically beat the highest global record found thus far, the algorithm immediately abandoned that path and backtracked, avoiding unnecessary computation.
+However, even on a highly pruned AoN graph, a pure brute-force traversal of a continental network would take centuries to execute. To control the exponential branching factor, the algorithm incorporated the mathematical bounding techniques developed in Chapter~\ref{chap:label_setting_approach}. The MTT and Upper Bound ($UB$) logic were seamlessly ported into the DFS as a B\&B mechanism. At every step of the traversal, the algorithm calculated the time remaining before the 24-hour deadline, divided it by the MTT of the current country, and added this theoretical maximum to the current country count. If this optimistic Upper Bound could not mathematically beat the highest global record found thus far, the algorithm immediately abandoned that path and backtracked, avoiding unnecessary computation.
 
 \subsection{High-Performance Multiprocessing Architecture}
 \label{subsec:hpc_multiprocessing}
@@ -62,11 +62,11 @@ Because a DFS evaluates independent branches, the search is an ``embarrassingly 
 
 \medskip
 
-To execute this at scale, the algorithm was deployed to a High-Performance Computing (HPC) cluster using the SLURM workload manager, allocating a single, highly powerful compute node equipped with 68 physical CPU cores and 64~GB of RAM.
+To execute this at scale, the algorithm was deployed to an HPC cluster using the SLURM workload manager, allocating a single, highly powerful compute node equipped with 68 physical CPU cores and 64~GB of RAM.
 
 \medskip
 
-Parallelizing a large graph search in Python, however, introduces non-trivial serialization and Inter-Process Communication (IPC) overheads. To prevent these systems-level bottlenecks from significantly degrading the search speed, two critical engineering optimizations were implemented:
+Parallelizing a large graph search in Python, however, introduces non-trivial serialization and IPC overheads. To prevent these systems-level bottlenecks from significantly degrading the search speed, two critical engineering optimizations were implemented:
 \begin{itemize}
     \item \textbf{Zero-Serialization Memory Sharing:} Passing a 1.5 million-edge graph to 68 individual worker processes via standard Python multiprocessing would exhaust memory due to duplication overhead. Instead, the architecture utilized an initialization function (\texttt{init\_worker}). This allowed the global graph dictionary, country mappings, and MTT data to be loaded natively into each worker's local memory space upon instantiation, avoiding repeated serialization.
     \item \textbf{Lazy Synchronization:} To allow all 68 workers to globally prune branches, they needed to share a single \texttt{shared\_global\_max} variable representing the current highest country record. Requiring all 68 workers to constantly acquire a multiprocessing lock to read this variable would cause significant IPC contention. To solve this, a ``lazy sync'' architecture was designed: each worker maintained a local copy of the global maximum and incurred IPC overhead only when syncronizing with the shared manager once every 10,000 nodes explored, or when a new record was actively discovered.
@@ -123,11 +123,11 @@ By using the partial results of the initial run to prune the graph, the pipeline
 \section{Distributed DFS Execution}
 \label{sec:distributed_dfs}
 
-Following the baseline DFS execution, logs indicated that the algorithm had evaluated only $1\%$ of the valid starting nodes before hitting the 48-hour wall-clock limit. However, the nature of the Activity-on-Node (AoN) graph presented an opportunity: because each starting node represents an independent search tree, the problem can be inherently parallelized. Distributing the workload across 100 nodes should allow exhaustive evaluation within the same 48-hour window.
+Following the baseline DFS execution, logs indicated that the algorithm had evaluated only $1\%$ of the valid starting nodes before hitting the 48-hour wall-clock limit. However, the nature of the AoN graph presented an opportunity: because each starting node represents an independent search tree, the problem can be inherently parallelized. Distributing the workload across 100 nodes should allow exhaustive evaluation within the same 48-hour window.
 
 \medskip
 
-To execute this, the architecture was upgraded from a single-node multiprocessing script to a fully distributed SLURM Job Array\cite{csuc_hpc}.
+To execute this, the architecture was upgraded from a single-node multiprocessing script to a fully distributed SLURM Job Array (see cluster usage guide in \cite{csuc_hpc}).
 
 \subsection{Horizontal Scaling and Job Array Distribution}
 \label{subsec:job_array_distribution}
@@ -136,12 +136,12 @@ The starting nodes were extracted, sorted deterministically, and partitioned acr
 
 \medskip
 
-To further optimize the local traversal within each worker, a State Dominance Memoization technique was introduced. Each worker maintained a local hash map of previously visited states, defined by the tuple $(\text{current\_node}, \text{visited\_countries})$. If a worker arrived at a state it had already reached via an earlier or identical arrival time, the branch was instantly pruned.
+To further optimize the local traversal within each worker, a State Dominance Memoization technique was introduced. Each worker maintained a local hash map of previously visited states, defined by the tuple (\texttt{current\_node}, \texttt{visited\_countries}). If a worker arrived at a state it had already reached via an earlier or identical arrival time, the branch was instantly pruned.
 
 \subsection{OOM Hurdles and Distributed Checkpointing}
 \label{subsec:oom_distributed_checkpointing}
 
-Deploying 100 parallel jobs, each running multiple worker processes and maintaining local memoization dictionaries, placed an immense strain on the cluster's memory infrastructure. Early deployments of the distributed array encountered severe Out-Of-Memory (OOM) errors, as the \texttt{local\_visited\_states} dictionaries grew beyond available RAM. To stabilize the array, the memory allocation per task had to be significantly increased (up to 64~GB per node) and the core count per task carefully balanced to ensure workers did not cannibalize shared memory.
+Deploying 100 parallel jobs, each running multiple worker processes and maintaining local memoization dictionaries, placed an immense strain on the cluster's memory infrastructure. Early deployments of the distributed array encountered severe OOM errors, as the \texttt{local\_visited\_states} dictionaries grew beyond available RAM. To stabilize the array, the memory allocation per task had to be significantly increased (up to 64~GB per node) and the core count per task carefully balanced to ensure workers did not cannibalize shared memory.
 
 \medskip
 
@@ -169,7 +169,7 @@ The distributed DFS successfully generated millions of candidate routes visiting
 \subsection{The Route Quality Index (RQI)}
 \label{subsec:route_quality_index}
 
-To bridge the gap between mathematical optimality and physical reality, all candidate routes were subjected to a post-execution evaluation using a custom Route Quality Index (RQI). The RQI dynamically scores the physical feasibility of a route by evaluating the feasibility of every individual transfer, accounting for specific transportation modalities (airport ``A'' vs.\ rail/bus ``R'').
+To bridge the gap between mathematical optimality and physical reality, all candidate routes were subjected to a post-execution evaluation using a custom RQI. The RQI dynamically scores the physical feasibility of a route by evaluating the feasibility of every individual transfer, accounting for specific transportation modalities (airport ``A'' vs.\ rail/bus ``R'').
 
 \medskip
 
@@ -177,25 +177,25 @@ For each transfer, the engine calculates the available safety margin. The \textt
 
 The effective safety margin is defined as
 \begin{equation}
-\text{Margin} = \text{Raw Buffer} - \text{Transit Time} - \text{Warrior Minimum}.
+\texttt{margin} = \texttt{raw\_buffer} - \texttt{transit\_time} - \texttt{warrior\_minimum}.
 \end{equation}
 Each transfer receives a piecewise quality score $q$ based on this margin:
 \begin{itemize}
-    \item \textbf{Non-negative margin ($\text{Margin} \geq 0$):} Scored on an asymptotic exponential curve capped at 100:
+    \item \textbf{Non-negative margin} ($\texttt{margin} \geq 0$): Scored on an asymptotic exponential curve capped at 100:
     \begin{equation}
-    q = 100 \bigl(1 - e^{-0.05 \cdot \text{Margin}}\bigr).
+    q = 100 \bigl(1 - e^{-0.05 \cdot \texttt{margin}}\bigr).
     \end{equation}
     A 30-minute safety buffer yields an excellent score ($\approx 77$), while anything above 90~minutes approaches 100.
-    \item \textbf{Negative margin ($\text{Margin} < 0$):} Heavily penalized with a linear multiplier:
+    \item \textbf{Negative margin} ($\texttt{margin} < 0$): Heavily penalized with a linear multiplier:
     \begin{equation}
-    q = \text{Margin} \times 1000.
+    q = \texttt{margin} \times 1000.
     \end{equation}
     A connection missing the minimum threshold by just 5~minutes receives a score of $-5000$.
 \end{itemize}
 
 Finally, because a single missed connection ruins the entire 24-hour attempt, the total RQI is calculated using a weighted formula that aggressively penalizes the route's weakest link (the bottleneck):
 \begin{equation}
-\text{RQI} = 0.7\, q_{\text{bottleneck}} + 0.3\, q_{\text{average}}.
+RQI = 0.7\, q_{\text{bottleneck}} + 0.3\, q_{\text{average}}.
 \end{equation}
 By applying this formula, the dashboard successfully filtered out physically infeasible routes, allowing the generated itineraries to be ranked strictly by their real-world viability.
 
@@ -210,7 +210,7 @@ Logically, this should be impossible. The \texttt{freq100} graph is a strict sub
 
 \medskip
 
-Investigation revealed a flaw in the interaction between the memoization logic and the full graph's branching factor. In the distributed worker script, a state was defined as $(\text{current\_node}, \text{visited\_countries})$. If the worker reached this state at an arrival time equal to or later than a previously recorded instance, the branch was heavily pruned to save computational time.
+Investigation revealed a flaw in the interaction between the memoization logic and the full graph's branching factor. In the distributed worker script, a state was defined as (\texttt{current\_node}, \texttt{visited\_countries}). If the worker reached this state at an arrival time equal to or later than a previously recorded instance, the branch was heavily pruned to save computational time.
 
 \medskip
 
@@ -241,7 +241,7 @@ When the worker process called \texttt{stack.pop()}, it immediately extracted an
 \subsection{Full Heuristic Execution and Convergence}
 \label{subsec:full_heuristic_execution_convergence}
 
-With the heuristic sorting mechanism successfully integrated, the fully distributed Activity-on-Node DFS was re-deployed across the 100-node High-Performance Computing (HPC) array.
+With the heuristic sorting mechanism successfully integrated, the fully distributed AoN DFS was re-deployed across the 100-node HPC array.
 
 \medskip
 
@@ -253,4 +253,4 @@ As a direct result of these stabilized mechanics, the heuristic array achieved 1
 
 \medskip
 
-The disparate JSONL checkpoint files generated by the cluster were subsequently hashed, deduplicated, and flattened into a highly compressed columnar Parquet database. This finalized the execution phase of the project, successfully producing a database of over 1.9 million candidate routes visiting 14 or more countries. With the computational architecture fully realized and the theoretical graph exhaustively traversed, the analysis now transitions to Chapter 6 for the application of the Route Quality Index (RQI) and the extraction of the true human-feasible global optimum.
+The disparate JSONL checkpoint files generated by the cluster were subsequently hashed, deduplicated, and flattened into a highly compressed columnar Parquet database. This finalized the execution phase of the project, successfully producing a database of over 1.9 million candidate routes visiting 14 or more countries. With the computational architecture fully realized and the theoretical graph exhaustively traversed, the analysis now transitions to Chapter 6 for the application of the RQI and the extraction of the true human-feasible global optimum.

@@ -29,12 +29,34 @@
 \usepackage{graphicx,psfrag}
 \usepackage{pdfpages}
 
-%FONTS TIMES O GARAMOND, 
+%FONTS TIMES O GARAMOND,
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
 \usepackage{times}
 %\usepackage{garamond}
 
 %MATHEMATICS PACKAGES
 \usepackage{amsmath,amssymb,amsthm}
+
+% Improved paragraph justification across the document
+\usepackage{microtype}
+\usepackage{fvextra}
+\usepackage{array}
+\usepackage{tabularx}
+\setlength{\emergencystretch}{2em}
+
+\DefineVerbatimEnvironment{appendixcode}{Verbatim}{%
+  breaklines=true,%
+  breakanywhere=true,%
+  breakafter={,},%
+  fontsize=\small,%
+  baselinestretch=1,%
+  commandchars=\\\{\},%
+}
+
+%DIAGRAMS (routing graphs in Chapter 2)
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta, positioning}
 
 %FANCY HEADERS AND FOOTERS
 \usepackage{fancyhdr}
@@ -48,9 +70,6 @@
 %PER A L'ÍNDEX DE MATÈRIES
 \usepackage{makeidx}
 \makeindex
-
-%APPENDIX
-\usepackage{appendix}
 
 % --- HEADERS & FOOTERS CONFIGURATION ---
 % Configure fancyhdr for nicer headers/footers when needed
@@ -80,6 +99,7 @@
 \graphicspath{{figures/}}
 
 % CRUCIAL: hyperref must be among the last packages loaded (after xcolor).
+\usepackage[hyphens]{url}
 \usepackage{xcolor}
 \usepackage{hyperref}
 \hypersetup{
@@ -90,8 +110,19 @@
     pdfborder={0 0 1}
 }
 
-%AQUEST DOCUMENT ÉS EN CATALÀ
-\selectlanguage{catalan}
+% Breakable inline code in text; compact typewriter in math mode
+\urlstyle{tt}
+\DeclareRobustCommand{\texttt}[1]{%
+  \ifmmode
+    \text{\normalfont\ttfamily #1}%
+  \else
+    \begingroup
+    \nolinkurl{#1}%
+    \endgroup
+  \fi
+}
+
+\selectlanguage{english}
 
 %EN COMPTES DE ÍNDEX, LA TAULA DE CONTINGUTS ES TITULA SUMARI
 \addto\captionscatalan
@@ -192,7 +223,7 @@ It was the summer before my final year, somewhere on a beach in Sardinia, when J
 
 \medskip
 
-We didn't beat it. We weren't even close (who the f**k stays +20 minutes doing that?). But we did what we always do, which is start talking, and the conversation drifted (as conversations between us tend to) toward bigger, stranger records. That was when he mentioned this one. Most countries visited by scheduled public transport in 24 hours. He had known about it for a while, apparently. Something about it had stuck with him: the image of a single person threading themselves through the geography of an entire continent in a single day, boarding trains and planes with surgical precision, crossing borders that most people only see on maps.
+We didn't beat it. We weren't even close. But we did what we always do, which is start talking, and the conversation drifted (as conversations between us tend to) toward bigger, stranger records. That was when he mentioned this one. Most countries visited by scheduled public transport in 24 hours. He had known about it for a while, apparently. Something about it had stuck with him: the image of a single person threading themselves through the geography of an entire continent in a single day, boarding trains and planes with surgical precision, crossing borders that most people only see on maps.
 
 \medskip
 
@@ -219,20 +250,27 @@ This thesis is the answer to that question. It is also, I hope, a demonstration 
 %TAULA DE CONTINGUTS: OBLIGATÒRIA
 \tableofcontents
 
-%INDEX DE FIGURES; NOMÉS ES POSA SI HI HA FIGURES
-\listoffigures
-
-%Fa que aparegui al sumari
-\addcontentsline{toc}{chapter}{List of Figures}
-
-
-%INDEX DE TAULES; NOMÉS ES POSA SI HI HA TAULES
-\listoftables
-%Fa que aparegui al sumari
-\addcontentsline{toc}{chapter}{List of Tables}
-
 %COMENÇA EL TEXT
 \mainmatter
+
+%=======================================================================
+% AI USE DISCLAIMER
+%=======================================================================
+\chapter*{AI Use Disclaimer}
+\addcontentsline{toc}{chapter}{AI Use Disclaimer}
+
+This thesis is the original work of the author, developed with the strategic assistance of artificial intelligence (AI) tools in specific, defined capacities. Throughout the writing process, AI tools (Gemini and Claude) were utilized to assist in redrafting select paragraphs to improve phrasing, academic tone, and overall readability, as well as to perform routine spelling and grammar checks. Despite this editorial assistance, the underlying arguments, analysis, and narrative structure of the text remain entirely my own.
+
+\medskip
+
+In the technical phase of this project, AI was leveraged as an execution tool to generate the source code for the majority of the project files. This code generation was strictly instructional. All high-level architectural decisions, system design, logical sequencing, task prioritization, and underlying engineering reasoning were conceived and directed entirely by the author. The AI acted exclusively as a functional tool to implement explicit parameters and logic that I provided.
+
+\medskip
+
+Finally, where AI technologies were directly used to produce the final artifacts, their specific implementation and operational roles are explicitly documented and explained in the appropriate technical sections of this thesis. Ultimately, all conceptual framework decisions, data interpretations, and conclusions drawn in this research are the sole responsibility of the author.
+
+\cleardoublepage
+
 %=======================================================================
 % MAIN TEXT
 %=======================================================================

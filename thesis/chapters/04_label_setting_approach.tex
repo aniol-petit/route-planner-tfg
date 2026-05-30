@@ -8,15 +8,15 @@ With a fully normalized, UTC-synchronized dataset of European transit schedules,
 
 \medskip
 
-To rigorously test different modeling paradigms, the first architectural approach evaluates the network as a time-dependent multi-graph. In this Activity-on-Edge (AoE) architecture, the vertices remain purely spatial, while the dimension of time is encoded directly into the attributes of the edges. This approach was deliberately chosen to maintain a highly compact memory footprint, avoiding the node explosion inherent to fully time-expanded models.
+To rigorously test different modeling paradigms, the first architectural approach evaluates the network as a time-dependent multi-graph. In this AoE architecture, the vertices remain purely spatial, while the dimension of time is encoded directly into the attributes of the edges. This approach was deliberately chosen to maintain a highly compact memory footprint, avoiding the node explosion inherent to fully time-expanded models.
 
 \medskip
 
-The graph was instantiated using the NetworkX library\cite{hagberg2008exploring} with the following structural rules:
+The graph was instantiated using the NetworkX library (see library documentation in \cite{hagberg2008exploring}) with the following structural rules:
 
 \begin{itemize}
     \item \textbf{Spatial Nodes ($V$):} A single vertex was created for each unique physical location. Nodes were tagged with specific attributes: their sovereign country (critical for the objective function) and their infrastructure type (airport or station). 
-    \item \textbf{Temporal Transit Edges ($E$):} Flights and trains were modeled as directed edges between origin and destination nodes. Because multiple trains or flights travel between the same two cities throughout the day, these edges stored dynamic temporal attributes. Instead of a single static weight, each edge contained an array of valid $(departure\_time, arrival\_time)$ pairs, formatted in absolute UTC minutes. To account for the 48-hour Guinness World Record window, train schedules (which operate on daily cycles) were programmatically duplicated, adding $1440$ minutes to populate the second day of the graph.
+    \item \textbf{Temporal Transit Edges ($E$):} Flights and trains were modeled as directed edges between origin and destination nodes. Because multiple trains or flights travel between the same two cities throughout the day, these edges stored dynamic temporal attributes. Instead of a single static weight, each edge contained an array of valid (\texttt{departure\_time}, \texttt{arrival\_time}) pairs, formatted in absolute UTC minutes. To account for the 48-hour Guinness World Record window, train schedules (which operate on daily cycles) were programmatically duplicated, adding $1440$ minutes to populate the second day of the graph.
     \item \textbf{Static Transfer Edges:} The manually validated intra-city connections (e.g., traversing from a city's airport to its central rail station) were integrated as standard, bidirectional static edges. Unlike transit edges, transfer edges were assigned a fixed scalar weight representing the human connection time in minutes, as they can be traversed at any point during the day.
 \end{itemize}
 
@@ -26,11 +26,11 @@ By compressing schedules into arrays on spatial edges, this AoE architecture suc
 \label{sec:algorithm_evolution}
 
 \noindent
-Because the Guinness World Record challenge is fundamentally a multi-objective optimization problem (maximizing unique countries visited while minimizing time within a strict 24-hour limit) a standard shortest-path algorithm like Dijkstra's cannot be used. Instead, the search must be modeled using Dynamic Programming (DP) via a Label-Setting algorithm (see Algorithm 1 in Appendix B).
+Because the Guinness World Record challenge is fundamentally a multi-objective optimization problem (maximizing unique countries visited while minimizing time within a strict 24-hour limit) a standard shortest-path algorithm like Dijkstra's cannot be used. Instead, the search must be modeled using DP via a Label-Setting algorithm (see Algorithm 1 in Appendix B).
 
 \medskip
 
-In this paradigm, as the algorithm traverses the time-dependent multi-graph, it assigns a state ``label'' $L$ to each node. A label is defined by the tuple $L = (v, t, C, start\_time)$. Here, $v$ tracks the current node, $t$ is the current absolute minute, $C$ represents the mathematical set of unique countries visited so far, and $start\_time$ marks when the journey began. The cardinality of the set, denoted as $|C|$, represents the integer count of unique countries visited.
+In this paradigm, as the algorithm traverses the time-dependent multi-graph, it assigns a state ``label'' $L$ to each node. A label is defined by the tuple $L = (v, t, C, s)$, where $s$ denotes \texttt{start\_time}. Here, $v$ tracks the current node, $t$ is the current absolute minute, $C$ represents the mathematical set of unique countries visited so far, and \texttt{start\_time} marks when the journey began. The cardinality of the set, denoted as $|C|$, represents the integer count of unique countries visited.
 
 \medskip
 
@@ -60,7 +60,7 @@ While standard $UB$ pruning successfully removed hopeless paths, it was overly o
 
 \medskip
 
-To tighten this bound, the concept of Minimum Transit Time (MTT) was introduced. The $MTT$ represents the absolute shortest physical time required to enter, traverse, and exit a specific country's transit network. For instance, even under perfect schedule conditions, traveling across Switzerland or Germany requires a mathematically provable minimum number of minutes. The algorithm precomputed this $MTT$ for every country in the dataset prior to the main search execution (see Algorithm 5 in Appendix B).
+To tighten this bound, the concept of MTT was introduced. The $MTT$ represents the absolute shortest physical time required to enter, traverse, and exit a specific country's transit network. For instance, even under perfect schedule conditions, traveling across Switzerland or Germany requires a mathematically provable minimum number of minutes. The algorithm precomputed this $MTT$ for every country in the dataset prior to the main search execution (see Algorithm 5 in Appendix B).
 
 \medskip
 
@@ -69,7 +69,7 @@ When calculating the $UB$, the algorithm sorted all unvisited, reachable countri
 \subsection{Priority Scoring, Hard Floors, and Rollouts}
 \label{subsec:priority_scoring_hard_floors_rollouts}
 
-To further optimize the search, the standard queue was replaced with a Priority Queue. Rather than expanding blindly, labels were ranked using a custom scoring formula. The formula was designed to prioritize deep, fast routes. For example, a core heuristic evaluated $Score(L) = |C| \times 10000 - t$, effectively forcing the algorithm to expand labels with the highest country count, while using an earlier absolute time $t$ as the mathematical tie-breaker to favor faster connections (see Algorithm 4 in Appendix B).
+To further optimize the search, the standard queue was replaced with a Priority Queue. Rather than expanding blindly, labels were ranked using a custom scoring formula. The formula was designed to prioritize deep, fast routes. For example, a core heuristic evaluated ${Score}(L) = |C| \times 10000 - t$, effectively forcing the algorithm to expand labels with the highest country count, while using an earlier absolute time $t$ as the mathematical tie-breaker to favor faster connections (see Algorithm 4 in Appendix B).
 
 \medskip
 
@@ -90,7 +90,7 @@ To bypass this nocturnal sparsity, the search was split into two halves. The arc
 
 \medskip
 
-Finally, a dedicated ``Stitcher'' algorithm evaluated the intersection of these two sets (see Algorithm 12 in Appendix B). By iterating through overlapping nodes and validating time continuity and geographic unions ($C_{forward} \cup C_{backward}$), the stitcher could reconstruct a globally optimal 24-hour path. This parallel, bi-directional approach effectively bypassed the sparse night-time bottlenecks and maximized graph coverage during the dense daytime schedules.
+Finally, a dedicated ``Stitcher'' algorithm evaluated the intersection of these two sets (see Algorithm 12 in Appendix B). By iterating through overlapping nodes and validating time continuity and geographic unions ($C_{\textsl{forward}} \cup C_{\textsl{backward}}$), the stitcher could reconstruct a globally optimal 24-hour path. This parallel, bi-directional approach effectively bypassed the sparse night-time bottlenecks and maximized graph coverage during the dense daytime schedules.
 
 \section{The Dimensionality Collapse}
 \label{sec:dimensionality_collapse}
@@ -103,10 +103,12 @@ The root of this bottleneck lay in the maintenance of the Pareto frontiers. As t
 
 \medskip
 
-This inefficiency was heavily compounded by the execution environment. The algorithm was executed locally on a single machine rather than being deployed to a High-Performance Computing (HPC) cluster. This was not a limitation of resources, but a deliberate architectural necessity. Dynamic Programming and Label-Setting algorithms fundamentally rely on continually evaluating and updating a globally shared state, specifically, the dynamic Pareto frontiers at every node in the graph. Attempting to parallelize this specific architecture across distributed cluster nodes (which operate on isolated memory pools) would have introduced massive Inter-Process Communication (IPC) overhead. The constant network latency required to safely lock and synchronize the frontiers across dozens of different parallel workers would likely have negated the benefits of parallelization. Thus, the approach was inherently bottlenecked by single-thread CPU execution speeds.
+This inefficiency was heavily compounded by the execution environment. The algorithm was executed locally on a single machine rather than being deployed to an HPC cluster. This was not a limitation of resources, but a deliberate architectural necessity. Dynamic Programming and Label-Setting algorithms fundamentally rely on continually evaluating and updating a globally shared state, specifically, the dynamic Pareto frontiers at every node in the graph. Attempting to parallelize this specific architecture across distributed cluster nodes (which operate on isolated memory pools) would have introduced massive IPC overhead. The constant network latency required to safely lock and synchronize the frontiers across dozens of different parallel workers would likely have negated the benefits of parallelization. Thus, the approach was inherently bottlenecked by single-thread CPU execution speeds.
 
 \medskip
 
-After weeks of continuous local execution, the algorithm struggled to converge on any record-breaking paths, a limitation that the AoN approach would later address. It is worth acknowledging that performance could theoretically have been pushed further. By implementing stricter, non-optimistic heuristics (such as aggressively killing technically viable paths to artificially force the queue to empty faster), the algorithm could have achieved faster convergence. However, doing so would have completely sacrificed the exactness of the search. Given the highly specific, non-intuitive nature of train schedules, overly aggressive pruning risked the blind deletion of the optimal, record-winning route.
+After weeks of continuous local execution, the algorithm struggled to converge on any record-breaking paths, a limitation that the AoN approach would later address. It is worth acknowledging that performance could theoretically have been pushed further. By implementing stricter dominance rules, more non-optimistic heuristics (such as aggressively killing technically viable paths to artificially force the queue to empty faster), or artificially forcing the queue to empty faster, the algorithm could have potentially achieved faster convergence. However, doing so would have completely sacrificed the exactness of the search. Given the highly specific, non-intuitive nature of train schedules, overly aggressive pruning risked the blind deletion of the optimal, record-winning route.
 
-Having thoroughly tested the boundaries of the Time-Dependent Activity-on-Edge (AoE) graph, the first phase of this comparative study was concluded. The execution bottlenecks clearly demonstrated that while the AoE model is memory-efficient, it shifts an excessive computational burden onto the search algorithm. With the exact computational trade-offs of this paradigm established, the analysis now transitions to evaluating the second architectural candidate: the highly parallelizable Activity-on-Node (AoN) framework explored in the following chapter.
+\medskip
+
+More importantly, the ultimate objective of this research was not to infinitely tune a single algorithm, but to conduct a comparative evaluation between two fundamental modeling paradigms. After completing several major evolutionary iterations of the algorithm running on the AoE architecture, its core computational trade-offs were conclusively established: it is highly memory-efficient, but it shifts an excessive processing burden onto the search algorithm. The analysis now transitions to evaluating the second architectural candidate: the highly parallelizable AoN framework, explored in the following chapter.
