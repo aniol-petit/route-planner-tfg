@@ -17,7 +17,7 @@ Each edge carries a cost, typically represented by a weight function $w(u, v)$. 
 
 \medskip
 
-A path in this graph is a sequence of vertices where each adjacent pair is connected by a valid edge. The goal of a routing algorithm is to find a specific path that maximizes or minimizes a certain objective function (e.g., minimizing total weight or maximizing the number of unique vertices visited).
+A path in a graph is a sequence of vertices where each adjacent pair is connected by a valid edge. The goal of a routing algorithm is to find a specific path that maximizes or minimizes a certain objective function (e.g., minimizing total weight or maximizing the number of unique vertices visited).
 
 \begin{figure}[htbp]
   \centering
@@ -38,7 +38,7 @@ A path in this graph is a sequence of vertices where each adjacent pair is conne
       \draw[edge] (u) -- (w);
     \end{tikzpicture}
     \par\medskip
-    {\small\textbf{(a)}~$G=(V,E)$ with $V=\{u,v,w,x,\ldots\}$ and $E=\{(u,v),(v,w),\ldots\}$.}
+    {\small\textbf{(a)}~$G=(V,E)$ with $V=\{u,v,w,x\}$ and $E=\{(u,v),(v,w),\ldots\}$.}
   \end{minipage}\hfill
   \begin{minipage}[t]{0.50\textwidth}
     \centering
@@ -58,7 +58,7 @@ A path in this graph is a sequence of vertices where each adjacent pair is conne
     \par\medskip
     {\small\textbf{(b)}~$w(u,v)=95$, $w(v,w)=40$ (minutes); a routing algorithm searches for a path in $G$.}
   \end{minipage}
-  \caption{Panel~(a) shows the abstract structure $G=(V,E)$; panel~(b) shows directed edges $e=(u,v)$ whose labels denote travel time in minutes, i.e.\ $w(u,v)=95$ and $w(v,w)=40$.}
+  \caption{Panel~(a) shows the abstract structure $G=(V,E)$; panel~(b) shows directed edges $e=(u,v)$ and $e=(v,w)$ whose labels denote travel time in minutes, i.e.\ $w(u,v)=95$ and $w(v,w)=40$.}
   \label{fig:graph_foundations}
 \end{figure}
 
@@ -73,7 +73,7 @@ A traditional static graph is insufficient for modeling public transit because c
 The physical topology of the graph remains static (e.g., one vertex per station), but the weight of an edge $w(u, v, t)$ is a function of the departure time $t$. This keeps the network compact, but complicates the routing algorithms, as the cost of traversal fluctuates dynamically.
 
 \textbf{Time-Expanded Networks.}
-Time is explicitly discretized and baked directly into the topology of the graph. A single physical station is duplicated into multiple vertices, each representing that station at a specific point in time (e.g., Station A at 10:00, Station A at 10:15). This dramatically increases the number of nodes and edges, but allows the use of standard, static routing algorithms, since every edge now possesses a fixed, immutable weight.
+Time is explicitly discretized and baked directly into the topology of the graph. A single physical station is duplicated into multiple vertices, each representing that station at a specific point in time (e.g., Station A at 10:00, Station A at 10:15). This significantly increases the number of nodes and edges, but allows the use of standard, static routing algorithms, since every edge now possesses a fixed, immutable weight.
 
 \medskip
 
@@ -86,10 +86,10 @@ Beyond the choice of how to handle chronological time, transportation graphs mus
 
 \medskip
 
-\textbf{Activity-on-Edge (AoE).}
+\textbf{Activity-on-Edge.}
 The traditional approach where vertices represent physical locations, and edges represent the actual transport activities (e.g., a train moving between two cities) or waiting periods. The temporal data is stored as attributes on the edges.
 
-\textbf{Activity-on-Node (AoN).}
+\textbf{Activity-on-Node.}
 An inverted approach where the vertices themselves represent the specific transport activities (e.g., a flight with a fixed departure and arrival time), and the directed edges represent the valid layovers or transfer opportunities connecting them.
 
 \medskip

@@ -30,7 +30,7 @@ Because the Guinness World Record challenge is fundamentally a multi-objective o
 
 \medskip
 
-In this paradigm, as the algorithm traverses the time-dependent multi-graph, it assigns a state ``label'' $L$ to each node. A label is defined by the tuple $L = (v, t, C, s)$, where $s$ denotes \texttt{start\_time}. Here, $v$ tracks the current node, $t$ is the current absolute minute, $C$ represents the mathematical set of unique countries visited so far, and \texttt{start\_time} marks when the journey began. The cardinality of the set, denoted as $|C|$, represents the integer count of unique countries visited.
+In this paradigm, as the algorithm traverses the time-dependent multi-graph, it assigns a state ``label'' $L$ to each node. A label is defined by the tuple $L = (v, t, C, s)$. Here, $v$ tracks the current node, $t$ is the current absolute minute, $C$ represents the mathematical set of unique countries visited so far, and $s$ denotes \texttt{start\_time}, which marks when the journey began. The cardinality of the set, denoted as $|C|$, represents the integer count of unique countries visited.
 
 \medskip
 
@@ -51,7 +51,7 @@ To make this computationally tractable without running a full sub-search at ever
 
 \medskip
 
-If the current number of countries visited plus this theoretical maximum ($|C| + UB$) was strictly less than or equal to the current global record, the path was mathematically dead and immediately pruned.
+If the current number of countries visited plus this theoretical maximum ($|C| + UB$) was strictly less than or equal to the current global record, or couldn't beat the existing record, the path was mathematically dead and immediately pruned.
 
 \subsection{Time-Budgeted UB and Minimum Transit Time (MTT)}
 \label{subsec:ub_pruning}
@@ -95,7 +95,7 @@ Finally, a dedicated ``Stitcher'' algorithm evaluated the intersection of these 
 \section{The Dimensionality Collapse}
 \label{sec:dimensionality_collapse}
 
-Despite these successive refinements, from baseline Pareto dominance to time-budgeted Upper Bounds, hard floors, and bi-directional stitching, the architecture ultimately could not handle the combinatorial complexity. It is crucial to clarify that the algorithm did not fail due to an Out-Of-Memory (OOM) error. Rather, it hit a computational bottleneck.
+Despite these successive refinements, from baseline Pareto dominance to time-budgeted Upper Bounds, hard floors, and bi-directional stitching, the architecture ultimately could not handle the combinatorial complexity. It is relevant to clarify that the algorithm did not fail due to an Out-Of-Memory (OOM) error. Rather, it hit a computational bottleneck.
 
 \medskip
 

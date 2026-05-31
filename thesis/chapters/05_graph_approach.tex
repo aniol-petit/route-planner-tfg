@@ -4,7 +4,7 @@
 \section{The Activity-on-Node (AoN) Transformation}
 \label{sec:aon_transformation}
 
-As established in the preliminary definitions, a central objective of this research is to evaluate and contrast two fundamental graph paradigms for time-dependent routing. Having quantified the computational limits of the memory-efficient AoE architecture in Chapter 4, the analysis now shifts to the second structural candidate: the AoN framework. The AoE model prioritized a compact spatial topology, which inherently forced the search algorithm to dynamically calculate temporal validity at every node. To systematically test the inverse trade-off, the European transportation network was mathematically reconstructed as an AoN DAG. This approach encodes temporal constraints in the graph structure rather than in the search algorithm, prioritizing algorithmic traversal speed over memory footprint.
+As established in the preliminary definitions, a central objective of this research is to evaluate and contrast two fundamental graph paradigms for time-dependent routing. Having quantified the computational limits of the memory-efficient AoE architecture in Chapter 4, the analysis now shifts to the second structural candidate: the AoN framework. The AoE model prioritized a compact spatial topology, which inherently forced the search algorithm to dynamically calculate temporal validity at every node. To systematically test the inverse trade-off, the European transportation network was mathematically reconstructed as an AoN Directed Acyclic Graph (DAG). This approach encodes temporal constraints in the graph structure rather than in the search algorithm, prioritizing algorithmic traversal speed over memory footprint.
 
 \subsection{Structural Inversion: Events as Nodes}
 \label{subsec:aon_events_as_nodes}
@@ -44,7 +44,7 @@ Mathematically, if Event $A$ arrives in Munich at 14:00, and there are three val
 \section{Baseline DFS Execution on the Full Graph}
 \label{sec:baseline_dfs}
 
-With the European transit network successfully transformed into an AoN DAG and stripped of redundant temporal edges, the search space was structurally primed for a pure DFS. Unlike the Dynamic Programming approach evaluated in Chapter~\ref{chap:label_setting_approach}, which required maintaining continuously expanding Pareto frontiers in memory at every node, a DFS on a DAG only requires maintaining the current path stack. This exceptionally low memory footprint resolved the previous state-space memory bottlenecks, allowing the algorithm to trace to trace routes with minimal memory overhead.
+With the European transit network successfully transformed into an AoN DAG and stripped of redundant temporal edges, the search space was structurally primed for a pure DFS. Unlike the Dynamic Programming approach evaluated in Chapter~\ref{chap:label_setting_approach}, which required maintaining continuously expanding Pareto frontiers in memory at every node, a DFS on a DAG only requires maintaining the current path stack. This exceptionally low memory footprint resolved the previous state-space memory bottlenecks, allowing the algorithm to trace routes with minimal memory overhead.
 
 \subsection{Core Search Mechanics and Bounding}
 \label{subsec:core_search_bounding}
@@ -210,7 +210,7 @@ Logically, this should be impossible. The \texttt{freq100} graph is a strict sub
 
 \medskip
 
-Investigation revealed a flaw in the interaction between the memoization logic and the full graph's branching factor. In the distributed worker script, a state was defined as (\texttt{current\_node}, \texttt{visited\_countries}). If the worker reached this state at an arrival time equal to or later than a previously recorded instance, the branch was heavily pruned to save computational time.
+Investigation revealed a flaw in the interaction between the memoization logic and the full graph's branching factor. In the distributed worker script, a state was defined as (\texttt{current\_node}, \texttt{visited\_countries}). If the worker reached this state at an arrival time equal to or later than a previously recorded instance, the branch was pruned to save computational time.
 
 \medskip
 
@@ -218,10 +218,6 @@ However, because the algorithm was blindly iterating through the full graph's ma
 
 \subsection{Heuristic Re-Engineering and Stack Sorting}
 \label{subsec:heuristic_re_engineering}
-
-The root cause was the state dominance pruning logic. The distributed workers tracked the best arrival time for any given state, \texttt{local\_visited\_states[(node, visited\_countries)] = best\_known\_arrival}. Because the DFS explored branches blindly, it often stumbled upon physically impossible 2-minute transfers first. It would record this absurdly early arrival time as the benchmark. Later, when the DFS evaluated a realistic 90-minute transfer reaching the exact same state, the arrival time was naturally later, triggering the strict pruning condition (\texttt{succ\_arr >= best\_known\_arr}) and permanently deleting the viable route.
-
-\medskip
 
 To counteract this, the search logic was re-engineered to force the DFS to prioritize realistic layovers over physically impossible short connections. To achieve this without altering the integrity of the exhaustive search, a heuristic sorting mechanism was injected directly into the graph dictionary initialization.
 
