@@ -142,6 +142,9 @@
 
 \frontmatter
 
+% Official UPF cover (cover.pdf) is prepended on every build via pdfpages.
+\includepdf[pages=-,pagecommand={\thispagestyle{empty}}]{cover.pdf}
+
 \maketitle
 
 \cleardoublepage

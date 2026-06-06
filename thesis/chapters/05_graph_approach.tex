@@ -83,7 +83,7 @@ The algorithm was submitted to the cluster with a maximum wall-clock execution l
 
 \medskip
 
-However, when the 48-hour hard limit was reached and the cluster terminated the job, the execution logs revealed a humbling reality. Despite the extreme memory efficiency of the AoN DFS, the strict Branch and Bound pruning inherited from Chapter~\ref{chap:label_setting_approach}, and the deployment of 68 parallel cores, the algorithm had evaluated barely $1\%$ of the total starting nodes in the graph. While the AoN transformation had successfully solved the memory issues of the previous approach, the unconstrained branching factor of the full, unfiltered continental network remained intractable within the time limit.
+However, when the 48-hour hard limit was reached and the cluster terminated the job, the execution logs revealed an unexpected outcome. Despite the extreme memory efficiency of the AoN DFS, the strict Branch and Bound pruning inherited from Chapter~\ref{chap:label_setting_approach}, and the deployment of 68 parallel cores, the algorithm had evaluated barely $1\%$ of the total starting nodes in the graph. While the AoN transformation had successfully solved the memory issues of the previous approach, the unconstrained branching factor of the full, unfiltered continental network remained intractable within the time limit.
 
 \section{Graph Reduction and Targeted Executions}
 \label{sec:graph_reduction_targeted}
@@ -199,6 +199,10 @@ RQI = 0.7\, q_{\text{bottleneck}} + 0.3\, q_{\text{average}}.
 \end{equation}
 By applying this formula, the dashboard successfully filtered out physically infeasible routes, allowing the generated itineraries to be ranked strictly by their real-world viability.
 
+\medskip
+
+The weighting coefficients, modality-specific warrior minimums, and the exponential decay factor are acknowledged as engineering design choices rather than theoretically derived constants, and were decided according to my own experience and operational intuition, intentionally thought to be overly optimistic. The 70/30 bottleneck-to-average split reflects the operational reality that a single missed connection invalidates the entire attempt regardless of the quality of all other legs, making the weakest link disproportionately important.
+
 \subsection{The Missing Routes Paradox}
 \label{subsec:missing_routes_paradox}
 
@@ -223,7 +227,11 @@ To counteract this, the search logic was re-engineered to force the DFS to prior
 
 \medskip
 
-During graph construction, the algorithm evaluated all valid successors for a given node. The ideal human layover was defined as 90~minutes. The successors were sorted in descending order (\texttt{reverse=True}) using an absolute-difference key:
+During graph construction, the algorithm evaluated all valid successors for a given node. The ideal human layover was defined as 90~minutes. This value was selected as the operational optimum balancing two competing pressures: it provides a meaningful safety buffer for a traveller executing a physically demanding international transit sequence, while avoiding excessively long waiting periods that would prematurely exhaust the 24-hour clock and reduce the maximum number of reachable countries. Layovers significantly shorter than this threshold are physically dangerous for the attempt; layovers significantly longer are strategically wasteful. 
+
+\medskip
+
+The successors were sorted in descending order (\texttt{reverse=True}) using an absolute-difference key:
 \begin{equation}
 \text{Sort Key} = \bigl|(\mathrm{Departure}_{\text{next}} - \mathrm{Arrival}_{\text{current}}) - 90\bigr|.
 \end{equation}
